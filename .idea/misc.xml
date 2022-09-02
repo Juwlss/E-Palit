@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/et_corner.xml" value="1.4142857142857144" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/img_checkbox.xml" value="0.2703125" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/login_button.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_message.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/login_page.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.176" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
