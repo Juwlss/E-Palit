@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.CheckBox;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     int passvis;
 
+    EditText email, password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,13 +32,20 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton passtoggle = findViewById(R.id.vis_off);
         EditText etpass = findViewById(R.id.lgin_pass);
+        EditText etemail = findViewById(R.id.lgin_email);
         CheckBox remember = findViewById(R.id.cbox_remember);
         passtoggle.setVisibility(View.GONE);
 
-
+        //auto signed in loading screen
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkbox = preferences.getString("remember", "");
+        if(checkbox.equals("true")){
+            startActivity(new Intent(MainActivity.this, Home.class));
+        }else if (checkbox.equals("false")){
+            Toast.makeText(MainActivity.this, "Please Sign in", Toast.LENGTH_SHORT).show();
+        }
 
-
+        //auto sign in
         remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -51,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("remember", "false");
                     editor.apply();
-                    Toast.makeText(MainActivity.this, "Checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -110,5 +120,14 @@ public class MainActivity extends AppCompatActivity {
     //signing in going to home page
     public void signin(View view) {
         startActivity( new Intent(MainActivity.this, Home.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d("CDA", "onBackPressed Called");
+        Intent setIntent = new Intent(Intent.ACTION_MAIN);
+        setIntent.addCategory(Intent.CATEGORY_HOME);
+        setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(setIntent);
     }
 }
