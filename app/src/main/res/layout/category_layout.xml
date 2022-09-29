@@ -13,42 +13,57 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="65dp"
         android:fontFamily="@font/inter"
         android:text="Categories"
         android:textColor="#094067"
-        android:textFontWeight="900"
-        android:textSize="23sp" />
+        android:textFontWeight="400"
+        android:textSize="23sp"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_categories"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_categories">
+        android:layout_height="30dp"
+        android:layout_below="@id/text_categories"
+        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
+        app:tabBackground="@drawable/tab_catselecting"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/black"
+        style="@style/tab_text">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/firstTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gadgets"/>
+            android:text="Gadgets"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/secondTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sports" />
+            android:text="Sports"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/thirdTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fashion" />
+            android:text="Fashion"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/fourthTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toys" />
+            android:text="Toys"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
     </com.google.android.material.tabs.TabLayout>
 

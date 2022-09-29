@@ -2,19 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white">
 
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/listTab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:tabBackground="@drawable/tab_listselecting"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/black"
+        app:tabTextAppearance="@style/tab_text">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/firstTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pending"/>
+            android:text="Pending" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/secondTab"

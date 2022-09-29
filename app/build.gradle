@@ -44,5 +44,7 @@ dependencies {
 
     //bottom nav
     implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
-    //password toggle
+    //search
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
 }

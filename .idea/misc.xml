@@ -8,11 +8,18 @@
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.2703125" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.2703125" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/img_checkbox.xml" value="0.2703125" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/login_button.xml" value="0.1638888888888889" />
-        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/activity_home.xml" value="0.176" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/tab_catselecting.xml" value="0.2601851851851852" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/tab_rect.xml" value="0.2611111111111111" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/tab_select.xml" value="0.2611111111111111" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/tab_selected.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/tab_selecting.xml" value="0.2611111111111111" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/tab_text_selecting.xml" value="0.2611111111111111" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/activity_home.xml" value="0.22588832487309646" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/category_layout.xml" value="0.176" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/category_layout.xml" value="0.22588832487309646" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_fashion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_finished.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_gadget.xml" value="0.25416666666666665" />
@@ -21,11 +28,14 @@
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_pending.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_search.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_sports.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/fragment_toy.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/listing_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/login_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/post_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/layout/user_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
       </map>
     </option>
@@ -39,7 +49,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.176" />
+        <option name="scale" value="0.22588832487309646" />
       </ProjectState>
     </option>
   </component>
