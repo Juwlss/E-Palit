@@ -15,12 +15,20 @@
 
 
             <include
+                android:id="@+id/layout_cat"
                 layout="@layout/category_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Prec_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_cat"/>
 
       </RelativeLayout>
+
+
 
 
 </FrameLayout>
