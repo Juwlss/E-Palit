@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.barter10.Adapter.ListpageAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 

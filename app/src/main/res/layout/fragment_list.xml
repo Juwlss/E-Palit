@@ -12,13 +12,14 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         layout="@layout/listing_layout"/>
+
+
 
 
 

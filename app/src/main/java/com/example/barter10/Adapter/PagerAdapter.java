@@ -1,10 +1,16 @@
-package com.example.barter10;
+package com.example.barter10.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.barter10.FashionFragment;
+import com.example.barter10.GadgetFragment;
+import com.example.barter10.SportsFragment;
+import com.example.barter10.ToyFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
