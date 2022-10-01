@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barter10">
         <activity
+            android:name=".Enternewpasspare"
+            android:exported="false" />
+        <activity
+            android:name=".signupvincent"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="true" />
         <activity

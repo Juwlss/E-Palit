@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Enternewpasspare">
+
+    <EditText
+        android:id="@+id/pass1"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:background="@drawable/rectangle35"
+        android:fontFamily="@font/inter"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textColorHint="#646464"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/newpass"
+        app:layout_constraintTop_toBottomOf="@+id/newpass" />
+
+
+    <ImageButton
+        android:id="@+id/visoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/pass1"
+        android:padding="0dp"
+        android:src="@drawable/ic_baseline_visibility_off_24"
+        app:layout_constraintBottom_toBottomOf="@+id/pass1"
+        app:layout_constraintEnd_toEndOf="@+id/pass1"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="@+id/pass1"
+        app:layout_constraintTop_toTopOf="@+id/pass1"
+        app:layout_constraintVertical_bias="0.529" />
+
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:background="@drawable/rectangle35"
+        android:fontFamily="@font/inter"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textColorHint="#646464"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    <ImageButton
+        android:id="@+id/visoff2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/pass1"
+        android:padding="0dp"
+        android:src="@drawable/ic_baseline_visibility_off_24"
+        app:layout_constraintBottom_toBottomOf="@+id/pass2"
+        app:layout_constraintEnd_toEndOf="@+id/pass2"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="@+id/pass2"
+        app:layout_constraintTop_toTopOf="@+id/pass2"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="248dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter"
+        android:text="Enter your new Password twice for confirmation"
+        android:textColor="#646464"
+        android:textFontWeight="800"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="213dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter"
+        android:text="   Comfirmation Password"
+        android:textColor="#646464"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pass1"
+        app:layout_constraintTop_toBottomOf="@+id/pass1" />
+
+    <TextView
+        android:id="@+id/newpass"
+        android:layout_width="213dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="240dp"
+        android:fontFamily="@font/inter"
+        android:text="    New Password"
+        android:textColor="#646464"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="265dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/inter"
+        android:text="Enter New Password"
+        android:textColor="#094067"
+        android:textFontWeight="900"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/topimg"
+        app:layout_constraintTop_toBottomOf="@+id/topimg" />
+
+
+
+    <ImageView
+        android:id="@+id/topimg"
+        android:layout_width="321dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/frame37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageView7"
+        android:layout_width="248dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/frame36"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass2"
+        app:layout_constraintVertical_bias="0.941" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="110.5dp"
+        android:layout_height="130dp"
+        android:src="@drawable/designall"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vectorback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+</androidx.constraintlayout.widget.ConstraintLayout>
