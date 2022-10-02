@@ -2,11 +2,13 @@ package com.example.barter10;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 import com.chaos.view.PinView;
@@ -44,5 +46,9 @@ public class otp extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void submitOTP(View view) {
+        startActivity(new Intent(otp.this, Enternewpasspare.class));
     }
 }

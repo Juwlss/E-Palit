@@ -116,6 +116,7 @@
 
 
                 <TextView
+                    android:id="@+id/forgot_pass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lgin_pass"
@@ -124,6 +125,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_toRightOf="@id/cbox_remember"
                     android:fontFamily="@font/inter"
+                    android:onClick="forgotPass"
                     android:text="Forgot Password?"
                     android:textColor="#EF4565"
                     android:textFontWeight="500" />
@@ -168,7 +170,8 @@
                     android:fontFamily="@font/inter"
                     android:text="Create now"
                     android:textColor="#EF4565"
-                    android:textFontWeight="700" />
+                    android:textFontWeight="700"
+                    android:onClick="signup"/>
 
 
 

@@ -2,6 +2,7 @@ package com.example.barter10;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -65,5 +66,14 @@ public class signupvincent extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void submitSignUp(View view) {
+
+        startActivity(new Intent(signupvincent.this, Home.class));
+    }
+
+    public void uptoin(View view) {
+        startActivity(new Intent(signupvincent.this, MainActivity.class));
     }
 }

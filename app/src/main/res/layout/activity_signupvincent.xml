@@ -88,7 +88,8 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="@+id/supass"
         app:layout_constraintStart_toStartOf="@+id/supass"
-        app:layout_constraintTop_toBottomOf="@+id/supass" />
+        app:layout_constraintTop_toBottomOf="@+id/supass"
+        android:onClick="submitSignUp"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -136,14 +137,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <TextView
-        android:layout_width="80dp"
+        android:layout_width="89dp"
         android:layout_height="18dp"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="48dp"
         android:fontFamily="@font/inter"
         android:text=" Sign in now"
         android:textColor="#EF4565"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        android:onClick="uptoin"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

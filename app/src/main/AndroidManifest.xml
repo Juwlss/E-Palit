@@ -11,16 +11,16 @@
         android:theme="@style/Theme.Barter10">
         <activity
             android:name=".forgotpassword"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".otp"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Enternewpasspare"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".signupvincent"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Home"
             android:exported="true" />

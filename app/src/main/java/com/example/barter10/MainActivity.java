@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -129,5 +130,14 @@ public class MainActivity extends AppCompatActivity {
         setIntent.addCategory(Intent.CATEGORY_HOME);
         setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(setIntent);
+    }
+
+
+    public void signup(View view) {
+        startActivity(new Intent(MainActivity.this, signupvincent.class));
+    }
+
+    public void forgotPass(View view) {
+        startActivity(new Intent(MainActivity.this, forgotpassword.class));
     }
 }

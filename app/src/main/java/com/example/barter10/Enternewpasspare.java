@@ -2,6 +2,7 @@ package com.example.barter10;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -111,5 +112,9 @@ public class Enternewpasspare extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void submitNPass(View view) {
+        startActivity(new Intent(Enternewpasspare.this, Home.class));
     }
 }
