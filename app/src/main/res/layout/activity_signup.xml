@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signupvincent">
+    tools:context=".signUp">
 
 
     <EditText
@@ -81,15 +81,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageButton
-        android:id="@+id/imageView6"
+        android:id="@+id/btn_su"
         android:layout_width="296dp"
         android:layout_height="46dp"
         android:background="@drawable/frame34"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="@+id/supass"
         app:layout_constraintStart_toStartOf="@+id/supass"
-        app:layout_constraintTop_toBottomOf="@+id/supass"
-        android:onClick="submitSignUp"/>
+        app:layout_constraintTop_toBottomOf="@+id/supass"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -97,9 +96,9 @@
         android:layout_height="48dp"
         android:layout_marginTop="104dp"
         android:src="@drawable/frame35"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_su"
         app:layout_constraintHorizontal_bias="0.296"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/btn_su"
         app:layout_constraintTop_toBottomOf="@+id/supass" />
 
     <ImageView

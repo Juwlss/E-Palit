@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139010349738",
+    "project_id": "e-palit",
+    "storage_bucket": "e-palit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139010349738:android:90440a96423f7a33038ed3",
+        "android_client_info": {
+          "package_name": "com.example.barter10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139010349738-ralg4g11o9ls6k1o405erk8c6ump2rsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-2oq5h6PHNZJ42CLgKzAWfx3N91m2YW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139010349738-ralg4g11o9ls6k1o405erk8c6ump2rsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

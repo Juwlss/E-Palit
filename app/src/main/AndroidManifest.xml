@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barter10">
         <activity
-            android:name=".forgotpassword"
+            android:name=".forgotPass"
             android:exported="true" />
         <activity
             android:name=".otp"
             android:exported="true" />
         <activity
-            android:name=".Enternewpasspare"
+            android:name=".newPass"
             android:exported="true" />
         <activity
-            android:name=".signupvincent"
+            android:name=".signUp"
             android:exported="true" />
         <activity
             android:name=".Home"
