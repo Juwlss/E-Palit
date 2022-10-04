@@ -43,7 +43,7 @@
                 android:layout_below="@id/appname"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="30dp">
 
@@ -93,12 +93,12 @@
                     android:id="@+id/vis_off"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="0dp"
-                    android:src="@drawable/ic_baseline_visibility_off_24"
+                    android:layout_below="@id/lgin_email"
                     android:layout_alignRight="@id/lgin_pass"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_below="@id/lgin_email"/>
+                    android:padding="0dp"
+                    android:src="@drawable/ic_baseline_visibility_off_24" />
 
 
                 <androidx.appcompat.widget.AppCompatCheckBox
@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/cbox_remember"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/login_button"
                     android:fontFamily="@font/inter"
                     android:onClick="signin"
@@ -152,7 +152,7 @@
                     android:layout_alignLeft="@id/lg_signin"
                     android:layout_centerInParent="true"
                     android:layout_marginStart="-25dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/inter"
                     android:text="Don't have an account? "
                     android:textColor="#646464"
@@ -165,14 +165,13 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lg_signin"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/lg_noacc"
                     android:fontFamily="@font/inter"
+                    android:onClick="signup"
                     android:text="Create now"
                     android:textColor="#EF4565"
-                    android:textFontWeight="700"
-                    android:onClick="signup"/>
-
+                    android:textFontWeight="700" />
 
 
             </RelativeLayout>

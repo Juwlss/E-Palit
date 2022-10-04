@@ -11,14 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-public class Enternewpasspare extends AppCompatActivity {
+public class newPass extends AppCompatActivity {
 
     int passvis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enternewpasspare);
+        setContentView(R.layout.activity_newpass);
 
 
         ImageButton passtoggle = findViewById(R.id.visoff);
@@ -115,6 +115,6 @@ public class Enternewpasspare extends AppCompatActivity {
     }
 
     public void submitNPass(View view) {
-        startActivity(new Intent(Enternewpasspare.this, Home.class));
+        startActivity(new Intent(newPass.this, Home.class));
     }
 }
