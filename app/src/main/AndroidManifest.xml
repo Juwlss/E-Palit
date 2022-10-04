@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barter10">
         <activity
+
+            android:name=".activity_signup_new"
+            android:exported="false" />
+        <activity
             android:name=".forgotPass"
             android:exported="true" />
+            
         <activity
             android:name=".otp"
             android:exported="true" />
