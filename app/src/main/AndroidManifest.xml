@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barter10">
         <activity
+            android:name=".activity_signup_new"
+            android:exported="false" />
+        <activity
             android:name=".forgotpassword"
             android:exported="true" />
         <activity
