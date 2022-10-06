@@ -18,6 +18,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,38 +35,63 @@ public class MainActivity extends AppCompatActivity {
 
 
     int passvis;
-
     EditText email, password;
     Button signin;
     FirebaseAuth firebaseAuth;
+    TextView create;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        signin = findViewById(R.id.lg_signin);
 
+        create = findViewById(R.id.lg_create);
+        signin = findViewById(R.id.lg_signin);
         ImageButton passtoggle = findViewById(R.id.vis_off);
         password = findViewById(R.id.lgin_pass);
         email = findViewById(R.id.lgin_email);
         CheckBox remember = findViewById(R.id.cbox_remember);
         passtoggle.setVisibility(View.GONE);
 
-
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //sign in
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String str_email = email.getText().toString();
+                String str_password = password.getText().toString();
+
+                if (TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
+                    Toast.makeText(MainActivity.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                }else{
+                    firebaseAuth.signInWithEmailAndPassword(str_email,str_password)
+                            .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(MainActivity.this, Home.class));
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
+            }
+        });
+
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, signUp.class));
+            }
+        });
 
 
 
-        //auto signed in loading screen
-        /**SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-        String checkbox = preferences.getString("remember", "");
-        if(checkbox.equals("true")){
-            startActivity(new Intent(MainActivity.this, Home.class));
-        }else if (checkbox.equals("false")){
-            Toast.makeText(MainActivity.this, "Please Sign in", Toast.LENGTH_SHORT).show();
-        }**/
 
         //auto sign in
         remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -136,13 +162,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
     //signing in going to home page
-    public void signin(View view) {
-        startActivity( new Intent(MainActivity.this, Home.class));
-    }
 
     @Override
     public void onBackPressed() {
@@ -153,10 +173,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(setIntent);
     }
 
-
-    public void signup(View view) {
-        startActivity(new Intent(MainActivity.this, signUp.class));
-    }
 
     public void forgotPass(View view) {
         startActivity(new Intent(MainActivity.this, forgotPass.class));

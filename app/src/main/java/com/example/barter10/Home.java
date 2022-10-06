@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -44,6 +46,7 @@ public class Home extends AppCompatActivity {
 
         appBarLayout = findViewById(R.id.appbar);
 
+        //replaceFragment(new MessageFragment());
 
         //declaring bottom navigation
         bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.nhome));
@@ -114,6 +117,13 @@ public class Home extends AppCompatActivity {
         });
 
     }
+
+    /**private void replaceFragment(MessageFragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.commit();
+    }**/
 
     public void appbarVisibility(int goBack){
         if (goBack != 1){
