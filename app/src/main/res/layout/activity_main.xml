@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:paddingTop="15dp"
-                android:src="@drawable/logo"/>
+                android:src="@drawable/logo" />
 
             <ImageView
                 android:id="@+id/appname"
@@ -139,7 +139,6 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/login_button"
                     android:fontFamily="@font/inter"
-                    android:onClick="signin"
                     android:text="Sign In"
                     android:textColor="#FFFFFE"
                     android:textFontWeight="700" />
@@ -168,7 +167,6 @@
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/lg_noacc"
                     android:fontFamily="@font/inter"
-                    android:onClick="signup"
                     android:text="Create now"
                     android:textColor="#EF4565"
                     android:textFontWeight="700" />

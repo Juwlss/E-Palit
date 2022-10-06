@@ -2,4 +2,29 @@
     <string name="app_name">Barter1.0</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <string-array name="messagelist">
+
+        <item>Vincent De Lara</item>
+        <item>Quirino Lacambra</item>
+        <item>Paulo Regacho</item>
+        <item>Randale Porciuncula</item>
+
+    </string-array>
+
+    <string-array name="conversation">
+
+        <item>hehe</item>
+        <item>hello pare</item>
+        <item>lowlow</item>
+        <item>ay niloko</item>
+
+    </string-array>
+
+
+
+
+
 </resources>
