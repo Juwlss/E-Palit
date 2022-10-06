@@ -45,10 +45,6 @@ public class activity_loading extends AppCompatActivity {
             }, 2000);
         }
 
-                    startActivity(new Intent(activity_loading.this,MainActivity.class));
-                    finish();
-                }
-            }, 2000);
         }
 
 

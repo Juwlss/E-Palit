@@ -91,31 +91,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-                String str_email = email.getText().toString();
-                String str_password = password.getText().toString();
-
-                if (TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
-                    Toast.makeText(MainActivity.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
-                }else{
-                    firebaseAuth.signInWithEmailAndPassword(str_email,str_password)
-                            .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if(task.isSuccessful()){
-                                        Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(MainActivity.this, Home.class));
-                                    } else {
-                                        Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                }
-            }
-        });
 
 
         //auto sign in
-        remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /**remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
@@ -133,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });**/
 
         //showing togglepassword when typing
         password.addTextChangedListener(new TextWatcher() {

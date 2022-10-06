@@ -1,9 +1,11 @@
 package com.example.barter10;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,26 +13,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import android.widget.ImageButton;
-import android.widget.Toast;
-
-import com.google.firebase.auth.FirebaseAuth;
-
-public class ProfileFragment extends Fragment {
-
-    FirebaseAuth firebaseAuth;
-    
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileFragment extends Fragment {
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
 
-
-=======
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -43,7 +32,7 @@ public class ProfileFragment extends Fragment {
         ImageButton settings = view.findViewById(R.id.btn_settings);
 
 
-        TextView logout = view.findViewById(R.id.btn_logout);
+        //TextView logout = view.findViewById(R.id.btn_logout);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -53,6 +42,17 @@ public class ProfileFragment extends Fragment {
                 FirebaseAuth.getInstance().signOut();
                 Toast.makeText(getActivity(), "Log out", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), MainActivity.class));
+            }
+        });
+
+
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
             }
         });
 

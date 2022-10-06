@@ -32,14 +32,13 @@ public class signUp extends AppCompatActivity {
 
     int passvis;
     EditText username, email, password;
-    ImageButton visOff,btnGoogle,btnFacebook;
+    ImageButton visOff, btnGoogle, btnFacebook;
     Button signUp;
     TextView signNow;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     FirebaseAuth firebaseAuth;
-
 
 
     @Override
@@ -67,14 +66,15 @@ public class signUp extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(password.getText().length() > 0){
+                if (password.getText().length() > 0) {
                     visOff.setVisibility(View.VISIBLE);
                     passvis = 1;
-                }else{
+                } else {
                     passvis = 0;
                     visOff.setVisibility(View.GONE);
                 }
             }
+
             @Override
             public void afterTextChanged(Editable s) {
 
@@ -85,7 +85,7 @@ public class signUp extends AppCompatActivity {
         visOff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (passvis){
+                switch (passvis) {
                     case 0:
                         visOff.setImageResource(R.drawable.ic_baseline_visibility_off_24);
                         password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -144,41 +144,13 @@ public class signUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(signUp.this, MainActivity.class));
-
-        //signup
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String str_username = username.getText().toString().trim();
-                String str_email = email.getText().toString().trim();
-                String str_password = password.getText().toString().trim();
-
-                if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
-                    Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
-                }else if (str_password.length() < 6){
-                    Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
-                }else {
-                    firebaseAuth.createUserWithEmailAndPassword(str_email,str_password)
-                            .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if(task.isSuccessful()){
-                                        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-                                        startActivity(new Intent(signUp.this, MainActivity.class));
-                                    }else {
-                                        Toast.makeText(signUp.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                    Toast.makeText(signUp.this, "Successfully registered", Toast.LENGTH_SHORT).show();
-                }
-
             }
         });
 
+
     }
 
-    private void addUser(){
+    private void addUser() {
         String str_username = username.getText().toString().trim();
         String str_email = email.getText().toString().trim();
         String str_password = password.getText().toString().trim();
@@ -186,9 +158,9 @@ public class signUp extends AppCompatActivity {
 
         if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
             Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
-        }else if (str_password.length() < 6){
+        } else if (str_password.length() < 6) {
             Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             firebaseAuth.createUserWithEmailAndPassword(str_email, str_password)
                     .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -208,4 +180,7 @@ public class signUp extends AppCompatActivity {
         }
 
     }
+
+
+
 }
