@@ -19,6 +19,9 @@
             android:name=".activityUpload"
             android:exported="true" />
         <activity
+            android:name=".activityUpload"
+            android:exported="true" />
+        <activity
             android:name=".activity_signup_new"
             android:exported="true" />
         <activity
