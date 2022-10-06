@@ -35,7 +35,6 @@ public class signUp extends AppCompatActivity {
     ImageButton signup;
 
     FirebaseAuth firebaseAuth;
-
     ProgressDialog progressDialog;
 
     @Override
@@ -128,7 +127,6 @@ public class signUp extends AppCompatActivity {
 
             }
         });
-
 
     }
 
