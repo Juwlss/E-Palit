@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 String str_email = email.getText().toString();
                 String str_password = password.getText().toString();
 
@@ -90,7 +91,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+                String str_email = email.getText().toString();
+                String str_password = password.getText().toString();
 
+                if (TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
+                    Toast.makeText(MainActivity.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                }else{
+                    firebaseAuth.signInWithEmailAndPassword(str_email,str_password)
+                            .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(MainActivity.this, Home.class));
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
+            }
+        });
 
 
         //auto sign in
