@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Barter10">
         <activity
             android:name=".activityUpload"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity_signup_new"
             android:exported="false" />
