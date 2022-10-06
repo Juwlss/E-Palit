@@ -52,20 +52,36 @@ public class MainActivity extends AppCompatActivity {
         CheckBox remember = findViewById(R.id.cbox_remember);
         passtoggle.setVisibility(View.GONE);
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
 
         //sign in
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                String str_email = email.getText().toString();
+                String str_password = password.getText().toString();
 
+                if (TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
+                    Toast.makeText(MainActivity.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                }else{
+                    firebaseAuth.signInWithEmailAndPassword(str_email,str_password)
+                            .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(MainActivity.this, Home.class));
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
+            }
+        });
 
-        //auto signed in loading screen
-        /**SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-        String checkbox = preferences.getString("remember", "");
-        if(checkbox.equals("true")){
-            startActivity(new Intent(MainActivity.this, Home.class));
-        }else if (checkbox.equals("false")){
-            Toast.makeText(MainActivity.this, "Please Sign in", Toast.LENGTH_SHORT).show();
-        }**/
 
         //auto sign in
         remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

@@ -5,11 +5,8 @@
       <map>
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/drawable/button_ui.xml" value="0.132" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_forgotpassword.xml" value="0.25416666666666665" />
-
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_loading.xml" value="0.25025641025641027" />
-
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_signup_new.xml" value="0.25416666666666665" />
-
         <entry key="..\:/Users/andrei/Documents/4th yr/Develop/app/src/main/res/layout/activity_main.xml" value="0.22588832487309646" />
         <entry key="..\:/Users/andrei/Documents/4th yr/Develop/app/src/main/res/layout/activity_signupvincent.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/Git/app/src/main/res/drawable/tab_catselected.xml" value="0.2703125" />
@@ -20,6 +17,8 @@
         <entry key="..\:/Users/andrei/Documents/4th yr/Git/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/Git/app/src/main/res/layout/activity_otp.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/Git/app/src/main/res/layout/activity_signupvincent.xml" value="0.22588832487309646" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/rebuild/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/rebuild/app/src/main/res/layout/fragment_profile.xml" value="0.1287037037037037" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/et_corner.xml" value="1.4142857142857144" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2703125" />
         <entry key="..\:/Users/andrei/Documents/Capstone/Developing/Barter10/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.2703125" />
