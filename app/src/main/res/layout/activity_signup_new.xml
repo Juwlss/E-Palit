@@ -25,7 +25,7 @@
         android:text="Sign Up!"
         android:textColor="#094067"
         android:textFontWeight="700"
-        android:textSize="@dimen/_25sdp"
+        android:textSize="@dimen/_25ssp"
         android:textStyle="bold" />
 
     <EditText
@@ -95,11 +95,12 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginRight="@dimen/_50sdp"
         android:background="@drawable/button_ui"
-        app:backgroundTint="@null"
         android:fontFamily="@font/inter"
         android:text="Sign Up"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        app:backgroundTint="@null" />
 
     <ImageView
         android:id="@+id/bottomLine"
