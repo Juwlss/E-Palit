@@ -16,7 +16,11 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.barter10.Model.DAOUser;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,11 +48,7 @@ public class signUp extends AppCompatActivity {
         password = findViewById(R.id.supass);
         signup = findViewById(R.id.btn_su);
 
-
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://e-palit-default-rtdb.asia-southeast1.firebasedatabase.app/");
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
-        DAOUser daoUser = new DAOUser();
 
         ImageButton passtoggle = findViewById(R.id.visoff2);
 
@@ -99,7 +99,35 @@ public class signUp extends AppCompatActivity {
         });
 
         //signup
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str_username = username.getText().toString().trim();
+                String str_email = email.getText().toString().trim();
+                String str_password = password.getText().toString().trim();
 
+                if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
+                    Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                }else if (str_password.length() < 6){
+                    Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
+                }else {
+                    firebaseAuth.createUserWithEmailAndPassword(str_email,str_password)
+                            .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                                        startActivity(new Intent(signUp.this, MainActivity.class));
+                                    }else {
+                                        Toast.makeText(signUp.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                    Toast.makeText(signUp.this, "Successfully registered", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
 
     }
