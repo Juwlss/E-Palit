@@ -101,40 +101,16 @@
                     android:src="@drawable/ic_baseline_visibility_off_24" />
 
 
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/cbox_remember"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/lgin_pass"
-                    android:layout_alignLeft="@id/lgin_pass"
-                    android:layout_centerInParent="true"
-                    android:button="@drawable/img_checkbox"
-                    android:fontFamily="@font/inter"
-                    android:text=" Remember me"
-                    android:textColor="#EF4565"
-                    android:textFontWeight="500" />
 
 
-                <TextView
-                    android:id="@+id/forgot_pass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/lgin_pass"
-                    android:layout_alignRight="@id/lgin_pass"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@id/cbox_remember"
-                    android:fontFamily="@font/inter"
-                    android:onClick="forgotPass"
-                    android:text="Forgot Password?"
-                    android:textColor="#EF4565"
-                    android:textFontWeight="500" />
+
+
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/lg_signin"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/cbox_remember"
+                    android:layout_below="@id/lgin_pass"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/login_button"
@@ -170,6 +146,20 @@
                     android:text="Create now"
                     android:textColor="#EF4565"
                     android:textFontWeight="700" />
+
+                <TextView
+                    android:id="@+id/forgot_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lg_noacc"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/inter"
+                    android:onClick="forgotPass"
+                    android:text="Forgot Password?"
+                    android:textColor="#EF4565"
+                    android:textFontWeight="500" />
 
 
             </RelativeLayout>

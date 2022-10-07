@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         ImageButton passtoggle = findViewById(R.id.vis_off);
         password = findViewById(R.id.lgin_pass);
         email = findViewById(R.id.lgin_email);
-        CheckBox remember = findViewById(R.id.cbox_remember);
         passtoggle.setVisibility(View.GONE);
 
         firebaseAuth = FirebaseAuth.getInstance();

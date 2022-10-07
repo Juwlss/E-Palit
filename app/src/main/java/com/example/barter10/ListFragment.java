@@ -29,18 +29,19 @@ public class ListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list,container, false);
 
         //declaring viewpager and tabs
-        lviewPager2 = view.findViewById(R.id.list_vpager);
+        //lviewPager2 = view.findViewById(R.id.list_vpager);
+
         lTabLayout = view.findViewById(R.id.listTab);
 
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
         lpagerAdapter = new ListpageAdapter(fm, getLifecycle());
-        lviewPager2.setAdapter(lpagerAdapter);
+        //lviewPager2.setAdapter(lpagerAdapter);
 
         lTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                lviewPager2.setCurrentItem(tab.getPosition());
+                //lviewPager2.setCurrentItem(tab.getPosition());
             }
 
             @Override

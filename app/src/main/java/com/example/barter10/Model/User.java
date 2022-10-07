@@ -1,4 +1,4 @@
-package com.example.barter10;
+package com.example.barter10.Model;
 
 public class User {
     String username, useremail, usepassword;

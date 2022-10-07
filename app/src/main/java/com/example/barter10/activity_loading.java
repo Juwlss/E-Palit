@@ -18,37 +18,6 @@ public class activity_loading extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-
-        if (firebaseAuth.getCurrentUser() != null){
-            startActivity(new Intent(activity_loading.this, Home.class));
-            finish();
-
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-        if(currentUser !=null){
-            startActivity(new Intent(activity_loading.this, Home.class));
-
-        }else{
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-
-                    //auto signed in loading screen
-                    startActivity(new Intent(activity_loading.this,MainActivity.class));
-                    finish();
-
-                }
-            }, 2000);
-        }
-
-        }
-
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +25,22 @@ public class activity_loading extends AppCompatActivity {
         setContentView(R.layout.activity_loading);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        if(currentUser !=null){
+            startActivity(new Intent(activity_loading.this, Home.class));
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        }else {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
 
+                    //auto signed in loading screen
+                    startActivity(new Intent(activity_loading.this, MainActivity.class));
+                    finish();
 
-
+                }
+            }, 2000);
+        }
     }
 }

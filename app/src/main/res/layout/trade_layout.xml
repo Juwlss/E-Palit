@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp">
+
+
+            //Self User or being offered
+            <RelativeLayout
+                android:layout_height="@dimen/_160sdp"
+                android:layout_width="match_parent"
+                android:layout_gravity="right">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/offerer_user"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/vincentuser" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toLeftOf="@id/offerer_user"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:text="Vincent De Lara"
+                    android:textColor="#333333"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ImageView
+                    android:id="@+id/image_trade"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_below="@id/offerer_user"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/shoe" />
+
+                //Trade symbol
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tradesymbol"
+                    android:layout_centerInParent="true"/>
+
+
+                //offering
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/offeree_user"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/daleuser"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Randale Porciuncula"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="#333333"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toRightOf="@id/offeree_user"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/watch"
+                    android:layout_below="@id/offeree_user"/>
+
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+    </GridLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

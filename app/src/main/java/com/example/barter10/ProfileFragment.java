@@ -1,10 +1,10 @@
 package com.example.barter10;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -51,8 +51,10 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
-
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                Fragment profileSettingFrag = new profileSettings();
+                fragmentTransaction.replace(R.id.frame_layout, profileSettingFrag);
+                fragmentTransaction.commit();
             }
         });
 
