@@ -30,7 +30,7 @@
             android:id="@+id/secondTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Finished" />
+            android:text="Setteled" />
 
 
     </com.google.android.material.tabs.TabLayout>

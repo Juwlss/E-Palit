@@ -44,7 +44,7 @@
             android:layout_centerHorizontal="true"
             android:text="Hello,"
             android:textFontWeight="600"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_14ssp" />
 
         <TextView
             android:id="@+id/profileUsername"
@@ -55,7 +55,7 @@
             android:fontFamily="@font/inter"
             android:text="Username"
             android:textColor="#333333"
-            android:textSize="@dimen/_24sdp"
+            android:textSize="@dimen/_24ssp"
             android:textStyle="bold" />
 
         <TextView
@@ -86,7 +86,7 @@
             android:textAllCaps="false"
             android:textColor="#333333"
             android:textFontWeight="600"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_14ssp"
             app:backgroundTint="@null" />
 
         <ImageView
@@ -134,7 +134,7 @@
             android:textAllCaps="false"
             android:textColor="#333333"
             android:textFontWeight="600"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_14ssp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
             android:text="Notification"
             android:textColor="#333333"
             android:textFontWeight="700"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.SwitchCompat
@@ -188,7 +188,7 @@
             android:text="Sign Out"
             android:textColor="#FF7272"
             android:textFontWeight="800"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_14ssp"
             android:textStyle="bold" />
 
     </RelativeLayout>
