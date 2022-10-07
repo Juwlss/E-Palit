@@ -5,27 +5,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.util.Pair;
-import androidx.fragment.app.FragmentManager;
-
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.storage.StorageManager;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -35,18 +26,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-
-import java.lang.ref.Reference;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 
 public class activityUpload extends AppCompatActivity {
 
-    ImageView upImg1,upImg2,upImg3,upImg4,btnBack;
+    ImageView upImg1,upImg2,upImg3,upImg4;
     Uri imageUri1,imageUri2,imageUri3,imageUri4,uploadImgdef;
     Button btnUpload;
     Button calendar;
@@ -66,15 +52,6 @@ public class activityUpload extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
 
-        //closing page
-        btnBack = findViewById(R.id.back);
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(activityUpload.this, "back", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
         //Uploading Image
         upImg1 = findViewById(R.id.upload_image1);
@@ -334,4 +311,5 @@ public class activityUpload extends AppCompatActivity {
             Imagelist.add(imageUri4);
         }
     }
+
 }

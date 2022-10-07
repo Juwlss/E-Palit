@@ -20,6 +20,7 @@ import android.widget.ListView;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.navigation.NavigationBarMenu;
 import com.google.android.material.navigation.NavigationBarView;
@@ -37,12 +38,15 @@ public class Home extends AppCompatActivity {
     String searched [] = {"Bike", "Hospital Bed", "Hello pare", "Carvings", "Nike Shoes"};
     ArrayAdapter<String> arrayAdapter;
     AppBarLayout appBarLayout;
+    FloatingActionButton upload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bottomNavigation = findViewById(R.id.bot_nav);
+
+        upload = findViewById(R.id.upload_item);
 
         appBarLayout = findViewById(R.id.appbar);
 
@@ -113,6 +117,13 @@ public class Home extends AppCompatActivity {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
 
+            }
+        });
+
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, activityUpload.class));
             }
         });
 
