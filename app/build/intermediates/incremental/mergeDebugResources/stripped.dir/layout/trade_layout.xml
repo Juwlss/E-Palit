@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+
+        //offerer
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/offerer_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/offerer_user"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_7sdp"
+                    android:src="@drawable/vincentuser" />
+
+                <TextView
+                    android:id="@+id/offerer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toLeftOf="@id/offerer_user"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:text="Vincent De Lara"
+                    android:textColor="#333333"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8ssp" />
+
+                <ImageView
+                    android:id="@+id/image_offerer"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_below="@id/offerer_user"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/shoe" />
+
+
+
+                //Trade symbol
+
+                <ImageView
+                    android:id="@+id/symbol_trade"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tradesymbol"
+                    android:layout_centerInParent="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_offerer"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/_10sdp">
+                    <Button
+                        android:id="@+id/trade_confirm"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/image_offerer"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/btn_upload_ui"
+                        android:fontFamily="@font/inter"
+                        android:text="confirm"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_6ssp"
+                        app:backgroundTint="#3DA9FC"/>
+
+                    <Button
+                        android:id="@+id/trade_cancel"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/image_offerer"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_toRightOf="@id/trade_confirm"
+                        android:background="@drawable/btn_upload_ui"
+                        android:fontFamily="@font/inter"
+                        android:text="Cancel"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_6ssp"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/offeree_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                //offering
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/offeree_user"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:src="@drawable/daleuser" />
+
+
+                <TextView
+                    android:id="@+id/offeree_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/offeree_user"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:text="Randale Porciuncula"
+                    android:textColor="#333333"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8ssp" />
+
+
+                <ImageView
+                    android:id="@+id/image_offeree"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_below="@id/offeree_user"
+                    android:src="@drawable/watch" />
+
+                <Button
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_below="@id/image_offeree"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/btn_upload_ui"
+                    android:text="PENDING"
+                    android:textSize="@dimen/_7ssp"
+                    app:backgroundTint="#5F6C7B" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</ScrollView>

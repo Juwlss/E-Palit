@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">139010349738-ralg4g11o9ls6k1o405erk8c6ump2rsa.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://e-palit-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">139010349738</string>
+    <string name="google_api_key" translatable="false">AIzaSyA-2oq5h6PHNZJ42CLgKzAWfx3N91m2YW8</string>
+    <string name="google_app_id" translatable="false">1:139010349738:android:90440a96423f7a33038ed3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA-2oq5h6PHNZJ42CLgKzAWfx3N91m2YW8</string>
+    <string name="google_storage_bucket" translatable="false">e-palit.appspot.com</string>
+    <string name="project_id" translatable="false">e-palit</string>
+</resources>

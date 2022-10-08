@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:menu="@menu/menu"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome, Pare!"
+                    android:fontFamily="@font/inter"
+                    android:textColor="#094067"
+                    android:textFontWeight="900"
+                    android:textSize="23sp"
+                    android:textStyle="bold"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/upload_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center|right"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#3DA9FC"
+            app:fabSize="auto"
+            app:tint="@android:color/white"
+            app:srcCompat="@drawable/upload"/>
+
+
+
+
+    </FrameLayout>
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bot_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mbn_circleColor="#FFFFFE"
+        app:mbn_selectedIconColor="#3DA9FC"
+        app:mbn_countTextColor="#FFFFFE"
+        app:mbn_countBackgroundColor="#ff6f00"
+        app:mbn_defaultIconColor="#FFFFFE"
+        app:mbn_backgroundBottomColor="#FFFFFE"
+        android:layout_gravity="bottom">
+
+    </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:textSize="70sp"
+        android:gravity="center"
+        android:layout_centerVertical="true"/> -->
+
+
+
+
+
+</LinearLayout>
