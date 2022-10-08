@@ -157,6 +157,10 @@ public class signUp extends AppCompatActivity {
             Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
         } else if (str_password.length() < 6) {
             Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
+        } else if(!str_email.contains("epalit.com")){
+            Toast.makeText(signUp.this, "email needs @epalit.com", Toast.LENGTH_SHORT).show();
+        }else if (str_email.length() < 4) {
+            Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
         } else {
             firebaseAuth.createUserWithEmailAndPassword(str_email, str_password)
                     .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
