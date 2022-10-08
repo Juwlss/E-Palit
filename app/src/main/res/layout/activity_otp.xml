@@ -6,93 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".otp">
 
-    <ImageView
-        android:id="@+id/arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008"
-        app:srcCompat="@drawable/arrow" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="196dp"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_110sdp"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/four_digits_logo" />
 
+
     <ImageView
         android:id="@+id/enter1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
         app:srcCompat="@drawable/enter" />
 
     <ImageView
-        android:id="@+id/enter2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/receive" />
-
-    <ImageView
         android:id="@+id/enter3"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="344dp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter1"
         app:srcCompat="@drawable/code" />
 
     <com.chaos.view.PinView
         android:id="@+id/pin1"
         style="@style/PinWidget.PinView"
-        android:layout_width="314dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="376dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:elevation="10dp"
         android:hint="e.g 5"
         android:inputType="number"
         android:itemBackground="@drawable/pins"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:itemHeight="56dp"
-        app:itemRadius="10dp"
+        app:itemHeight="@dimen/_39sdp"
+        app:itemWidth="@dimen/_39sdp"
+        app:itemRadius="@dimen/_10sdp"
         app:itemSpacing="30dp"
-        app:itemWidth="56dp"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter3"
         app:lineColor="@color/white"
         app:viewType="rectangle">
 
     </com.chaos.view.PinView>
 
-    <ImageButton
+    <Button
         android:id="@+id/button"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="452dp"
-        android:background="@drawable/button"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn_border"
+        android:fontFamily="@font/inter"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="submitOTP"/>
+        app:layout_constraintTop_toBottomOf="@+id/pin1" />
 
     <ImageView
         android:id="@+id/design"
@@ -108,12 +102,12 @@
 
     <ImageView
         android:id="@+id/resend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="516dp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         app:srcCompat="@drawable/resend" />
 
 
