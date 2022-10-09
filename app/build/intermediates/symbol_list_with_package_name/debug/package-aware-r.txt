@@ -3799,6 +3799,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id header
 id header_title
 id hideable
 id home
@@ -4006,6 +4007,8 @@ id position
 id post
 id postLayout
 id prof_rv
+id profileLayout
+id profileMenu
 id profileUsername
 id profile_info
 id profilename

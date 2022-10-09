@@ -12,10 +12,11 @@
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_loading.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_signup_new.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_upload.xml" value="0.264" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_upload.xml" value="0.2" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/fragment_gadget.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/fragment_profile.xml" value="0.4463667820069204" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/fragment_profile_settings.xml" value="0.176" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/layout/rippleeffect.xml" value="0.1" />
         <entry key="..\:/Users/andrei/Documents/4th yr/16/app/src/main/res/drawable/btn_upload_ui.xml" value="0.2703125" />
         <entry key="..\:/Users/andrei/Documents/4th yr/16/app/src/main/res/drawable/button_ui.xml" value="0.2703125" />
@@ -119,7 +120,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.264" />
+        <option name="scale" value="0.2" />
       </ProjectState>
     </option>
   </component>

@@ -3798,6 +3798,7 @@ int id group_divider 0x7f0a010b
 int id grouping 0x7f0a010c
 int id groups 0x7f0a010d
 int id guideline 0x7f0a010e
+int id header 0x7f0a02b5
 int id header_title 0x7f0a010f
 int id hideable 0x7f0a0110
 int id home 0x7f0a0111
@@ -4005,6 +4006,8 @@ int id position 0x7f0a01d0
 int id post 0x7f0a01d1
 int id postLayout 0x7f0a01d2
 int id prof_rv 0x7f0a01d3
+int id profileLayout 0x7f0a02b6
+int id profileMenu 0x7f0a02b7
 int id profileUsername 0x7f0a01d4
 int id profile_info 0x7f0a01d5
 int id profilename 0x7f0a01d6

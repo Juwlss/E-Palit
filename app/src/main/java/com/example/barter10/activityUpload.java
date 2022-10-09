@@ -16,6 +16,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -30,8 +31,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -245,17 +249,25 @@ public class activityUpload extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Uploading Post...");
 
-        //generate unique id in item
-        Random random = new Random();
-        int id = random.nextInt(100000);
-        prodId = Integer.toString(id);
+        // generating key
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("itemdetails");
 
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(prodId);
+        String itemKey = reference.push().getKey();
 
-        if (Imagelist.isEmpty()) {
-            Toast.makeText(activityUpload.this, "Please Upload a Photo", Toast.LENGTH_SHORT).show();
-        } else if (timer == null) {
-            Toast.makeText(activityUpload.this, "Please set a timer", Toast.LENGTH_SHORT).show();
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(itemKey);
+        //getting values in edit text
+        String prod_id =itemKey;
+        String itemName = uploadName.getText().toString();
+        String itemDetails = uploadDetails.getText().toString();
+        String itemCondition = uploadCondition.getText().toString();
+        String itemValue = uploadValue.getText().toString();
+        String itemPreference = uploadPreference.getText().toString();
+        String timeLimit = timer;
+        String itemCategory = category1+category2;
+
+        if (Imagelist.isEmpty() || timer == null || TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails) || TextUtils.isEmpty(itemCondition) || TextUtils.isEmpty(itemValue) || TextUtils.isEmpty(itemPreference) || TextUtils.isEmpty(itemCategory)){
+            Toast.makeText(activityUpload.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
         } else {
             progressDialog.show();
             for (upload_count = 0; upload_count < Imagelist.size(); upload_count++) {
@@ -269,24 +281,10 @@ public class activityUpload extends AppCompatActivity {
                             progressDialog.dismiss();
 
                         //storing details in realtime database firebase
-
-                        rootNode = FirebaseDatabase.getInstance();
-                        reference = rootNode.getReference("itemdetails");
-
-                        //getting values in edit text
-                        String prod_id = prodId;
-                        String itemName = uploadName.getText().toString();
-                        String itemDetails = uploadDetails.getText().toString();
-                        String itemCondition = uploadCondition.getText().toString();
-                        String itemValue = uploadValue.getText().toString();
-                        String itemPreference = uploadPreference.getText().toString();
-                        String timeLimit = timer;
-                        String itemCategory = category1 + " " + category2;
-
                         DetailHelperClass detailClass = new DetailHelperClass(prod_id, itemName, itemDetails, itemCondition, itemValue, itemPreference, timeLimit, itemCategory);
                         reference.child(prod_id).setValue(detailClass);//setting primary key
 
-                        startActivity(new Intent(activityUpload.this, Home.class));
+
                         //restart activity
                         Intent intent = getIntent();
                         finish();
