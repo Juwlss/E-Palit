@@ -4064,6 +4064,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signUpInput
 id sin
 id skipCollapsed
 id skipped

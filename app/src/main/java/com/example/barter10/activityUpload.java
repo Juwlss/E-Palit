@@ -284,11 +284,9 @@ public class activityUpload extends AppCompatActivity {
                         DetailHelperClass detailClass = new DetailHelperClass(prod_id, itemName, itemDetails, itemCondition, itemValue, itemPreference, timeLimit, itemCategory);
                         reference.child(prod_id).setValue(detailClass);//setting primary key
 
+                        Intent i = new Intent(activityUpload.this, Home.class);
+                        startActivity(i);
 
-                        //restart activity
-                        Intent intent = getIntent();
-                        finish();
-                        startActivity(intent);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

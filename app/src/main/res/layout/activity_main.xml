@@ -15,42 +15,44 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/logo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:paddingTop="15dp"
-                android:src="@drawable/logo" />
-
-            <ImageView
-                android:id="@+id/appname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/logo"
-                android:layout_centerHorizontal="true"
-                android:paddingTop="15dp"
-                android:src="@drawable/appname" />
-
-            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:src="@drawable/design"/>
 
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="214dp"
+                android:layout_height="261dp"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/loading_logo" />
+
             <RelativeLayout
+                android:id="@+id/signUpInput"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/appname"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="-300dp">
+
+
+                <ImageView
+                    android:id="@+id/appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/appname" />
 
                 <TextView
                     android:id="@+id/welcome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/appname"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/inter"
@@ -101,11 +103,6 @@
                     android:src="@drawable/ic_baseline_visibility_off_24" />
 
 
-
-
-
-
-
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/lg_signin"
                     android:layout_width="200dp"
@@ -152,9 +149,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lg_noacc"
+                    android:layout_centerInParent="true"
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="15dp"
-                    android:layout_centerInParent="true"
                     android:fontFamily="@font/inter"
                     android:onClick="forgotPass"
                     android:text="Forgot Password?"

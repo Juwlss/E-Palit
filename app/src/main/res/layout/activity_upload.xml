@@ -196,7 +196,7 @@
                         android:inputType="textPersonName"
                         android:paddingBottom="20dp"
                         android:singleLine="true"
-                        android:textSize="@dimen/_15sdp" />
+                        android:textSize="15dp" />
 
                     <TextView
                         android:id="@+id/lblValue"

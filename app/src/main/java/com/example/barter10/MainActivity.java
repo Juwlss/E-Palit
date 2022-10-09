@@ -3,6 +3,8 @@ package com.example.barter10;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,11 +15,14 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,11 +44,45 @@ public class MainActivity extends AppCompatActivity {
     Button signin;
     FirebaseAuth firebaseAuth;
     TextView create;
+    private ImageView mImage;
+    private RelativeLayout layout,layout1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //animatino
+        mImage = findViewById(R.id.logo);
+        mImage.setAnimation(AnimationUtils.loadAnimation(this, R.anim.resize));
+
+        layout = findViewById(R.id.signUpInput);
+
+        //logo shrink
+        ObjectAnimator scaleDownX = ObjectAnimator.ofFloat(mImage, "scaleX", 0.4f);
+        ObjectAnimator scaleDownY = ObjectAnimator.ofFloat(mImage, "scaleY", 0.4f);
+        scaleDownX.setDuration(700);
+        scaleDownY.setDuration(700);
+
+        AnimatorSet scaleDown = new AnimatorSet();
+        scaleDown.play(scaleDownX).with(scaleDownY);
+        scaleDown.start();
+
+        //move up
+        ObjectAnimator moveUpY = ObjectAnimator.ofFloat(mImage, "translationY", -800);
+        moveUpY.setDuration(700);
+
+        AnimatorSet moveUp = new AnimatorSet();
+        moveUp.play(moveUpY);
+        moveUp.start();
+
+        //move up
+        ObjectAnimator moveUpY1 = ObjectAnimator.ofFloat(layout, "translationY", -1480);
+        moveUpY1.setDuration(700);
+
+        AnimatorSet moveUp1 = new AnimatorSet();
+        moveUp1.play(moveUpY1);
+        moveUp1.start();
 
 
         create = findViewById(R.id.lg_create);
