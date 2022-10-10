@@ -24,19 +24,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/trade_rv"
-            android:layout_width="match_parent"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/list_vpager"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/trade_tab"
-            tools:listitem="@layout/trade_layout" />
-
-
+            android:layout_below="@id/trade_tab"/>
 
 
 
 
     </RelativeLayout>
+
 
 
 

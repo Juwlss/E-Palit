@@ -34,6 +34,7 @@ public class MessageFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_message, container, false);
 
+        RecyclerView recyclerView = view.findViewById(R.id.trade_rv);
 
 
         return view;

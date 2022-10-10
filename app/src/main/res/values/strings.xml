@@ -14,12 +14,23 @@
     </string-array>
 
     <string-array name="conversation">
-
         <item>hehe</item>
         <item>hello pare</item>
         <item>lowlow</item>
         <item>ay niloko</item>
+    </string-array>
 
+
+    <string-array name="offeree">
+        <item>Delarsprt</item>
+        <item>Quirinoy</item>
+        <item>Eigan</item>
+    </string-array>
+
+    <string-array name="offerer">
+        <item>Regacho</item>
+        <item>Juls</item>
+        <item>Keannu</item>
     </string-array>
 
 

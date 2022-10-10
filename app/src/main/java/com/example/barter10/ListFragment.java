@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
@@ -11,8 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.barter10.Adapter.ListpageAdapter;
+import com.example.barter10.Adapter.trade_recyclerviewAdapter;
+import com.example.barter10.Model.Pending;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
 
 public class ListFragment extends Fragment {
 
@@ -28,20 +33,22 @@ public class ListFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_list,container, false);
 
-        //declaring viewpager and tabs
-        //lviewPager2 = view.findViewById(R.id.list_vpager);
 
+
+
+        //declaring viewpager and tabs
+        lviewPager2 = view.findViewById(R.id.list_vpager);
         lTabLayout = view.findViewById(R.id.listTab);
 
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
         lpagerAdapter = new ListpageAdapter(fm, getLifecycle());
-        //lviewPager2.setAdapter(lpagerAdapter);
+        lviewPager2.setAdapter(lpagerAdapter);
 
         lTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                //lviewPager2.setCurrentItem(tab.getPosition());
+                lviewPager2.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -57,11 +64,8 @@ public class ListFragment extends Fragment {
 
 
 
-
-
-
-
-
         return view;
     }
+
+
 }

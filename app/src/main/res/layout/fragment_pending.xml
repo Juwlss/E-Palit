@@ -5,12 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".PendingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trade_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="80sp"
-        android:gravity="center"
-        android:text="Pending" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trade_tab"
+        tools:listitem="@layout/trade_layout" />
 
 </FrameLayout>
