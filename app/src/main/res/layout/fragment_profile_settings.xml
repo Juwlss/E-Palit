@@ -25,7 +25,6 @@
             android:textFontWeight="700"
             android:textSize="@dimen/_20ssp"
             android:textStyle="bold" />
-
         <RelativeLayout
             android:id="@+id/profileLayout"
             android:layout_width="wrap_content"
@@ -68,6 +67,28 @@
 
         <RelativeLayout
             android:id="@+id/profileMenu"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/lblSettings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/userprofile" />
+
+        <TextView
+            android:id="@+id/lblHello"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgProfile"
+            android:layout_centerHorizontal="true"
+            android:text="Hello,"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/profileUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profileLayout">
