@@ -16,7 +16,6 @@ public class forgotPass extends AppCompatActivity {
         setContentView(R.layout.activity_forgotpassword);
 
         Button btnforgot = findViewById(R.id.btn_forgotpassword);
-        ImageView btnback = findViewById(R.id.icon_close);
 
         btnforgot.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,12 +25,7 @@ public class forgotPass extends AppCompatActivity {
             }
         });
 
-        btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(forgotPass.this, MainActivity.class));
-                Toast.makeText(forgotPass.this, "Back", Toast.LENGTH_SHORT).show();
-            }
-        });
+
+
     }
 }
