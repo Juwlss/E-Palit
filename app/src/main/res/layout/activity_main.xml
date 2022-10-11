@@ -11,47 +11,27 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/signin_rel1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/logo"
                 android:layout_width="@dimen/_52sdp"
                 android:layout_height="@dimen/_61sdp"
                 android:layout_centerHorizontal="true"
-                android:paddingTop="@dimen/_15sdp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:src="@drawable/logo" />
 
             <ImageView
                 android:id="@+id/appname"
                 android:layout_width="@dimen/_189sdp"
                 android:layout_height="@dimen/_29sdp"
-                android:layout_below="@+id/logo"
                 android:layout_centerHorizontal="true"
-                android:paddingTop="@dimen/_5sdp"
+                android:layout_below="@id/logo"
                 android:src="@drawable/appname" />
 
-            <ImageView
-                android:id="@+id/design"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_80sdp"
-                android:layout_alignParentStart="true"
-
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="-25dp"
-                android:layout_marginTop="@dimen/_80sdp"
-                android:layout_marginRight="@dimen/_1sdp"
-                android:layout_marginBottom="-6dp"
-                app:srcCompat="@drawable/design" />
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="214dp"
-                android:layout_height="261dp"
-                android:layout_centerInParent="true"
-                app:srcCompat="@drawable/loading_logo" />
 
             <RelativeLayout
                 android:id="@+id/signUpInput"
@@ -64,25 +44,11 @@
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="-300dp">
 
-                <ImageView
-                    android:id="@+id/appname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:paddingTop="15dp"
-                    android:src="@drawable/appname" />
-
-                android:layout_marginStart="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_30sdp">
 
                 <TextView
                     android:id="@+id/welcome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/appname"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/inter"
@@ -185,10 +151,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lg_noacc"
                     android:layout_centerInParent="true"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="@dimen/_50sdp"
-                    android:layout_marginTop="@dimen/_15sdp"
                     android:fontFamily="@font/inter"
                     android:onClick="forgotPass"
                     android:text="Forgot Password?"
@@ -197,7 +159,11 @@
                     android:textSize="@dimen/_8ssp" />
 
 
+
+
             </RelativeLayout>
+
+
 
 
         </RelativeLayout>

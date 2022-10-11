@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class signUp extends AppCompatActivity {
 
     int passvis;
-    EditText username, email, password;
+    EditText username, email, password,phoNo;
     ImageButton visOff, btnGoogle, btnFacebook;
     Button signUp;
     TextView signNow;
@@ -51,7 +51,7 @@ public class signUp extends AppCompatActivity {
         username = findViewById(R.id.txtName);
         email = findViewById(R.id.txtEmail);
         password = findViewById(R.id.txtPassword);
-
+        phoNo = findViewById(R.id.txtPhone);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
