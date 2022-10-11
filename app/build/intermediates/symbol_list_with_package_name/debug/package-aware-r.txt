@@ -3480,6 +3480,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable nprofile
+drawable pangbaba
 drawable paulouser
 drawable pins
 drawable post_shape
@@ -3626,13 +3627,13 @@ id appBarLayout
 id appbar
 id appname
 id arc
-id arrow
 id asConfigured
 id async
 id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id bar
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3651,11 +3652,13 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnBack
 id btnCalendar
 id btnFacebook
 id btnGoogle
 id btnMiscSupport
 id btnMyInfo
+id btnSearch
 id btnSignup
 id btnUpload
 id btn_follow
@@ -3755,7 +3758,6 @@ id end
 id endToStart
 id end_padder
 id enter1
-id enter2
 id enter3
 id enterAlways
 id enterAlwaysCollapsed
@@ -3808,7 +3810,6 @@ id home_vpager
 id honorRequest
 id horizontal_only
 id icon
-id icon_close
 id icon_forgotpassword
 id icon_group
 id icon_only
@@ -3816,10 +3817,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id imageView7
 id imageView8
-id imageView9
 id image_message
 id image_offeree
 id image_offerer
@@ -4041,7 +4040,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id searchIcon
 id search_badge
 id search_bar
 id search_button
@@ -4178,7 +4176,9 @@ id txtItemName
 id txtLocation
 id txtName
 id txtPassword
+id txtPhone
 id txtPreference
+id txtSign
 id ucrop
 id ucrop_frame
 id ucrop_photobox
@@ -4355,6 +4355,7 @@ layout fragment_message
 layout fragment_pending
 layout fragment_profile
 layout fragment_profile_settings
+layout fragment_search
 layout fragment_sports
 layout fragment_toy
 layout listing_layout

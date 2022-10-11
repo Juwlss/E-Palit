@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -33,6 +35,7 @@ public class Home extends AppCompatActivity {
 
     MeowBottomNavigation bottomNavigation;
     int goBack;
+    ImageView btnSearch;
 
     ListView listView;
     String searched [] = {"Bike", "Hospital Bed", "Hello pare", "Carvings", "Nike Shoes"};
@@ -47,6 +50,7 @@ public class Home extends AppCompatActivity {
         bottomNavigation = findViewById(R.id.bot_nav);
 
         upload = findViewById(R.id.upload_item);
+        btnSearch = findViewById(R.id.btnSearch);
 
         appBarLayout = findViewById(R.id.appbar);
 
@@ -127,14 +131,23 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new SearchFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.home,fragment).commit();
+            }
+        });
+
     }
 
     /**private void replaceFragment(MessageFragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
-        fragmentTransaction.commit();
-    }**/
+     FragmentManager fragmentManager = getSupportFragmentManager();
+     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+     fragmentTransaction.replace(R.id.frame_layout,fragment);
+     fragmentTransaction.commit();
+     }**/
 
     public void appbarVisibility(int goBack){
         if (goBack != 1){
@@ -167,25 +180,25 @@ public class Home extends AppCompatActivity {
 
     /**@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+    getMenuInflater().inflate(R.menu.menu, menu);
 
 
-        MenuItem menuItem = menu.findItem(R.id.searchIcon);
-        SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint("Search");
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
+    MenuItem menuItem = menu.findItem(R.id.searchIcon);
+    SearchView searchView = (SearchView) menuItem.getActionView();
+    searchView.setQueryHint("Search");
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+    return false;
+    }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
+    @Override
+    public boolean onQueryTextChange(String newText) {
+    return false;
+    }
+    });
 
-        return super.onCreateOptionsMenu(menu);
+    return super.onCreateOptionsMenu(menu);
     }**/
 
 
