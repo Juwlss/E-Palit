@@ -1,3 +1,4 @@
+
 package com.example.barter10;
 
 
@@ -272,7 +273,7 @@ public class activityUpload extends AppCompatActivity {
             progressDialog.show();
             for (upload_count = 0; upload_count < Imagelist.size(); upload_count++) {
                 Uri IndividualImage = Imagelist.get(upload_count);
-                StorageReference ImageName = storageReference.child(IndividualImage.getLastPathSegment());
+                StorageReference ImageName = storageReference.child(itemKey+".jpg");
 
                 ImageName.putFile(IndividualImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
