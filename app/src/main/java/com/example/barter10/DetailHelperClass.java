@@ -1,3 +1,4 @@
+
 package com.example.barter10;
 
 public class DetailHelperClass {
