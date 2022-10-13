@@ -15,8 +15,12 @@ com/example/barter10/FashionFragment.java
 com/example/barter10/ProfileFragment.java
  com.example.barter10.ProfileFragment
  com.example.barter10.ProfileFragment$1
-com/example/barter10/SportsFragment.java
- com.example.barter10.SportsFragment
+com/example/barter10/Home.java
+ com.example.barter10.Home
+ com.example.barter10.Home$1
+ com.example.barter10.Home$2
+ com.example.barter10.Home$3
+ com.example.barter10.Home$4
 com/example/barter10/FinishedFragment.java
  com.example.barter10.FinishedFragment
 com/example/barter10/activity_loading.java
@@ -31,8 +35,8 @@ com/example/barter10/Adapter/trade_recyclerviewAdapter.java
  com.example.barter10.Adapter.trade_recyclerviewAdapter$MyViewHolder
 com/example/barter10/Model/User.java
  com.example.barter10.Model.User
-com/example/barter10/DataBindingTriggerClass.java
- com.example.barter10.DataBindingTriggerClass
+com/example/barter10/DetailHelperClass.java
+ com.example.barter10.DetailHelperClass
 com/example/barter10/Adapter/MessageListAdapter.java
  com.example.barter10.Adapter.MessageListAdapter
  com.example.barter10.Adapter.MessageListAdapter$MyViewHolder
@@ -50,9 +54,19 @@ com/example/barter10/ListFragment.java
  com.example.barter10.ListFragment$1
 com/example/barter10/HomeFragment.java
  com.example.barter10.HomeFragment
- com.example.barter10.HomeFragment$1
-com/example/barter10/Adapter/ListpageAdapter.java
- com.example.barter10.Adapter.ListpageAdapter
+com/example/barter10/activityUpload.java
+ com.example.barter10.activityUpload
+ com.example.barter10.activityUpload$1
+ com.example.barter10.activityUpload$10
+ com.example.barter10.activityUpload$2
+ com.example.barter10.activityUpload$3
+ com.example.barter10.activityUpload$4
+ com.example.barter10.activityUpload$5
+ com.example.barter10.activityUpload$6
+ com.example.barter10.activityUpload$6$1
+ com.example.barter10.activityUpload$7
+ com.example.barter10.activityUpload$8
+ com.example.barter10.activityUpload$9
 com/example/barter10/GadgetFragment.java
  com.example.barter10.GadgetFragment
 com/example/barter10/otp.java
@@ -75,24 +89,9 @@ com/example/barter10/newPass.java
  com.example.barter10.newPass$2
  com.example.barter10.newPass$3
  com.example.barter10.newPass$4
-com/example/barter10/DetailHelperClass.java
- com.example.barter10.DetailHelperClass
-com/example/barter10/activityUpload.java
- com.example.barter10.activityUpload
- com.example.barter10.activityUpload$1
- com.example.barter10.activityUpload$10
- com.example.barter10.activityUpload$2
- com.example.barter10.activityUpload$3
- com.example.barter10.activityUpload$4
- com.example.barter10.activityUpload$5
- com.example.barter10.activityUpload$6
- com.example.barter10.activityUpload$6$1
- com.example.barter10.activityUpload$7
- com.example.barter10.activityUpload$8
- com.example.barter10.activityUpload$9
-com/example/barter10/Home.java
- com.example.barter10.Home
- com.example.barter10.Home$1
- com.example.barter10.Home$2
- com.example.barter10.Home$3
- com.example.barter10.Home$4
+com/example/barter10/SportsFragment.java
+ com.example.barter10.SportsFragment
+com/example/barter10/Adapter/ListpageAdapter.java
+ com.example.barter10.Adapter.ListpageAdapter
+com/example/barter10/DataBindingTriggerClass.java
+ com.example.barter10.DataBindingTriggerClass

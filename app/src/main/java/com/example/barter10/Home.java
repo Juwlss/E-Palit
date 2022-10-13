@@ -34,9 +34,6 @@ public class Home extends AppCompatActivity {
     MeowBottomNavigation bottomNavigation;
     int goBack;
 
-    ListView listView;
-    String searched [] = {"Bike", "Hospital Bed", "Hello pare", "Carvings", "Nike Shoes"};
-    ArrayAdapter<String> arrayAdapter;
     AppBarLayout appBarLayout;
     FloatingActionButton upload;
 
@@ -57,10 +54,6 @@ public class Home extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.nlist));
         bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.nmessage));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.nprofile));
-
-
-        //search
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, searched);
 
         //choosing in bottom navigation
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {

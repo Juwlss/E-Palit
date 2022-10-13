@@ -5,21 +5,22 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-
 import com.example.barter10.FashionFragment;
 import com.example.barter10.GadgetFragment;
 import com.example.barter10.SportsFragment;
 import com.example.barter10.ToyFragment;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class PagerAdapter extends FragmentStateAdapter {
-    private final List <Fragment> fragmentList = new ArrayList<>();
-    private final List <String> fragmentTitle = new ArrayList<>();
 
-    public PagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy"};
+
+    int noTab;
+    public PagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle, int Tabno) {
         super(fragmentManager, lifecycle);
+
+        this.noTab = Tabno;
     }
 
 
@@ -27,6 +28,8 @@ public class PagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position){
+            case 0:
+                return new GadgetFragment();
             case 1:
                 return new SportsFragment();
             case 2:
@@ -34,12 +37,12 @@ public class PagerAdapter extends FragmentStateAdapter {
             case 3:
                 return new ToyFragment();
             default:
-                return new GadgetFragment();
+                return null;
         }
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return noTab;
     }
 }

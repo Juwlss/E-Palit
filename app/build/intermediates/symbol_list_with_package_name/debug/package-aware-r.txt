@@ -3762,6 +3762,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fashionTab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3778,12 +3779,12 @@ id flip
 id floating
 id forever
 id forgot_pass
-id fourthTab
 id fragment_container_view_tag
 id frame_layout
 id frost
 id fullname
 id fullscreen_header
+id gadgettTab
 id ghost_view
 id ghost_view_holder
 id give_us_a_review_landmine_button
@@ -4074,6 +4075,7 @@ id spacer
 id special_effects_controller_view_tag
 id spline
 id split_action_bar
+id sportTab
 id spread
 id spread_inside
 id spring
@@ -4141,7 +4143,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id thirdTab
 id time
 id title
 id titleDividerNoCustom
@@ -4153,6 +4154,7 @@ id top
 id topPanel
 id topimg
 id touch_outside
+id toyTab
 id trade_cancel
 id trade_confirm
 id trade_rv

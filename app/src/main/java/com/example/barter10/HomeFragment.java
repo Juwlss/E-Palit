@@ -10,18 +10,15 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 
 import com.example.barter10.Adapter.PagerAdapter;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment{
 
-
-    private Toolbar mToolbar;
-
-    ArrayAdapter<String> arrayAdapter;
+    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy"};
 
     //Oncreate
     @Override
@@ -41,26 +38,15 @@ public class HomeFragment extends Fragment {
         tabLayout = view.findViewById(R.id.tab_categories);
 
 
+
         FragmentManager fm = getActivity().getSupportFragmentManager();
-        pagerAdapter = new PagerAdapter(fm, getLifecycle());
+        pagerAdapter = new PagerAdapter(fm, getLifecycle(), tabLayout.getTabCount());
         viewPager2.setAdapter(pagerAdapter);
+        new TabLayoutMediator(tabLayout, viewPager2,
+                (tab, position) -> tab.setText(tabCategory[position])
+        ).attach();
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
-            }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
 
         return view;
     }
