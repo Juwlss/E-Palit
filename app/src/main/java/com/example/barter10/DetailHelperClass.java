@@ -2,6 +2,7 @@
 package com.example.barter10;
 
 public class DetailHelperClass {
+
     String post_id,itemName,itemDetails,itemCondition,itemValue,itemPreference,itemCategory,timeLimit;
 
     public DetailHelperClass() {

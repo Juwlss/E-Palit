@@ -3660,6 +3660,7 @@ id btnSignup
 id btnUpload
 id btn_follow
 id btn_forgotpassword
+id btn_img
 id btn_logout
 id btn_settings
 id button
@@ -4179,6 +4180,7 @@ id txtPassword
 id txtPhone
 id txtPreference
 id txtSign
+id txt_upload
 id ucrop
 id ucrop_frame
 id ucrop_photobox
@@ -4187,11 +4189,8 @@ id uniform
 id unlabeled
 id up
 id upload
-id upload_image1
-id upload_image2
-id upload_image3
-id upload_image4
 id upload_item
+id upload_list
 id useLogo
 id username
 id v_circle
@@ -4456,6 +4455,7 @@ layout ucrop_fragment_photobox
 layout ucrop_layout_rotate_wheel
 layout ucrop_layout_scale_wheel
 layout ucrop_view
+layout upload_layout
 layout user_layout
 menu example_menu
 menu example_menu2

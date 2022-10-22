@@ -19,10 +19,17 @@
             <ImageView
                 android:layout_width="@dimen/_90sdp"
                 android:layout_height="@dimen/_90sdp"
-                android:src="@drawable/shoe"/>
+                android:src="@drawable/shoe" />
+
 
         </RelativeLayout>
+
+
+
+
     </androidx.cardview.widget.CardView>
+
+
 
 
 </RelativeLayout>

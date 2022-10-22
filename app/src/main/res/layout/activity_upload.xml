@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
@@ -27,48 +29,72 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/upload_image1"
-                        android:layout_width="@dimen/_130sdp"
-                        android:layout_height="@dimen/_130sdp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="70dp"
-                        android:background="@drawable/hover_effect"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/upload_button" />
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/white"
+                        app:contentInsetStart="0dp"
+                        app:layout_anchorGravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_upload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/inter"
+                                android:text="Upload Item"
+                                android:textColor="#094067"
+                                android:textFontWeight="700"
+                                android:textSize="@dimen/_20sdp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <!--                    <GridLayout-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_below="@id/header"-->
+                    <!--                        android:layout_margin="@dimen/_25sdp"-->
+                    <!--                        android:columnCount="2"-->
+                    <!--                        android:useDefaultMargins="true">-->
 
                     <ImageView
-                        android:id="@+id/upload_image2"
-                        android:layout_width="@dimen/_130sdp"
-                        android:layout_height="@dimen/_130sdp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="70dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/hover_effect"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/upload_button" />
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_below="@id/header"
+                        android:layout_centerHorizontal="true" />
 
-                    <ImageView
-                        android:id="@+id/upload_image3"
-                        android:layout_width="@dimen/_130sdp"
-                        android:layout_height="@dimen/_130sdp"
-                        android:layout_below="@id/upload_image1"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/hover_effect"
-                        app:srcCompat="@drawable/upload_button" />
 
-                    <ImageView
-                        android:id="@+id/upload_image4"
-                        android:layout_width="@dimen/_130sdp"
+                    <!--                    </GridLayout>-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/upload_list"
+                        android:layout_width="wrap_content"
                         android:layout_height="@dimen/_130sdp"
-                        android:layout_below="@id/upload_image2"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/hover_effect"
-                        app:srcCompat="@drawable/upload_button" />
+                        android:layout_below="@id/header"
+                        android:layout_centerHorizontal="true"
+                        android:scrollbars="horizontal"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/upload_list"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_border"
+                        android:text="Upload"
+                        app:backgroundTint="@null" />
+
                 </RelativeLayout>
+
 
                 <RelativeLayout
                     android:id="@+id/input"
@@ -367,32 +393,7 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/header"
-            app:contentInsetStart="0dp"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            app:layout_anchor="@+id/appBarLayout"
-            app:layout_anchorGravity="center">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/inter"
-                    android:text="Upload Item"
-                    android:textColor="#094067"
-                    android:textFontWeight="700"
-                    android:textSize="@dimen/_20sdp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

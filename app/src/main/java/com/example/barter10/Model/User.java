@@ -1,7 +1,7 @@
 package com.example.barter10.Model;
 
 public class User {
-    String username, useremail, usepassword;
+    String username, useremail, userpassword;
 
 
     public User(){
@@ -11,7 +11,7 @@ public class User {
     public User(String username, String useremail, String usepassword) {
         this.username = username;
         this.useremail = useremail;
-        this.usepassword = usepassword;
+        this.userpassword = usepassword;
     }
 
     public String getUsername() {
@@ -23,6 +23,6 @@ public class User {
     }
 
     public String getUsepassword() {
-        return usepassword;
+        return userpassword;
     }
 }

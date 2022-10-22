@@ -28,12 +28,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\category_layout.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_gadget.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\fragment_gadget.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_signup_new.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\activity_signup_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_gadget.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\fragment_gadget.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_miscsupport.png.flat",
@@ -52,36 +52,36 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\nhome.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_ui.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\button_ui.xml"
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectorback.png.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\vectorback.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_alist.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\alist.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectorback.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\vectorback.png"
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_ui.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\button_ui.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_sports.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\fragment_sports.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\activity_home.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_hehe.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\hehe.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_vincentuser.jpg.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\vincentuser.jpg"
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_listing_layout.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\listing_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_vincentuser.jpg.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\drawable\\vincentuser.jpg"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable_shoe.png.flat",
@@ -262,6 +262,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\layout_upload_layout.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\src\\main\\res\\layout\\upload_layout.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\22\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
