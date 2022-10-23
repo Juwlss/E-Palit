@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/drawable/edittext_ui_search.xml" value="0.178" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/fragment_view_search.xml" value="0.25" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/search_item.xml" value="0.25" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/viewsearched_item.xml" value="0.25" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/drawable/btn_upload_ui.xml" value="0.132" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/drawable/button_ui.xml" value="0.132" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/E-Palit/app/src/main/res/drawable/rippleeffect.xml" value="0.1" />

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/homeFrameLayout"
     tools:context=".Home"
     android:orientation="vertical">
 
@@ -35,6 +36,13 @@
                     android:textFontWeight="900"
                     android:textSize="23sp"
                     android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_search_24"/>
 
             </androidx.appcompat.widget.Toolbar>
 

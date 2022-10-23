@@ -3385,6 +3385,7 @@ drawable design_snackbar_background
 drawable designall
 drawable edit_text_border
 drawable edittext_ui
+drawable edittext_ui_search
 drawable enter
 drawable enternewpassword
 drawable et_corner
@@ -3407,9 +3408,12 @@ drawable ic_baseline_arrow_right_24
 drawable ic_baseline_check_box_24
 drawable ic_baseline_check_box_outline_blank_24
 drawable ic_baseline_chevron_right_24
+drawable ic_baseline_close_24
 drawable ic_baseline_favorite_border_24
+drawable ic_baseline_history_24
 drawable ic_baseline_message_24
 drawable ic_baseline_people_24
+drawable ic_baseline_search_24
 drawable ic_baseline_visibility_24
 drawable ic_baseline_visibility_off_24
 drawable ic_clock_black_24dp
@@ -3487,6 +3491,7 @@ drawable pangbaba
 drawable paulouser
 drawable pins
 drawable post_shape
+drawable postexample
 drawable progress_bg
 drawable pv_invisible_image
 drawable rating
@@ -3500,7 +3505,6 @@ drawable rectangle37
 drawable rectangle38
 drawable resend
 drawable rippleeffect
-drawable search
 drawable settings
 drawable shoe
 drawable signup
@@ -3653,13 +3657,16 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnBack
 id btnCalendar
 id btnFacebook
 id btnGoogle
 id btnMiscSupport
 id btnMyInfo
+id btnSearch
 id btnSignup
 id btnUpload
+id btnViewBack
 id btn_follow
 id btn_forgotpassword
 id btn_img
@@ -3671,6 +3678,7 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
+id card
 id carryVelocity
 id categories
 id center
@@ -3783,6 +3791,7 @@ id floating
 id forever
 id forgot_pass
 id fragment_container_view_tag
+id fragmentsearch
 id frame_layout
 id frost
 id fullname
@@ -3807,6 +3816,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeFrameLayout
 id home_vpager
 id honorRequest
 id horizontal_only
@@ -4024,6 +4034,9 @@ id radio
 id rating
 id ratio
 id react
+id recentDelete
+id recentImg
+id recentsearch
 id rectangle
 id rectangles
 id resend
@@ -4046,7 +4059,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id searchIcon
 id search_badge
 id search_bar
 id search_button
@@ -4055,6 +4067,7 @@ id search_edit_frame
 id search_go_btn
 id search_mag_icon
 id search_plate
+id search_rv
 id search_src_text
 id search_voice_btn
 id secondTab
@@ -4205,6 +4218,8 @@ id username
 id v_circle
 id vertical_only
 id viewPost
+id viewSearch_bar
+id viewSearch_rv
 id view_offset_helper
 id view_overlay
 id view_transition
@@ -4364,8 +4379,10 @@ layout fragment_message
 layout fragment_pending
 layout fragment_profile
 layout fragment_profile_settings
+layout fragment_search
 layout fragment_sports
 layout fragment_toy
+layout fragment_view_search
 layout listing_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4435,6 +4452,7 @@ layout notification_template_part_time
 layout post_layout
 layout profile_post
 layout sdp_example
+layout search_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -4467,6 +4485,7 @@ layout ucrop_layout_scale_wheel
 layout ucrop_view
 layout upload_layout
 layout user_layout
+layout viewsearched_item
 menu example_menu
 menu example_menu2
 menu menu

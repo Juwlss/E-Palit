@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -33,7 +34,7 @@ public class Home extends AppCompatActivity {
 
     MeowBottomNavigation bottomNavigation;
     int goBack;
-
+    ImageView btnSearch;
     AppBarLayout appBarLayout;
     FloatingActionButton upload;
 
@@ -42,6 +43,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bottomNavigation = findViewById(R.id.bot_nav);
+        btnSearch = findViewById(R.id.btnSearch);
 
         upload = findViewById(R.id.upload_item);
 
@@ -119,6 +121,16 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, activityUpload.class));
             }
         });
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new SearchFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.homeFrameLayout,fragment).commit();
+                bottomNavigation.setVisibility(View.GONE);
+            }
+        });
+
 
     }
 

@@ -31,6 +31,8 @@ import com.example.barter10.Model.DetailHelperClass;
 import com.example.barter10.Model.Upload;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.datepicker.CalendarConstraints;
+import com.google.android.material.datepicker.DateValidatorPointForward;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.firebase.database.DatabaseReference;
@@ -100,11 +102,14 @@ public class activityUpload extends AppCompatActivity{
         });
 
         //calendar
+        //calendar
         calendar = findViewById(R.id.btnCalendar);
-        MaterialDatePicker materialDatePicker = MaterialDatePicker.Builder.dateRangePicker()
-                .setSelection(Pair.create(MaterialDatePicker.thisMonthInUtcMilliseconds(), MaterialDatePicker.todayInUtcMilliseconds()))
-                .build();
-
+        CalendarConstraints.DateValidator dateValidator = DateValidatorPointForward.now();
+        CalendarConstraints.Builder constraintBuilder = new CalendarConstraints.Builder();
+        constraintBuilder.setValidator(dateValidator);
+        MaterialDatePicker.Builder builder = MaterialDatePicker.Builder.dateRangePicker();
+        builder.setCalendarConstraints(constraintBuilder.build());
+        MaterialDatePicker materialDatePicker = builder.build();
         calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
