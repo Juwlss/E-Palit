@@ -53,8 +53,8 @@ com/example/barter10/activity_loading.java
  com.example.barter10.activity_loading$1
 com/example/barter10/Model/Message.java
  com.example.barter10.Model.Message
-com/example/barter10/Adapter/PagerAdapter.java
- com.example.barter10.Adapter.PagerAdapter
+com/example/barter10/Adapter/ListpageAdapter.java
+ com.example.barter10.Adapter.ListpageAdapter
 com/example/barter10/Adapter/trade_recyclerviewAdapter.java
  com.example.barter10.Adapter.trade_recyclerviewAdapter
  com.example.barter10.Adapter.trade_recyclerviewAdapter$MyViewHolder
@@ -96,9 +96,8 @@ com/example/barter10/activityUpload.java
  com.example.barter10.activityUpload$7
  com.example.barter10.activityUpload$7$1
  com.example.barter10.activityUpload$7$2
-com/example/barter10/GadgetFragment.java
- com.example.barter10.GadgetFragment
- com.example.barter10.GadgetFragment$1
+com/example/barter10/DataBindingTriggerClass.java
+ com.example.barter10.DataBindingTriggerClass
 com/example/barter10/otp.java
  com.example.barter10.otp
  com.example.barter10.otp$1
@@ -125,7 +124,10 @@ com/example/barter10/SportsFragment.java
  com.example.barter10.SportsFragment
 com/example/barter10/Model/viewSearch.java
  com.example.barter10.Model.viewSearch
-com/example/barter10/Adapter/ListpageAdapter.java
- com.example.barter10.Adapter.ListpageAdapter
-com/example/barter10/DataBindingTriggerClass.java
- com.example.barter10.DataBindingTriggerClass
+com/example/barter10/GadgetFragment.java
+ com.example.barter10.GadgetFragment
+ com.example.barter10.GadgetFragment$1
+ com.example.barter10.GadgetFragment$2
+ com.example.barter10.GadgetFragment$3
+com/example/barter10/Adapter/PagerAdapter.java
+ com.example.barter10.Adapter.PagerAdapter

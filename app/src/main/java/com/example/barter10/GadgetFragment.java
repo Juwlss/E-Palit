@@ -14,11 +14,14 @@ import android.widget.Toast;
 
 import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Model.Upload;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
@@ -29,7 +32,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
 
     private List<Upload> mUploads;
     private DatabaseReference databaseReference;
-    private FirebaseDatabase firebaseDatabase;
+    private FirebaseStorage firebaseStorage;
 
     private RecyclerView recyclerView;
     private PostImageAdapter postImageAdapter;
@@ -56,7 +59,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         recyclerView.setAdapter(postImageAdapter);
         postImageAdapter.setOnItemClickListener(GadgetFragment.this);
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseStorage = FirebaseStorage.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -72,7 +75,6 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
                 }
 
                 postImageAdapter.notifyDataSetChanged();
-
 
             }
 
@@ -102,7 +104,21 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         Upload selectedItem = mUploads.get(position);
         String selectedkey = selectedItem.getKey();
 
-//        StorageReference imageRef = FirebaseDatabase.getInstance().getReferenceFromUrl(selectedItem.getImageUrl());
+        StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
+
+        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+
+                databaseReference.child(selectedkey).removeValue();
+                Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
