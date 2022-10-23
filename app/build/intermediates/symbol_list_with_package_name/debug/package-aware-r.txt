@@ -3407,6 +3407,9 @@ drawable ic_baseline_arrow_right_24
 drawable ic_baseline_check_box_24
 drawable ic_baseline_check_box_outline_blank_24
 drawable ic_baseline_chevron_right_24
+drawable ic_baseline_favorite_border_24
+drawable ic_baseline_message_24
+drawable ic_baseline_people_24
 drawable ic_baseline_visibility_24
 drawable ic_baseline_visibility_off_24
 drawable ic_clock_black_24dp
@@ -3546,7 +3549,6 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
-id Prec_view
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -3827,7 +3829,6 @@ id image_view_logo
 id image_view_state_aspect_ratio
 id image_view_state_rotate
 id image_view_state_scale
-id img
 id imgProfile
 id img_logo
 id immediateStop
@@ -3841,6 +3842,8 @@ id item1
 id item2
 id item3
 id item4
+id itemCondition
+id itemName
 id item_touch_helper_previous_elevation
 id iv
 id jumpToEnd
@@ -3887,6 +3890,7 @@ id listMode
 id listTab
 id list_item
 id list_vpager
+id location
 id logo
 id lytCameraPick
 id lytGalleryPick
@@ -3998,12 +4002,15 @@ id password_toggle
 id path
 id pathRelative
 id peekHeight
+id people
 id percent
 id pin
 id pin1
 id position
 id post
+id postImage
 id postLayout
+id post_rv
 id prof_rv
 id profileMenu
 id profileUsername
@@ -4012,12 +4019,13 @@ id profilename
 id progressBar
 id progress_circular
 id progress_horizontal
+id rLayout
 id radio
 id rating
 id ratio
+id react
 id rectangle
 id rectangles
-id rescyclerview
 id resend
 id reverseSawtooth
 id right
@@ -4192,9 +4200,11 @@ id upload
 id upload_item
 id upload_list
 id useLogo
+id userProfile
 id username
 id v_circle
 id vertical_only
+id viewPost
 id view_offset_helper
 id view_overlay
 id view_transition

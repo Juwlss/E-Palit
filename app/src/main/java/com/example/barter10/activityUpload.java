@@ -15,7 +15,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -28,11 +27,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 import com.example.barter10.Adapter.UploadListAdapter;
+import com.example.barter10.Model.DetailHelperClass;
 import com.example.barter10.Model.Upload;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.firebase.database.DatabaseReference;
@@ -60,10 +58,9 @@ public class activityUpload extends AppCompatActivity{
     ArrayList<Uri> itemList = new ArrayList<>();
     private int upload_count = 0;
     private String timer;
-    EditText uploadName, uploadDetails, uploadCondition, uploadValue, uploadPreference;
-    DatabaseReference reference;
-    FirebaseDatabase rootNode;
-    StorageReference mStorage;
+    private EditText uploadName, uploadLocation, uploadDetails, uploadCondition, uploadValue, uploadPreference;
+    private DatabaseReference reference;
+    private FirebaseDatabase rootNode;
     private String category1;
     private String category2;
 
@@ -186,6 +183,7 @@ public class activityUpload extends AppCompatActivity{
 
         //getting details in edit text
         uploadName = findViewById(R.id.txtItemName);
+        uploadLocation = findViewById(R.id.txtLocation);
         uploadDetails = findViewById(R.id.txtDetails);
         uploadCondition = findViewById(R.id.txtCondition);
         uploadValue = findViewById(R.id.txtEstimatedValue);
@@ -250,17 +248,20 @@ public class activityUpload extends AppCompatActivity{
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem").child(itemKey);
         //getting values in edit text
         String prod_id =itemKey;
-        String itemName = uploadName.getText().toString();
-        String itemDetails = uploadDetails.getText().toString();
-        String itemCondition = uploadCondition.getText().toString();
-        String itemValue = uploadValue.getText().toString();
-        String itemPreference = uploadPreference.getText().toString();
+        String itemName = uploadName.getText().toString().trim();
+        String itemLocation = uploadLocation.getText().toString().trim();
+        String itemDetails = uploadDetails.getText().toString().trim();
+        String itemCondition = uploadCondition.getText().toString().trim();
+        String itemValue = uploadValue.getText().toString().trim();
+        String itemPreference = uploadPreference.getText().toString().trim();
         String timeLimit = timer;
         String itemCategory = category1+category2;
-        Log.d("str", "pics size"+itemList.size());
+
+
         if (itemList.isEmpty() || timer == null || TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails) || TextUtils.isEmpty(itemCondition) || TextUtils.isEmpty(itemValue) || TextUtils.isEmpty(itemPreference) || TextUtils.isEmpty(itemCategory)){
             Toast.makeText(activityUpload.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
         } else {
+
             for (upload_count=0; upload_count<itemList.size(); upload_count++){
                 Uri IndividualImage = itemList.get(upload_count);
                 StorageReference ImageName = storageReference.child(IndividualImage.getLastPathSegment());
@@ -276,12 +277,20 @@ public class activityUpload extends AppCompatActivity{
                                    storeLink(urlStrings);
 
                                    DetailHelperClass detailClass = new DetailHelperClass(prod_id,  itemName, itemDetails, itemCondition, itemValue, itemPreference, timeLimit, itemCategory);
-                                   reference.child(prod_id).setValue(detailClass);//setting primary key
 
+
+                                   Upload upload = new Upload(uri.toString(),itemLocation, itemName, itemCondition);
+
+                                   reference.child(prod_id).setValue(upload);//setting primary key
 
                                    Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
                                    startActivity(new Intent(activityUpload.this, Home.class));
                                }
+                           }
+                       }).addOnFailureListener(new OnFailureListener() {
+                           @Override
+                           public void onFailure(@NonNull Exception e) {
+                               Toast.makeText(activityUpload.this,"Failed to Upload",Toast.LENGTH_SHORT).show();
                            }
                        });
 

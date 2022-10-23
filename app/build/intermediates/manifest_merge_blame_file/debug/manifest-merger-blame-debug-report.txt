@@ -6,113 +6,113 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml
+8-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml
+9-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-13-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:7:22-77
+13-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:7:22-77
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 14-->[com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:12:5-81
 14-->[com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:12:22-78
 15
 16    <application
-16-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:8:5-54:19
+16-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:8:5-54:19
 17        android:allowBackup="true"
-17-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:10:9-35
+17-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:10:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.7.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\3b39ddf491420bee289bfc1ff2e6793f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:11:9-43
+20-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:11:9-43
 21        android:label="@string/app_name"
-21-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:12:9-41
+21-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:12:9-41
 22        android:largeHeap="true"
-22-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:13:9-33
+22-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:13:9-33
 23        android:requestLegacyExternalStorage="true"
-23-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:9:9-52
+23-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:9:9-52
 24        android:roundIcon="@mipmap/ic_launcher_round"
-24-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:14:9-54
+24-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:14:9-54
 25        android:supportsRtl="true"
-25-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:15:9-35
+25-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:15:9-35
 26        android:testOnly="true"
 27        android:theme="@style/Theme.Barter10" >
-27-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:16:9-46
+27-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:16:9-46
 28        <activity
-28-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:18:9-20:39
+28-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:18:9-20:39
 29            android:name="com.example.barter10.activityUpload"
-29-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:19:13-43
+29-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:19:13-43
 30            android:exported="true" />
-30-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:20:13-36
+30-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:20:13-36
 31        <activity
-31-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:21:9-23:39
+31-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:21:9-23:39
 32            android:name="com.example.barter10.signUp"
-32-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:22:13-35
+32-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:22:13-35
 33            android:exported="true" />
-33-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:23:13-36
+33-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:23:13-36
 34        <activity
-34-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:24:9-26:39
+34-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:24:9-26:39
 35            android:name="com.example.barter10.forgotPass"
-35-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:25:13-39
+35-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:25:13-39
 36            android:exported="true" />
-36-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:26:13-36
+36-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:26:13-36
 37        <activity
-37-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:27:9-29:39
+37-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:27:9-29:39
 38            android:name="com.example.barter10.otp"
-38-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:28:13-32
+38-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:28:13-32
 39            android:exported="true" />
-39-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:29:13-36
+39-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:29:13-36
 40        <activity
-40-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:30:9-32:39
+40-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:30:9-32:39
 41            android:name="com.example.barter10.newPass"
-41-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:31:13-36
+41-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:31:13-36
 42            android:exported="true" />
-42-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:32:13-36
+42-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:32:13-36
 43        <activity
-43-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:33:9-35:39
+43-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:33:9-35:39
 44            android:name="com.example.barter10.Home"
-44-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:34:13-33
+44-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:34:13-33
 45            android:exported="true" />
-45-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:35:13-36
+45-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:35:13-36
 46        <activity
-46-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:36:9-38:39
+46-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:36:9-38:39
 47            android:name="com.example.barter10.MainActivity"
-47-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:37:13-41
+47-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:37:13-41
 48            android:exported="true" />
-48-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:38:13-36
+48-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:38:13-36
 49        <activity
-49-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:39:9-48:20
+49-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:39:9-48:20
 50            android:name="com.example.barter10.activity_loading"
-50-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:40:13-45
+50-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:40:13-45
 51            android:exported="true"
-51-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:41:13-36
+51-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:41:13-36
 52            android:screenOrientation="portrait" >
-52-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:42:13-49
+52-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:42:13-49
 53            <intent-filter>
-53-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:43:13-47:29
+53-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:43:13-47:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:44:17-69
-54-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:44:25-66
+54-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:44:17-69
+54-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:44:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:46:17-77
-56-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:46:27-74
+56-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:46:17-77
+56-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:46:27-74
 57            </intent-filter>
 58        </activity>
 59
 60        <meta-data
-60-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:50:9-52:57
+60-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:50:9-52:57
 61            android:name="preloaded_fonts"
-61-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:51:13-43
+61-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:51:13-43
 62            android:resource="@array/preloaded_fonts" />
-62-->C:\Users\andrei\Documents\4th yr\22\app\src\main\AndroidManifest.xml:52:13-54
+62-->C:\Users\andrei\Documents\4th yr\26\app\src\main\AndroidManifest.xml:52:13-54
 63
 64        <activity
 64-->[com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:15:9-18:68
