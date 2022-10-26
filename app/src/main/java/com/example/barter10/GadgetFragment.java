@@ -14,8 +14,10 @@ import android.widget.Toast;
 
 import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Model.Upload;
+import com.example.barter10.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -59,19 +61,50 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         recyclerView.setAdapter(postImageAdapter);
         postImageAdapter.setOnItemClickListener(GadgetFragment.this);
 
+
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        String userId = firebaseAuth.getUid();
+
+        //storage
         firebaseStorage = FirebaseStorage.getInstance();
+        //displaying items
         databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+
+//        DatabaseReference postReference;
+//        postReference = FirebaseDatabase.getInstance().getReference("users");
+//
+//        postReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                mUploads.clear();
+//
+//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                    User user = new User();
+//                    String username = dataSnapshot.child("username").getValue().toString();
+//                    Toast.makeText(getContext(), ""+username, Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                //fetching from firebase to display
                 mUploads.clear();
-                for(DataSnapshot postSnapshot : snapshot.getChildren()){
-                    Upload upload = postSnapshot.getValue(Upload.class);
-                    upload.setKey(postSnapshot.getKey());
 
-                    mUploads.add(upload);
+                for(DataSnapshot postSnapshot : snapshot.getChildren()){
+                    for(DataSnapshot snapshot1 : postSnapshot.getChildren()){
+                        Upload upload = snapshot1.getValue(Upload.class);
+                        upload.setKey(snapshot1.getKey());
+                        mUploads.add(upload);
+                    }
+
                 }
 
                 postImageAdapter.notifyDataSetChanged();
@@ -83,6 +116,12 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
+
+
+
         return view;
     }
 

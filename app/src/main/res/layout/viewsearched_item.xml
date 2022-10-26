@@ -54,7 +54,7 @@
 
 
             <ImageView
-                android:id="@+id/postImage"
+                android:id="@+id/searchImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/userProfile"
@@ -66,7 +66,7 @@
                 android:id="@+id/viewPost"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_below="@+id/postImage"
+                android:layout_below="@+id/searchImage"
                 android:backgroundTint="#3DA9FC"
                 android:fontFamily="@font/inter"
                 android:text="View Post"
@@ -119,17 +119,18 @@
                 android:textStyle="bold"
 
                 />
+
             <TextView
                 android:id="@+id/itemCondition"
-                android:layout_below="@+id/itemName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/itemName"
                 android:layout_marginLeft="@dimen/_20sdp"
-                android:text="Condition"
                 android:fontFamily="@font/inter"
-                android:textStyle="bold"
-                android:textSize="@dimen/_12ssp"
+                android:text="Condition"
                 android:textColor="#094067"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
 
                 />
 

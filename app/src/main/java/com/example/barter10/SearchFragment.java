@@ -110,8 +110,12 @@ public class SearchFragment extends Fragment {
 
 
 
+
+
         return view;
     }
+
+
 
     private void LoadData() {
 
@@ -155,4 +159,5 @@ public class SearchFragment extends Fragment {
         adapter.startListening();
         recyclerView.setAdapter(adapter);
     }
+
 }

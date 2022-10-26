@@ -29,14 +29,19 @@ import android.widget.Toast;
 import com.example.barter10.Adapter.UploadListAdapter;
 import com.example.barter10.Model.DetailHelperClass;
 import com.example.barter10.Model.Upload;
+import com.example.barter10.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.DateValidatorPointForward;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -65,6 +70,7 @@ public class activityUpload extends AppCompatActivity{
     private FirebaseDatabase rootNode;
     private String category1;
     private String category2;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +83,7 @@ public class activityUpload extends AppCompatActivity{
         uploadListAdapter = new UploadListAdapter(itemList);
         recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
         recyclerView.setAdapter(uploadListAdapter);
+
 
         if(ContextCompat.checkSelfPermission(activityUpload.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(activityUpload.this,
@@ -98,6 +105,7 @@ public class activityUpload extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 upload();
+
             }
         });
 
@@ -197,6 +205,36 @@ public class activityUpload extends AppCompatActivity{
         //setting upload button in default
         uploadImgdef = Uri.parse("android.resource://com.example.uploadpage/drawable/upload_button");
 
+
+    }
+
+    private void getUsername(){
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
+
+        postReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    String copyuser = firebaseAuth.getCurrentUser().getEmail();
+
+                    username = dataSnapshot.child("useremail").getValue().toString();
+                    if(copyuser.equals(username)){
+                        username = dataSnapshot.child("username").getValue().toString();
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void uploadImage() {
@@ -243,16 +281,23 @@ public class activityUpload extends AppCompatActivity{
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Uploading Post...");
 
+        //Getting userID
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        String uid = firebaseAuth.getUid();
+
+
         // generating key
         rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("PostItem");
+        reference = rootNode.getReference("PostItem").child(uid);
 
         urlStrings = new ArrayList<>();
         String itemKey = reference.push().getKey();
 
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem").child(itemKey);
+
+        //referring to storage
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem").child(uid);
         //getting values in edit text
-        String prod_id =itemKey;
+        String postId =itemKey;
         String itemName = uploadName.getText().toString().trim();
         String itemLocation = uploadLocation.getText().toString().trim();
         String itemDetails = uploadDetails.getText().toString().trim();
@@ -261,7 +306,6 @@ public class activityUpload extends AppCompatActivity{
         String itemPreference = uploadPreference.getText().toString().trim();
         String timeLimit = timer;
         String itemCategory = category1+category2;
-
 
         if (itemList.isEmpty() || timer == null || TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails) || TextUtils.isEmpty(itemCondition) || TextUtils.isEmpty(itemValue) || TextUtils.isEmpty(itemPreference) || TextUtils.isEmpty(itemCategory)){
             Toast.makeText(activityUpload.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
@@ -279,14 +323,38 @@ public class activityUpload extends AppCompatActivity{
                            public void onSuccess(Uri uri) {
                                urlStrings.add(String.valueOf(uri));
                                if (urlStrings.size() == itemList.size()){
+                                   //displaying pictures to upload
                                    storeLink(urlStrings);
 
-                                   DetailHelperClass detailClass = new DetailHelperClass(prod_id,  itemName, itemDetails, itemCondition, itemValue, itemPreference, timeLimit, itemCategory);
+                                   FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                                   DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
 
+                                   postReference.addValueEventListener(new ValueEventListener() {
+                                       @Override
+                                       public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                                   Upload upload = new Upload(uri.toString(),itemLocation, itemName, itemCondition);
+                                           String name;
+                                           for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                               String copyuser = firebaseAuth.getCurrentUser().getEmail();
+                                               name = dataSnapshot.child("useremail").getValue().toString();
+                                               if(copyuser.equals(name)){
+                                                   //getting the username of uploader
+                                                   name = dataSnapshot.child("username").getValue().toString();
 
-                                   reference.child(prod_id).setValue(upload);//setting primary key
+                                                   //uploading to firebase
+                                                   Upload upload = new Upload(name,uri.toString(),itemLocation, itemName, itemCondition);
+
+                                                   reference.child(postId).setValue(upload);//setting primary key
+                                                   break;
+                                               }
+                                           }
+                                       }
+
+                                       @Override
+                                       public void onCancelled(@NonNull DatabaseError error) {
+
+                                       }
+                                   });
 
                                    Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
                                    startActivity(new Intent(activityUpload.this, Home.class));

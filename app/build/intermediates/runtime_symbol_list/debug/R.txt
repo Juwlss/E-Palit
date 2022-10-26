@@ -3401,6 +3401,7 @@ int drawable googleg_standard_color_18 0x7f080098
 int drawable hehe 0x7f080099
 int drawable hover_back 0x7f08009a
 int drawable hover_effect 0x7f08009b
+int drawable ic_baseline_account_circle_24 0x7f080129
 int drawable ic_baseline_add_24 0x7f08009c
 int drawable ic_baseline_arrow_back_24 0x7f08009d
 int drawable ic_baseline_arrow_right_24 0x7f08009e
@@ -3410,6 +3411,7 @@ int drawable ic_baseline_chevron_right_24 0x7f0800a1
 int drawable ic_baseline_close_24 0x7f0800a2
 int drawable ic_baseline_favorite_border_24 0x7f0800a3
 int drawable ic_baseline_history_24 0x7f0800a4
+int drawable ic_baseline_image_24 0x7f08012a
 int drawable ic_baseline_message_24 0x7f0800a5
 int drawable ic_baseline_people_24 0x7f0800a6
 int drawable ic_baseline_search_24 0x7f0800a7
@@ -4058,6 +4060,7 @@ int id scrollIndicatorDown 0x7f0a01fd
 int id scrollIndicatorUp 0x7f0a01fe
 int id scrollView 0x7f0a01ff
 int id scrollable 0x7f0a0200
+int id searchImage 0x7f0a02bd
 int id search_badge 0x7f0a0201
 int id search_bar 0x7f0a0202
 int id search_button 0x7f0a0203

@@ -7,7 +7,8 @@ import com.google.firebase.database.Exclude;
 public class Upload {
 
     private String imageUrl;
-//    private String userName;
+    private String userName;
+    private String profileUrl;
     private String location;
     private String itemName;
     private String itemCondition;
@@ -17,9 +18,10 @@ public class Upload {
 
     }
 
-    public Upload(String imageUrl, String location, String itemName, String itemCondition) {
+    public Upload(String userName, String imageUrl, String location, String itemName, String itemCondition) {
         this.imageUrl = imageUrl;
-//        this.userName = userName;
+        this.userName = userName;
+//        this.profileUrl = profileUrl;
         this.location = location;
         this.itemName = itemName;
         this.itemCondition = itemCondition;
@@ -33,12 +35,20 @@ public class Upload {
         this.imageUrl = imageUrl;
     }
 
-//    public String getUserName() {
-//        return userName;
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+//    public String getProfileUrl() {
+//        return profileUrl;
 //    }
 //
-//    public void setUserName(String userName) {
-//        this.userName = userName;
+//    public void setProfileUrl(String profileUrl) {
+//        this.profileUrl = profileUrl;
 //    }
 
     public String getLocation() {

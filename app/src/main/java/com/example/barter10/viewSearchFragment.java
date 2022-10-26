@@ -1,5 +1,6 @@
 package com.example.barter10;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,9 +20,11 @@ import android.widget.Toast;
 import com.example.barter10.Model.viewSearch;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.squareup.picasso.Picasso;
 
 public class viewSearchFragment extends Fragment {
 
@@ -40,7 +43,10 @@ public class viewSearchFragment extends Fragment {
 
         String searchedText = SearchFragment.searchedText;// getting the input search in parent fragment
 
-        dataRef = FirebaseDatabase.getInstance().getReference("PostItem");
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        String userId = firebaseAuth.getUid();
+        dataRef = FirebaseDatabase.getInstance().getReference("PostItem").child(userId);
         btnViewBack = view.findViewById(R.id.btnViewBack);
         viewSearchBar = view.findViewById(R.id.viewSearch_bar);
         rv = view.findViewById(R.id.viewSearch_rv);
@@ -49,6 +55,7 @@ public class viewSearchFragment extends Fragment {
 
         //getting value in firebase
         LoadPostData("");
+
         viewSearchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -112,8 +119,19 @@ public class viewSearchFragment extends Fragment {
         adapter = new FirebaseRecyclerAdapter<viewSearch, viewSearchHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull viewSearchHolder holder, int position, @NonNull viewSearch model) {
+                holder.userName.setText(model.getUserName());
+                holder.location.setText(model.getLocation());
                 holder.itemName.setText(model.getItemName());
-                holder.itemCondition.setText(model.getItemCondition());
+                holder.condition.setText(model.getItemCondition());
+
+
+                Picasso.get()
+                        .load(model.getImageUrl())
+                        .placeholder(R.drawable.ic_baseline_image_24)
+                        .fit()
+                        .into(holder.searchImage);
+
+
                 holder.viewPost.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -125,11 +143,13 @@ public class viewSearchFragment extends Fragment {
             @NonNull
             @Override
             public viewSearchHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewsearched_item, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_layout, parent, false);
                 return  new viewSearchHolder(view);
             }
         };
         adapter.startListening();
         rv.setAdapter(adapter);
+
     }
+
 }

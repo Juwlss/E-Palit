@@ -24,8 +24,8 @@
                 android:id="@+id/userProfile"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
-                android:src="@mipmap/ic_launcher"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_account_circle_24" />
 
             <TextView
                 android:id="@+id/username"

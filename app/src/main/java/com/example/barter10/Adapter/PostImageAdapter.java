@@ -1,6 +1,7 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.barter10.Model.Upload;
+import com.example.barter10.Model.User;
 import com.example.barter10.R;
 import com.squareup.picasso.Picasso;
 
@@ -41,16 +43,22 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Upload upload = mUploads.get(position);
 
-//        holder.userName.setText(upload.getUserName());
+        holder.userName.setText(upload.getUserName());
         holder.location.setText(upload.getLocation());
         holder.itemName.setText(upload.getItemName());
         holder.condition.setText(upload.getItemCondition());
 
-        Picasso.with(mContext)
+        Picasso.get()
                 .load(upload.getImageUrl())
-                .placeholder(R.mipmap.ic_launcher)
+                .placeholder(R.drawable.ic_baseline_image_24)
                 .fit()
                 .into(holder.postImage);
+
+//        Picasso.with(mContext)
+//                .load(upload.getProfileUrl())
+//                .placeholder(R.drawable.kyouser)
+//                .fit()
+//                .into(holder.userImage);
 
     }
 
@@ -66,11 +74,13 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         public TextView itemName;
         public TextView condition;
         public ImageView postImage;
+        public ImageView userImage;
 
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
 
             userName = itemView.findViewById(R.id.username);
+            userImage = itemView.findViewById(R.id.userProfile);
             location = itemView.findViewById(R.id.location);
             itemName = itemView.findViewById(R.id.itemName);
             condition = itemView.findViewById(R.id.itemCondition);

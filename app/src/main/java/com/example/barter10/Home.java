@@ -18,8 +18,12 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.Model.Upload;
+import com.example.barter10.Model.User;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarItemView;
@@ -29,6 +33,12 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Home extends AppCompatActivity {
 
@@ -37,6 +47,9 @@ public class Home extends AppCompatActivity {
     ImageView btnSearch;
     AppBarLayout appBarLayout;
     FloatingActionButton upload;
+
+    private TextView welcome;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +62,49 @@ public class Home extends AppCompatActivity {
 
         appBarLayout = findViewById(R.id.appbar);
 
-        //replaceFragment(new MessageFragment());
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
+        //text welcome
+        welcome = findViewById(R.id.welcome);
+
+        DatabaseReference postReference;
+        postReference = FirebaseDatabase.getInstance().getReference("users");
+
+        postReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String username="";
+
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                   String copyuser = firebaseAuth.getCurrentUser().getEmail();
+
+                    username = dataSnapshot.child("useremail").getValue().toString();
+                    if(copyuser.equals(username)){
+                        username = dataSnapshot.child("username").getValue().toString();
+                        break;
+                    }
+                }
+
+                String name[] = username.split(" ");
+                String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
+                welcome.setText("Welcome "+upperString+"!");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
+
+
 
         //declaring bottom navigation
         bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.nhome));

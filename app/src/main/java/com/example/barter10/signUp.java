@@ -167,9 +167,11 @@ public class signUp extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                String uid = databaseReference.push().getKey();
-                                User user = new User(str_username, str_email, str_password);
-                                databaseReference.child(uid).setValue(user);
+                                String userId = firebaseAuth.getUid();
+
+                                User user = new User(userId, str_username, str_email, str_password);
+                                databaseReference.child(userId).setValue(user);
+
                                 Toast.makeText(signUp.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(signUp.this, MainActivity.class));
                             } else {
