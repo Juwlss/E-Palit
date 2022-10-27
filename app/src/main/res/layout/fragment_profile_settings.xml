@@ -27,8 +27,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProfile"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
             android:layout_below="@+id/lblSettings"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_20sdp"
@@ -49,12 +49,12 @@
             android:id="@+id/profileUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/lblHello"
+            android:layout_centerInParent="true"
             android:text="Username"
             android:textColor="#333333"
             android:textSize="@dimen/_24ssp"
-            android:textStyle="bold"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/lblHello" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/lblPersonal"
@@ -62,12 +62,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/profileUsername"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_25ssp"
             android:fontFamily="@font/inter"
             android:text="Personal"
             android:textColor="#333333"
             android:textFontWeight="800"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
 
         <Button
@@ -80,7 +80,7 @@
             android:fontFamily="@font/inter"
             android:gravity="left|center_vertical"
             android:paddingLeft="@dimen/_50sdp"
-            android:text="My Information"
+            android:text="Account Information"
             android:textAllCaps="false"
             android:textColor="#333333"
             android:textFontWeight="600"
@@ -93,7 +93,7 @@
             android:layout_alignTop="@+id/btnMyInfo"
             android:layout_alignBottom="@+id/btnMyInfo"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:src="@drawable/myinfo" />
+            android:src="@drawable/ic_baseline_edit_24" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -115,11 +115,11 @@
             android:text="Miscellaneous"
             android:textColor="#333333"
             android:textFontWeight="700"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnMiscSupport"
+            android:id="@+id/btnSec"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lblMisc"
@@ -128,7 +128,7 @@
             android:fontFamily="@font/inter"
             android:gravity="left|center_vertical"
             android:paddingLeft="@dimen/_50sdp"
-            android:text="Support"
+            android:text="Security"
             android:textAllCaps="false"
             android:textColor="#333333"
             android:textFontWeight="600"
@@ -137,19 +137,21 @@
         <ImageView
             android:layout_width="@dimen/_17sdp"
             android:layout_height="@dimen/_17sdp"
-            android:layout_alignTop="@+id/btnMiscSupport"
-            android:layout_alignBottom="@+id/btnMiscSupport"
-            android:layout_marginLeft="@dimen/_19sdp"
-            android:src="@drawable/miscsupport" />
+            android:layout_alignTop="@+id/btnSec"
+            android:layout_alignBottom="@+id/btnSec"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:src="@drawable/ic_baseline_security_24" />
 
         <TextView
             android:id="@+id/lblNotif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btnMiscSupport"
+            android:layout_below="@id/btnSec"
             android:layout_marginTop="@dimen/_10sdp"
             android:fontFamily="@font/inter"
             android:paddingLeft="@dimen/_50sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
             android:text="Notification"
             android:textColor="#333333"
             android:textFontWeight="700"
@@ -167,12 +169,12 @@
             app:track="@drawable/track" />
 
         <ImageView
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
             android:layout_alignTop="@+id/lblNotif"
             android:layout_alignBottom="@+id/lblNotif"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:src="@drawable/mynotif" />
+            android:src="@drawable/ic_baseline_notifications_24" />
 
         <TextView
             android:id="@+id/btn_logout"
@@ -190,8 +192,6 @@
 
 
     </RelativeLayout>
-
-
 
 
 </FrameLayout>
