@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class profileSettings extends Fragment {
 
     FirebaseAuth firebaseAuth;
-
+    Button btnInfo;
+    Button btnSec;
     TextView logout;
 
     @Override
@@ -27,7 +29,8 @@ public class profileSettings extends Fragment {
 
         logout = view.findViewById(R.id.btn_logout);
         firebaseAuth = FirebaseAuth.getInstance();
-
+        btnInfo = view.findViewById(R.id.btnMyInfo);
+        btnSec = view.findViewById(R.id.btnSec);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +38,26 @@ public class profileSettings extends Fragment {
                 FirebaseAuth.getInstance().signOut();
                 Toast.makeText(getActivity(), "Logging out", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), MainActivity.class));
+            }
+        });
+
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                Fragment infoFrag = new infoSettingFragment();
+                fragmentTransaction.replace(R.id.frame_layout, infoFrag);
+                fragmentTransaction.commit();
+            }
+        });
+
+        btnSec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                Fragment securityFrag = new securityFragment();
+                fragmentTransaction.replace(R.id.frame_layout, securityFrag);
+                fragmentTransaction.commit();
             }
         });
 

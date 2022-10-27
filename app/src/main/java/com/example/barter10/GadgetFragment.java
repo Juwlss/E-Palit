@@ -142,22 +142,26 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
     public void onDeleteClick(int position) {
         Upload selectedItem = mUploads.get(position);
         String selectedkey = selectedItem.getKey();
+        String username = selectedItem.getUserName();
+        Toast.makeText(getContext(), ""+username, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), ""+selectedkey, Toast.LENGTH_SHORT).show();
 
-        StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
 
-        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-
-                databaseReference.child(selectedkey).removeValue();
-                Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
+//
+//        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void unused) {
+//
+//                databaseReference.child(selectedkey).removeValue();
+//                Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Toast.makeText(getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
 

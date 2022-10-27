@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".securityFragment">
+
+    <RelativeLayout
+        android:id="@+id/profileset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backar2"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24"></ImageView>
+
+        <TextView
+            android:id="@+id/lblSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter"
+            android:text="Security"
+            android:textColor="#333333"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/lblPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblSecurity"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fontFamily="@font/inter"
+            android:text="Password"
+            android:textColor="#333333"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblPassword"
+            android:layout_alignLeft="@+id/lblPassword"
+            android:fontFamily="@font/inter"
+            android:hint="Change current password"
+            android:backgroundTint="@android:color/transparent"
+            android:inputType="textPassword"
+            android:textColor="#5F6C7B"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

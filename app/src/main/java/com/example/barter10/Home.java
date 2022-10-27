@@ -107,10 +107,10 @@ public class Home extends AppCompatActivity {
 
 
         //declaring bottom navigation
-        bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.nhome));
-        bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.nlist));
-        bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.nmessage));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.nprofile));
+        bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_home_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_list_alt_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_chat_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_baseline_person_24));
 
         //choosing in bottom navigation
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {

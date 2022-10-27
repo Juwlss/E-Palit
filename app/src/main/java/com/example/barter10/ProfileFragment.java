@@ -29,7 +29,6 @@ public class ProfileFragment extends Fragment {
 
         ImageButton settings = view.findViewById(R.id.btn_settings);
 
-
         //TextView logout = view.findViewById(R.id.btn_logout);
 
 
@@ -43,6 +42,8 @@ public class ProfileFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+
 
 
         return view;
