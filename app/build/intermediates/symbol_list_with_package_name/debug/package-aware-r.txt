@@ -3400,7 +3400,6 @@ drawable google
 drawable google_fb_ui
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable hehe
 drawable hover_back
 drawable hover_effect
 drawable ic_baseline_account_circle_24
@@ -3426,6 +3425,7 @@ drawable ic_baseline_person_24
 drawable ic_baseline_search_24
 drawable ic_baseline_security_24
 drawable ic_baseline_settings_24
+drawable ic_baseline_swap_horizontal_circle_24
 drawable ic_baseline_visibility_24
 drawable ic_baseline_visibility_off_24
 drawable ic_clock_black_24dp
@@ -3679,6 +3679,7 @@ id btn_follow
 id btn_forgotpassword
 id btn_img
 id btn_logout
+id btn_pending
 id btn_settings
 id button
 id buttonPanel
@@ -4097,6 +4098,7 @@ id secondTab
 id select_dialog_listview
 id selected
 id selection_type
+id selfpost
 id seperator1
 id seperator2
 id sharedValueSet
@@ -4144,7 +4146,6 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
-id symbol_trade
 id tabMode
 id tab_categories
 id tag_accessibility_actions
@@ -4202,8 +4203,8 @@ id touch_outside
 id toyTab
 id trade_cancel
 id trade_confirm
+id trade_layout
 id trade_rv
-id trade_tab
 id transitionToEnd
 id transitionToStart
 id transition_current_scene

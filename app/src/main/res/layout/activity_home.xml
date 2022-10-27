@@ -11,7 +11,7 @@
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="match_parent"
         android:layout_weight="1">
 
 
@@ -67,6 +67,8 @@
 
     </FrameLayout>
 
+
+
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:id="@+id/bot_nav"
         android:layout_width="match_parent"
@@ -74,20 +76,14 @@
         app:mbn_circleColor="#FFFFFE"
         app:mbn_selectedIconColor="#3DA9FC"
         app:mbn_countTextColor="#FFFFFE"
-        app:mbn_countBackgroundColor="#ff6f00"
+        app:mbn_countBackgroundColor="#F10038"
         app:mbn_defaultIconColor="#FFFFFE"
         app:mbn_backgroundBottomColor="#FFFFFE"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        app:mbn_shadowColor="#333333">
 
     </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
 
-    <!--<TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        android:textSize="70sp"
-        android:gravity="center"
-        android:layout_centerVertical="true"/> -->
 
 
 

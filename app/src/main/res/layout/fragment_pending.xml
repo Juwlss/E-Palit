@@ -8,8 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/trade_rv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/trade_tab"
+        android:layout_height="match_parent"
         tools:listitem="@layout/trade_layout" />
 
 </FrameLayout>
