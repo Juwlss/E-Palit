@@ -6,6 +6,7 @@ import com.google.firebase.database.Exclude;
 
 public class Upload {
 
+    private String uid;
     private String imageUrl;
     private String userName;
     private String profileUrl;
@@ -18,13 +19,22 @@ public class Upload {
 
     }
 
-    public Upload(String userName, String imageUrl, String location, String itemName, String itemCondition) {
+    public Upload(String uid, String userName, String imageUrl, String location, String itemName, String itemCondition) {
+        this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
 //        this.profileUrl = profileUrl;
         this.location = location;
         this.itemName = itemName;
         this.itemCondition = itemCondition;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getImageUrl() {

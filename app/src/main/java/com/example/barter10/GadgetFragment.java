@@ -64,7 +64,6 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
 
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        String userId = firebaseAuth.getUid();
 
         //storage
         firebaseStorage = FirebaseStorage.getInstance();
@@ -99,11 +98,9 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
                 mUploads.clear();
 
                 for(DataSnapshot postSnapshot : snapshot.getChildren()){
-                    for(DataSnapshot snapshot1 : postSnapshot.getChildren()){
-                        Upload upload = snapshot1.getValue(Upload.class);
-                        upload.setKey(snapshot1.getKey());
-                        mUploads.add(upload);
-                    }
+                    Upload upload = postSnapshot.getValue(Upload.class);
+                    upload.setKey(postSnapshot.getKey());
+                    mUploads.add(upload);
 
                 }
 

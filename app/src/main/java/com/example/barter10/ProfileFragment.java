@@ -21,6 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
@@ -58,17 +59,25 @@ public class ProfileFragment extends Fragment {
 
         //displaying the post of user
         String userId = firebaseAuth.getCurrentUser().getUid();
-        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem").child(userId);
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+
+        Query qProfileimg = databaseReference.orderByChild("userId");
+
+        qProfileimg.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //fetching from firebase to display
                 mUploads.clear();
 
                 for(DataSnapshot postSnapshot : snapshot.getChildren()){
-                    Upload upload = postSnapshot.getValue(Upload.class);
-                    upload.setKey(postSnapshot.getKey());
-                    mUploads.add(upload);
+                    for (DataSnapshot profileSnap : snapshot.getChildren()){
+                        if (postSnapshot.getKey() == FirebaseAuth.getInstance().getUid()){
+                            Upload upload = postSnapshot.getValue(Upload.class);
+                            upload.setKey(postSnapshot.getKey());
+                            mUploads.add(upload);
+                            Toast.makeText(getContext(), ""+postSnapshot.getKey(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
 
                 selfPostAdapter.notifyDataSetChanged();

@@ -1,13 +1,10 @@
 package com.example.barter10;
 
-import android.content.Context;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -17,23 +14,34 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.barter10.Adapter.PostImageAdapter;
+import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.viewSearch;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class viewSearchFragment extends Fragment {
 
     ImageView btnViewBack;
     EditText viewSearchBar;
     RecyclerView rv;
+    private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     FirebaseRecyclerOptions<viewSearch> options;
     FirebaseRecyclerAdapter<viewSearch, viewSearchHolder> adapter;
     DatabaseReference dataRef;
+    private PostImageAdapter postImageAdapter;
+    private List<Upload> mUploads;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,14 +52,21 @@ public class viewSearchFragment extends Fragment {
         String searchedText = SearchFragment.searchedText;// getting the input search in parent fragment
 
 
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        String userId = firebaseAuth.getUid();
-        dataRef = FirebaseDatabase.getInstance().getReference("PostItem").child(userId);
+        dataRef = FirebaseDatabase.getInstance().getReference("PostItem");
+
+
+
         btnViewBack = view.findViewById(R.id.btnViewBack);
         viewSearchBar = view.findViewById(R.id.viewSearch_bar);
+
+        postImageAdapter = new PostImageAdapter(getContext(), mUploads);
+
+        //displaying search
         rv = view.findViewById(R.id.viewSearch_rv);
+        rv.setAdapter(postImageAdapter);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
         rv.setHasFixedSize(true);
+        mUploads = new ArrayList<>();
 
         //getting value in firebase
         LoadPostData("");
@@ -100,8 +115,7 @@ public class viewSearchFragment extends Fragment {
             }
         });
 
-        Toast.makeText(getContext(), viewSearchBar.getText().toString().trim(), Toast.LENGTH_SHORT).show();
-
+//        Toast.makeText(getContext(), viewSearchBar.getText().toString().trim(), Toast.LENGTH_SHORT).show();
 
 
         return view;
@@ -112,10 +126,16 @@ public class viewSearchFragment extends Fragment {
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout, mFragment).commit();
     }
 
-    private void LoadPostData(String data) {
-        Query query = dataRef.orderByChild("itemName").startAt(data).endAt(data+"\uf8ff");
+
+    private void LoadPostData (String data){
+
+
+        Query query = dataRef
+                .orderByChild("itemName").startAt(data).endAt(data+"\uf8ff");
+
 
         options = new FirebaseRecyclerOptions.Builder<viewSearch>().setQuery(query, viewSearch.class).build();
+
         adapter = new FirebaseRecyclerAdapter<viewSearch, viewSearchHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull viewSearchHolder holder, int position, @NonNull viewSearch model) {
@@ -149,7 +169,61 @@ public class viewSearchFragment extends Fragment {
         };
         adapter.startListening();
         rv.setAdapter(adapter);
-
+        adapter.notifyDataSetChanged();
     }
+
+
+
+
+
+
+//    private void LoadPostData(String data) {
+//
+//
+////        DataSnapshot dataSnapshot = null;
+////        Upload upload = dataSnapshot.getValue(Upload.class);
+////        upload.setKey(dataSnapshot.getKey());
+////        mUploads.add(upload);
+////
+////
+////        Toast.makeText(getContext(), ""+mUploads, Toast.LENGTH_SHORT).show();
+//
+//
+//
+//        dataRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                int count=0;
+//
+//                mUploads.clear();
+//
+//                for (DataSnapshot user : snapshot.getChildren()){
+//
+//                    count += 1;
+//
+//
+//                    for (DataSnapshot post : user.getChildren()){
+//
+//
+//
+//
+//                    }
+//
+//                }
+//
+//                adapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+//
+//
+//    }
 
 }

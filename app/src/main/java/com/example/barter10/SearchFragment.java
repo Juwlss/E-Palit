@@ -49,7 +49,7 @@ public class SearchFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        currentUserId = firebaseAuth.getCurrentUser().getUid();
+        currentUserId = firebaseAuth.getUid();
 
         dataRef = FirebaseDatabase.getInstance().getReference().child("RecentSearch").child(currentUserId);
         btnBack = view.findViewById(R.id.btnBack);

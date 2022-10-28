@@ -132,7 +132,9 @@ public class activityUpload extends AppCompatActivity{
                 });
             }
         });
-        //end calendar
+
+
+
 
 
         //spinner list of categories
@@ -283,19 +285,18 @@ public class activityUpload extends AppCompatActivity{
 
         //Getting userID
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        String uid = firebaseAuth.getUid();
 
 
         // generating key
         rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("PostItem").child(uid);
+        reference = rootNode.getReference("PostItem");
 
         urlStrings = new ArrayList<>();
         String itemKey = reference.push().getKey();
 
 
         //referring to storage
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem").child(uid);
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem");
         //getting values in edit text
         String postId =itemKey;
         String itemName = uploadName.getText().toString().trim();
@@ -342,11 +343,12 @@ public class activityUpload extends AppCompatActivity{
                                                    name = dataSnapshot.child("username").getValue().toString();
 
                                                    //uploading to firebase
-                                                   Upload upload = new Upload(name,uri.toString(),itemLocation, itemName, itemCondition);
-
+                                                   Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), name,uri.toString(),itemLocation, itemName, itemCondition);
                                                    reference.child(postId).setValue(upload);//setting primary key
-                                                   break;
+
+
                                                }
+                                               break;
                                            }
                                        }
 
