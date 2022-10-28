@@ -3791,6 +3791,7 @@ id expand_activities_button
 id expanded_menu
 id fade
 id fashionTab
+id fashion_rv
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3813,6 +3814,7 @@ id frame_layout
 id frost
 id fullname
 id fullscreen_header
+id gadget_rv
 id gadgettTab
 id ghost_view
 id ghost_view_holder
@@ -3916,7 +3918,6 @@ id line1
 id line3
 id linear
 id listCategories1
-id listCategories2
 id listMode
 id listTab
 id list_item
@@ -4042,7 +4043,6 @@ id position
 id post
 id postImage
 id postLayout
-id post_rv
 id prof_rv
 id profileMenu
 id profileUsername
@@ -4123,6 +4123,7 @@ id special_effects_controller_view_tag
 id spline
 id split_action_bar
 id sportTab
+id sports_rv
 id spread
 id spread_inside
 id spring
@@ -4161,6 +4162,8 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id techTab
+id technology_rv
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -4201,6 +4204,7 @@ id topPanel
 id topimg
 id touch_outside
 id toyTab
+id toy_rv
 id trade_cancel
 id trade_confirm
 id trade_layout
@@ -4407,6 +4411,7 @@ layout fragment_profile_settings
 layout fragment_search
 layout fragment_security
 layout fragment_sports
+layout fragment_technology
 layout fragment_toy
 layout fragment_view_search
 layout listing_layout

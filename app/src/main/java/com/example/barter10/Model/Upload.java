@@ -14,12 +14,14 @@ public class Upload {
     private String itemName;
     private String itemCondition;
     private String mKey;
+    private String category1;
 
     public Upload(){
 
     }
 
-    public Upload(String uid, String userName, String imageUrl, String location, String itemName, String itemCondition) {
+    public Upload(String uid, String userName, String imageUrl, String location, String itemName, String itemCondition, String category1) {
+        this.category1 = category1;
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
@@ -27,6 +29,14 @@ public class Upload {
         this.location = location;
         this.itemName = itemName;
         this.itemCondition = itemCondition;
+    }
+
+    public String getCategory1() {
+        return category1;
+    }
+
+    public void setCategory1(String category1) {
+        this.category1 = category1;
     }
 
     public String getUid() {

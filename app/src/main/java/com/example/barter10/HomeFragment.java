@@ -14,7 +14,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class HomeFragment extends Fragment{
 
-    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy"};
+    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy","Technology"};
 
     //Oncreate
     @Override
@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment{
         viewPager2 = view.findViewById(R.id.home_vpager);
         tabLayout = view.findViewById(R.id.tab_categories);
 
-
+        tabLayout.setTabMode(tabLayout.MODE_SCROLLABLE);
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
         pagerAdapter = new PagerAdapter(fm, getLifecycle(), tabLayout.getTabCount());
