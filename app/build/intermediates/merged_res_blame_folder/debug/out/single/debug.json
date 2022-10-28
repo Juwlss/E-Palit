@@ -1,674 +1,706 @@
 [
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn_border.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\btn_border.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_pins.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\pins.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_notifications_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_notifications_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_profile_post.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\profile_post.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_catselecting.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\tab_catselecting.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_checkbox.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\img_checkbox.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame34.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\frame34.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_upload_button.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\upload_button.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_fb.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_fb.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_enter.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\enter.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle37.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle37.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_appname.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\appname.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_login_button.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\login_button.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_code.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\code.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_post_layout.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\post_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_google.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\google.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_security_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_security_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_right_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_right_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame35.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\frame35.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_search_item.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\search_item.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_technology.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_technology.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle36.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle36.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_shoe.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\shoe.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_swap_horizontal_circle_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_swap_horizontal_circle_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_history_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_history_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_messages.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\messages.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_kyouser.jpg.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\kyouser.jpg"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_edit_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_edit_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rippleeffect.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rippleeffect.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame36.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\frame36.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_design.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\design.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_slasheye.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\slasheye.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame35.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\frame35.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_list.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_pangbaba.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable-v24\\pangbaba.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_line.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\bottom_line.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_pangbaba.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable-v24\\pangbaba.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_fb.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_fb.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_fb.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_fb.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_vector.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\vector.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\edittext_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_pending.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_pending.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle37.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle37.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_et_corner.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\et_corner.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_view_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\view_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_fb.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_fb.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_resend.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\resend.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\anim_label_resize.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\anim\\label_resize.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_settings_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\anim_resize.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\anim\\resize.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_upload.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\upload.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_fb.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_fb.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_facebook.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\facebook.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_message.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_message.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_list_alt_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_list_alt_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_swap_horizontal_circle_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_swap_horizontal_circle_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_enternewpassword.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\enternewpassword.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_undraw_contact_us_re_4qqt_1.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_undraw_contact_us_re_4qqt_1.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_box_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_check_box_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_listing_layout.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\listing_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_visibility_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_visibility_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_design_signup.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\design_signup.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_frame_37.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_frame_37.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_chat_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_chat_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_view_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\view_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle38.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle38.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_account_circle_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_calendar_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\calendar_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\menu\\menu.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_design_signup.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\design_signup.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame37.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\frame37.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_loading.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_loading.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_aprofile.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\aprofile.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\font_interbold.ttf.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\font\\interbold.ttf"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_close_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_close_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_photo_alternate_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_add_photo_alternate_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fashion.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_fashion.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ahome.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ahome.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_thumb.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\thumb.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_checkbox.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\img_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_hover_back.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\hover_back.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_edit_photo_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\edit_photo_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_message_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_message_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_photo_alternate_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_add_photo_alternate_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_close_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_close_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_view_search.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_view_search.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_logoe.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_logoe.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_label_logo.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\label_logo.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_border_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_postexample.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\postexample.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_forgotpassword.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_forgotpassword.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rippleeffect.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rippleeffect.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_technology.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_technology.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_paulouser.jpg.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\paulouser.jpg"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_toy.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_toy.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn_border.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\btn_border.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_watch.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\watch.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_alist.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\alist.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_userprofile.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\userprofile.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_message_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_message_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_signup.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\signup.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_visibility_off.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\visibility_off.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_list.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_progress_bg.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\progress_bg.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_chevron_right_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_chevron_right_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_line.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\bottom_line.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_info_setting.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_info_setting.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\font_interbold.ttf.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\font\\interbold.ttf"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_security.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_security.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_calendar_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\calendar_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_list_alt_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_list_alt_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\font_inter.ttf.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\font\\inter.ttf"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_edit_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_edit_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\anim_label_resize.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\anim\\label_resize.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_otp.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_otp.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame34.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\frame34.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectorback.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\vectorback.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle36.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle36.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_security_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_security_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_listcategories_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\listcategories_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_viewsearched_item.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\viewsearched_item.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_user_layout.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\user_layout.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_code.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\code.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_listcategories_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\listcategories_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\font_intersemibold.ttf.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\font\\intersemibold.ttf"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\font_inter.ttf.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\font\\inter.ttf"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle33.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle33.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_ui_search.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\edittext_ui_search.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_shoe.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\shoe.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_four_digits_logo.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\four_digits_logo.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_visibility_off.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\visibility_off.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_message.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_message.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\edittext_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_ui_search.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\edittext_ui_search.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle33.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle33.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_home_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_people_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_people_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_chevron_right_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_chevron_right_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fashion.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_fashion.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_hover_back.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\hover_back.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_search_black_24dp.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_search_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_arrow.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\arrow.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_aprofile.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\aprofile.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_upload.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\upload.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_design.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\design.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_post_shape.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\post_shape.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_image_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\anim_resize.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\anim\\resize.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_track.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\track.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_account_circle_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_loading.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_loading.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_epalit.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_epalit.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_category_layout.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\category_layout.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_enternewpassword.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\enternewpassword.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_vincentuser.jpg.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\vincentuser.jpg"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_forgotpassword.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\icon_forgotpassword.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectors.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\vectors.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_visibility_off_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_visibility_off_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_upload_layout.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\upload_layout.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_watch.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\watch.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_home.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_upload_layout.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\upload_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_hover_effect.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\hover_effect.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_pins.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\pins.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\menu\\menu.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_receive.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\receive.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_vincentuser.jpg.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\vincentuser.jpg"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_button.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\button.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_juls.jpg.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\juls.jpg"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_edit_text_border.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\edit_text_border.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rating.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rating.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_trade_layout.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\trade_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\logo.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_track.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\track.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectors.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\vectors.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle34.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle34.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_edit_photo_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\edit_photo_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_tradesymbol.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\tradesymbol.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_arrow.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\arrow.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_box_outline_blank_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_check_box_outline_blank_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle34.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle34.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\button_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_catselected.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\tab_catselected.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_security.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_security.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_undraw_mobile_login_re_9ntv1.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\undraw_mobile_login_re_9ntv1.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_designall.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\designall.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_gadget.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_gadget.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_gadget.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_gadget.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_signup_new.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_signup_new.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_progress_bg.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\progress_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_forgotpassword.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\icon_forgotpassword.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_border_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_group_26.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_group_26.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_pending.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_pending.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_fb.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_fb.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn_upload_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\btn_upload_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_notifications_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_notifications_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_search_black_24dp.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_search_black_24dp.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_finished.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_finished.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_listselecting.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\tab_listselecting.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn_upload_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\btn_upload_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_post_layout.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\post_layout.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_profile_post.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\profile_post.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_back_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_signup_new.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_signup_new.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_search.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_et_corner.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\et_corner.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_viewsearched_item.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\viewsearched_item.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_signup.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\signup.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_fb.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_fb.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_undraw_mobile_login_re_9ntv1.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\undraw_mobile_login_re_9ntv1.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_kyouser.jpg.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\kyouser.jpg"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_four_digits_logo.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\four_digits_logo.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\button_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_receive.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\receive.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_catselecting.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\tab_catselecting.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile_settings.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_profile_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_visibility_off_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_visibility_off_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_daleuser.jpg.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\daleuser.jpg"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_history_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_history_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle35.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle35.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_otp.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_otp.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_daleuser.jpg.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\daleuser.jpg"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_userprofile.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\userprofile.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_listing_layout.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\listing_layout.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame36.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\frame36.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle38.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle38.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_newpass.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_newpass.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_juls.jpg.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\juls.jpg"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_postexample.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\postexample.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_login_button.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\login_button.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_newpass.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_newpass.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_listselecting.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\tab_listselecting.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectorback.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\vectorback.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle32.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rectangle32.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_thumb.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\thumb.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_post_shape.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\post_shape.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_box_outline_blank_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_check_box_outline_blank_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_vector.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\vector.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_people_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_people_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_image_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_sports.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_sports.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_listselected.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\tab_listselected.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_toy.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_toy.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_catselected.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\tab_catselected.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_finished.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_finished.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_gg.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_gg.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_amessage.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\amessage.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_rating.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\rating.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_search_item.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\search_item.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_listselected.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\tab_listselected.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_undraw_personal_email_re_4lx7_1.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_undraw_personal_email_re_4lx7_1.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ahome.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ahome.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_upload_button.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\upload_button.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile_settings.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_profile_settings.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_amessage.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\amessage.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_alist.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\alist.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_hover_effect.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\hover_effect.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle32.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle32.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_messages.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\messages.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_button.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\button.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_trade_layout.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\trade_layout.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_edit_text_border.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\edit_text_border.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_category_layout.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\category_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_info_setting.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\fragment_info_setting.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_view_search.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_view_search.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_visibility_24.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\ic_baseline_visibility_24.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_user_layout.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\user_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_loading_logo.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\loading_logo.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_box_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_check_box_24.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\font_intersemibold.ttf.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\font\\intersemibold.ttf"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_google_fb_ui.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\google_fb_ui.xml"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_paulouser.jpg.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\paulouser.jpg"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_google_fb_ui.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\google_fb_ui.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_label_logo.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\label_logo.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_forgotpassword.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_forgotpassword.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_tradesymbol.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\tradesymbol.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_upload.xml.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\layout\\activity_upload.xml"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle35.png.flat",
-        "source": "C:\\Users\\Lorgie\\AndroidStudioProjects\\Clone7\\app\\src\\main\\res\\drawable\\rectangle35.png"
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_resend.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\resend.png"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_slasheye.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\slasheye.png"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_loading_logo.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\loading_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_upload.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\activity_upload.xml"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_sports.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\layout\\fragment_sports.xml"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_right_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_right_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_enter.png.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\enter.png"
+    },
+    {
+        "merged": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_chat_24.xml.flat",
+        "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-p\\app\\src\\main\\res\\drawable\\ic_baseline_chat_24.xml"
     }
 ]

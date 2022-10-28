@@ -209,6 +209,20 @@
         <entry key="..\:/Users/lacam/AndroidStudioProjects/E-Palit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3305" />
         <entry key="..\:/Users/lacam/AndroidStudioProjects/E-Palit/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3305" />
         <entry key="..\:/Users/lacam/AndroidStudioProjects/E-Palit/app/src/main/res/layout/activity_otp.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_epalit.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_frame_37.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_gg.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_group_26.xml" value="0.176" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_logoe.xml" value="0.107" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_undraw_contact_us_re_4qqt_1.xml" value="0.162" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/drawable/ic_undraw_personal_email_re_4lx7_1.xml" value="0.107" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_forgotpassword.xml" value="0.22" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_loading.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_newpass.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_otp.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_signup_new.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/ic_gg.xml" value="0.13333333333333333" />
       </map>
     </option>
   </component>

@@ -11,7 +11,7 @@
         android:layout_width="214dp"
         android:layout_height="261dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/loading_logo" />
+        app:srcCompat="@drawable/ic_logoe"/>
 
     <ProgressBar
         android:id="@+id/progressBar"

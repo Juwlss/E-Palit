@@ -22,15 +22,15 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="@dimen/_25sdp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/ic_logoe" />
 
             <ImageView
                 android:id="@+id/appname"
                 android:layout_width="@dimen/_189sdp"
                 android:layout_height="@dimen/_29sdp"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@id/logo"
-                android:src="@drawable/appname" />
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_epalit" />
 
 
             <RelativeLayout

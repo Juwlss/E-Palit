@@ -15,64 +15,149 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/four_digits_logo" />
+        app:srcCompat="@drawable/ic_undraw_personal_email_re_4lx7_1" />
 
 
-    <ImageView
+    <TextView
         android:id="@+id/enter1"
-        android:layout_width="@dimen/_230sdp"
-        android:layout_height="@dimen/_18sdp"
-        android:layout_below="@+id/logo"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/enter" />
-
-    <ImageView
-        android:id="@+id/enter3"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_12sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter1"
-        app:srcCompat="@drawable/code" />
-
-    <com.chaos.view.PinView
-        android:id="@+id/pin1"
-        style="@style/PinWidget.PinView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:elevation="10dp"
-        android:hint="e.g 5"
-        android:inputType="number"
-        android:itemBackground="@drawable/pins"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:itemHeight="@dimen/_39sdp"
-        app:itemWidth="@dimen/_39sdp"
-        app:itemRadius="@dimen/_10sdp"
-        app:itemSpacing="30dp"
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/interbold"
+        android:text="Enter 4 digit code"
+        android:textColor="#094067"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter3"
-        app:lineColor="@color/white"
-        app:viewType="rectangle">
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.04" />
 
-    </com.chaos.view.PinView>
+    <RelativeLayout
+        android:id="@+id/pens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSign"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/enter1"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/pen1"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+        <EditText
+            android:id="@+id/pen2"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_46sdp"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+        <EditText
+            android:id="@+id/pen3"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_92sdp"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+        <EditText
+            android:id="@+id/pen4"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_138sdp"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pen5"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_184sdp"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pen6"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_230sdp"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_otp"
         android:layout_width="@dimen/_160sdp"
         android:layout_height="@dimen/_25sdp"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:background="@drawable/btn_border"
         android:fontFamily="@font/inter"
@@ -86,30 +171,76 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pin1"
-        android:onClick="submitOTP"/>
+        app:layout_constraintTop_toBottomOf="@+id/pens"/>
+    //android:onClick="submitOTP"
+
+
+    <RelativeLayout
+        android:id="@+id/txtSign"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_otp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_74sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter"
+            android:text="Didn't receive the code?"
+            android:textColor="#5F6C7B"
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:id="@+id/didnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_38sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/interbold"
+            android:paddingLeft="@dimen/_130sdp"
+            android:text="Resend now"
+            android:textColor="#EF4565"
+            android:textSize="@dimen/_8ssp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgbarotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSign"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSign" />
+
+    <TextView
+        android:id="@+id/textmobileshownumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSign"
+        tools:layout_editor_absoluteX="63dp" />
 
     <ImageView
         android:id="@+id/design"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110.5dp"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_group_26"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/design" />
-
-    <ImageView
-        android:id="@+id/resend"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_8sdp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:srcCompat="@drawable/resend" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

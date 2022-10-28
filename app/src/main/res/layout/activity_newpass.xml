@@ -127,7 +127,7 @@
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_120sdp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/frame37"
+        android:src="@drawable/ic_frame_37"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -154,9 +154,9 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="110.5dp"
+        android:layout_width="110dp"
         android:layout_height="130dp"
-        android:src="@drawable/designall"
+        android:src="@drawable/ic_group_26"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
