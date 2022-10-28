@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/categories"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,58 +11,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_55sdp"
         android:fontFamily="@font/inter"
         android:text="Categories"
         android:textColor="#094067"
-        android:textFontWeight="400"
-        android:textSize="23sp"/>
+        android:textFontWeight="900"
+        android:textSize="@dimen/_18sdp" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_categories"
+        style="@style/tab_text"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="@dimen/_30sdp"
         android:layout_below="@id/text_categories"
-        android:layout_margin="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         app:tabBackground="@drawable/tab_catselecting"
         app:tabIndicatorHeight="0dp"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/black"
-        style="@style/tab_text">
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/gadgettTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gadgets"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Gadgets" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/sportTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sports"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Sports" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/fashionTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fashion"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Fashion" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/toyTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toys"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Toys" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/techTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="10dp"
+            android:text="Technology" />
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -72,6 +81,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tab_categories"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal" />
 
 </RelativeLayout>

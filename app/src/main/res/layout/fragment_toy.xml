@@ -5,12 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ToyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/toy_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="toy"
-        android:textSize="50sp"
-        android:gravity="center"/>
+        tools:listitem="@layout/post_layout"/>
 
 </FrameLayout>

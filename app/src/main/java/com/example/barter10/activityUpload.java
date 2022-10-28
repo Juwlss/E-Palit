@@ -56,7 +56,6 @@ public class activityUpload extends AppCompatActivity{
     private UploadListAdapter uploadListAdapter;
     RecyclerView recyclerView;
     ImageView imageView;
-    Uri uploadImgdef;
     Button btnUpload;
     Button calendar;
     ProgressDialog progressDialog;
@@ -69,8 +68,7 @@ public class activityUpload extends AppCompatActivity{
     private DatabaseReference reference;
     private FirebaseDatabase rootNode;
     private String category1;
-    private String category2;
-    private String username;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,22 +137,21 @@ public class activityUpload extends AppCompatActivity{
 
         //spinner list of categories
 
+        //adding
         Spinner list1 = findViewById(R.id.listCategories1);
-        Spinner list2 = findViewById(R.id.listCategories2);
         List<String> categories = new ArrayList<>();
         categories.add(0, "Select");
+        categories.add("Gadget");
         categories.add("Technology");
         categories.add("Fashion");
         categories.add("Sports");
+        categories.add("Toy");
 
-        //styling
+        //setting categories in spinner
         ArrayAdapter<String> dataAdapter;
         dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, categories);
-        //
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //
         list1.setAdapter(dataAdapter);
-
         list1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -170,31 +167,6 @@ public class activityUpload extends AppCompatActivity{
                 // TODO Auto-generated method
             }
         });
-        //styling
-        ArrayAdapter<String> dataAdapter2;
-        dataAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, categories);
-        //
-        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //
-        list2.setAdapter(dataAdapter2);
-
-        list2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).equals("Select")) {
-                    //do nothing
-                } else {
-                    category2 = parent.getItemAtPosition(position).toString();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method
-            }
-        });
-
-        //end of spinner list categories
 
         //getting details in edit text
         uploadName = findViewById(R.id.txtItemName);
@@ -204,39 +176,7 @@ public class activityUpload extends AppCompatActivity{
         uploadValue = findViewById(R.id.txtEstimatedValue);
         uploadPreference = findViewById(R.id.txtPreference);
 
-        //setting upload button in default
-        uploadImgdef = Uri.parse("android.resource://com.example.uploadpage/drawable/upload_button");
 
-
-    }
-
-    private void getUsername(){
-
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
-
-        postReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
-                    String copyuser = firebaseAuth.getCurrentUser().getEmail();
-
-                    username = dataSnapshot.child("useremail").getValue().toString();
-                    if(copyuser.equals(username)){
-                        username = dataSnapshot.child("username").getValue().toString();
-                        break;
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     private void uploadImage() {
@@ -289,14 +229,14 @@ public class activityUpload extends AppCompatActivity{
 
         // generating key
         rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("PostItem");
+        reference = rootNode.getReference("Paulo");
 
         urlStrings = new ArrayList<>();
         String itemKey = reference.push().getKey();
 
 
         //referring to storage
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem");
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Paulo");
         //getting values in edit text
         String postId =itemKey;
         String itemName = uploadName.getText().toString().trim();
@@ -306,9 +246,13 @@ public class activityUpload extends AppCompatActivity{
         String itemValue = uploadValue.getText().toString().trim();
         String itemPreference = uploadPreference.getText().toString().trim();
         String timeLimit = timer;
-        String itemCategory = category1+category2;
 
-        if (itemList.isEmpty() || timer == null || TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails) || TextUtils.isEmpty(itemCondition) || TextUtils.isEmpty(itemValue) || TextUtils.isEmpty(itemPreference) || TextUtils.isEmpty(itemCategory)){
+        String cat1 = category1;
+
+
+        if (itemList.isEmpty() || timer == null || TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails)
+                || TextUtils.isEmpty(itemCondition) || TextUtils.isEmpty(itemValue) || TextUtils.isEmpty(itemPreference)
+                || cat1 == null){
             Toast.makeText(activityUpload.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
         } else {
 
@@ -319,55 +263,54 @@ public class activityUpload extends AppCompatActivity{
                 ImageName.putFile(IndividualImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                       ImageName.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                           @Override
-                           public void onSuccess(Uri uri) {
-                               urlStrings.add(String.valueOf(uri));
-                               if (urlStrings.size() == itemList.size()){
-                                   //displaying pictures to upload
-                                   storeLink(urlStrings);
+                        ImageName.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                urlStrings.add(String.valueOf(uri));
+                                if (urlStrings.size() == itemList.size()){
+                                    //displaying pictures to upload
+                                    storeLink(urlStrings);
 
-                                   FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-                                   DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
+                                    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                                    DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
 
-                                   postReference.addValueEventListener(new ValueEventListener() {
-                                       @Override
-                                       public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    postReference.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                                           String name;
-                                           for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                               String copyuser = firebaseAuth.getCurrentUser().getEmail();
-                                               name = dataSnapshot.child("useremail").getValue().toString();
-                                               if(copyuser.equals(name)){
-                                                   //getting the username of uploader
-                                                   name = dataSnapshot.child("username").getValue().toString();
+                                            String name;
+                                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                                String copyuser = firebaseAuth.getCurrentUser().getEmail();
+                                                name = dataSnapshot.child("useremail").getValue().toString();
+                                                if(copyuser.equals(name)){
+                                                    //getting the username of uploader
+                                                    name = dataSnapshot.child("username").getValue().toString();
 
-                                                   //uploading to firebase
-                                                   Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), name,uri.toString(),itemLocation, itemName, itemCondition);
-                                                   reference.child(postId).setValue(upload);//setting primary key
+                                                    //uploading to firebase
+                                                    Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), name,uri.toString(),itemLocation, itemName, itemCondition, cat1);
+                                                    reference.child(postId).setValue(upload);//setting primary key
+                                                    break;
+                                                }
 
+                                            }
+                                        }
 
-                                               }
-                                               break;
-                                           }
-                                       }
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
 
-                                       @Override
-                                       public void onCancelled(@NonNull DatabaseError error) {
+                                        }
+                                    });
 
-                                       }
-                                   });
-
-                                   Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
-                                   startActivity(new Intent(activityUpload.this, Home.class));
-                               }
-                           }
-                       }).addOnFailureListener(new OnFailureListener() {
-                           @Override
-                           public void onFailure(@NonNull Exception e) {
-                               Toast.makeText(activityUpload.this,"Failed to Upload",Toast.LENGTH_SHORT).show();
-                           }
-                       });
+                                    Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(activityUpload.this, Home.class));
+                                }
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(activityUpload.this,"Failed to Upload",Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -391,59 +334,9 @@ public class activityUpload extends AppCompatActivity{
             hashMap.put("ImgLink"+i, urlStrings.get(i));
 
         }
-//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("User");
-//        databaseReference.push().setValue(hashMap)
-//                .addOnCompleteListener(
-//                        new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//                                if (task.isSuccessful()) {
-//                                    Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
-//                                }
-//                            }
-//                        }
-//                ).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(activityUpload.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
         progressDialog.dismiss();
         itemList.clear();
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.upload_image1:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()                    //Crop image(Optional), Check Customization for more option
-//                        .compress(1024)            //Final image size will be less than 1 MB(Optional)
-//                        .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
-//                        .start(1);
-//
-//                break;
-//            case R.id.upload_image2:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()
-//                        .compress(1024)
-//                        .maxResultSize(1080, 1080)
-//                        .start(2);
-//                break;
-//            case R.id.upload_image3:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()
-//                        .compress(1024)
-//                        .maxResultSize(1080, 1080)
-//                        .start(3);
-//                break;
-//            case R.id.upload_image4:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()
-//                        .compress(1024)
-//                        .maxResultSize(1080, 1080)
-//                        .start(4);
-//                break;
-//        }
-//    }
 }

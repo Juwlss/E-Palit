@@ -52,7 +52,7 @@ public class viewSearchFragment extends Fragment {
         String searchedText = SearchFragment.searchedText;// getting the input search in parent fragment
 
 
-        dataRef = FirebaseDatabase.getInstance().getReference("PostItem");
+        dataRef = FirebaseDatabase.getInstance().getReference("Paulo");
 
 
 
@@ -115,9 +115,6 @@ public class viewSearchFragment extends Fragment {
             }
         });
 
-//        Toast.makeText(getContext(), viewSearchBar.getText().toString().trim(), Toast.LENGTH_SHORT).show();
-
-
         return view;
     }
 
@@ -171,59 +168,5 @@ public class viewSearchFragment extends Fragment {
         rv.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
-
-
-
-
-
-
-//    private void LoadPostData(String data) {
-//
-//
-////        DataSnapshot dataSnapshot = null;
-////        Upload upload = dataSnapshot.getValue(Upload.class);
-////        upload.setKey(dataSnapshot.getKey());
-////        mUploads.add(upload);
-////
-////
-////        Toast.makeText(getContext(), ""+mUploads, Toast.LENGTH_SHORT).show();
-//
-//
-//
-//        dataRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//                int count=0;
-//
-//                mUploads.clear();
-//
-//                for (DataSnapshot user : snapshot.getChildren()){
-//
-//                    count += 1;
-//
-//
-//                    for (DataSnapshot post : user.getChildren()){
-//
-//
-//
-//
-//                    }
-//
-//                }
-//
-//                adapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//
-//
-//
-//    }
 
 }

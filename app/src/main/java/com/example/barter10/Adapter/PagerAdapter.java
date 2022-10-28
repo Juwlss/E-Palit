@@ -8,13 +8,14 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.example.barter10.FashionFragment;
 import com.example.barter10.GadgetFragment;
 import com.example.barter10.SportsFragment;
+import com.example.barter10.TechnologyFragment;
 import com.example.barter10.ToyFragment;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PagerAdapter extends FragmentStateAdapter {
 
-    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy"};
+    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy","Technology"};
 
     int noTab;
     public PagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle, int Tabno) {
@@ -36,6 +37,8 @@ public class PagerAdapter extends FragmentStateAdapter {
                 return new FashionFragment();
             case 3:
                 return new ToyFragment();
+            case 4:
+                return new TechnologyFragment();
             default:
                 return null;
         }

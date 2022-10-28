@@ -22,6 +22,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -38,6 +39,8 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
 
     private RecyclerView recyclerView;
     private PostImageAdapter postImageAdapter;
+    private FirebaseAuth firebaseAuth;
+    private String currentId;
 
     public GadgetFragment() {
         // Required empty public constructor
@@ -50,7 +53,11 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         View view = inflater.inflate(R.layout.fragment_gadget, container, false);
 
 
-        recyclerView = view.findViewById(R.id.post_rv);
+        firebaseAuth = FirebaseAuth.getInstance();
+        currentId = firebaseAuth.getCurrentUser().getUid();
+
+
+        recyclerView = view.findViewById(R.id.gadget_rv);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -62,13 +69,10 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         postImageAdapter.setOnItemClickListener(GadgetFragment.this);
 
 
-
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-
         //storage
         firebaseStorage = FirebaseStorage.getInstance();
         //displaying items
-        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Paulo");
 
 //        DatabaseReference postReference;
 //        postReference = FirebaseDatabase.getInstance().getReference("users");
@@ -91,19 +95,17 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
 //            }
 //        });
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        Query query = databaseReference.orderByChild("category1").equalTo("Gadget");
+        query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //fetching from firebase to display
                 mUploads.clear();
-
                 for(DataSnapshot postSnapshot : snapshot.getChildren()){
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setKey(postSnapshot.getKey());
                     mUploads.add(upload);
-
                 }
-
                 postImageAdapter.notifyDataSetChanged();
 
             }
@@ -138,27 +140,31 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
     @Override
     public void onDeleteClick(int position) {
         Upload selectedItem = mUploads.get(position);
-        String selectedkey = selectedItem.getKey();
-        String username = selectedItem.getUserName();
-        Toast.makeText(getContext(), ""+username, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getContext(), ""+selectedkey, Toast.LENGTH_SHORT).show();
+        String selectedKey = selectedItem.getKey();
 
+        String otherUid = selectedItem.getUid();
 
-//        StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
-//
-//        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void unused) {
-//
-//                databaseReference.child(selectedkey).removeValue();
-//                Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        if(currentId.equals(otherUid)){
+            StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
+
+            imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+
+                    databaseReference.child(currentId).child(selectedKey).removeValue();
+                    Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+        else {
+            Toast.makeText(getContext(), "This is not your post", Toast.LENGTH_SHORT).show();
+        }
 
 
 
