@@ -14,19 +14,30 @@ public class Upload {
     private String itemName;
     private String itemCondition;
     private String mKey;
-
+    private String itemUser;
     public Upload(){
 
     }
 
-    public Upload(String uid, String userName, String imageUrl, String location, String itemName, String itemCondition) {
+    public Upload(String itemUser, String uid, String userName, String imageUrl, String location, String itemName, String itemCondition) {
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
+        this.itemUser = itemUser;
 //        this.profileUrl = profileUrl;
         this.location = location;
         this.itemName = itemName;
+
         this.itemCondition = itemCondition;
+
+    }
+
+    public String getItemUser() {
+        return itemUser;
+    }
+
+    public void setItemUser(String itemUser) {
+        this.itemUser = itemUser;
     }
 
     public String getUid() {

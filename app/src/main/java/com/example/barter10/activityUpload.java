@@ -210,34 +210,7 @@ public class activityUpload extends AppCompatActivity{
 
     }
 
-    private void getUsername(){
 
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
-
-        postReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
-                    String copyuser = firebaseAuth.getCurrentUser().getEmail();
-
-                    username = dataSnapshot.child("useremail").getValue().toString();
-                    if(copyuser.equals(username)){
-                        username = dataSnapshot.child("username").getValue().toString();
-                        break;
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 
     private void uploadImage() {
 
@@ -343,18 +316,16 @@ public class activityUpload extends AppCompatActivity{
                                                    name = dataSnapshot.child("username").getValue().toString();
 
                                                    //uploading to firebase
-                                                   Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), name,uri.toString(),itemLocation, itemName, itemCondition);
+                                                   Upload upload = new Upload(itemName+"_"+name,FirebaseAuth.getInstance().getUid(), name,uri.toString(),itemLocation, itemName, itemCondition);
                                                    reference.child(postId).setValue(upload);//setting primary key
-
-
+                                                   break;
                                                }
-                                               break;
                                            }
                                        }
 
                                        @Override
                                        public void onCancelled(@NonNull DatabaseError error) {
-
+                                           Toast.makeText(activityUpload.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                                        }
                                    });
 
@@ -391,59 +362,10 @@ public class activityUpload extends AppCompatActivity{
             hashMap.put("ImgLink"+i, urlStrings.get(i));
 
         }
-//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("User");
-//        databaseReference.push().setValue(hashMap)
-//                .addOnCompleteListener(
-//                        new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//                                if (task.isSuccessful()) {
-//                                    Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
-//                                }
-//                            }
-//                        }
-//                ).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(activityUpload.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
         progressDialog.dismiss();
         itemList.clear();
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.upload_image1:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()                    //Crop image(Optional), Check Customization for more option
-//                        .compress(1024)            //Final image size will be less than 1 MB(Optional)
-//                        .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
-//                        .start(1);
-//
-//                break;
-//            case R.id.upload_image2:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()
-//                        .compress(1024)
-//                        .maxResultSize(1080, 1080)
-//                        .start(2);
-//                break;
-//            case R.id.upload_image3:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()
-//                        .compress(1024)
-//                        .maxResultSize(1080, 1080)
-//                        .start(3);
-//                break;
-//            case R.id.upload_image4:
-//                ImagePicker.Companion.with(activityUpload.this)
-//                        .crop()
-//                        .compress(1024)
-//                        .maxResultSize(1080, 1080)
-//                        .start(4);
-//                break;
-//        }
-//    }
+
 }

@@ -57,22 +57,20 @@ public class Home extends AppCompatActivity {
         postReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String username="";
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
 
-                   String copyuser = firebaseAuth.getCurrentUser().getEmail();
-
-                    username = dataSnapshot.child("useremail").getValue().toString();
-                    if(copyuser.equals(username)){
-                        username = dataSnapshot.child("username").getValue().toString();
+                        String username = dataSnapshot.child("username").getValue().toString();
+                        String name[] = username.split(" ");
+                        String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
+                        welcome.setText("Welcome "+upperString+"!");
                         break;
                     }
                 }
 
-                String name[] = username.split(" ");
-                String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
-                welcome.setText("Welcome "+upperString+"!");
+
+
             }
 
             @Override

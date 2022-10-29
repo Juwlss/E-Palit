@@ -131,26 +131,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //auto sign in
-        /**remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if(buttonView.isChecked()){
-                    SharedPreferences preferences = getSharedPreferences("remember", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("remember", "true");
-                    editor.apply();
-                    Toast.makeText(MainActivity.this, "Checked", Toast.LENGTH_SHORT).show();
-                }else if(!buttonView.isChecked()){
-                    SharedPreferences preferences = getSharedPreferences("remember", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("remember", "false");
-                    editor.apply();
-                    Toast.makeText(MainActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });**/
 
         //showing togglepassword when typing
         password.addTextChangedListener(new TextWatcher() {

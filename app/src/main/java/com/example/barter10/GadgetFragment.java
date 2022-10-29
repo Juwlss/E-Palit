@@ -70,26 +70,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         //displaying items
         databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
 
-//        DatabaseReference postReference;
-//        postReference = FirebaseDatabase.getInstance().getReference("users");
-//
-//        postReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                mUploads.clear();
-//
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-//                    User user = new User();
-//                    String username = dataSnapshot.child("username").getValue().toString();
-//                    Toast.makeText(getContext(), ""+username, Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
+
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

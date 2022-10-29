@@ -25,6 +25,8 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +39,7 @@ public class ProfileFragment extends Fragment {
     private SelfPostAdapter selfPostAdapter;
     private RecyclerView recyclerView;
     private FirebaseAuth firebaseAuth;
-
+    private TextView countPost;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class ProfileFragment extends Fragment {
 
         ImageButton settings = view.findViewById(R.id.btn_settings);
         TextView profilename = view.findViewById(R.id.profilename);
+        countPost = view.findViewById(R.id.numpost);
+
 
         recyclerView = view.findViewById(R.id.prof_rv);
         recyclerView.setHasFixedSize(true);
@@ -61,27 +65,25 @@ public class ProfileFragment extends Fragment {
         String userId = firebaseAuth.getCurrentUser().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
 
-        Query qProfileimg = databaseReference.orderByChild("userId");
+        Query qPost = databaseReference.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getUid());
 
-        qProfileimg.addValueEventListener(new ValueEventListener() {
+        qPost.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //fetching from firebase to display
                 mUploads.clear();
-
                 for(DataSnapshot postSnapshot : snapshot.getChildren()){
-                    for (DataSnapshot profileSnap : snapshot.getChildren()){
-                        if (postSnapshot.getKey() == FirebaseAuth.getInstance().getUid()){
-                            Upload upload = postSnapshot.getValue(Upload.class);
-                            upload.setKey(postSnapshot.getKey());
-                            mUploads.add(upload);
-                            Toast.makeText(getContext(), ""+postSnapshot.getKey(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
+                    Upload upload = postSnapshot.getValue(Upload.class);
+                    upload.setKey(postSnapshot.getKey());
+                    mUploads.add(upload);
+
+
+                    countPost.setText(""+snapshot.getChildrenCount());
+                    Toast.makeText(getContext(), "uploadcount : "+snapshot.getChildrenCount(), Toast.LENGTH_SHORT).show();
                 }
 
-                selfPostAdapter.notifyDataSetChanged();
 
+                selfPostAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -89,6 +91,10 @@ public class ProfileFragment extends Fragment {
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
+
 
 
         //go to profile settings
@@ -109,19 +115,13 @@ public class ProfileFragment extends Fragment {
         postReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String username="";
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
-                    String copyuser = firebaseAuth.getCurrentUser().getEmail();
-
-                    username = dataSnapshot.child("useremail").getValue().toString();
-                    if(copyuser.equals(username)){
-                        username = dataSnapshot.child("username").getValue().toString();
+                    if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
+                        profilename.setText(dataSnapshot.child("username").getValue().toString());
                         break;
                     }
                 }
-                profilename.setText(username);
             }
 
             @Override

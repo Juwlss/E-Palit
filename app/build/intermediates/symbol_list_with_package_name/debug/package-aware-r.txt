@@ -1347,6 +1347,8 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color epalitblue
+color epalitred
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -3625,7 +3627,6 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
-id aho
 id alertTitle
 id aligned
 id all
@@ -3681,6 +3682,7 @@ id btn_img
 id btn_logout
 id btn_pending
 id btn_settings
+id btn_username
 id button
 id buttonPanel
 id cache_measures
@@ -3768,7 +3770,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id edi
 id editEmail
 id editLocation
 id editName

@@ -42,7 +42,6 @@ public class viewSearchFragment extends Fragment {
     DatabaseReference dataRef;
     private PostImageAdapter postImageAdapter;
     private List<Upload> mUploads;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -130,11 +129,14 @@ public class viewSearchFragment extends Fragment {
     private void LoadPostData (String data){
 
 
+
         Query query = dataRef
-                .orderByChild("itemName").startAt(data).endAt(data+"\uf8ff");
+                .orderByChild("itemName").startAt(data).endAt(data+"\uf8ff"+data);
+
 
 
         options = new FirebaseRecyclerOptions.Builder<viewSearch>().setQuery(query, viewSearch.class).build();
+
 
         adapter = new FirebaseRecyclerAdapter<viewSearch, viewSearchHolder>(options) {
             @Override

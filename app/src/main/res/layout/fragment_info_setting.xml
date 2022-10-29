@@ -47,7 +47,7 @@
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/editEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/editPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/editLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                 android:src="@drawable/ic_baseline_account_circle_24" />
 
             <ImageView
-                android:id="@+id/aho"
+                android:id="@+id/btn_img"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginLeft="@dimen/_60sdp"
@@ -151,7 +151,7 @@
             android:layout_centerHorizontal="true"
             tools:ignore="NotSibling">
 
-            <EditText
+            <TextView
                 android:id="@+id/editName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,12 +160,13 @@
                 android:backgroundTint="@android:color/transparent"
                 android:fontFamily="@font/inter"
                 android:hint="Username"
+                android:textAlignment="center"
                 android:textColor="#333333"
                 android:textSize="@dimen/_18ssp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/edi"
+                android:id="@+id/btn_username"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_alignTop="@+id/editName"
