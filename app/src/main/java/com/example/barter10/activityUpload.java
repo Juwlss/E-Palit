@@ -229,14 +229,14 @@ public class activityUpload extends AppCompatActivity{
 
         // generating key
         rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("Paulo");
+        reference = rootNode.getReference("PostItem");
 
         urlStrings = new ArrayList<>();
         String itemKey = reference.push().getKey();
 
 
         //referring to storage
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Paulo");
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem");
         //getting values in edit text
         String postId =itemKey;
         String itemName = uploadName.getText().toString().trim();

@@ -64,7 +64,7 @@ public class SportsFragment extends Fragment implements PostImageAdapter.OnItemC
         //storage
         firebaseStorage = FirebaseStorage.getInstance();
         //displaying items
-        databaseReference = FirebaseDatabase.getInstance().getReference("Paulo");
+        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
 
 
         Query query = databaseReference.orderByChild("category1").equalTo("Sports");

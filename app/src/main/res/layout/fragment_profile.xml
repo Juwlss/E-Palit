@@ -24,12 +24,8 @@
                 android:src="@drawable/ic_baseline_account_circle_24" />
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_toRightOf="@id/image_profile">
 
                 <TextView
@@ -58,7 +54,7 @@
                     android:layout_height="@dimen/_20sdp"
                     android:layout_below="@id/rating"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="Posts:"
+                    android:text="Post:"
                     android:textColor="#000000"
                     android:textSize="@dimen/_15ssp" />
 
@@ -70,7 +66,7 @@
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_toRightOf="@id/post"
-                    android:text="5"
+                    android:text="0"
                     android:textColor="#000000"
                     android:textFontWeight="900"
                     android:textSize="@dimen/_15ssp"
@@ -92,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/profile_info"
-            tools:listitem="@layout/profile_post"/>
+            tools:listitem="@layout/profile_post" />
 
 
 

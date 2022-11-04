@@ -72,7 +72,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         //storage
         firebaseStorage = FirebaseStorage.getInstance();
         //displaying items
-        databaseReference = FirebaseDatabase.getInstance().getReference("Paulo");
+        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
 
 //        DatabaseReference postReference;
 //        postReference = FirebaseDatabase.getInstance().getReference("users");

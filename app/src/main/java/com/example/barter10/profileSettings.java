@@ -3,6 +3,7 @@ package com.example.barter10;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -14,13 +15,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class profileSettings extends Fragment {
 
-    FirebaseAuth firebaseAuth;
-    Button btnInfo;
-    Button btnSec;
-    TextView logout;
+    private FirebaseAuth firebaseAuth;
+    private Button btnInfo;
+    private Button btnSec;
+    private TextView logout;
+    private TextView userName;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +38,7 @@ public class profileSettings extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         btnInfo = view.findViewById(R.id.btnMyInfo);
         btnSec = view.findViewById(R.id.btnSec);
+        userName = view.findViewById(R.id.profileUsername);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +68,27 @@ public class profileSettings extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+
+        DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
+
+        postReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
+                        userName.setText(dataSnapshot.child("username").getValue().toString());
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
 

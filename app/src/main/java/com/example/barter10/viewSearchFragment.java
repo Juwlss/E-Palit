@@ -52,7 +52,7 @@ public class viewSearchFragment extends Fragment {
         String searchedText = SearchFragment.searchedText;// getting the input search in parent fragment
 
 
-        dataRef = FirebaseDatabase.getInstance().getReference("Paulo");
+        dataRef = FirebaseDatabase.getInstance().getReference("PostItem");
 
 
 
