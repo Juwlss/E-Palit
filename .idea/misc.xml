@@ -120,7 +120,9 @@
         <entry key="..\:/Users/andrei/Documents/4th yr/28/app/src/main/res/layout/trade_layout.xml" value="0.4" />
         <entry key="..\:/Users/andrei/Documents/4th yr/28/app/src/main/res/layout/upload_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/28/app/src/main/res/layout/user_layout.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/activity_signup_new.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/activity_home.xml" value="0.15773809523809523" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/activity_signup_new.xml" value="1.0" />
         <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/fragment_info_setting.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/29/app/src/main/res/layout/profile_post.xml" value="0.25416666666666665" />
@@ -239,7 +241,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.152" />
+        <option name="scale" value="1.0" />
       </ProjectState>
     </option>
   </component>

@@ -1,23 +1,23 @@
-com/example/barter10/Adapter/PagerAdapter.java
- com.example.barter10.Adapter.PagerAdapter
-com/example/barter10/Model/Upload.java
- com.example.barter10.Model.Upload
-com/example/barter10/Model/DetailHelperClass.java
- com.example.barter10.Model.DetailHelperClass
-com/example/barter10/Model/Pending.java
- com.example.barter10.Model.Pending
-com/example/barter10/Model/viewSearch.java
- com.example.barter10.Model.viewSearch
-com/example/barter10/BuildConfig.java
- com.example.barter10.BuildConfig
-com/example/barter10/Model/Message.java
- com.example.barter10.Model.Message
 com/example/barter10/DataBindingTriggerClass.java
  com.example.barter10.DataBindingTriggerClass
-com/example/barter10/Model/RecentSearch.java
- com.example.barter10.Model.RecentSearch
+com/example/barter10/Model/DetailHelperClass.java
+ com.example.barter10.Model.DetailHelperClass
+com/example/barter10/BuildConfig.java
+ com.example.barter10.BuildConfig
 com/example/barter10/Adapter/ListpageAdapter.java
  com.example.barter10.Adapter.ListpageAdapter
+com/example/barter10/Model/Upload.java
+ com.example.barter10.Model.Upload
+com/example/barter10/Model/viewSearch.java
+ com.example.barter10.Model.viewSearch
+com/example/barter10/Model/Message.java
+ com.example.barter10.Model.Message
+com/example/barter10/Adapter/PagerAdapter.java
+ com.example.barter10.Adapter.PagerAdapter
+com/example/barter10/Model/RecentSearch.java
+ com.example.barter10.Model.RecentSearch
+com/example/barter10/Model/Pending.java
+ com.example.barter10.Model.Pending
 com/example/barter10/Model/User.java
  com.example.barter10.Model.User
 com/example/barter10/profileSettings.java
@@ -152,6 +152,7 @@ com/example/barter10/MainActivity.java
  com.example.barter10.MainActivity
  com.example.barter10.MainActivity$1
  com.example.barter10.MainActivity$1$1
+ com.example.barter10.MainActivity$1$2
  com.example.barter10.MainActivity$2
  com.example.barter10.MainActivity$3
  com.example.barter10.MainActivity$4

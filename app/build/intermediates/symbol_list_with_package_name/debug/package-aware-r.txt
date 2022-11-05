@@ -3389,6 +3389,7 @@ drawable edittext_ui
 drawable edittext_ui_search
 drawable enter
 drawable enternewpassword
+drawable epalit_logo
 drawable et_corner
 drawable four_digits_logo
 drawable frame34
@@ -3843,6 +3844,7 @@ id hideable
 id home
 id homeAsUp
 id homeFrameLayout
+id home_logo
 id home_vpager
 id honorRequest
 id horizontal_only
@@ -3917,8 +3919,8 @@ id legacy
 id lg_create
 id lg_noacc
 id lg_signin
-id lgin_email
 id lgin_pass
+id lgin_username
 id light
 id line
 id line1
@@ -4123,6 +4125,7 @@ id showHome
 id showTitle
 id signUpInput
 id signin_rel1
+id signup_textView
 id sin
 id skipCollapsed
 id skipped
@@ -4189,7 +4192,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
 id textView3
 id textView5
@@ -4236,8 +4238,8 @@ id tv_count
 id txtConPassword
 id txtCondition
 id txtDetails
-id txtEmail
 id txtEstimatedValue
+id txtFullName
 id txtItemName
 id txtLocation
 id txtName
@@ -4275,6 +4277,7 @@ id vis_off
 id visible
 id visible_removing_fragment_view_tag
 id visionOff
+id visionOff2
 id visoff
 id visoff2
 id welcome

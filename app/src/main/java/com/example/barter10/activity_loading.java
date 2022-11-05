@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class activity_loading extends AppCompatActivity {
 
-
+    FirebaseUser currentUser;
     FirebaseAuth firebaseAuth;
 
 
@@ -23,12 +23,15 @@ public class activity_loading extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-        if(currentUser !=null){
-            startActivity(new Intent(activity_loading.this, Home.class));
 
+        currentUser = firebaseAuth.getCurrentUser();
+
+        if(currentUser != null){
+            startActivity(new Intent(activity_loading.this, Home.class));
+            finish();
         }else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -42,5 +45,6 @@ public class activity_loading extends AppCompatActivity {
                 }
             }, 2000);
         }
+
     }
 }

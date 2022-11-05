@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,7 +30,7 @@ public class Home extends AppCompatActivity {
     ImageView btnSearch;
     AppBarLayout appBarLayout;
     FloatingActionButton upload;
-
+    FirebaseAuth firebaseAuth;
     private TextView welcome;
     private DatabaseReference databaseReference;
 
@@ -43,7 +45,7 @@ public class Home extends AppCompatActivity {
 
         appBarLayout = findViewById(R.id.appbar);
 
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -57,20 +59,23 @@ public class Home extends AppCompatActivity {
         postReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String username="";
+                String userid="";
+
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
 
-                   String copyuser = firebaseAuth.getCurrentUser().getEmail();
+                   String copyuser = firebaseAuth.getCurrentUser().getUid();
 
-                    username = dataSnapshot.child("useremail").getValue().toString();
-                    if(copyuser.equals(username)){
-                        username = dataSnapshot.child("username").getValue().toString();
+                    userid = dataSnapshot.getKey();
+                    Toast.makeText(Home.this, dataSnapshot.toString()+"", Toast.LENGTH_SHORT).show();
+
+                    if(copyuser.equals(userid)){
+                        userid = dataSnapshot.child("username").getValue().toString();
                         break;
                     }
                 }
 
-                String name[] = username.split(" ");
+                String name[] = userid.split(" ");
                 String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
                 welcome.setText("Welcome "+upperString+"!");
             }

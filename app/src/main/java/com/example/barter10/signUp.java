@@ -17,6 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.barter10.Model.User;
+import com.google.android.gms.auth.api.identity.BeginSignInRequest;
+import com.google.android.gms.auth.api.identity.Identity;
+import com.google.android.gms.auth.api.identity.SignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,15 +32,15 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signUp extends AppCompatActivity {
 
-    int passvis;
-    EditText username, email, password,phoNo;
+    private GoogleSignInClient googleSignInClient;
+    private FirebaseAuth firebaseAuth;
+
+    int passvis,passvis2;
+    EditText fullname,username, email, password, conpassword,phoNo;
     ImageButton visOff, btnGoogle, btnFacebook;
     Button signUp;
     TextView signNow;
-
-    FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -46,37 +51,17 @@ public class signUp extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         visOff = findViewById(R.id.visionOff);
 
-        ImageButton passtoggle = findViewById(R.id.visoff2);
+        ImageButton passtoggle = findViewById(R.id.visionOff2);
 
+
+        fullname = findViewById(R.id.txtFullName);
         username = findViewById(R.id.txtName);
-        email = findViewById(R.id.txtEmail);
         password = findViewById(R.id.txtPassword);
+        conpassword = findViewById(R.id.txtConPassword);
         phoNo = findViewById(R.id.txtPhone);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
-        visOff.setVisibility(View.GONE);
-        password.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (password.getText().length() > 0) {
-                    visOff.setVisibility(View.VISIBLE);
-                    passvis = 1;
-                } else {
-                    passvis = 0;
-                    visOff.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
 //checking the password when toggling
         visOff.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +78,25 @@ public class signUp extends AppCompatActivity {
                         visOff.setImageResource(R.drawable.ic_baseline_visibility_24);
                         password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                         passvis = 0;
+                        break;
+                }
+            }
+        });
+
+        passtoggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (passvis2) {
+                    case 0:
+                        passtoggle.setImageResource(R.drawable.ic_baseline_visibility_off_24);
+                        conpassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                        passvis2 = 1;
+                        break;
+
+                    case 1:
+                        passtoggle.setImageResource(R.drawable.ic_baseline_visibility_24);
+                        conpassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                        passvis2 = 0;
                         break;
                 }
             }
@@ -115,6 +119,8 @@ public class signUp extends AppCompatActivity {
         //Button google
 
         btnGoogle = findViewById(R.id.btnGoogle);
+
+
 
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,28 +154,45 @@ public class signUp extends AppCompatActivity {
     }
 
     private void addUser() {
+
+        String str_fullname = fullname.getText().toString().trim();
         String str_username = username.getText().toString().trim();
-        String str_email = email.getText().toString().trim();
         String str_password = password.getText().toString().trim();
+        String str_conpass = conpassword.getText().toString().trim();
+        String str_phone = phoNo.getText().toString().trim();
 
 
-        if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
+        String checker = "^[9][0-9]{9}$";
+
+
+        if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_phone) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_fullname)) {
             Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
         } else if (str_password.length() < 6) {
             Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
-        } else if(!str_email.contains("epalit.com")){
-            Toast.makeText(signUp.this, "email needs @epalit.com", Toast.LENGTH_SHORT).show();
-        }else if (str_email.length() < 4) {
+        } else if (!str_password.equals(str_conpass)){
+            conpassword.setError("Password does not match");
+            Toast.makeText(signUp.this, str_password+" "+str_conpass, Toast.LENGTH_SHORT).show();
+        }else if (str_username.length() < 4) {
             Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
-        } else {
-            firebaseAuth.createUserWithEmailAndPassword(str_email, str_password)
+        } else if (str_phone.length() == 9) {
+            Toast.makeText(signUp.this, "phone No. is too short", Toast.LENGTH_SHORT).show();
+        } else if (!str_phone.matches(checker)){
+            phoNo.requestFocus();
+            phoNo.setError("Correct Format: +63 9xxxxxxxxx");
+        }
+        else {
+
+            String emailfb = str_username+"@epalit.com";
+            String phone = "+63"+str_phone;
+
+            firebaseAuth.createUserWithEmailAndPassword(emailfb, str_password)
                     .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 String userId = firebaseAuth.getUid();
 
-                                User user = new User(userId, str_username, str_email, str_password);
+                                User user = new User(userId, str_fullname, str_username, str_password, phone);
                                 databaseReference.child(userId).setValue(user);
 
                                 Toast.makeText(signUp.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
