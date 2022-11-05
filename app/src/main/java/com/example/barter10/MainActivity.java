@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //animatino
         mImage = findViewById(R.id.logo);
         mImage.setAnimation(AnimationUtils.loadAnimation(this, R.anim.resize));
 
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         scaleDown.start();
 
         //move up
-        ObjectAnimator moveUpY = ObjectAnimator.ofFloat(mImage, "translationY", -800);
+        ObjectAnimator moveUpY = ObjectAnimator.ofFloat(mImage, "translationY", -750);
         moveUpY.setDuration(700);
 
         AnimatorSet moveUp = new AnimatorSet();
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         moveUp.start();
 
         //move up
-        ObjectAnimator moveUpY1 = ObjectAnimator.ofFloat(layout, "translationY", -1480);
+        ObjectAnimator moveUpY1 = ObjectAnimator.ofFloat(layout, "translationY", -950);
         moveUpY1.setDuration(700);
 
         AnimatorSet moveUp1 = new AnimatorSet();
@@ -142,18 +141,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        firebaseAuth.signInWithEmailAndPassword(str_email,str_password)
-//                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if(task.isSuccessful()){
-//                            Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(MainActivity.this, Home.class));
-//                        } else {
-//                            Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
+
 
         //auto sign in
         /**remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

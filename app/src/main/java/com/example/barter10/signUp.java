@@ -35,7 +35,7 @@ public class signUp extends AppCompatActivity {
     private GoogleSignInClient googleSignInClient;
     private FirebaseAuth firebaseAuth;
 
-    int passvis,passvis2;
+    int passvis=1,passvis2=1;
     EditText fullname,username, email, password, conpassword,phoNo;
     ImageButton visOff, btnGoogle, btnFacebook;
     Button signUp;

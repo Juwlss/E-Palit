@@ -5,52 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/signin_rel1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_61sdp"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentTop="true"
+                android:layout_width="214dp"
+                android:layout_height="261dp"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="@dimen/_25sdp"
-                android:src="@drawable/ic_logoe" />
-
-            <ImageView
-                android:id="@+id/appname"
-                android:layout_width="@dimen/_189sdp"
-                android:layout_height="@dimen/_29sdp"
-                android:layout_below="@id/logo"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_epalit" />
-
+                android:src="@drawable/loading_logo" />
 
             <RelativeLayout
                 android:id="@+id/signUpInput"
+                android:layout_below="@+id/logo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="-300dp">
 
+                <ImageView
+                    android:id="@+id/appname"
+                    android:layout_width="@dimen/_189sdp"
+                    android:layout_height="@dimen/_29sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/epalit_logo" />
+
 
                 <TextView
                     android:id="@+id/welcome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/appname"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
                     android:fontFamily="@font/inter"
                     android:text="Welcome!"
                     android:textColor="#094067"
@@ -64,7 +60,7 @@
                     android:layout_height="@dimen/_25sdp"
                     android:layout_below="@id/welcome"
                     android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:background="@drawable/et_corner"
                     android:fontFamily="@font/inter"
                     android:hint="Username"
@@ -107,7 +103,7 @@
                     android:layout_height="@dimen/_25sdp"
                     android:layout_below="@id/lgin_pass"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:background="@drawable/login_button"
                     android:fontFamily="@font/inter"
                     android:text="Sign In"
@@ -115,55 +111,53 @@
                     android:textFontWeight="700"
                     android:textSize="@dimen/_10ssp" />
 
-                <TextView
-                    android:id="@+id/lg_noacc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/lg_signin"
-                    android:layout_alignLeft="@id/lg_signin"
+                <RelativeLayout
+                    android:layout_below="@+id/lg_signin"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:layout_centerInParent="true"
-                    android:layout_marginStart="-2dp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/inter"
-                    android:text="Don't have an account? "
-                    android:textColor="#646464"
-                    android:textFontWeight="500"
-                    android:textSize="@dimen/_8ssp" />
-
-
-                <TextView
-                    android:id="@+id/lg_create"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/lg_signin"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_toRightOf="@id/lg_noacc"
-                    android:fontFamily="@font/inter"
-                    android:text="Create now"
-                    android:textColor="#EF4565"
-                    android:textFontWeight="700"
-                    android:textSize="@dimen/_8ssp" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/forgot_pass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/lg_noacc"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/inter"
-                    android:onClick="forgotPass"
-                    android:text="Forgot Password?"
-                    android:textColor="#EF4565"
-                    android:textFontWeight="500"
-                    android:textSize="@dimen/_8ssp" />
+                    <TextView
+                        android:id="@+id/lg_noacc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/inter"
+                        android:text="Don't have an account? "
+                        android:textColor="#646464"
+                        android:textFontWeight="500"
+                        android:textSize="@dimen/_8ssp" />
 
 
+                    <TextView
+                        android:id="@+id/lg_create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/lg_noacc"
+                        android:fontFamily="@font/inter"
+                        android:text="Create now"
+                        android:textColor="#EF4565"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_8ssp" />
 
+                    <TextView
+                        android:id="@+id/forgot_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_below="@id/lg_noacc"
+                        android:fontFamily="@font/inter"
+                        android:layout_centerInParent="true"
+                        android:onClick="forgotPass"
+                        android:text="Forgot Password?"
+                        android:textColor="#EF4565"
+                        android:textFontWeight="500"
+                        android:textSize="@dimen/_8ssp" />
+
+                </RelativeLayout>
 
             </RelativeLayout>
-
-
 
 
         </RelativeLayout>

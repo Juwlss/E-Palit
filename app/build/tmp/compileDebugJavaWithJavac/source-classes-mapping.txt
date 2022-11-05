@@ -1,31 +1,5 @@
 com/example/barter10/DataBindingTriggerClass.java
  com.example.barter10.DataBindingTriggerClass
-com/example/barter10/Model/DetailHelperClass.java
- com.example.barter10.Model.DetailHelperClass
-com/example/barter10/BuildConfig.java
- com.example.barter10.BuildConfig
-com/example/barter10/Adapter/ListpageAdapter.java
- com.example.barter10.Adapter.ListpageAdapter
-com/example/barter10/Model/Upload.java
- com.example.barter10.Model.Upload
-com/example/barter10/Model/viewSearch.java
- com.example.barter10.Model.viewSearch
-com/example/barter10/Model/Message.java
- com.example.barter10.Model.Message
-com/example/barter10/Adapter/PagerAdapter.java
- com.example.barter10.Adapter.PagerAdapter
-com/example/barter10/Model/RecentSearch.java
- com.example.barter10.Model.RecentSearch
-com/example/barter10/Model/Pending.java
- com.example.barter10.Model.Pending
-com/example/barter10/Model/User.java
- com.example.barter10.Model.User
-com/example/barter10/profileSettings.java
- com.example.barter10.profileSettings
- com.example.barter10.profileSettings$1
- com.example.barter10.profileSettings$2
- com.example.barter10.profileSettings$3
- com.example.barter10.profileSettings$4
 com/example/barter10/viewSearchFragment.java
  com.example.barter10.viewSearchFragment
  com.example.barter10.viewSearchFragment$1
@@ -36,15 +10,8 @@ com/example/barter10/viewSearchFragment.java
 com/example/barter10/Adapter/UploadListAdapter.java
  com.example.barter10.Adapter.UploadListAdapter
  com.example.barter10.Adapter.UploadListAdapter$ViewHolder
-com/example/barter10/signUp.java
- com.example.barter10.signUp
- com.example.barter10.signUp$1
- com.example.barter10.signUp$2
- com.example.barter10.signUp$3
- com.example.barter10.signUp$4
- com.example.barter10.signUp$5
- com.example.barter10.signUp$6
- com.example.barter10.signUp$7
+com/example/barter10/Adapter/ListpageAdapter.java
+ com.example.barter10.Adapter.ListpageAdapter
 com/example/barter10/FashionFragment.java
  com.example.barter10.FashionFragment
  com.example.barter10.FashionFragment$1
@@ -66,6 +33,8 @@ com/example/barter10/ProfileFragment.java
 com/example/barter10/Adapter/SelfPostAdapter.java
  com.example.barter10.Adapter.SelfPostAdapter
  com.example.barter10.Adapter.SelfPostAdapter$ImageViewHolder
+com/example/barter10/Model/RecentSearch.java
+ com.example.barter10.Model.RecentSearch
 com/example/barter10/Adapter/PostImageAdapter.java
  com.example.barter10.Adapter.PostImageAdapter
  com.example.barter10.Adapter.PostImageAdapter$ImageViewHolder
@@ -86,20 +55,34 @@ com/example/barter10/Home.java
  com.example.barter10.Home$6
 com/example/barter10/FinishedFragment.java
  com.example.barter10.FinishedFragment
-com/example/barter10/activity_loading.java
- com.example.barter10.activity_loading
- com.example.barter10.activity_loading$1
+com/example/barter10/SportsFragment.java
+ com.example.barter10.SportsFragment
+ com.example.barter10.SportsFragment$1
+ com.example.barter10.SportsFragment$2
+ com.example.barter10.SportsFragment$3
+com/example/barter10/Model/Message.java
+ com.example.barter10.Model.Message
+com/example/barter10/Adapter/PagerAdapter.java
+ com.example.barter10.Adapter.PagerAdapter
 com/example/barter10/Adapter/trade_recyclerviewAdapter.java
  com.example.barter10.Adapter.trade_recyclerviewAdapter
  com.example.barter10.Adapter.trade_recyclerviewAdapter$MyViewHolder
+com/example/barter10/Model/User.java
+ com.example.barter10.Model.User
 com/example/barter10/viewSearchHolder.java
  com.example.barter10.viewSearchHolder
  com.example.barter10.viewSearchHolder$1
+com/example/barter10/Model/DetailHelperClass.java
+ com.example.barter10.Model.DetailHelperClass
 com/example/barter10/Adapter/MessageListAdapter.java
  com.example.barter10.Adapter.MessageListAdapter
  com.example.barter10.Adapter.MessageListAdapter$MyViewHolder
 com/example/barter10/MessageFragment.java
  com.example.barter10.MessageFragment
+com/example/barter10/Model/Upload.java
+ com.example.barter10.Model.Upload
+com/example/barter10/Model/Pending.java
+ com.example.barter10.Model.Pending
 com/example/barter10/securityFragment.java
  com.example.barter10.securityFragment
  com.example.barter10.securityFragment$1
@@ -107,6 +90,8 @@ com/example/barter10/forgotPass.java
  com.example.barter10.forgotPass
  com.example.barter10.forgotPass$1
  com.example.barter10.forgotPass$1$1
+com/example/barter10/BuildConfig.java
+ com.example.barter10.BuildConfig
 com/example/barter10/ListFragment.java
  com.example.barter10.ListFragment
  com.example.barter10.ListFragment$1
@@ -148,6 +133,32 @@ com/example/barter10/PendingFragment.java
  com.example.barter10.PendingFragment
 com/example/barter10/viewHolder.java
  com.example.barter10.viewHolder
+com/example/barter10/Model/viewSearch.java
+ com.example.barter10.Model.viewSearch
+com/example/barter10/newPass.java
+ com.example.barter10.newPass
+ com.example.barter10.newPass$1
+ com.example.barter10.newPass$2
+ com.example.barter10.newPass$3
+ com.example.barter10.newPass$4
+com/example/barter10/profileSettings.java
+ com.example.barter10.profileSettings
+ com.example.barter10.profileSettings$1
+ com.example.barter10.profileSettings$2
+ com.example.barter10.profileSettings$3
+ com.example.barter10.profileSettings$4
+com/example/barter10/activity_loading.java
+ com.example.barter10.activity_loading
+ com.example.barter10.activity_loading$1
+com/example/barter10/signUp.java
+ com.example.barter10.signUp
+ com.example.barter10.signUp$1
+ com.example.barter10.signUp$2
+ com.example.barter10.signUp$3
+ com.example.barter10.signUp$4
+ com.example.barter10.signUp$5
+ com.example.barter10.signUp$6
+ com.example.barter10.signUp$7
 com/example/barter10/MainActivity.java
  com.example.barter10.MainActivity
  com.example.barter10.MainActivity$1
@@ -156,14 +167,3 @@ com/example/barter10/MainActivity.java
  com.example.barter10.MainActivity$2
  com.example.barter10.MainActivity$3
  com.example.barter10.MainActivity$4
-com/example/barter10/newPass.java
- com.example.barter10.newPass
- com.example.barter10.newPass$1
- com.example.barter10.newPass$2
- com.example.barter10.newPass$3
- com.example.barter10.newPass$4
-com/example/barter10/SportsFragment.java
- com.example.barter10.SportsFragment
- com.example.barter10.SportsFragment$1
- com.example.barter10.SportsFragment$2
- com.example.barter10.SportsFragment$3
