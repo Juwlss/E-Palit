@@ -67,8 +67,6 @@ public class Home extends AppCompatActivity {
                    String copyuser = firebaseAuth.getCurrentUser().getUid();
 
                     userid = dataSnapshot.getKey();
-                    Toast.makeText(Home.this, dataSnapshot.toString()+"", Toast.LENGTH_SHORT).show();
-
                     if(copyuser.equals(userid)){
                         userid = dataSnapshot.child("username").getValue().toString();
                         break;

@@ -1,6 +1,7 @@
 package com.example.barter10;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,20 +21,30 @@ import com.example.barter10.Model.User;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.Identity;
 import com.google.android.gms.auth.api.identity.SignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class signUp extends AppCompatActivity {
 
-    private GoogleSignInClient googleSignInClient;
+    private GoogleSignInClient gsc;
+    private GoogleSignInOptions gso;
     private FirebaseAuth firebaseAuth;
+    private FirebaseDatabase firebaseDatabase;
+
 
     int passvis=1,passvis2=1;
     EditText fullname,username, email, password, conpassword,phoNo;
@@ -60,6 +71,7 @@ public class signUp extends AppCompatActivity {
         conpassword = findViewById(R.id.txtConPassword);
         phoNo = findViewById(R.id.txtPhone);
 
+        firebaseDatabase = FirebaseDatabase.getInstance("https://e-palit-default-rtdb.asia-southeast1.firebasedatabase.app/");
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
 
@@ -119,15 +131,24 @@ public class signUp extends AppCompatActivity {
         //Button google
 
         btnGoogle = findViewById(R.id.btnGoogle);
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
+        gsc = GoogleSignIn.getClient(this, gso);
 
 
 
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(signUp.this, "google", Toast.LENGTH_SHORT).show();
+                Intent i = gsc.getSignInIntent();
+                startActivityForResult(i, 123);
             }
         });
+
+
 
         //Button Facebook
 
@@ -184,6 +205,7 @@ public class signUp extends AppCompatActivity {
 
             String emailfb = str_username+"@epalit.com";
             String phone = "+63"+str_phone;
+            String profilepic ="gs://e-palit.appspot.com/PostItem/Default/kyo.jpg";
 
             firebaseAuth.createUserWithEmailAndPassword(emailfb, str_password)
                     .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
@@ -192,7 +214,7 @@ public class signUp extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 String userId = firebaseAuth.getUid();
 
-                                User user = new User(userId, str_fullname, str_username, str_password, phone);
+                                User user = new User(userId, str_fullname, profilepic, str_username, str_password, phone);
                                 databaseReference.child(userId).setValue(user);
 
                                 Toast.makeText(signUp.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
@@ -207,6 +229,48 @@ public class signUp extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 123){
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
+
+                firebaseAuth.signInWithCredential(credential).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    @Override
+                    public void onSuccess(AuthResult authResult) {
+                        if(task.isSuccessful()){
+
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            User user1 = new User();
+                            assert user != null;
+
+                            user1.setUserID(user.getUid());
+                            user1.setUsername(user.getDisplayName());
+                            user1.setProfilepic(user.getPhotoUrl().toString());
 
 
+                            Toast.makeText(signUp.this, "sign in google", Toast.LENGTH_SHORT).show();
+                            firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
+                            Intent intent = new Intent(signUp.this, Home.class);
+                            intent.putExtra("username", user.getDisplayName());
+                            intent.putExtra("profilepic", user.getPhotoUrl().toString());
+
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(signUp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+            } catch (ApiException e) {
+                Toast.makeText(signUp.this, "wtffff", Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+
+        }
+    }
 }

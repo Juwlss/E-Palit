@@ -54,11 +54,11 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 .fit()
                 .into(holder.postImage);
 
-//        Picasso.with(mContext)
-//                .load(upload.getProfileUrl())
-//                .placeholder(R.drawable.kyouser)
-//                .fit()
-//                .into(holder.userImage);
+        Picasso.get()
+                .load(upload.getProfileUrl())
+                .placeholder(R.drawable.ic_baseline_account_circle_24)
+                .fit()
+                .into(holder.userImage);
 
     }
 

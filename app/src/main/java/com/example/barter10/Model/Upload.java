@@ -20,12 +20,12 @@ public class Upload {
 
     }
 
-    public Upload(String uid, String userName, String imageUrl, String location, String itemName, String itemCondition, String category1) {
+    public Upload(String uid, String userName, String profileUrl, String imageUrl, String location, String itemName, String itemCondition, String category1) {
         this.category1 = category1;
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
-//        this.profileUrl = profileUrl;
+        this.profileUrl = profileUrl;
         this.location = location;
         this.itemName = itemName;
         this.itemCondition = itemCondition;
@@ -63,13 +63,13 @@ public class Upload {
         this.userName = userName;
     }
 
-//    public String getProfileUrl() {
-//        return profileUrl;
-//    }
-//
-//    public void setProfileUrl(String profileUrl) {
-//        this.profileUrl = profileUrl;
-//    }
+    public String getProfileUrl() {
+        return profileUrl;
+    }
+
+    public void setProfileUrl(String profileUrl) {
+        this.profileUrl = profileUrl;
+    }
 
     public String getLocation() {
         return location;

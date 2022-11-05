@@ -24,12 +24,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\drawable\\upload_button.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_technology.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\layout\\fragment_technology.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable_amessage.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\drawable\\amessage.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_technology.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\layout\\fragment_technology.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_group_26.xml.flat",

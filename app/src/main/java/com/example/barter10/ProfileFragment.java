@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.barter10.Adapter.PostImageAdapter;
@@ -24,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -46,10 +48,17 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         ImageButton settings = view.findViewById(R.id.btn_settings);
+
+        //profile
+        ImageView imageprofile = view.findViewById(R.id.image_profile);
         TextView profilename = view.findViewById(R.id.profilename);
         countPost = view.findViewById(R.id.numpost);
 
 
+
+
+
+        //displaying post of user
         recyclerView = view.findViewById(R.id.prof_rv);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
@@ -118,6 +127,9 @@ public class ProfileFragment extends Fragment {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
+                        String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
+
+                        Picasso.get().load(Profilepic).into(imageprofile);
                         profilename.setText(dataSnapshot.child("username").getValue().toString());
                         break;
                     }

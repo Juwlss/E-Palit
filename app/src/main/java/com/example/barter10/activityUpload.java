@@ -45,6 +45,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,6 +75,8 @@ public class activityUpload extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
+
+
 
         //new Image
         imageView = findViewById(R.id.image);
@@ -280,18 +283,19 @@ public class activityUpload extends AppCompatActivity{
 
                                             String name;
                                             for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                                String copyuser = firebaseAuth.getCurrentUser().getEmail();
-                                                name = dataSnapshot.child("useremail").getValue().toString();
-                                                if(copyuser.equals(name)){
+
+                                                if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
+
+                                                    String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
+
                                                     //getting the username of uploader
                                                     name = dataSnapshot.child("username").getValue().toString();
-
                                                     //uploading to firebase
-                                                    Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), name,uri.toString(),itemLocation, itemName, itemCondition, cat1);
+                                                    Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), name, Profilepic, uri.toString(),itemLocation, itemName, itemCondition, cat1);
                                                     reference.child(postId).setValue(upload);//setting primary key
+
                                                     break;
                                                 }
-
                                             }
                                         }
 
