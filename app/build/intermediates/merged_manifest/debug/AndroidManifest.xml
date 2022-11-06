@@ -36,6 +36,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Barter10" >
         <activity
+            android:name="com.example.barter10.signupotp"
+            android:exported="false" />
+        <activity
             android:name="com.example.barter10.Upload.activityUpload"
             android:exported="true" />
         <activity

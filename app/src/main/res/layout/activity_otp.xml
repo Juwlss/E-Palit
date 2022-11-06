@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/interbold"
-        android:text="Enter 4 digit code"
+        android:text="Forgot password verification"
         android:textColor="#094067"
         android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
@@ -34,17 +34,34 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/veriotp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/interbold"
+        android:text="Please enter the 6 digits that we sent to you phone number."
+        android:textColor="#5F6C7B"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <RelativeLayout
         android:id="@+id/pens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSign"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="60dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/enter1"
+        app:layout_constraintTop_toBottomOf="@+id/veriotp"
         tools:layout_editor_absoluteX="0dp">
 
         <EditText
@@ -63,53 +80,56 @@
             tools:ignore="LabelFor"
             tools:layout_editor_absoluteX="49dp"
             tools:layout_editor_absoluteY="287dp" />
+
         <EditText
             android:id="@+id/pen2"
             android:layout_width="@dimen/_39sdp"
             android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_46sdp"
             android:background="@drawable/pins"
             android:gravity="center"
-            android:layout_marginLeft="@dimen/_46sdp"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="number"
             android:maxLength="1"
-            android:textSize="@dimen/_24ssp"
             android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
             android:textStyle="bold"
             tools:ignore="LabelFor"
             tools:layout_editor_absoluteX="49dp"
             tools:layout_editor_absoluteY="287dp" />
+
         <EditText
             android:id="@+id/pen3"
             android:layout_width="@dimen/_39sdp"
             android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_92sdp"
             android:background="@drawable/pins"
             android:gravity="center"
-            android:layout_marginLeft="@dimen/_92sdp"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="number"
             android:maxLength="1"
-            android:textSize="@dimen/_24ssp"
             android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
             android:textStyle="bold"
             tools:ignore="LabelFor"
             tools:layout_editor_absoluteX="49dp"
             tools:layout_editor_absoluteY="287dp" />
+
         <EditText
             android:id="@+id/pen4"
             android:layout_width="@dimen/_39sdp"
             android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_138sdp"
             android:background="@drawable/pins"
             android:gravity="center"
-            android:layout_marginLeft="@dimen/_138sdp"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="number"
             android:maxLength="1"
-            android:textSize="@dimen/_24ssp"
             android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
             android:textStyle="bold"
             tools:ignore="LabelFor"
             tools:layout_editor_absoluteX="49dp"
@@ -119,15 +139,15 @@
             android:id="@+id/pen5"
             android:layout_width="@dimen/_39sdp"
             android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_184sdp"
             android:background="@drawable/pins"
             android:gravity="center"
-            android:layout_marginLeft="@dimen/_184sdp"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="number"
             android:maxLength="1"
-            android:textSize="@dimen/_24ssp"
             android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
             android:textStyle="bold"
             tools:ignore="LabelFor"
             tools:layout_editor_absoluteX="49dp"
@@ -137,15 +157,15 @@
             android:id="@+id/pen6"
             android:layout_width="@dimen/_39sdp"
             android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_230sdp"
             android:background="@drawable/pins"
             android:gravity="center"
-            android:layout_marginLeft="@dimen/_230sdp"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="number"
             android:maxLength="1"
-            android:textSize="@dimen/_24ssp"
             android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
             android:textStyle="bold"
             tools:ignore="LabelFor"
             tools:layout_editor_absoluteX="49dp"
@@ -188,7 +208,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button_otp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/didnt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_74sdp"
@@ -199,7 +219,7 @@
             android:textSize="@dimen/_8ssp" />
 
         <TextView
-            android:id="@+id/didnt"
+            android:id="@+id/resendotp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_38sdp"
@@ -224,15 +244,18 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSign" />
 
     <TextView
-        android:id="@+id/textmobileshownumber"
+        android:id="@+id/textmobileshownumberotp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:textColor="@color/black"
+
         android:textSize="@dimen/_14ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSign"
-        tools:layout_editor_absoluteX="63dp" />
+        app:layout_constraintBottom_toTopOf="@+id/pens"
+        app:layout_constraintTop_toBottomOf="@+id/veriotp"
+        app:layout_constraintVertical_bias="0.083"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/design"
@@ -241,6 +264,8 @@
         android:src="@drawable/ic_group_26"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
