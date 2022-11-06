@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.BottomNavigation.HomeFragment;
@@ -65,21 +66,23 @@ public class Home extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String userid="";
 
-
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    Toast.makeText(Home.this, dataSnapshot.getKey()+"!@#"+FirebaseAuth.getInstance().getUid(), Toast.LENGTH_SHORT).show();
 
-                   String copyuser = firebaseAuth.getCurrentUser().getUid();
+                   if(dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
 
-                    userid = dataSnapshot.getKey();
-                    if(copyuser.equals(userid)){
-                        userid = dataSnapshot.child("username").getValue().toString();
-                        break;
-                    }
+
+                       Toast.makeText(Home.this, FirebaseAuth.getInstance().getUid()+"123123123", Toast.LENGTH_SHORT).show();
+                       userid = dataSnapshot.child("username").getValue().toString();
+                       String name[] = userid.split(" ");
+                       String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
+                       welcome.setText("Welcome "+upperString+"!");
+                       break;
+
+                   }
                 }
 
-                String name[] = userid.split(" ");
-                String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
-                welcome.setText("Welcome "+upperString+"!");
+
             }
 
             @Override
