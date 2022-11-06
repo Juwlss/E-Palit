@@ -38,7 +38,7 @@ public class otp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-        TextView textmobile = findViewById(R.id.textmobileshownumber);
+        TextView textmobile = findViewById(R.id.textmobileshownumberotp);
         textmobile.setText(String.format(
                 "+63-%s", getIntent().getStringExtra("mobile")
         ));
@@ -100,6 +100,42 @@ public class otp extends AppCompatActivity {
 
             }
         });
+        findViewById(R.id.resendotp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        "+63" + getIntent().getStringExtra("mobile"),
+                        60,
+                        TimeUnit.SECONDS,
+                        otp.this,
+                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
+
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential){
+
+                            }
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e){
+
+                                Toast.makeText(otp.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            @Override
+                            public void onCodeSent(@NonNull String newverification, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken){
+                                verificationotp = newverification;
+                                Toast.makeText(otp.this,"OTP has been sent",Toast.LENGTH_SHORT).show();
+
+                            }
+
+                        }
+                );
+
+
+
+            }
+        });
+
 
 
     }

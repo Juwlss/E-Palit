@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signupotp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_undraw_contact_us_re_4qqt_1" />
+
+
+    <TextView
+        android:id="@+id/enter6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/interbold"
+        android:text="Account verification"
+        android:textColor="#094067"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/verisgn"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/interbold"
+        android:text="Please enter the 6 digits that we sent to you phone number."
+        android:textColor="#5F6C7B"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/penssgn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtsgnotp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/verisgn"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/pensgn1"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pensgn2"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_46sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pensgn3"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_92sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pensgn4"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_138sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pensgn5"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_184sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+        <EditText
+            android:id="@+id/pensgn6"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:layout_marginLeft="@dimen/_230sdp"
+            android:background="@drawable/pins"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="287dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_sgn"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn_border"
+        android:fontFamily="@font/inter"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/penssgn"/>
+    //android:onClick="submitOTP"
+
+
+    <RelativeLayout
+        android:id="@+id/txtsgn"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_sgn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_sgn">
+
+        <TextView
+            android:id="@+id/didntsgn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_74sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter"
+            android:text="Didn't receive the code?"
+            android:textColor="#5F6C7B"
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:id="@+id/resendsgn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_38sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/interbold"
+            android:paddingLeft="@dimen/_130sdp"
+            android:text="Resend now"
+            android:textColor="#EF4565"
+            android:textSize="@dimen/_8ssp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prgbarsgnotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtsgn"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtsgn" />
+
+    <TextView
+        android:id="@+id/txtsgnotp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toTopOf="@+id/penssgn"
+        app:layout_constraintTop_toBottomOf="@+id/verisgn"
+        app:layout_constraintVertical_bias="0.083"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/design"
+        android:layout_width="110.5dp"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_group_26"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

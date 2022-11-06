@@ -3447,6 +3447,7 @@ drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24dp
 drawable ic_undraw_contact_us_re_4qqt_1
+drawable ic_undraw_forgot_password_re_hxwm_1
 drawable ic_undraw_personal_email_re_4lx7_1
 drawable icon_forgotpassword
 drawable img_checkbox
@@ -3689,6 +3690,7 @@ id btn_username
 id button
 id buttonPanel
 id button_otp
+id button_sgn
 id cache_measures
 id callMeasure
 id cancel_action
@@ -3754,7 +3756,8 @@ id design_menu_item_text
 id design_navigation_view
 id dest
 id dialog_button
-id didnt
+id didnt2
+id didntsgn
 id dimensions
 id direct
 id disableHome
@@ -3792,6 +3795,7 @@ id end
 id endToStart
 id end_padder
 id enter1
+id enter6
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -4051,6 +4055,13 @@ id pen4
 id pen5
 id pen6
 id pens
+id pensgn1
+id pensgn2
+id pensgn3
+id pensgn4
+id pensgn5
+id pensgn6
+id penssgn
 id people
 id percent
 id pin
@@ -4060,6 +4071,8 @@ id postImage
 id postLayout
 id prgbar
 id prgbarotp
+id prgbarsgn
+id prgbarsgnotp
 id prof_rv
 id profileMenu
 id profileUsername
@@ -4079,6 +4092,8 @@ id recentImg
 id recentsearch
 id rectangle
 id rectangles
+id resendotp
+id resendsgn
 id reverseSawtooth
 id right
 id rightToLeft
@@ -4207,7 +4222,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id textmobileshownumber
+id textmobileshownumberotp
 id time
 id title
 id titleDividerNoCustom
@@ -4247,6 +4262,8 @@ id txtPhone
 id txtPreference
 id txtSign
 id txt_upload
+id txtsgn
+id txtsgnotp
 id txtviw
 id ucrop
 id ucrop_frame
@@ -4262,6 +4279,8 @@ id useLogo
 id userProfile
 id username
 id v_circle
+id veriotp
+id verisgn
 id vertical_only
 id viewPost
 id viewSearch_bar
@@ -4395,6 +4414,7 @@ layout activity_main
 layout activity_newpass
 layout activity_otp
 layout activity_signup_new
+layout activity_signupotp
 layout activity_upload
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

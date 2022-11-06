@@ -9,7 +9,7 @@ public class User {
     }
 
     public User(String userID, String fullname, String profilepic, String username, String userpassword, String userPhone) {
-        this.username = userID;
+        this.userID = userID;
         this.fullname = fullname;
         this.profilepic = profilepic;
         this.username = username;
