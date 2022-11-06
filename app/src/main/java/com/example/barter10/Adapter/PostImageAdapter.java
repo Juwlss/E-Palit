@@ -1,20 +1,26 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
-import android.media.Image;
+import android.content.SharedPreferences;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Model.Upload;
-import com.example.barter10.Model.User;
 import com.example.barter10.R;
+import com.example.barter10.Profile.visitprofile;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -56,9 +62,31 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
 
         Picasso.get()
                 .load(upload.getProfileUrl())
-                .placeholder(R.drawable.ic_baseline_account_circle_24)
+                .placeholder(R.drawable.ic_default_picture)
                 .fit()
                 .into(holder.userImage);
+
+
+        holder.visitProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", upload.getUid());
+                editor.apply();
+
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+//                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,new ProfileFragment());
+            }
+        });
+
 
     }
 
@@ -76,9 +104,12 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         public ImageView postImage;
         public ImageView userImage;
 
+        public Button visitProfile;
+
 
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
+
 
             userName = itemView.findViewById(R.id.username);
             userImage = itemView.findViewById(R.id.userProfile);
@@ -87,12 +118,20 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
             condition = itemView.findViewById(R.id.itemCondition);
             postImage = itemView.findViewById(R.id.postImage);
 
+            visitProfile = itemView.findViewById(R.id.userLayout);
+
+
+
             itemView.setOnClickListener(this);
             itemView.setOnCreateContextMenuListener(this);
         }
 
+
         @Override
         public void onClick(View v) {
+
+
+
             if(mListener != null){
                 int position = getAdapterPosition();
                 if(position != RecyclerView.NO_POSITION){
@@ -100,6 +139,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 }
             }
         }
+
 
         @Override
         public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {

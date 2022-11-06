@@ -2,7 +2,6 @@ package com.example.barter10;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
@@ -11,9 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.BottomNavigation.HomeFragment;
+import com.example.barter10.BottomNavigation.ListFragment;
+import com.example.barter10.BottomNavigation.MessageFragment;
+import com.example.barter10.BottomNavigation.ProfileFragment;
+import com.example.barter10.Search.SearchFragment;
+import com.example.barter10.Upload.activityUpload;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;

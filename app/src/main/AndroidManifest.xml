@@ -16,25 +16,25 @@
         android:theme="@style/Theme.Barter10">
 
         <activity
-            android:name=".activityUpload"
+            android:name=".Upload.activityUpload"
             android:exported="true" />
         <activity
-            android:name=".signUp"
+            android:name=".SignInSignUp.signUp"
             android:exported="true" />
         <activity
-            android:name=".forgotPass"
+            android:name=".ForgotPassword.forgotPass"
             android:exported="true" />
         <activity
-            android:name=".otp"
+            android:name=".ForgotPassword.otp"
             android:exported="true" />
         <activity
-            android:name=".newPass"
+            android:name=".ForgotPassword.newPass"
             android:exported="true" />
         <activity
             android:name=".Home"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SignInSignUp.MainActivity"
             android:exported="true" />
         <activity
             android:name=".activity_loading"
@@ -47,7 +47,13 @@
             </intent-filter>
         </activity>
 
-        <meta-data
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+
+
+
+    <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 

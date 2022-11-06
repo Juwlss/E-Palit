@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".BottomNavigation.ProfileFragment">
 
 
 
@@ -21,7 +21,7 @@
                 android:id="@+id/image_profile"
                 android:layout_width="@dimen/_60sdp"
                 android:layout_height="@dimen/_60sdp"
-                android:src="@drawable/ic_baseline_account_circle_24" />
+                android:src="@drawable/ic_default_picture" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 <TextView
                     android:id="@+id/profilename"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_25ssp"
+                    android:layout_height="@dimen/_25sdp"
                     android:fontFamily="@font/inter"
                     android:maxLines="1"
                     android:text="Vincent De Lara"

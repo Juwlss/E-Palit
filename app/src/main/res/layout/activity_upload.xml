@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activityUpload">
+    tools:context=".Upload.activityUpload">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:layout_height="match_parent"
                 app:layout_anchor="@+id/nestedScrollView"
                 app:layout_anchorGravity="center"
-                tools:context=".activityUpload">
+                tools:context=".Upload.activityUpload">
 
                 <RelativeLayout
                     android:id="@+id/upload"

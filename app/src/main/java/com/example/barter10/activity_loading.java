@@ -3,14 +3,12 @@ package com.example.barter10;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Toast;
 
+import com.example.barter10.SignInSignUp.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class activity_loading extends AppCompatActivity {

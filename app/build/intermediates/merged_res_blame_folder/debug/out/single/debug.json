@@ -296,10 +296,6 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\drawable\\btn_upload_ui.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\drawable\\ic_baseline_account_circle_24.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_forgotpassword.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\drawable\\icon_forgotpassword.png"
     },
@@ -402,6 +398,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_fb.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_fb.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_default_picture.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\drawable\\ic_default_picture.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
@@ -670,6 +670,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_fb.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_fb.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_visitprofile.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\src\\main\\res\\layout\\fragment_visitprofile.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\29\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_security.xml.flat",

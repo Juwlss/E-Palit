@@ -20,52 +20,59 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_10sdp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/userProfile"
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_50sdp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_baseline_account_circle_24" />
-
-            <TextView
-                android:id="@+id/username"
+            <RelativeLayout
+                android:id="@+id/relative_user"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_toRightOf="@id/userProfile"
-                android:fontFamily="@font/inter"
-                android:maxLines="1"
-                android:text="Username"
-                android:textColor="#333333"
-                android:textFontWeight="600"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/username"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_toRightOf="@id/userProfile"
-                android:maxLines="1"
-                android:text="Location"
-                android:textColor="#5F6C7B"
-                android:textFontWeight="500" />
+                <Button
+                    android:id="@+id/userLayout"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@android:color/transparent" />
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignTop="@+id/userProfile"-->
-<!--                android:layout_alignBottom="@+id/userProfile"-->
-<!--                android:layout_alignParentRight="true"-->
-<!--                android:src="@drawable/ic_baseline_more_vert_24" />-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfile"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_default_picture" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/userProfile"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:text="Username"
+                    android:textColor="#333333"
+                    android:textFontWeight="600"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/userProfile"
+                    android:maxLines="1"
+                    android:text="Location"
+                    android:textColor="#5F6C7B"
+                    android:textFontWeight="500" />
+
+
+            </RelativeLayout>
+
 
             <ImageView
                 android:id="@+id/postImage"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_180sdp"
-                android:layout_below="@+id/userProfile"
+                android:layout_below="@+id/relative_user"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="13dp"

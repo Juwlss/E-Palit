@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".infoSettingFragment">
+    tools:context=".Profile.infoSettingFragment">
 
     <RelativeLayout
         android:id="@+id/profileset"
@@ -17,7 +17,7 @@
             android:layout_height="@dimen/_28sdp"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/ic_baseline_arrow_back_24"></ImageView>
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
 
         <TextView
             android:id="@+id/accountInf"
@@ -123,15 +123,15 @@
             android:layout_centerHorizontal="true">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/changeProfile"
+                android:id="@+id/profileImage"
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_100sdp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_40sdp"
-                android:src="@drawable/ic_baseline_account_circle_24" />
+                android:src="@drawable/ic_default_picture" />
 
             <ImageView
-                android:id="@+id/btn_img"
+                android:id="@+id/changePicture"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginLeft="@dimen/_60sdp"

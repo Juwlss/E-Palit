@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profile.visitprofile">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/v_backarr"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+        <RelativeLayout
+            android:id="@+id/profile_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:padding="@dimen/_10sdp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/v_image_profile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/ic_default_picture" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/v_image_profile">
+
+                <TextView
+                    android:id="@+id/v_profilename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:text="Vincent De Lara"
+                    android:textColor="#000000"
+                    android:textFontWeight="900"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_below="@id/v_profilename"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/rating"
+                    android:text="Rating: 0/10"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textFontWeight="900"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentBottom="true"
+                    android:text="Post:"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/v_numpost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/post"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textFontWeight="900"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@id/rating"
+                    android:layout_marginLeft="@dimen/_45sdp"
+                    android:layout_toRightOf="@id/v_numpost"
+                    android:background="@drawable/button_ui"
+                    android:text="Send Message"
+                    android:textSize="10sp"
+                    app:backgroundTint="@null" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prof_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/profile_info"
+            tools:listitem="@layout/profile_post" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>
