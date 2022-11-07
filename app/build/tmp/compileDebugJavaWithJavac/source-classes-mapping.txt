@@ -50,18 +50,13 @@ com/example/barter10/Profile/profileSettings.java
  com.example.barter10.Profile.profileSettings$3
  com.example.barter10.Profile.profileSettings$4
  com.example.barter10.Profile.profileSettings$5
-com/example/barter10/SignInSignUp/signUp.java
- com.example.barter10.SignInSignUp.signUp
- com.example.barter10.SignInSignUp.signUp$1
- com.example.barter10.SignInSignUp.signUp$2
- com.example.barter10.SignInSignUp.signUp$3
- com.example.barter10.SignInSignUp.signUp$3$1
- com.example.barter10.SignInSignUp.signUp$4
- com.example.barter10.SignInSignUp.signUp$5
- com.example.barter10.SignInSignUp.signUp$5$1
- com.example.barter10.SignInSignUp.signUp$6
- com.example.barter10.SignInSignUp.signUp$7
- com.example.barter10.SignInSignUp.signUp$8
+com/example/barter10/ForgotPassword/otp.java
+ com.example.barter10.ForgotPassword.otp
+ com.example.barter10.ForgotPassword.otp$1
+ com.example.barter10.ForgotPassword.otp$1$1
+ com.example.barter10.ForgotPassword.otp$2
+ com.example.barter10.ForgotPassword.otp$2$1
+ com.example.barter10.ForgotPassword.otp$3
 com/example/barter10/Category/FashionFragment.java
  com.example.barter10.Category.FashionFragment
  com.example.barter10.Category.FashionFragment$1
@@ -69,14 +64,8 @@ com/example/barter10/Category/FashionFragment.java
  com.example.barter10.Category.FashionFragment$3
 com/example/barter10/BottomNavigation/PendingFragment.java
  com.example.barter10.BottomNavigation.PendingFragment
-com/example/barter10/signupotp.java
- com.example.barter10.signupotp
- com.example.barter10.signupotp$1
- com.example.barter10.signupotp$1$1
- com.example.barter10.signupotp$2
- com.example.barter10.signupotp$2$1
- com.example.barter10.signupotp$3
- com.example.barter10.signupotp$4
+com/example/barter10/DataBindingTriggerClass.java
+ com.example.barter10.DataBindingTriggerClass
 com/example/barter10/Home.java
  com.example.barter10.Home
  com.example.barter10.Home$1
@@ -113,14 +102,14 @@ com/example/barter10/Model/Upload.java
  com.example.barter10.Model.Upload
 com/example/barter10/Model/Pending.java
  com.example.barter10.Model.Pending
-com/example/barter10/SignInSignUp/MainActivity.java
- com.example.barter10.SignInSignUp.MainActivity
- com.example.barter10.SignInSignUp.MainActivity$1
- com.example.barter10.SignInSignUp.MainActivity$1$1
- com.example.barter10.SignInSignUp.MainActivity$1$2
- com.example.barter10.SignInSignUp.MainActivity$2
- com.example.barter10.SignInSignUp.MainActivity$3
- com.example.barter10.SignInSignUp.MainActivity$4
+com/example/barter10/signupotp.java
+ com.example.barter10.signupotp
+ com.example.barter10.signupotp$1
+ com.example.barter10.signupotp$1$1
+ com.example.barter10.signupotp$2
+ com.example.barter10.signupotp$2$1
+ com.example.barter10.signupotp$3
+ com.example.barter10.signupotp$4
 com/example/barter10/BottomNavigation/MessageFragment.java
  com.example.barter10.BottomNavigation.MessageFragment
 com/example/barter10/Category/TechnologyFragment.java
@@ -176,12 +165,23 @@ com/example/barter10/Model/viewSearch.java
  com.example.barter10.Model.viewSearch
 com/example/barter10/Adapter/ListpageAdapter.java
  com.example.barter10.Adapter.ListpageAdapter
-com/example/barter10/DataBindingTriggerClass.java
- com.example.barter10.DataBindingTriggerClass
-com/example/barter10/ForgotPassword/otp.java
- com.example.barter10.ForgotPassword.otp
- com.example.barter10.ForgotPassword.otp$1
- com.example.barter10.ForgotPassword.otp$1$1
- com.example.barter10.ForgotPassword.otp$2
- com.example.barter10.ForgotPassword.otp$2$1
- com.example.barter10.ForgotPassword.otp$3
+com/example/barter10/SignInSignUp/signUp.java
+ com.example.barter10.SignInSignUp.signUp
+ com.example.barter10.SignInSignUp.signUp$1
+ com.example.barter10.SignInSignUp.signUp$2
+ com.example.barter10.SignInSignUp.signUp$3
+ com.example.barter10.SignInSignUp.signUp$3$1
+ com.example.barter10.SignInSignUp.signUp$4
+ com.example.barter10.SignInSignUp.signUp$5
+ com.example.barter10.SignInSignUp.signUp$5$1
+ com.example.barter10.SignInSignUp.signUp$6
+ com.example.barter10.SignInSignUp.signUp$7
+ com.example.barter10.SignInSignUp.signUp$8
+com/example/barter10/SignInSignUp/MainActivity.java
+ com.example.barter10.SignInSignUp.MainActivity
+ com.example.barter10.SignInSignUp.MainActivity$1
+ com.example.barter10.SignInSignUp.MainActivity$1$1
+ com.example.barter10.SignInSignUp.MainActivity$1$2
+ com.example.barter10.SignInSignUp.MainActivity$2
+ com.example.barter10.SignInSignUp.MainActivity$3
+ com.example.barter10.SignInSignUp.MainActivity$4

@@ -137,10 +137,34 @@ public class signUp extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String str_fullname = fullname.getText().toString().trim();
+                String str_username = username.getText().toString().trim();
+                String str_password = password.getText().toString().trim();
+                String str_conpass = conpassword.getText().toString().trim();
+
+                String checker = "^[9][0-9]{9}$";
+
+
                 if(phoNo.getText().toString().trim().isEmpty()){
                     Toast.makeText(signUp.this,"Enter Phone Number",Toast.LENGTH_SHORT).show();
                     return;
+                } else if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_fullname)) {
+                    Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                } else if (str_password.length() < 6) {
+                    Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
+                } else if (!str_password.equals(str_conpass)){
+                    conpassword.setError("Password does not match");
+                    Toast.makeText(signUp.this, str_password+" "+str_conpass, Toast.LENGTH_SHORT).show();
+                }else if (str_username.length() < 4) {
+                    Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
                 }
+
+
+
+
+
+
                 progressBar.setVisibility(View.VISIBLE);
                 signUp.setVisibility(View.INVISIBLE);
 
@@ -288,33 +312,7 @@ public class signUp extends AppCompatActivity {
 
 //    private void addUser() {
 //
-//        String str_fullname = fullname.getText().toString().trim();
-//        String str_username = username.getText().toString().trim();
-//        String str_password = password.getText().toString().trim();
-//        String str_conpass = conpassword.getText().toString().trim();
-//        String str_phone = phoNo.getText().toString().trim();
 //
-//
-//
-//
-//        String checker = "^[9][0-9]{9}$";
-//
-//
-//        if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_phone) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_fullname)) {
-//            Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
-//        } else if (str_password.length() < 6) {
-//            Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
-//        } else if (!str_password.equals(str_conpass)){
-//            conpassword.setError("Password does not match");
-//            Toast.makeText(signUp.this, str_password+" "+str_conpass, Toast.LENGTH_SHORT).show();
-//        }else if (str_username.length() < 4) {
-//            Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
-//        } else if (str_phone.length() == 9) {
-//            Toast.makeText(signUp.this, "phone No. is too short", Toast.LENGTH_SHORT).show();
-//        } else if (!str_phone.matches(checker)){
-//            phoNo.requestFocus();
-//            phoNo.setError("Correct Format: +63 9xxxxxxxxx");
-//        }
 //        else {
 //
 //            String emailfb = str_username+"@epalit.com";

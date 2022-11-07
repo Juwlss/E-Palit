@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\32\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\values-night\\style.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,204",
+                        "endLines": "5,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "196,491"
+                    },
+                    "to": {
+                        "startLines": "2,59",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,5335",
+                        "endLines": "5,64",
+                        "endColumns": "12,12",
+                        "endOffsets": "236,5617"
+                    }
+                },
                 {
                     "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
@@ -18,25 +37,6 @@
                         "startOffsets": "241,311,395,479,575,677,779,4245",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "306,390,474,570,672,774,868,4329"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\32\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "829"
-                    },
-                    "to": {
-                        "startLines": "13",
-                        "startColumns": "4",
-                        "startOffsets": "873",
-                        "endLines": "25",
-                        "endColumns": "12",
-                        "endOffsets": "1586"
                     }
                 },
                 {
@@ -57,22 +57,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\32\\app\\src\\main\\res\\values-night\\style.xml",
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "57,204",
-                        "endLines": "5,12",
-                        "endColumns": "12,12",
-                        "endOffsets": "196,491"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "829"
                     },
                     "to": {
-                        "startLines": "2,59",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,5335",
-                        "endLines": "5,64",
-                        "endColumns": "12,12",
-                        "endOffsets": "236,5617"
+                        "startLines": "13",
+                        "startColumns": "4",
+                        "startOffsets": "873",
+                        "endLines": "25",
+                        "endColumns": "12",
+                        "endOffsets": "1586"
                     }
                 }
             ]
