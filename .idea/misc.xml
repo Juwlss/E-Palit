@@ -247,6 +247,10 @@
         <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_otp.xml" value="0.1" />
         <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/activity_signup_new.xml" value="0.1" />
         <entry key="..\:/Users/lacam/AndroidStudioProjects/E-p/app/src/main/res/layout/ic_gg.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/ayos/app/src/main/res/layout/activity_forgotpassword.xml" value="0.18819655521783182" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/ayos/app/src/main/res/layout/activity_otp.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/ayos/app/src/main/res/layout/activity_signup_new.xml" value="0.1" />
+        <entry key="..\:/Users/lacam/AndroidStudioProjects/ayos/app/src/main/res/layout/activity_signupotp.xml" value="0.1" />
       </map>
     </option>
   </component>

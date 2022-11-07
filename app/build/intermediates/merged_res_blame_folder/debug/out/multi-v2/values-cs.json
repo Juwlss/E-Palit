@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\lacam\\AndroidStudioProjects\\E-Pal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-cs\\values-cs.xml",
+            "outputFile": "C:\\Users\\lacam\\AndroidStudioProjects\\ayos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-cs\\values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\lacam\\.gradle\\caches\\transforms-3\\77a54add8f54e63adf145b0774bd6ed7\\transformed\\jetified-play-services-base-18.0.1\\res\\values-cs\\values.xml",

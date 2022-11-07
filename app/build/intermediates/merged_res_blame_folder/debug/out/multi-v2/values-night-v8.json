@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\lacam\\AndroidStudioProjects\\E-Pal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\lacam\\AndroidStudioProjects\\ayos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-Pal\\app\\src\\main\\res\\values-night\\style.xml",
+                    "source": "C:\\Users\\lacam\\AndroidStudioProjects\\ayos\\app\\src\\main\\res\\values-night\\style.xml",
                     "from": {
                         "startLines": "2,7",
                         "startColumns": "4,4",
@@ -20,6 +20,25 @@
                         "endLines": "5,64",
                         "endColumns": "12,12",
                         "endOffsets": "236,5617"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lacam\\AndroidStudioProjects\\ayos\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "829"
+                    },
+                    "to": {
+                        "startLines": "13",
+                        "startColumns": "4",
+                        "startOffsets": "873",
+                        "endLines": "25",
+                        "endColumns": "12",
+                        "endOffsets": "1586"
                     }
                 },
                 {
@@ -54,25 +73,6 @@
                         "startOffsets": "241,311,395,479,575,677,779,4245",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "306,390,474,570,672,774,868,4329"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lacam\\AndroidStudioProjects\\E-Pal\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "829"
-                    },
-                    "to": {
-                        "startLines": "13",
-                        "startColumns": "4",
-                        "startOffsets": "873",
-                        "endLines": "25",
-                        "endColumns": "12",
-                        "endOffsets": "1586"
                     }
                 }
             ]

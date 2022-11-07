@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\lacam\\AndroidStudioProjects\\E-Pal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+            "outputFile": "C:\\Users\\lacam\\AndroidStudioProjects\\ayos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\lacam\\.gradle\\caches\\transforms-3\\ebbe032ad27c29366d26f220f9a13914\\transformed\\jetified-ssp-android-1.1.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
