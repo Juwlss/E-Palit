@@ -87,6 +87,7 @@ public class SearchFragment extends Fragment {
                             search_bar.onEditorAction(EditorInfo.IME_ACTION_DONE);
                         }
                         else {
+
                             String recent = search_bar.getText().toString().trim();
                             String recentkey = key;
                             RecentSearch recents = new RecentSearch(recent,recentkey);

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\layout_profile_post.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\profile_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_catselecting.xml.flat",
@@ -16,24 +16,24 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_logoe.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_signup.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\signup.png"
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_receive.png.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\receive.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_fb.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_fb.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_receive.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\receive.png"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_signup.png.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\signup.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_history_24.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_baseline_history_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_visibility_24.xml.flat",

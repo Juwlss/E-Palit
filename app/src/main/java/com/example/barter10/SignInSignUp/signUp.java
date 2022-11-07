@@ -155,58 +155,54 @@ public class signUp extends AppCompatActivity {
                     Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
                 } else if (!str_password.equals(str_conpass)){
                     conpassword.setError("Password does not match");
-                    Toast.makeText(signUp.this, str_password+" "+str_conpass, Toast.LENGTH_SHORT).show();
                 }else if (str_username.length() < 4) {
                     Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
+                }else{
+
+                    progressBar.setVisibility(View.VISIBLE);
+                    signUp.setVisibility(View.INVISIBLE);
+
+                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                            "+63" + phoNo.getText().toString(),
+                            60,
+                            TimeUnit.SECONDS,
+                            signUp.this,
+                            new PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
+
+                                @Override
+                                public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential){
+                                    progressBar.setVisibility(View.GONE);
+                                    signUp.setVisibility(View.INVISIBLE);
+                                }
+                                @Override
+                                public void onVerificationFailed(@NonNull FirebaseException e){
+                                    progressBar.setVisibility(View.GONE);
+                                    signUp.setVisibility(View.VISIBLE);
+                                    Toast.makeText(signUp.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+
+                                }
+
+                                @Override
+                                public void onCodeSent(@NonNull String verification, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken){
+                                    super.onCodeSent(verification, forceResendingToken);
+                                    progressBar.setVisibility(View.GONE);
+                                    signUp.setVisibility(View.VISIBLE);
+                                    Intent intent = new Intent(getApplicationContext(), signupotp.class);
+                                    intent.putExtra("phodb", phoNo.getText().toString());
+                                    intent.putExtra("verificationsgn", verification);
+                                    intent.putExtra("fulldb",fullname.getText().toString());
+                                    intent.putExtra("userdb",username.getText().toString());
+                                    intent.putExtra("passdb",password.getText().toString());
+
+
+                                    startActivity(intent);
+
+                                }
+
+                            }
+                    );
+
                 }
-
-
-
-
-
-
-                progressBar.setVisibility(View.VISIBLE);
-                signUp.setVisibility(View.INVISIBLE);
-
-                PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                        "+63" + phoNo.getText().toString(),
-                        60,
-                        TimeUnit.SECONDS,
-                        signUp.this,
-                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
-
-                            @Override
-                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential){
-                                progressBar.setVisibility(View.GONE);
-                                signUp.setVisibility(View.INVISIBLE);
-                            }
-                            @Override
-                            public void onVerificationFailed(@NonNull FirebaseException e){
-                                progressBar.setVisibility(View.GONE);
-                                signUp.setVisibility(View.VISIBLE);
-                                Toast.makeText(signUp.this,e.getMessage(),Toast.LENGTH_SHORT).show();
-
-                            }
-
-                            @Override
-                            public void onCodeSent(@NonNull String verification, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken){
-                                super.onCodeSent(verification, forceResendingToken);
-                                progressBar.setVisibility(View.GONE);
-                                signUp.setVisibility(View.VISIBLE);
-                                Intent intent = new Intent(getApplicationContext(), signupotp.class);
-                                intent.putExtra("phodb", phoNo.getText().toString());
-                                intent.putExtra("verificationsgn", verification);
-                                intent.putExtra("fulldb",fullname.getText().toString());
-                                intent.putExtra("userdb",username.getText().toString());
-                                intent.putExtra("passdb",password.getText().toString());
-
-
-                                startActivity(intent);
-
-                            }
-
-                        }
-                );
 
 
             }
@@ -310,38 +306,6 @@ public class signUp extends AppCompatActivity {
 
     }
 
-//    private void addUser() {
-//
-//
-//        else {
-//
-//            String emailfb = str_username+"@epalit.com";
-//            String phone = "+63"+str_phone;
-//            String profilepic ="gs://e-palit.appspot.com/PostItem/Default/kyo.jpg";
-//
-//            firebaseAuth.createUserWithEmailAndPassword(emailfb, str_password)
-//                    .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<AuthResult> task) {
-//                            if (task.isSuccessful()) {
-//                                String userId = firebaseAuth.getUid();
-//
-//                                User user = new User(userId, str_fullname, profilepic, str_username, str_password, phone);
-//                                databaseReference.child(userId).setValue(user);
-//
-//
-//
-//                                Toast.makeText(signUp.this, "Registered xxxx Successfully", Toast.LENGTH_SHORT).show();
-//                                startActivity(new Intent(signUp.this, MainActivity.class));
-//                            } else {
-//                                Toast.makeText(signUp.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
-//                            }
-//                        }
-//
-//                    });
-//        }
-//
-//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -384,7 +348,7 @@ public class signUp extends AppCompatActivity {
                 });
 
             } catch (ApiException e) {
-                Toast.makeText(signUp.this, "wtffff", Toast.LENGTH_SHORT).show();
+                Toast.makeText(signUp.this, "Authentication Error", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
 

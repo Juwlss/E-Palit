@@ -19,6 +19,7 @@ public class viewHolder extends RecyclerView.ViewHolder {
     TextView recent_search;
     ImageView btnDelete;
     View v;
+
     public viewHolder(@NonNull View itemView) {
         super(itemView);
         recent_search = itemView.findViewById(R.id.recentsearch);

@@ -20,6 +20,12 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_5sdp">
 
+            <Button
+                android:id="@+id/userLayout"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@android:color/transparent" />
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/userProfile"
                 android:layout_width="@dimen/_50sdp"

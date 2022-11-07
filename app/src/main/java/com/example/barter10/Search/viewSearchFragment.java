@@ -1,7 +1,10 @@
 package com.example.barter10.Search;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,10 +16,11 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.viewSearch;
+import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -96,7 +100,6 @@ public class viewSearchFragment extends Fragment {
 
 
 
-
         btnViewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,17 +137,50 @@ public class viewSearchFragment extends Fragment {
         adapter = new FirebaseRecyclerAdapter<viewSearch, viewSearchHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull viewSearchHolder holder, int position, @NonNull viewSearch model) {
+
                 holder.userName.setText(model.getUserName());
                 holder.location.setText(model.getLocation());
                 holder.itemName.setText(model.getItemName());
                 holder.condition.setText(model.getItemCondition());
 
-
+                //item image
                 Picasso.get()
                         .load(model.getImageUrl())
                         .placeholder(R.drawable.ic_baseline_image_24)
                         .fit()
                         .into(holder.searchImage);
+
+                //user image
+                Picasso.get()
+                        .load(model.getProfileUrl())
+                        .placeholder(R.drawable.ic_default_picture)
+                        .fit()
+                        .into(holder.userImage);
+
+
+                holder.visitProfile.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+//                        Toast.makeText(getContext(), upload.getUid()+"", Toast.LENGTH_SHORT).show();
+
+                        SharedPreferences.Editor editor = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                        editor.putString("username", model.getUserName());
+                        editor.apply();
+
+
+                        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                        MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                        meowBottomNavigation.setVisibility(View.GONE);
+
+                        Fragment fragment = new visitprofile();
+                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+                    }
+                });
+
 
 
                 holder.viewPost.setOnClickListener(new View.OnClickListener() {

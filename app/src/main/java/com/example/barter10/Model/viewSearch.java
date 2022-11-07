@@ -8,9 +8,13 @@ public class viewSearch {
     private String location;
     private String itemName;
     private String itemCondition;
+    private String uid;
 
-    public viewSearch(String userName, String location, String imageUrl, String itemName, String itemCondition) {
+    public viewSearch(String uid, String userName, String profileUrl, String location, String imageUrl, String itemName, String itemCondition) {
+
+        this.uid = uid;
         this.userName = userName;
+        this.profileUrl = profileUrl;
         this.location = location;
         this.imageUrl = imageUrl;
         this.itemName = itemName;
@@ -18,6 +22,14 @@ public class viewSearch {
     }
 
     public viewSearch() {
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getItemName() {
@@ -50,6 +62,14 @@ public class viewSearch {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getProfileUrl() {
+        return profileUrl;
+    }
+
+    public void setProfileUrl(String profileUrl) {
+        this.profileUrl = profileUrl;
     }
 
     public String getLocation() {

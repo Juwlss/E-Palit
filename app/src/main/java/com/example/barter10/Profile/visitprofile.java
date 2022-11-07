@@ -58,7 +58,7 @@ public class visitprofile extends Fragment {
     private List<Upload> mUploads;
     private RecyclerView recyclerView;
     private SelfPostAdapter selfPostAdapter;
-    String profieid;
+    String profieid,search_username;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -90,6 +90,7 @@ public class visitprofile extends Fragment {
 
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         profieid = sharedPreferences.getString("uid", "none");
+        search_username = sharedPreferences.getString("username","none");
 
         //Displaying the username into profile fragment
         DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
@@ -101,23 +102,62 @@ public class visitprofile extends Fragment {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
 
-                    Toast.makeText(getContext(), profieid+"", Toast.LENGTH_SHORT).show();
-                    if (profieid.equals(FirebaseAuth.getInstance().getUid())){
-                        btn_message.setVisibility(View.GONE);
+
+
+
+
+                    //for visiting in search fragment
+                    for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
+
+
+                        //Visiting the users in display post
+
+                        //if current user visits his own profile
+                        if (profieid.equals(FirebaseAuth.getInstance().getUid())){
+                            btn_message.setVisibility(View.GONE);
+                        }
+
+                        //if current user visits other user
+                        if (dataSnapshot.getKey().equals(profieid)){
+
+//                        Toast.makeText(getContext(), profieid+"!@#", Toast.LENGTH_SHORT).show();
+                            String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
+
+                            Picasso.get()
+                                    .load(Profilepic)
+                                    .placeholder(R.drawable.ic_default_picture)
+                                    .into(imageprofile);
+                            username.setText(dataSnapshot.child("username").getValue().toString());
+                            break;
+                        }
+
+
+
+//                        Toast.makeText(getContext(), search_username+"POTA", Toast.LENGTH_SHORT).show();
+
+                        if (postSnapshot.getValue().equals(search_username)){
+
+                            Toast.makeText(getContext(), postSnapshot.getValue()+"tite", Toast.LENGTH_SHORT).show();
+
+                            String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
+
+                            Picasso.get()
+                                    .load(Profilepic)
+                                    .placeholder(R.drawable.ic_default_picture)
+                                    .into(imageprofile);
+                            username.setText(postSnapshot.getValue().toString());
+                            break;
+
+                        }
+
+                        if(profieid.equals(postSnapshot.getValue())){
+                            btn_message.setVisibility(View.GONE);
+                        }
+
+
                     }
 
-                    if (dataSnapshot.getKey().equals(profieid)){
 
-                        Toast.makeText(getContext(), profieid+"", Toast.LENGTH_SHORT).show();
-                        String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
-
-                        Picasso.get()
-                                .load(Profilepic)
-                                .placeholder(R.drawable.ic_default_picture)
-                                .into(imageprofile);
-                        username.setText(dataSnapshot.child("username").getValue().toString());
-                        break;
-                    }
 
                 }
             }

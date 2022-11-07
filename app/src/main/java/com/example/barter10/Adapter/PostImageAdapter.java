@@ -104,6 +104,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         public ImageView postImage;
         public ImageView userImage;
 
+        public Button viewPost;
         public Button visitProfile;
 
 
@@ -118,6 +119,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
             condition = itemView.findViewById(R.id.itemCondition);
             postImage = itemView.findViewById(R.id.postImage);
 
+            viewPost = itemView.findViewById(R.id.viewPost);
             visitProfile = itemView.findViewById(R.id.userLayout);
 
 

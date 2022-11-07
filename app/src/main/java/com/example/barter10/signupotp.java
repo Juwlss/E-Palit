@@ -99,7 +99,7 @@ public class signupotp extends AppCompatActivity {
                             buttonsgnotp.setVisibility(View.VISIBLE);
                             if(task.isSuccessful()){
                                 addUser();
-                                Toast.makeText(signupotp.this, "Nice matched", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(signupotp.this, "Sign up Successfully", Toast.LENGTH_SHORT).show();
 
                             }else{
                                 Toast.makeText(signupotp.this,"The verification code entered was invalid", Toast.LENGTH_SHORT).show();
@@ -161,7 +161,6 @@ public class signupotp extends AppCompatActivity {
         String pic = "gs://e-palit.appspot.com/PostItem/Default/Vector (1).png";
 
         String username = userz+"@epalit.com";
-        Toast.makeText(signupotp.this, username, Toast.LENGTH_SHORT).show();
 
         firebaseAuth.createUserWithEmailAndPassword(username, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override

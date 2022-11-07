@@ -68,12 +68,9 @@ public class Home extends AppCompatActivity {
                 String userid="";
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Toast.makeText(Home.this, dataSnapshot.getKey()+"!@#"+FirebaseAuth.getInstance().getUid(), Toast.LENGTH_SHORT).show();
 
                    if(dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
 
-
-                       Toast.makeText(Home.this, FirebaseAuth.getInstance().getUid()+"123123123", Toast.LENGTH_SHORT).show();
                        userid = dataSnapshot.child("username").getValue().toString();
                        String name[] = userid.split(" ");
                        String upperString = name[0].substring(0, 1).toUpperCase() + name[0].substring(1).toLowerCase();
