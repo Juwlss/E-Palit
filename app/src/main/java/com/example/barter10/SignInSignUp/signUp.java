@@ -56,6 +56,10 @@ public class signUp extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
 
+    private CallbackManager callbackManager;
+    private static final String TAG = "FacebookAuthentication";
+
+
 
     int passvis=1,passvis2=1;
     EditText fullname,username, email, password, conpassword,phoNo;
@@ -209,11 +213,30 @@ public class signUp extends AppCompatActivity {
         //Button Facebook
 
         btnFacebook = findViewById(R.id.btnFacebook);
+        callbackManager = CallbackManager.Factory.create();
 
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(signUp.this, "Facebook", Toast.LENGTH_SHORT).show();
+
+                LoginManager.getInstance().logInWithReadPermissions(signUp.this, Arrays.asList("email", "public_profile"));
+                LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        handleFacebookToken(loginResult.getAccessToken());
+                    }
+
+                    @Override
+                    public void onCancel() {
+
+                    }
+
+                    @Override
+                    public void onError(@NonNull FacebookException e) {
+
+                    }
+
+                });
             }
         });
 
@@ -227,6 +250,39 @@ public class signUp extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    private void handleFacebookToken(AccessToken accessToken) {
+        AuthCredential authCredential = FacebookAuthProvider.getCredential(accessToken.getToken());
+
+        firebaseAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Log.d(TAG, "sign in with credential: successful");
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                    updateUI(user);
+                }else{
+                    Toast.makeText(signUp.this, ""+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    updateUI(null);
+                }
+            }
+        });
+    }
+
+    private void updateUI(FirebaseUser user) {
+        if(user!=null){
+            User user1 = new User();
+            assert user != null;
+
+            user1.setUserID(user.getUid());
+            user1.setUsername(user.getDisplayName());
+            user1.setProfilepic(user.getPhotoUrl().toString());
+            firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
+
+            startActivity(new Intent(signUp.this, Home.class));
+        }
 
     }
 
@@ -292,6 +348,9 @@ public class signUp extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        //facebook signin
+        callbackManager.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == 123){
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);

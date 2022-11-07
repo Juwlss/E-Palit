@@ -58,8 +58,10 @@ com/example/barter10/SignInSignUp/signUp.java
  com.example.barter10.SignInSignUp.signUp$3$1
  com.example.barter10.SignInSignUp.signUp$4
  com.example.barter10.SignInSignUp.signUp$5
+ com.example.barter10.SignInSignUp.signUp$5$1
  com.example.barter10.SignInSignUp.signUp$6
  com.example.barter10.SignInSignUp.signUp$7
+ com.example.barter10.SignInSignUp.signUp$8
 com/example/barter10/Category/FashionFragment.java
  com.example.barter10.Category.FashionFragment
  com.example.barter10.Category.FashionFragment$1
