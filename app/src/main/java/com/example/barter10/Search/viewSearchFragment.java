@@ -32,6 +32,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class viewSearchFragment extends Fragment {
 
@@ -166,7 +167,7 @@ public class viewSearchFragment extends Fragment {
 //                        Toast.makeText(getContext(), upload.getUid()+"", Toast.LENGTH_SHORT).show();
 
                         SharedPreferences.Editor editor = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
-                        editor.putString("username", model.getUserName());
+                        editor.putString("uid", model.getUid());
                         editor.apply();
 
 

@@ -260,6 +260,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\tradesymbol.png"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_chat.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\fragment_chat.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\anim_label_resize.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\anim\\label_resize.xml"
     },

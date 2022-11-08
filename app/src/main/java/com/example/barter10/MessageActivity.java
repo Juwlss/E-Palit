@@ -43,6 +43,7 @@ public class MessageActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
+    String userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +82,7 @@ public class MessageActivity extends AppCompatActivity {
 
 //        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        String userid = getIntent().getStringExtra("userid");
+        userid = getIntent().getStringExtra("userid");
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +123,7 @@ public class MessageActivity extends AppCompatActivity {
 
     }
 
-    private void sendMessage(String sender, String receiver, String message){
+    private void sendMessage(String sender, final String receiver, String message){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
         HashMap<String, Object> hashMap = new HashMap<>();
@@ -131,9 +132,30 @@ public class MessageActivity extends AppCompatActivity {
         hashMap.put("message", message);
 
         reference.child("Chats").push().setValue(hashMap);
+
+        DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child(userid);
+
+        chatRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.exists()){
+                    chatRef.child("id").setValue(userid);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
     }
 
-    private void readMessage(final String myid, final String userid, String imageurl){
+    private void readMessage(final String myid, final String userid, final String imageurl){
 
 
         reference = FirebaseDatabase.getInstance().getReference("Chats");
@@ -148,12 +170,11 @@ public class MessageActivity extends AppCompatActivity {
                     if ((chat.getReceiver().equals(myid) && chat.getSender().equals(userid))
                         || (chat.getReceiver().equals(userid) && chat.getSender().equals(myid))){
 
-                        Toast.makeText(MessageActivity.this, dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MessageActivity.this, dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
 
                         mChat.add(chat);
                     }
 
-//                    Toast.makeText(MessageActivity.this, chat.getReceiver()+"!@#!@#"+userid, Toast.LENGTH_SHORT).show();
 
 
                     chatAdapter = new ChatAdapter(MessageActivity.this, mChat, imageurl);

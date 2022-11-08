@@ -3923,6 +3923,7 @@ id flip
 id floating
 id forever
 id forgot_pass
+id fragchat_rv
 id fragment_container_view_tag
 id fragmentsearch
 id frame_layout
@@ -4570,6 +4571,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
 layout dp_example
+layout fragment_chat
 layout fragment_fashion
 layout fragment_finished
 layout fragment_gadget

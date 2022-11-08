@@ -23,6 +23,7 @@ import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Adapter.SelfPostAdapter;
 import com.example.barter10.BottomNavigation.HomeFragment;
 import com.example.barter10.Home;
+import com.example.barter10.MessageActivity;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.User;
 import com.example.barter10.Profile.profileSettings;
@@ -60,6 +61,8 @@ public class visitprofile extends Fragment {
     private SelfPostAdapter selfPostAdapter;
     String profieid,search_username;
 
+    private List<User> mUser;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -80,6 +83,9 @@ public class visitprofile extends Fragment {
         mUploads = new ArrayList<>();
         selfPostAdapter = new SelfPostAdapter(getContext(), mUploads);
         recyclerView.setAdapter(selfPostAdapter);
+
+
+        mUser = new ArrayList<>();
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,11 +108,6 @@ public class visitprofile extends Fragment {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
 
-
-
-
-
-                    //for visiting in search fragment
                     for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
 
 
@@ -118,7 +119,7 @@ public class visitprofile extends Fragment {
                         }
 
                         //if current user visits other user
-                        if (dataSnapshot.getKey().equals(profieid)){
+                        if (dataSnapshot.getKey().equals(profieid) ){
 
 //                        Toast.makeText(getContext(), profieid+"!@#", Toast.LENGTH_SHORT).show();
                             String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
@@ -135,24 +136,25 @@ public class visitprofile extends Fragment {
 
 //                        Toast.makeText(getContext(), search_username+"POTA", Toast.LENGTH_SHORT).show();
 
-                        if (postSnapshot.getValue().equals(search_username)){
-
-                            Toast.makeText(getContext(), postSnapshot.getValue()+"tite", Toast.LENGTH_SHORT).show();
-
-                            String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
-
-                            Picasso.get()
-                                    .load(Profilepic)
-                                    .placeholder(R.drawable.ic_default_picture)
-                                    .into(imageprofile);
-                            username.setText(postSnapshot.getValue().toString());
-                            break;
-
-                        }
-
-                        if(profieid.equals(postSnapshot.getValue())){
-                            btn_message.setVisibility(View.GONE);
-                        }
+                        //User visits at search fragment
+//                        if (postSnapshot.getValue().equals(search_username)){
+//
+//                            Toast.makeText(getContext(), postSnapshot.getValue()+"tite", Toast.LENGTH_SHORT).show();
+//
+//                            String Profilepic1 = dataSnapshot.child("profilepic").getValue().toString();
+//
+//                            Picasso.get()
+//                                    .load(Profilepic1)
+//                                    .placeholder(R.drawable.ic_default_picture)
+//                                    .into(imageprofile);
+//                            username.setText(postSnapshot.getValue().toString());
+//                            break;
+//
+//                        }
+//
+//                        if(profieid.equals(postSnapshot.getValue())){
+//                            btn_message.setVisibility(View.GONE);
+//                        }
 
 
                     }
@@ -194,6 +196,19 @@ public class visitprofile extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //send message
+        btn_message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), MessageActivity.class);
+                intent.putExtra("userid", profieid);
+                getContext().startActivity(intent);
+
+
             }
         });
 
