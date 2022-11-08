@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +35,6 @@ public class signupotp extends AppCompatActivity {
     DatabaseReference database;
     FirebaseAuth firebaseAuth;
     private PhoneAuthCredential phoneAuthCredential;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -52,6 +52,8 @@ public class signupotp extends AppCompatActivity {
         inputsgn6 = findViewById(R.id.pensgn6);
         firebaseAuth = FirebaseAuth.getInstance();
         setsgnotp();
+
+
 
         ProgressBar progressotpBar = findViewById(R.id.prgbarsgnotp);
         Button buttonsgnotp = findViewById(R.id.button_sgn);
@@ -166,7 +168,10 @@ public class signupotp extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+
+
                     User user = new User(FirebaseAuth.getInstance().getUid(), full,pic,userz,pass,pho);
+
                     database.child(FirebaseAuth.getInstance().getUid()).setValue(user);
 
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);

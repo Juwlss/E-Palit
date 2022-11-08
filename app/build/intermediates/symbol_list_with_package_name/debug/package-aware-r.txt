@@ -3388,6 +3388,8 @@ drawable aprofile
 drawable arrow
 drawable avd_hide_password
 drawable avd_show_password
+drawable background_receiver
+drawable background_sender
 drawable bottom_line
 drawable btn_border
 drawable btn_checkbox_checked_mtrl
@@ -3491,6 +3493,7 @@ drawable ic_baseline_people_24
 drawable ic_baseline_person_24
 drawable ic_baseline_search_24
 drawable ic_baseline_security_24
+drawable ic_baseline_send_24
 drawable ic_baseline_settings_24
 drawable ic_baseline_swap_horizontal_circle_24
 drawable ic_baseline_visibility_24
@@ -3545,6 +3548,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable message_background
 drawable messenger_bubble_large_blue
 drawable messenger_bubble_large_white
 drawable messenger_bubble_small_blue
@@ -3732,6 +3736,7 @@ id autoCompleteToStart
 id automatic
 id backar2
 id backarr
+id bar_layout
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3767,6 +3772,7 @@ id btn_img
 id btn_logout
 id btn_message
 id btn_pending
+id btn_send
 id btn_settings
 id btn_username
 id button
@@ -3789,6 +3795,8 @@ id chain
 id chain2
 id chains
 id changePicture
+id chat_profileImage
+id chats_rv
 id checkbox
 id checked
 id chg
@@ -3859,6 +3867,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id display_always
+id display_message
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -4063,7 +4072,9 @@ id menu_crop
 id menu_loader
 id mes_rv
 id message
+id message_username
 id messenger_send_button
+id messsage_toolbar
 id middle
 id mini
 id month_grid
@@ -4233,6 +4244,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id selfpost
+id send_message
 id seperator1
 id seperator2
 id sharedValueSet
@@ -4318,6 +4330,7 @@ id text_categories
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_send
 id text_view_rotate
 id text_view_scale
 id textinput_counter
@@ -4353,6 +4366,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_count
+id tv_message
 id txtConPassword
 id txtCondition
 id txtDetails
@@ -4383,8 +4397,8 @@ id upload_list
 id useLogo
 id userLayout
 id userProfile
-id user_message
 id username
+id username_message
 id v_backarr
 id v_circle
 id v_image_profile
@@ -4522,6 +4536,7 @@ layout activity_forgotpassword
 layout activity_home
 layout activity_loading
 layout activity_main
+layout activity_message
 layout activity_newpass
 layout activity_otp
 layout activity_signup_new
@@ -4530,6 +4545,8 @@ layout activity_upload
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout category_layout
+layout chat_item_left
+layout chat_item_right
 layout com_facebook_activity_layout
 layout com_facebook_device_auth_dialog_fragment
 layout com_facebook_login_fragment

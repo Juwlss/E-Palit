@@ -1,71 +1,92 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.barter10.MessageActivity;
 import com.example.barter10.Model.Message;
+import com.example.barter10.Model.User;
 import com.example.barter10.R;
-import com.google.android.material.imageview.ShapeableImageView;
+import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+public class MessageListAdapter extends RecyclerView.Adapter<MessageListAdapter.ViewHolder> {
 
-public class MessageListAdapter extends RecyclerView.Adapter<MessageListAdapter.MyViewHolder> {
-
-    Context context;
-    ArrayList<Message> messageArrayList;
+    private Context mContext;
+    private List<User> mUsers;
 
 
-    public MessageListAdapter(Context context, ArrayList<Message> messageArrayList){
-        this.context = context;
-        this.messageArrayList = messageArrayList;
+    public MessageListAdapter(Context mContext, List<User> mUsers) {
+        this.mUsers = mUsers;
+        this.mContext = mContext;
+
     }
-
 
     @NonNull
     @Override
-    public MessageListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //inflate the layout
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.messages, parent, false);
+    public MessageListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.messages, parent, false);
 
-        return new MessageListAdapter.MyViewHolder(view);
+        return new MessageListAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MessageListAdapter.MyViewHolder holder, int position) {
-        //assigning values to the views
-        holder.receiverName.setText(messageArrayList.get(position).getUsername());
-        holder.messageContent.setText(messageArrayList.get(position).getMessage());
-        holder.circleImageView.setImageResource(messageArrayList.get(position).getReceiverImage());
+    public void onBindViewHolder(@NonNull MessageListAdapter.ViewHolder holder, int position) {
+        User user = mUsers.get(position);
+
+        holder.username.setText(user.getUsername());
+        if(user.getProfilepic().equals("default")){
+            holder.profileImage.setImageResource(R.mipmap.ic_launcher);
+        }else{
+            Picasso.get()
+                    .load(user.getProfilepic())
+                    .placeholder(R.drawable.ic_default_picture)
+                    .into(holder.profileImage);
+        }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, MessageActivity.class);
+                intent.putExtra("userid", user.getUserID());
+                mContext.startActivity(intent);
+            }
+        });
+
+
+
     }
 
     @Override
     public int getItemCount() {
-        // no of items you want to display
-        return messageArrayList.size();
+        return mUsers.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
-        CircleImageView circleImageView;
-        TextView receiverName, messageContent;
+        public TextView username;
+        public ImageView profileImage;
 
 
-
-        public MyViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            circleImageView = itemView.findViewById(R.id.image_message);
-            receiverName = itemView.findViewById(R.id.username);
-            messageContent = itemView.findViewById(R.id.message);
+            username = itemView.findViewById(R.id.message_username);
+            profileImage = itemView.findViewById(R.id.image_message);
+
+
+
         }
     }
+
+
+
 }

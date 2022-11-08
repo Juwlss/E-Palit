@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\dc40c780a03951c003d08d37d2dd9682\transformed\databinding-adapters-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\4fb7cdd7c5c38172219a10d1c0f6a7e4\transformed\databinding-runtime-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\209b4e169df9eb39470483ca696e3286\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
@@ -107,20 +107,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\andrei\Documents\4th yr\E-Pali
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\cde339d3e644570689531bf543ce9af2\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\951943b61d00c0cd79aee8ab64d43391\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
 	package
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
 		INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-64:12
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:1-67:12
 		INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:2:11-69
@@ -169,7 +169,7 @@ MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Do
 	android:name
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:9:5-62:19
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:9:5-65:19
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\209b4e169df9eb39470483ca696e3286\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\209b4e169df9eb39470483ca696e3286\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\139bc81091ef124bf6e2ab3a058f775f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -270,90 +270,96 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Do
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:17:9-46
+activity#com.example.barter10.MessageActivity
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:18:9-20:39
+	android:exported
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:19:13-44
 activity#com.example.barter10.signupotp
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:18:9-20:40
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:exported
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:20:13-37
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:19:13-38
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:22:13-38
 activity#com.example.barter10.Upload.activityUpload
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:21:9-23:39
-	android:exported
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:23:13-36
-	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:22:13-50
-activity#com.example.barter10.SignInSignUp.signUp
 ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:24:9-26:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:25:13-48
-activity#com.example.barter10.ForgotPassword.forgotPass
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:25:13-50
+activity#com.example.barter10.SignInSignUp.signUp
 ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:27:9-29:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:29:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:28:13-54
-activity#com.example.barter10.ForgotPassword.otp
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:28:13-48
+activity#com.example.barter10.ForgotPassword.forgotPass
 ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:30:9-32:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:31:13-47
-activity#com.example.barter10.ForgotPassword.newPass
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:31:13-54
+activity#com.example.barter10.ForgotPassword.otp
 ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:33:9-35:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:34:13-51
-activity#com.example.barter10.Home
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:34:13-47
+activity#com.example.barter10.ForgotPassword.newPass
 ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:36:9-38:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:38:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:37:13-33
-activity#com.example.barter10.SignInSignUp.MainActivity
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:37:13-51
+activity#com.example.barter10.Home
 ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:39:9-41:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:41:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:40:13-54
-activity#com.example.barter10.activity_loading
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:42:9-51:20
-	android:screenOrientation
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:40:13-33
+activity#com.example.barter10.SignInSignUp.MainActivity
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:42:9-44:39
 	android:exported
 		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:44:13-36
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:43:13-54
+activity#com.example.barter10.activity_loading
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:45:9-54:20
+	android:screenOrientation
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:48:13-49
+	android:exported
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:47:13-36
+	android:name
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:46:13-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:46:13-50:29
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:49:13-53:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:47:17-69
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:50:17-69
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:47:25-66
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:50:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:49:17-77
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:52:17-77
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:49:27-74
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:52:27-74
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:53:9-55:55
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:56:9-58:55
 	android:value
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:55:13-52
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:58:13-52
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:54:13-58
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:57:13-58
 meta-data#com.facebook.sdk.ClientToken
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:56:9-58:61
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:59:9-61:61
 	android:value
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:58:13-58
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:61:13-58
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:57:13-56
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:60:13-56
 meta-data#preloaded_fonts
-ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:59:9-61:57
+ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:62:9-64:57
 	android:resource
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:61:13-54
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:64:13-54
 	android:name
-		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:60:13-43
+		ADDED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml:63:13-43
 uses-sdk
 INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\andrei\Documents\4th yr\33\app\src\main\AndroidManifest.xml
