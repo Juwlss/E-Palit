@@ -15,7 +15,6 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.barter10.Home;
 import com.example.barter10.Model.User;
 import com.example.barter10.R;
@@ -24,7 +23,6 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -62,7 +60,7 @@ public class signUp extends AppCompatActivity {
 
 
     int passvis=1,passvis2=1;
-    EditText fullname,username, email, password, conpassword,phoNo;
+    EditText fullname,username, password, conpassword,phoNo;
     ImageButton visOff, btnGoogle, btnFacebook;
     Button signUp;
     TextView signNow;
@@ -90,7 +88,7 @@ public class signUp extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
 
-//checking the password when toggling
+        //checking the password when toggling
         visOff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,6 +191,8 @@ public class signUp extends AppCompatActivity {
                                     intent.putExtra("fulldb",fullname.getText().toString());
                                     intent.putExtra("userdb",username.getText().toString());
                                     intent.putExtra("passdb",password.getText().toString());
+                                    intent.putExtra("userid", FirebaseAuth.getInstance().getUid());
+
 
 
                                     startActivity(intent);
@@ -295,7 +295,7 @@ public class signUp extends AppCompatActivity {
         if(user!=null){
             User user1 = new User();
             assert user != null;
-
+            
             user1.setUserID(user.getUid());
             user1.setUsername(user.getDisplayName());
             user1.setProfilepic(user.getPhotoUrl().toString());

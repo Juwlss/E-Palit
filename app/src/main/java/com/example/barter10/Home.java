@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.BottomNavigation.HomeFragment;
@@ -37,7 +38,6 @@ public class Home extends AppCompatActivity {
     FloatingActionButton upload;
     FirebaseAuth firebaseAuth;
     private TextView welcome;
-    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +51,6 @@ public class Home extends AppCompatActivity {
         appBarLayout = findViewById(R.id.appbar);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
-        databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
         //text welcome

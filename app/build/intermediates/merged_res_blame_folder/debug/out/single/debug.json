@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\layout_chat_item_left.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\chat_item_left.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\layout_profile_post.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\profile_post.xml"
     },
@@ -52,6 +56,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_undraw_contact_us_re_4qqt_1.xml"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\layout_chat_item_right.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\chat_item_right.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle38.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\rectangle38.png"
     },
@@ -62,6 +70,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_pins.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\pins.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_message.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\activity_message.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\font_inter.ttf.flat",
@@ -624,6 +636,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\activity_forgotpassword.xml"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_background_sender.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\background_sender.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_search_black_24dp.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_search_black_24dp.xml"
     },
@@ -660,6 +676,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\layout\\activity_newpass.xml"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_background_receiver.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\background_receiver.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_checkbox.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\img_checkbox.xml"
     },
@@ -692,6 +712,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\listcategories_ui.xml"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_send_24.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\ic_baseline_send_24.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_daleuser.jpg.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\daleuser.jpg"
     },
@@ -710,6 +734,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_shoe.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\shoe.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_message_background.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\src\\main\\res\\drawable\\message_background.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\33\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_chat_24.xml.flat",

@@ -2,13 +2,13 @@ package com.example.barter10.Model;
 
 public class Message {
     String username;
+    String userImage;
     String message;
-    int receiverImage;
 
-    public Message(String username, String message, int receiverImage) {
+    public Message(String username, String userImage, String message) {
         this.username = username;
         this.message = message;
-        this.receiverImage = receiverImage;
+        this.userImage = userImage;
     }
 
     public String getUsername() {
@@ -19,6 +19,14 @@ public class Message {
         this.username = username;
     }
 
+    public String getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
+    }
+
     public String getMessage() {
         return message;
     }
@@ -27,11 +35,7 @@ public class Message {
         this.message = message;
     }
 
-    public int getReceiverImage() {
-        return receiverImage;
-    }
 
-    public void setReceiverImage(int receiverImage) {
-        this.receiverImage = receiverImage;
-    }
+
+
 }

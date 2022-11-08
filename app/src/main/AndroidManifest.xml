@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barter10">
         <activity
+            android:name=".MessageActivity"
+            android:exported="true" />
+        <activity
             android:name=".signupotp"
             android:exported="false" />
         <activity

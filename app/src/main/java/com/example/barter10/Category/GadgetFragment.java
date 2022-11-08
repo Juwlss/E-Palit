@@ -58,8 +58,6 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         currentId = firebaseAuth.getCurrentUser().getUid();
 
 
-
-
         recyclerView = view.findViewById(R.id.gadget_rv);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
