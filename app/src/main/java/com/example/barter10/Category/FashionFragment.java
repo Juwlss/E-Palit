@@ -66,7 +66,7 @@ public class FashionFragment extends Fragment implements PostImageAdapter.OnItem
         //storage
         firebaseStorage = FirebaseStorage.getInstance();
         //displaying items
-        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+        databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
 
         Query query = databaseReference.orderByChild("category1").equalTo("Fashion");

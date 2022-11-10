@@ -68,7 +68,7 @@ public class TechnologyFragment extends Fragment implements PostImageAdapter.OnI
         //storage
         firebaseStorage = FirebaseStorage.getInstance();
         //displaying items
-        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+        databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
 
         Query query = databaseReference.orderByChild("category1").equalTo("Technology");

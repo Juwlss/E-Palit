@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.graphics.text.LineBreaker;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -49,22 +52,18 @@ import java.util.concurrent.TimeUnit;
 
 public class signUp extends AppCompatActivity {
 
-    private GoogleSignInClient gsc;
-    private GoogleSignInOptions gso;
+
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
 
-    private CallbackManager callbackManager;
-    private static final String TAG = "FacebookAuthentication";
-
-
 
     int passvis=1,passvis2=1;
-    EditText fullname,username, password, conpassword,phoNo;
-    ImageButton visOff, btnGoogle, btnFacebook;
-    Button signUp;
-    TextView signNow;
-    DatabaseReference databaseReference;
+    private EditText fullname,username, password, conpassword,phoNo;
+    private ImageButton visOff;
+    private Button signUp;
+    private TextView signNow,terms,policy;
+    private DatabaseReference databaseReference;
+    private CheckBox checkBox;
 
 
     @Override
@@ -84,7 +83,13 @@ public class signUp extends AppCompatActivity {
         conpassword = findViewById(R.id.txtConPassword);
         phoNo = findViewById(R.id.txtPhone);
 
-        firebaseDatabase = FirebaseDatabase.getInstance("https://e-palit-default-rtdb.asia-southeast1.firebasedatabase.app/");
+
+        checkBox = findViewById(R.id.cb_privacy);
+
+        terms = findViewById(R.id.tv_Terms);
+        policy = findViewById(R.id.tv_policy);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
 
@@ -153,9 +158,11 @@ public class signUp extends AppCompatActivity {
                     Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
                 } else if (!str_password.equals(str_conpass)){
                     conpassword.setError("Password does not match");
-                }else if (str_username.length() < 4) {
+                } else if (str_username.length() < 4) {
                     Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
-                }else{
+                } else if(!checkBox.isChecked()){
+                    Toast.makeText(signUp.this, "You must agree to Sign up", Toast.LENGTH_SHORT).show();
+                } else{
 
                     progressBar.setVisibility(View.VISIBLE);
                     signUp.setVisibility(View.INVISIBLE);
@@ -208,57 +215,24 @@ public class signUp extends AppCompatActivity {
             }
         });
 
-        //Button google
-
-        btnGoogle = findViewById(R.id.btnGoogle);
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-
-        gsc = GoogleSignIn.getClient(this, gso);
-
-
-
-        btnGoogle.setOnClickListener(new View.OnClickListener() {
+        terms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = gsc.getSignInIntent();
-                startActivityForResult(i, 123);
+                setContentView(R.layout.layout_terms);
+            }
+        });
+
+        policy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.layout_privacypolicy);
             }
         });
 
 
 
-        //Button Facebook
 
-        btnFacebook = findViewById(R.id.btnFacebook);
-        callbackManager = CallbackManager.Factory.create();
 
-        btnFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                LoginManager.getInstance().logInWithReadPermissions(signUp.this, Arrays.asList("email", "public_profile"));
-                LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        handleFacebookToken(loginResult.getAccessToken());
-                    }
-
-                    @Override
-                    public void onCancel() {
-
-                    }
-
-                    @Override
-                    public void onError(@NonNull FacebookException e) {
-
-                    }
-
-                });
-            }
-        });
 
         //Button Sign in now
         signNow = findViewById(R.id.lblSignnow);
@@ -273,85 +247,7 @@ public class signUp extends AppCompatActivity {
 
     }
 
-    private void handleFacebookToken(AccessToken accessToken) {
-        AuthCredential authCredential = FacebookAuthProvider.getCredential(accessToken.getToken());
-
-        firebaseAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    Log.d(TAG, "sign in with credential: successful");
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    updateUI(user);
-                }else{
-                    Toast.makeText(signUp.this, ""+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    updateUI(null);
-                }
-            }
-        });
-    }
-
-    private void updateUI(FirebaseUser user) {
-        if(user!=null){
-            User user1 = new User();
-            assert user != null;
-            
-            user1.setUserID(user.getUid());
-            user1.setUsername(user.getDisplayName());
-            user1.setProfilepic(user.getPhotoUrl().toString());
-            firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
-
-            startActivity(new Intent(signUp.this, Home.class));
-        }
-
-    }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        //facebook signin
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode == 123){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
-
-                firebaseAuth.signInWithCredential(credential).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                    @Override
-                    public void onSuccess(AuthResult authResult) {
-                        if(task.isSuccessful()){
-
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            User user1 = new User();
-                            assert user != null;
-
-                            user1.setUserID(user.getUid());
-                            user1.setUsername(user.getDisplayName());
-                            user1.setProfilepic(user.getPhotoUrl().toString());
-
-
-                            Toast.makeText(signUp.this, "sign in google", Toast.LENGTH_SHORT).show();
-                            firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
-                            Intent intent = new Intent(signUp.this, Home.class);
-                            intent.putExtra("username", user.getDisplayName());
-                            intent.putExtra("profilepic", user.getPhotoUrl().toString());
-
-                            startActivity(intent);
-                        }else{
-                            Toast.makeText(signUp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-            } catch (ApiException e) {
-                Toast.makeText(signUp.this, "Authentication Error", Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-            }
-
-        }
-    }
 }

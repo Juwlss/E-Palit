@@ -146,88 +146,104 @@
             android:paddingLeft="@dimen/_15sdp"
             android:textSize="@dimen/_10ssp" />
 
+        <RelativeLayout
+            android:id="@+id/dataprivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPhone"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_centerInParent="true">
+
+            <CheckBox
+                android:id="@+id/cb_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cb_privacy"
+                android:layout_centerVertical="true"
+                android:text="By signing up, you agree to our"/>
+
+            <TextView
+                android:id="@+id/tv_Terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toRightOf="@id/privacy"
+                android:text=" Terms"
+                android:textColor="#EF4565"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tv_and"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_Terms"
+                android:text=" &amp; "/>
+
+            <TextView
+                android:id="@+id/tv_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_and"
+                android:text="Privacy Policy"
+                android:textColor="#EF4565"/>
+
+
+
+
+        </RelativeLayout>
+
 
         <Button
             android:id="@+id/btnSignup"
             android:layout_width="@dimen/_130sdp"
             android:layout_height="@dimen/_28sdp"
-            android:layout_below="@id/txtPhone"
+            android:layout_below="@id/dataprivacy"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/button_ui"
             android:fontFamily="@font/inter"
             android:text="Sign Up"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textFontWeight="600"
-            android:textSize="@dimen/_8ssp"
+            android:textSize="@dimen/_10ssp"
             app:backgroundTint="@null" />
 
-        <ImageView
-            android:id="@+id/bottomLine"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_13sdp"
-            android:layout_below="@id/btnSignup"
-            android:layout_marginTop="@dimen/_5sdp"
-            app:srcCompat="@drawable/bottom_line" />
-
-        <RelativeLayout
-            android:id="@+id/button"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bottomLine"
-            android:layout_centerHorizontal="true">
-
-            <ImageButton
-                android:id="@+id/btnGoogle"
-                android:layout_width="@dimen/_35sdp"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginLeft="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:background="@drawable/ic_gg" />
-
-            <ImageButton
-                android:id="@+id/btnFacebook"
-                android:layout_width="@dimen/_35sdp"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_alignParentRight="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_50sdp"
-                android:background="@drawable/ic_fb" />
-        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/txtSign"
-            android:layout_width="@dimen/_300sdp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button"
-            android:layout_centerHorizontal="true">
+            android:layout_below="@id/btnSignup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/already"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_70sdp"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/inter"
                 android:text="Already have a account?"
                 android:textColor="#5F6C7B"
-                android:textSize="@dimen/_8ssp" />
+                android:textSize="@dimen/_10ssp" />
 
             <TextView
                 android:id="@+id/lblSignnow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toRightOf="@id/already"
                 android:fontFamily="@font/interbold"
-                android:paddingLeft="@dimen/_130sdp"
                 android:text="Sign in now"
                 android:textColor="#EF4565"
-                android:textSize="@dimen/_8ssp" />
+                android:textSize="@dimen/_10ssp" />
         </RelativeLayout>
 
         <ProgressBar

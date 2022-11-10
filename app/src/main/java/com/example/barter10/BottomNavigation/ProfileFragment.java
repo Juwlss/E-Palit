@@ -71,7 +71,7 @@ public class ProfileFragment extends Fragment {
 
         //displaying the post of user
         String userId = firebaseAuth.getCurrentUser().getUid();
-        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+        databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
         Query qPost = databaseReference.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getUid());
 

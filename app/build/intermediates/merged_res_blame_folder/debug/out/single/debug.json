@@ -92,6 +92,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\src\\main\\res\\layout\\post_layout.xml"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_privacypolicy.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\src\\main\\res\\layout\\layout_privacypolicy.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_undraw_forgot_password_re_hxwm_1.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\src\\main\\res\\drawable\\ic_undraw_forgot_password_re_hxwm_1.xml"
     },
@@ -398,6 +402,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\build\\intermediates\\merged_res\\debug\\drawable_arrow.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\src\\main\\res\\drawable\\arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_terms.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\src\\main\\res\\layout\\layout_terms.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\build\\intermediates\\merged_res\\debug\\layout_profile_post.xml.flat",

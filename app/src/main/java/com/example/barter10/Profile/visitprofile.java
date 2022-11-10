@@ -140,7 +140,7 @@ public class visitprofile extends Fragment {
 
 
         //Displaying userpost
-        databaseReference = FirebaseDatabase.getInstance().getReference("PostItem");
+        databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
         Query qPost = databaseReference.orderByChild("uid").equalTo(profieid);
 
         qPost.addValueEventListener(new ValueEventListener() {

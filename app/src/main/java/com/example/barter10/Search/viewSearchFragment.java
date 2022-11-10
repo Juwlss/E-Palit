@@ -55,7 +55,7 @@ public class viewSearchFragment extends Fragment {
         String searchedText = SearchFragment.searchedText;// getting the input search in parent fragment
 
 
-        dataRef = FirebaseDatabase.getInstance().getReference("PostItem");
+        dataRef = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
 
 

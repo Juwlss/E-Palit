@@ -3718,6 +3718,7 @@ id alertTitle
 id aligned
 id all
 id allStates
+id already
 id always
 id animateToEnd
 id animateToStart
@@ -3786,6 +3787,7 @@ id cancel_button
 id card
 id carryVelocity
 id categories
+id cb_privacy
 id center
 id centerCrop
 id centerInside
@@ -3841,6 +3843,7 @@ id customPanel
 id cut
 id dark
 id dataBinding
+id dataprivacy
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -4184,6 +4187,7 @@ id prgbar
 id prgbarotp
 id prgbarsgn
 id prgbarsgnotp
+id privacy
 id prof_rv
 id profileImage
 id profileMenu
@@ -4311,6 +4315,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id techTab
 id technology_rv
+id terms_content
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -4365,8 +4370,12 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_Terms
+id tv_and
 id tv_count
 id tv_message
+id tv_policy
+id tv_termNcondition
 id txtConPassword
 id txtCondition
 id txtDetails
@@ -4587,6 +4596,8 @@ layout fragment_technology
 layout fragment_toy
 layout fragment_view_search
 layout fragment_visitprofile
+layout layout_privacypolicy
+layout layout_terms
 layout listing_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4895,9 +4906,11 @@ string path_password_strike_through
 string permission_camera_denied
 string permission_camera_extended_denied
 string permission_gallery_denied
+string policy
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string terms
 string title_camera
 string title_choose_image_provider
 string title_gallery

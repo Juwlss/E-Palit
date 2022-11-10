@@ -229,14 +229,14 @@ public class activityUpload extends AppCompatActivity{
 
         // generating key
         rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("PostItem");
+        reference = rootNode.getReference("PendApproval");
 
         urlStrings = new ArrayList<>();
         String itemKey = reference.push().getKey();
 
 
         //referring to storage
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PostItem");
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("PendApproval");
         //getting values in edit text
         String postId =itemKey;
         String itemName = uploadName.getText().toString().trim();
@@ -302,7 +302,7 @@ public class activityUpload extends AppCompatActivity{
                                         }
                                     });
 
-                                    Toast.makeText(activityUpload.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(activityUpload.this, "Wait for Admin Approval", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(activityUpload.this, Home.class));
                                 }
                             }
