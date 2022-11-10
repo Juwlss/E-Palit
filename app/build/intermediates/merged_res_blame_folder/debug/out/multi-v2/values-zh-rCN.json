@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\demo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+            "outputFile": "C:\\Users\\Lorgie\\AndroidStudioProjects\\FinalApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,41 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\77a54add8f54e63adf145b0774bd6ed7\\transformed\\jetified-play-services-base-18.0.1\\res\\values-zh-rCN\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "197,294,419,530,628,729,841,939,1027,1131,1228,1354,1465,1565,1669,1721,1774",
-                        "endColumns": "96,124,110,97,100,111,97,87,103,96,125,110,99,103,51,52,69",
-                        "endOffsets": "293,418,529,627,728,840,938,1026,1130,1227,1353,1464,1564,1668,1720,1773,1843"
-                    },
-                    "to": {
-                        "startLines": "60,61,62,63,64,65,66,67,69,70,71,72,73,74,75,76,77",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5329,5430,5559,5674,5776,5881,5997,6099,6290,6398,6499,6629,6744,6848,6956,7012,7069",
-                        "endColumns": "100,128,114,101,104,115,101,91,107,100,129,114,103,107,55,56,73",
-                        "endOffsets": "5425,5554,5669,5771,5876,5992,6094,6186,6393,6494,6624,6739,6843,6951,7007,7064,7138"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\b84231de16f8ebce1f2f1ac77190dd7c\\transformed\\jetified-facebook-login-15.1.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,185,285,394,503,582,664,736,821,906,1012,1114,1200,1286,1377,1486,1564,1643,1761,1854,1949,2055,2149",
-                        "endColumns": "129,99,108,108,78,81,71,84,84,105,101,85,85,90,108,77,78,117,92,94,105,93,85",
-                        "endOffsets": "180,280,389,498,577,659,731,816,901,1007,1109,1195,1281,1372,1481,1559,1638,1756,1849,1944,2050,2144,2230"
-                    },
-                    "to": {
-                        "startLines": "37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3149,3279,3379,3488,3597,3676,3758,3830,3915,4000,4106,4208,4294,4380,4471,4580,4658,4737,4855,4948,5043,5149,5243",
-                        "endColumns": "129,99,108,108,78,81,71,84,84,105,101,85,85,90,108,77,78,117,92,94,105,93,85",
-                        "endOffsets": "3274,3374,3483,3592,3671,3753,3825,3910,3995,4101,4203,4289,4375,4466,4575,4653,4732,4850,4943,5038,5144,5238,5324"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\8efa47f55dd97604243cd46e34df559b\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\8efa47f55dd97604243cd46e34df559b\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -72,7 +38,58 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\3b39ddf491420bee289bfc1ff2e6793f\\transformed\\core-1.7.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\77a54add8f54e63adf145b0774bd6ed7\\transformed\\jetified-play-services-base-18.0.1\\res\\values-zh-rCN\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "197,294,419,530,628,729,841,939,1027,1131,1228,1354,1465,1565,1669,1721,1774",
+                        "endColumns": "96,124,110,97,100,111,97,87,103,96,125,110,99,103,51,52,69",
+                        "endOffsets": "293,418,529,627,728,840,938,1026,1130,1227,1353,1464,1564,1668,1720,1773,1843"
+                    },
+                    "to": {
+                        "startLines": "60,61,62,63,64,65,66,67,69,70,71,72,73,74,75,76,77",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5329,5430,5559,5674,5776,5881,5997,6099,6290,6398,6499,6629,6744,6848,6956,7012,7069",
+                        "endColumns": "100,128,114,101,104,115,101,91,107,100,129,114,103,107,55,56,73",
+                        "endOffsets": "5425,5554,5669,5771,5876,5992,6094,6186,6393,6494,6624,6739,6843,6951,7007,7064,7138"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\b84231de16f8ebce1f2f1ac77190dd7c\\transformed\\jetified-facebook-login-15.1.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,185,285,394,503,582,664,736,821,906,1012,1114,1200,1286,1377,1486,1564,1643,1761,1854,1949,2055,2149",
+                        "endColumns": "129,99,108,108,78,81,71,84,84,105,101,85,85,90,108,77,78,117,92,94,105,93,85",
+                        "endOffsets": "180,280,389,498,577,659,731,816,901,1007,1109,1195,1281,1372,1481,1559,1638,1756,1849,1944,2050,2144,2230"
+                    },
+                    "to": {
+                        "startLines": "37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3149,3279,3379,3488,3597,3676,3758,3830,3915,4000,4106,4208,4294,4380,4471,4580,4658,4737,4855,4948,5043,5149,5243",
+                        "endColumns": "129,99,108,108,78,81,71,84,84,105,101,85,85,90,108,77,78,117,92,94,105,93,85",
+                        "endOffsets": "3274,3374,3483,3592,3671,3753,3825,3910,3995,4101,4203,4289,4375,4466,4575,4653,4732,4850,4943,5038,5144,5238,5324"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\e1c5a7156f3a9a9c68ceb70a00243216\\transformed\\browser-1.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,138,230,331",
+                        "endColumns": "82,91,100,92",
+                        "endOffsets": "133,225,326,419"
+                    },
+                    "to": {
+                        "startLines": "78,81,82,83",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7143,7365,7457,7558",
+                        "endColumns": "82,91,100,92",
+                        "endOffsets": "7221,7452,7553,7646"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\3b39ddf491420bee289bfc1ff2e6793f\\transformed\\core-1.7.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -89,7 +106,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\209b4e169df9eb39470483ca696e3286\\transformed\\material-1.6.1\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\Lorgie\\.gradle\\caches\\transforms-3\\209b4e169df9eb39470483ca696e3286\\transformed\\material-1.6.1\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -105,23 +122,6 @@
                         "endLines": "5,33,34,35,36,79,80,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131",
                         "endColumns": "12,69,90,105,72,61,76,58,58,77,56,55,58,57,53,84,55,57,53,64,91,73,75,91,61,61,78,66,65,63,68,77,60,70,66,59,78,66,82,84,73,64,75,47,63,75,77,61,63,62,79,75,77,76,68",
                         "endOffsets": "247,2874,2965,3071,3144,7283,7360,7705,7764,7842,7899,7955,8014,8072,8126,8211,8267,8325,8379,8444,8536,8610,8686,8778,8840,8902,8981,9048,9114,9178,9247,9325,9386,9457,9524,9584,9663,9730,9813,9898,9972,10037,10113,10161,10225,10301,10379,10441,10505,10568,10648,10724,10802,10879,10948"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\e1c5a7156f3a9a9c68ceb70a00243216\\transformed\\browser-1.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,138,230,331",
-                        "endColumns": "82,91,100,92",
-                        "endOffsets": "133,225,326,419"
-                    },
-                    "to": {
-                        "startLines": "78,81,82,83",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7143,7365,7457,7558",
-                        "endColumns": "82,91,100,92",
-                        "endOffsets": "7221,7452,7553,7646"
                     }
                 }
             ]

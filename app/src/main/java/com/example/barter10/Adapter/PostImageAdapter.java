@@ -2,6 +2,7 @@ package com.example.barter10.Adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.FullPostFragment;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.R;
 import com.example.barter10.Profile.visitprofile;
@@ -52,7 +54,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         holder.userName.setText(upload.getUserName());
         holder.location.setText(upload.getLocation());
         holder.itemName.setText(upload.getItemName());
-        holder.condition.setText(upload.getItemCondition());
+        holder.details.setText(upload.getItemCondition());
 
         Picasso.get()
                 .load(upload.getImageUrl())
@@ -87,6 +89,25 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
             }
         });
 
+        holder.viewPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int pos = holder.getAdapterPosition();// GET SPECIFIC KEY
+                Upload selectedItem = mUploads.get(pos);// FIND SPECIFIC KEY
+                String postKey = selectedItem.getKey();// STORE SPECIFIC KEY
+                String uid = selectedItem.getUid();//STORE SPECIFIC USER ID
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                Fragment fragment = new FullPostFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("ItemKey", postKey);
+                bundle.putString("uId", uid);
+                fragment.setArguments(bundle);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+            }
+        });
+
 
     }
 
@@ -100,7 +121,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         public TextView userName;
         public TextView location;
         public TextView itemName;
-        public TextView condition;
+        public TextView details;
         public ImageView postImage;
         public ImageView userImage;
 
@@ -116,7 +137,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
             userImage = itemView.findViewById(R.id.userProfile);
             location = itemView.findViewById(R.id.location);
             itemName = itemView.findViewById(R.id.itemName);
-            condition = itemView.findViewById(R.id.itemCondition);
+            details = itemView.findViewById(R.id.itemDetails);
             postImage = itemView.findViewById(R.id.postImage);
 
             viewPost = itemView.findViewById(R.id.viewPost);

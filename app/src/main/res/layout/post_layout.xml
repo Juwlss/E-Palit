@@ -78,13 +78,27 @@
                 android:layout_marginTop="13dp"
                 android:layout_marginEnd="4dp"
                 android:src="@drawable/paulouser" />
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/postImage"
+                android:layout_gravity="bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter"
+                android:text="Item Name"
+                android:textColor="#094067"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/viewPost"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_below="@+id/postImage"
+                android:layout_below="@+id/itemName"
                 android:backgroundTint="#3DA9FC"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/inter"
                 android:text="View Post"
                 android:textAllCaps="false"
@@ -127,31 +141,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rLayout">
-                <TextView
-                    android:id="@+id/itemName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/inter"
-                    android:text="Item Name"
-                    android:textColor="#094067"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold"
-                    android:layout_gravity="bottom"/>
 
                 <TextView
-                    android:id="@+id/itemCondition"
+                    android:id="@+id/itemDetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/itemName"
-                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:fontFamily="@font/inter"
-                    android:text="Condition"
+                    android:text="Details"
                     android:textColor="#094067"
                     android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="@dimen/_10sdp"/>
+                    android:textStyle="bold" />
             </RelativeLayout>
 
         </RelativeLayout>

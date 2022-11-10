@@ -132,7 +132,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
                 @Override
                 public void onSuccess(Void unused) {
 
-                    databaseReference.child(currentId).child(selectedKey).removeValue();
+                    databaseReference.child(selectedKey).removeValue();
                     Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UpdatePostFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_anchor="@+id/nestedScrollView"
+                    app:layout_anchorGravity="center"
+                    tools:context=".activityUpload">
+
+                    <RelativeLayout
+                        android:id="@+id/upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/header"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="@color/white"
+                            app:contentInsetStart="0dp"
+                            app:layout_anchorGravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt_upload"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/inter"
+                                    android:text="Update Post"
+                                    android:textColor="#094067"
+                                    android:textFontWeight="700"
+                                    android:textSize="@dimen/_20sdp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.Toolbar>
+
+                        <!--                    <GridLayout-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_below="@id/header"-->
+                        <!--                        android:layout_margin="@dimen/_25sdp"-->
+                        <!--                        android:columnCount="2"-->
+                        <!--                        android:useDefaultMargins="true">-->
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_below="@id/header"
+                            android:layout_centerHorizontal="true" />
+
+
+                        <!--                    </GridLayout>-->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/update_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_130sdp"
+                            android:layout_below="@id/header"
+                            android:layout_centerHorizontal="true"
+                            android:scrollbars="horizontal" />
+
+                        <Button
+                            android:id="@+id/btn_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/update_list"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/btn_border"
+                            android:text="Pick Image"
+                            app:backgroundTint="@null" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/upload">
+
+                        <View
+                            android:id="@+id/seperator1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/view_ui" />
+
+                        <TextView
+                            android:id="@+id/lblName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/seperator1"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Name of item"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/u_txtItemName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lblName"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:backgroundTint="#808080"
+                            android:ems="10"
+                            android:hint="Name of the item"
+                            android:inputType="textPersonName"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/u_lblDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_txtItemName"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Details"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/u_txtDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/u_lblDetails"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:backgroundTint="#808080"
+                            android:ems="10"
+                            android:hint="Details of the item"
+                            android:inputType="textPersonName"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/u_lblLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_txtDetails"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Location"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/u_txtLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/u_lblLocation"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:backgroundTint="#808080"
+                            android:ems="10"
+                            android:hint="Location of interest"
+                            android:inputType="textPersonName"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:id="@+id/u_lblCondition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_txtLocation"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Condition"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/u_txtCondition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/u_lblCondition"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:backgroundTint="#808080"
+                            android:ems="10"
+                            android:hint="Condition of the item"
+                            android:inputType="textPersonName"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/u_lblValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_txtCondition"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Estimated Value"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/u_txtEstimatedValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/u_lblValue"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:backgroundTint="#808080"
+                            android:ems="10"
+                            android:hint="Estimated value of the item"
+                            android:inputType="number"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/u_lblPreference"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_txtEstimatedValue"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Preference"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/u_txtPreference"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/u_lblPreference"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:backgroundTint="#808080"
+                            android:ems="10"
+                            android:hint="Preference item to be traded with"
+                            android:inputType="textPersonName"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/u_lblTimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_txtPreference"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Timer"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/u_btnCalendar"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/u_lblTimer"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/calendar_ui"
+                            android:drawableRight="@drawable/ic_baseline_arrow_right_24"
+                            android:fontFamily="@font/inter"
+                            android:gravity="left|center_vertical"
+                            android:hint="Set Time"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            app:backgroundTint="@null" />
+
+                        <View
+                            android:id="@+id/u_seperator2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/u_btnCalendar"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/view_ui" />
+
+                        <TextView
+                            android:id="@+id/u_lblCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/u_seperator2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Category"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/input">
+
+                        <Spinner
+                            android:id="@+id/u_listCategories1"
+                            android:layout_width="@dimen/_115sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/listcategories_ui"
+                            android:fontFamily="@font/inter"
+                            android:spinnerMode="dropdown" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/update"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/input"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_100sdp"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:background="@drawable/btn_upload_ui"
+                        android:fontFamily="@font/inter"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+
+                </RelativeLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -120,7 +120,7 @@ public class TechnologyFragment extends Fragment implements PostImageAdapter.OnI
                 @Override
                 public void onSuccess(Void unused) {
 
-                    databaseReference.child(currentId).child(selectedKey).removeValue();
+                    databaseReference.child(selectedKey).removeValue();
                     Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {

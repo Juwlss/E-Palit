@@ -15,13 +15,15 @@ public class Upload {
     private String itemCondition;
     private String mKey;
     private String category1;
+    private String itemDetails;
+    private String itemValue;
+    private String itemPreference;
+    private String timer;
 
-    public Upload(){
-
+    public Upload() {
     }
 
-    public Upload(String uid, String userName, String profileUrl, String imageUrl, String location, String itemName, String itemCondition, String category1) {
-        this.category1 = category1;
+    public Upload(String uid, String imageUrl, String userName, String profileUrl, String location, String itemName, String itemCondition, String category1, String itemDetails, String itemValue, String itemPreference, String timer) {
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
@@ -29,14 +31,11 @@ public class Upload {
         this.location = location;
         this.itemName = itemName;
         this.itemCondition = itemCondition;
-    }
-
-    public String getCategory1() {
-        return category1;
-    }
-
-    public void setCategory1(String category1) {
         this.category1 = category1;
+        this.itemDetails = itemDetails;
+        this.itemValue = itemValue;
+        this.itemPreference = itemPreference;
+        this.timer = timer;
     }
 
     public String getUid() {
@@ -93,6 +92,46 @@ public class Upload {
 
     public void setItemCondition(String itemCondition) {
         this.itemCondition = itemCondition;
+    }
+
+    public String getCategory1() {
+        return category1;
+    }
+
+    public void setCategory1(String category1) {
+        this.category1 = category1;
+    }
+
+    public String getItemDetails() {
+        return itemDetails;
+    }
+
+    public void setItemDetails(String itemDetails) {
+        this.itemDetails = itemDetails;
+    }
+
+    public String getItemValue() {
+        return itemValue;
+    }
+
+    public void setItemValue(String itemValue) {
+        this.itemValue = itemValue;
+    }
+
+    public String getItemPreference() {
+        return itemPreference;
+    }
+
+    public void setItemPreference(String itemPreference) {
+        this.itemPreference = itemPreference;
+    }
+
+    public String getTimer() {
+        return timer;
+    }
+
+    public void setTimer(String timer) {
+        this.timer = timer;
     }
 
     @Exclude

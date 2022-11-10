@@ -119,7 +119,7 @@ public class FashionFragment extends Fragment implements PostImageAdapter.OnItem
                 @Override
                 public void onSuccess(Void unused) {
 
-                    databaseReference.child(currentId).child(selectedKey).removeValue();
+                    databaseReference.child(selectedKey).removeValue();
                     Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
