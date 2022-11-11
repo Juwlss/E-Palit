@@ -18,6 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.FullPostFragment;
 import com.example.barter10.Model.Upload;
@@ -25,6 +28,7 @@ import com.example.barter10.R;
 import com.example.barter10.Profile.visitprofile;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.ImageViewHolder> {
@@ -50,23 +54,39 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Upload upload = mUploads.get(position);
+        List <SlideModel> slideModels = new ArrayList<>();
 
         holder.userName.setText(upload.getUserName());
         holder.location.setText(upload.getLocation());
         holder.itemName.setText(upload.getItemName());
         holder.details.setText(upload.getItemCondition());
 
-        Picasso.get()
-                .load(upload.getImageUrl())
-                .placeholder(R.drawable.ic_baseline_image_24)
-                .fit()
-                .into(holder.postImage);
 
         Picasso.get()
                 .load(upload.getProfileUrl())
                 .placeholder(R.drawable.ic_default_picture)
                 .fit()
                 .into(holder.userImage);
+
+        String rep = upload.getImageUrl().replace("]","");
+        String rep1 = rep.replace("[","");
+        String rep2 = rep1.replace(" ","");
+        String[] pictures = rep2.split(",");
+
+
+
+
+        for (int i =0 ; i < pictures.length ; i++){
+
+
+            slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
+
+        }
+
+
+        holder.imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+
+
 
 
         holder.visitProfile.setOnClickListener(new View.OnClickListener() {
@@ -127,11 +147,12 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
 
         public Button viewPost;
         public Button visitProfile;
-
+        public ImageSlider imageSlider;
 
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            imageSlider = itemView.findViewById(R.id.image_slider);
 
             userName = itemView.findViewById(R.id.username);
             userImage = itemView.findViewById(R.id.userProfile);

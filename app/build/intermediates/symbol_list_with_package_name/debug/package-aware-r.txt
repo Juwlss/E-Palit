@@ -611,6 +611,17 @@ attr insetForeground
 attr isLightTheme
 attr isMaterial3Theme
 attr isMaterialTheme
+attr iss_auto_cycle
+attr iss_corner_radius
+attr iss_delay
+attr iss_error_image
+attr iss_indicator_align
+attr iss_period
+attr iss_placeholder
+attr iss_selected_dot
+attr iss_text_align
+attr iss_title_background
+attr iss_unselected_dot
 attr itemActiveIndicatorStyle
 attr itemBackground
 attr itemCount
@@ -1384,8 +1395,10 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey_font
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_font
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -1891,6 +1904,8 @@ color teal_700
 color test_color
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
+color text_shadow
+color text_shadow_white
 color tooltip_background_dark
 color tooltip_background_light
 color ucrop_color_crop_background
@@ -3448,6 +3463,8 @@ drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable daleuser
+drawable default_selected_dot
+drawable default_unselected_dot
 drawable design
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3462,6 +3479,7 @@ drawable edittext_ui_search
 drawable enter
 drawable enternewpassword
 drawable epalit_logo
+drawable error
 drawable et_corner
 drawable four_digits_logo
 drawable frame34
@@ -3470,16 +3488,19 @@ drawable frame36
 drawable google_fb_ui
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gradient
 drawable hover_back
 drawable hover_effect
 drawable ic_baseline_add_24
 drawable ic_baseline_add_photo_alternate_24
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_arrow_right_24
+drawable ic_baseline_broken_image_24
 drawable ic_baseline_chat_24
 drawable ic_baseline_check_box_24
 drawable ic_baseline_check_box_outline_blank_24
 drawable ic_baseline_chevron_right_24
+drawable ic_baseline_circle_24
 drawable ic_baseline_close_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_favorite_border_24
@@ -3490,6 +3511,7 @@ drawable ic_baseline_list_alt_24
 drawable ic_baseline_message_24
 drawable ic_baseline_more_vert_24
 drawable ic_baseline_notifications_24
+drawable ic_baseline_panorama_fish_eye_24
 drawable ic_baseline_people_24
 drawable ic_baseline_person_24
 drawable ic_baseline_search_24
@@ -3529,6 +3551,7 @@ drawable juls
 drawable kyouser
 drawable label_logo
 drawable listcategories_ui
+drawable loading
 drawable loading_logo
 drawable login_button
 drawable m3_appbar_background
@@ -3585,6 +3608,7 @@ drawable notify_panel_notification_icon_bg
 drawable pangbaba
 drawable paulouser
 drawable pins
+drawable placeholder
 drawable post_shape
 drawable postexample
 drawable progress_bg
@@ -3979,6 +4003,8 @@ id image_message
 id image_offeree
 id image_offerer
 id image_profile
+id image_slider
+id image_view
 id image_view_crop
 id image_view_logo
 id image_view_state_aspect_ratio
@@ -4049,6 +4075,7 @@ id line
 id line1
 id line3
 id linear
+id linear_layout
 id listCategories1
 id listMode
 id listTab
@@ -4171,6 +4198,7 @@ id outward
 id overshoot
 id packed
 id page
+id pager_dots
 id parallax
 id parent
 id parentPanel
@@ -4360,6 +4388,7 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_send
+id text_view
 id text_view_rotate
 id text_view_scale
 id textinput_counter
@@ -4464,6 +4493,7 @@ id viewSearch_bar
 id viewSearch_rv
 id view_offset_helper
 id view_overlay
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -4642,6 +4672,7 @@ layout fragment_toy
 layout fragment_update_post
 layout fragment_view_search
 layout fragment_visitprofile
+layout image_slider
 layout layout_privacypolicy
 layout layout_terms
 layout listing_layout
@@ -4717,6 +4748,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout offer_layout
+layout pager_row
 layout post_layout
 layout profile_post
 layout sdp_example
@@ -4871,6 +4903,7 @@ string icon_content_description
 string image_picker_provider_authority_suffix
 string item_view_role_description
 string label
+string left
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
 string m3_ref_typeface_plain_medium
@@ -6122,6 +6155,7 @@ styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc blendSrc brightness contrast crossfade imagePanX imagePanY imageRotate imageZoom overlay round roundPercent saturation warmth
+styleable ImageSlider iss_auto_cycle iss_corner_radius iss_delay iss_error_image iss_indicator_align iss_period iss_placeholder iss_selected_dot iss_text_align iss_title_background iss_unselected_dot
 styleable Insets marginLeftSystemWindowInsets marginRightSystemWindowInsets marginTopSystemWindowInsets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets
 styleable KeyAttribute android_alpha android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transformPivotTarget transitionEasing transitionPathRotate
 styleable KeyCycle android_alpha android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transitionEasing transitionPathRotate waveOffset wavePeriod wavePhase waveShape waveVariesBy

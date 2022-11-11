@@ -66,6 +66,9 @@ dependencies {
 
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
 
+    //carousel
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
     //bottom nav
     implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
 
