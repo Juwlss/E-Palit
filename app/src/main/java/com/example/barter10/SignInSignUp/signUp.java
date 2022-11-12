@@ -146,6 +146,7 @@ public class signUp extends AppCompatActivity {
                 String str_password = password.getText().toString().trim();
                 String str_conpass = conpassword.getText().toString().trim();
 
+
                 String checker = "^[9][0-9]{9}$";
 
 

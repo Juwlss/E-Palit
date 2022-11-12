@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzcoskun.imageslider.ImageSlider;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -16,28 +17,30 @@ public class viewSearchHolder extends RecyclerView.ViewHolder {
     public TextView userName;
     public TextView location;
     public TextView itemName;
-    public TextView condition;
-    public ImageView searchImage;
+    public TextView details;
     public ImageView userImage;
 
-
+    public Button viewPost;
     public Button visitProfile;
-    Button viewPost;
+    public ImageSlider imageSlider;
+
+
     ImageView react;
 
     public viewSearchHolder(@NonNull View itemView) {
         super(itemView);
 
-        userName= itemView.findViewById(R.id.username);
-        location = itemView.findViewById(R.id.location);
-        searchImage = itemView.findViewById(R.id.postImage);
 
+        imageSlider = itemView.findViewById(R.id.image_slider);
+
+        userName = itemView.findViewById(R.id.username);
         userImage = itemView.findViewById(R.id.userProfile);
-        visitProfile = itemView.findViewById(R.id.userLayout);
+        location = itemView.findViewById(R.id.location);
+        itemName = itemView.findViewById(R.id.itemName);
+        details = itemView.findViewById(R.id.itemDetails);
 
-        itemName= itemView.findViewById(R.id.itemName);
-        condition = itemView.findViewById(R.id.itemCondition);
         viewPost = itemView.findViewById(R.id.viewPost);
+        visitProfile = itemView.findViewById(R.id.userLayout);
         react = itemView.findViewById(R.id.react);
 
         react.setOnClickListener(new View.OnClickListener() {

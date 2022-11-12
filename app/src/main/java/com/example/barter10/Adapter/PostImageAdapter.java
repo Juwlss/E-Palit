@@ -57,7 +57,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         List <SlideModel> slideModels = new ArrayList<>();
 
         holder.userName.setText(upload.getUserName());
-        holder.location.setText(upload.getLocation());
+        holder.rating.setText(upload.getRating());
         holder.itemName.setText(upload.getItemName());
         holder.details.setText(upload.getItemCondition());
 
@@ -68,6 +68,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 .fit()
                 .into(holder.userImage);
 
+        //multiple images
         String rep = upload.getImageUrl().replace("]","");
         String rep1 = rep.replace("[","");
         String rep2 = rep1.replace(" ","");
@@ -139,10 +140,9 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
     public class ImageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener {
 
         public TextView userName;
-        public TextView location;
+        public TextView rating;
         public TextView itemName;
         public TextView details;
-        public ImageView postImage;
         public ImageView userImage;
 
         public Button viewPost;
@@ -156,10 +156,9 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
 
             userName = itemView.findViewById(R.id.username);
             userImage = itemView.findViewById(R.id.userProfile);
-            location = itemView.findViewById(R.id.location);
+            rating = itemView.findViewById(R.id.Prating);
             itemName = itemView.findViewById(R.id.itemName);
             details = itemView.findViewById(R.id.itemDetails);
-            postImage = itemView.findViewById(R.id.postImage);
 
             viewPost = itemView.findViewById(R.id.viewPost);
             visitProfile = itemView.findViewById(R.id.userLayout);

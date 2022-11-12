@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -58,7 +59,7 @@ public class visitprofile extends Fragment {
 
     private List<Upload> mUploads;
     private RecyclerView recyclerView;
-    private SelfPostAdapter selfPostAdapter;
+    private PostImageAdapter selfPostAdapter;
     String profieid,search_username;
 
     private List<User> mUser;
@@ -79,9 +80,9 @@ public class visitprofile extends Fragment {
         //displaying post of user
         recyclerView = view.findViewById(R.id.prof_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mUploads = new ArrayList<>();
-        selfPostAdapter = new SelfPostAdapter(getContext(), mUploads);
+        selfPostAdapter = new PostImageAdapter(getContext(), mUploads);
         recyclerView.setAdapter(selfPostAdapter);
 
 
@@ -96,7 +97,6 @@ public class visitprofile extends Fragment {
 
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         profieid = sharedPreferences.getString("uid", "none");
-        search_username = sharedPreferences.getString("username","none");
 
         //Displaying the username into profile fragment
         DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");

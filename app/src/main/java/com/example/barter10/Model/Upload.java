@@ -9,6 +9,7 @@ public class Upload {
     private String uid;
     private String imageUrl;
     private String userName;
+    private String rating;
     private String profileUrl;
     private String location;
     private String itemName;
@@ -23,10 +24,11 @@ public class Upload {
     public Upload() {
     }
 
-    public Upload(String uid, String imageUrl, String userName, String profileUrl, String location, String itemName, String itemCondition, String category1, String itemDetails, String itemValue, String itemPreference, String timer) {
+    public Upload(String uid, String imageUrl, String userName, String rating, String profileUrl, String location, String itemName, String itemCondition, String category1, String itemDetails, String itemValue, String itemPreference, String timer) {
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
+        this.rating = rating;
         this.profileUrl = profileUrl;
         this.location = location;
         this.itemName = itemName;
@@ -60,6 +62,15 @@ public class Upload {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public String getProfileUrl() {

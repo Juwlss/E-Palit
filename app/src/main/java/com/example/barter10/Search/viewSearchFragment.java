@@ -16,6 +16,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Model.Upload;
@@ -142,14 +145,25 @@ public class viewSearchFragment extends Fragment {
                 holder.userName.setText(model.getUserName());
                 holder.location.setText(model.getLocation());
                 holder.itemName.setText(model.getItemName());
-                holder.condition.setText(model.getItemCondition());
 
+
+                List <SlideModel> slideModels = new ArrayList<>();
                 //item image
-                Picasso.get()
-                        .load(model.getImageUrl())
-                        .placeholder(R.drawable.ic_baseline_image_24)
-                        .fit()
-                        .into(holder.searchImage);
+                String rep = model.getImageUrl().replace("]","");
+                String rep1 = rep.replace("[","");
+                String rep2 = rep1.replace(" ","");
+                String[] pictures = rep2.split(",");
+
+
+                for (int i =0 ; i < pictures.length ; i++){
+
+
+                    slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
+
+                }
+
+
+                holder.imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
                 //user image
                 Picasso.get()

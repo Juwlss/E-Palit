@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/card"
             android:layout_marginTop="@dimen/_1sdp"
-            tools:listitem="@layout/viewsearched_item" />
+            tools:listitem="@layout/post_layout" />
     </RelativeLayout>
 
 

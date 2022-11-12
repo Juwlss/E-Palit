@@ -52,7 +52,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/location"
+                    android:id="@+id/Prating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/username"
@@ -60,7 +60,7 @@
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_toRightOf="@id/userProfile"
                     android:maxLines="1"
-                    android:text="Location"
+                    android:text="Rating 0/10"
                     android:textColor="#5F6C7B"
                     android:textFontWeight="500" />
 
@@ -74,21 +74,19 @@
                 android:layout_height="@dimen/_180sdp"
                 android:layout_below="@+id/relative_user"
                 android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                app:iss_selected_dot="@drawable/ic_baseline_circle_24"
-                app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24"
-                app:iss_corner_radius="25"
                 app:iss_auto_cycle="true"
+                app:iss_corner_radius="25"
                 app:iss_delay="0"
-                app:iss_period="5000"
-                app:iss_title_background="@android:color/transparent"
                 app:iss_error_image="@drawable/ic_baseline_broken_image_24"
-                app:iss_placeholder="@drawable/ic_baseline_image_24"/>
+                app:iss_period="5000"
+                app:iss_placeholder="@drawable/ic_baseline_image_24"
+                app:iss_selected_dot="@drawable/ic_baseline_circle_24"
+                app:iss_title_background="@android:color/transparent"
+                app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24" />
 
 
             <TextView

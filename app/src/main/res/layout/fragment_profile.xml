@@ -48,7 +48,7 @@
                     android:layout_below="@id/profilename"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:src="@drawable/rating"
-                    android:text="Rating: 0/10"
+                    android:text="Rating: 12/10"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textFontWeight="900"

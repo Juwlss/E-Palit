@@ -38,6 +38,7 @@ public class MessageActivity extends AppCompatActivity {
     private ImageButton btnSend;
     private EditText textSend;
 
+    String userid;
     ChatAdapter chatAdapter;
     List<Chat> mChat;
 
@@ -81,7 +82,7 @@ public class MessageActivity extends AppCompatActivity {
 
 //        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        String userid = getIntent().getStringExtra("userid");
+        userid = getIntent().getStringExtra("userid");
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,10 +132,62 @@ public class MessageActivity extends AppCompatActivity {
         hashMap.put("message", message);
 
         reference.child("Chats").push().setValue(hashMap);
+
+        //sender Chatlist
+        DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child(userid);
+
+        //add user to fragment
+        chatRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.exists()){
+                    chatRef.child("id").setValue(userid);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        //receiver chatlist
+//        DatabaseReference chatRefReceiver = FirebaseDatabase.getInstance().getReference("Chatlist")
+//                .child(userid)
+//                .child(FirebaseAuth.getInstance().getUid());
+//
+//        chatRefReceiver.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                Chat chat = dataSnapshot.getValue(Chat.class);
+//                if(!dataSnapshot.exists()){
+//                    chatRefReceiver.child("id").setValue(chat.getSender());
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+
+
     }
 
-    private void readMessage(final String myid, final String userid, String imageurl){
 
+
+
+
+
+
+
+
+
+
+    private void readMessage(final String myid, final String userid, String imageurl){
 
         reference = FirebaseDatabase.getInstance().getReference("Chats");
         reference.addValueEventListener(new ValueEventListener() {
@@ -153,7 +206,6 @@ public class MessageActivity extends AppCompatActivity {
                         mChat.add(chat);
                     }
 
-//                    Toast.makeText(MessageActivity.this, chat.getReceiver()+"!@#!@#"+userid, Toast.LENGTH_SHORT).show();
 
 
                     chatAdapter = new ChatAdapter(MessageActivity.this, mChat, imageurl);
@@ -161,8 +213,6 @@ public class MessageActivity extends AppCompatActivity {
 
                 }
 
-                //pang pa error
-//                chatAdapter.notifyDataSetChanged();
             }
 
             @Override

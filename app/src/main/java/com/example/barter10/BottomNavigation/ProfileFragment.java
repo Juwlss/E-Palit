@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Adapter.SelfPostAdapter;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.R;
@@ -37,10 +39,11 @@ public class ProfileFragment extends Fragment {
     private List<Upload> mUploads;
     private DatabaseReference databaseReference;
     private FirebaseStorage firebaseStorage;
-    private SelfPostAdapter selfPostAdapter;
+    private PostImageAdapter selfPostAdapter;
     private RecyclerView recyclerView;
     private FirebaseAuth firebaseAuth;
     private TextView countPost;
+    private TextView rating;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,7 +55,7 @@ public class ProfileFragment extends Fragment {
         ImageView imageprofile = view.findViewById(R.id.image_profile);
         TextView profilename = view.findViewById(R.id.profilename);
         countPost = view.findViewById(R.id.numpost);
-
+        rating = view.findViewById(R.id.rating);
 
 
 
@@ -60,9 +63,9 @@ public class ProfileFragment extends Fragment {
         //displaying post of user
         recyclerView = view.findViewById(R.id.prof_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mUploads = new ArrayList<>();
-        selfPostAdapter = new SelfPostAdapter(getContext(), mUploads);
+        selfPostAdapter = new PostImageAdapter(getContext(), mUploads);
         recyclerView.setAdapter(selfPostAdapter);
 
         //referencing to the firebase
@@ -81,11 +84,13 @@ public class ProfileFragment extends Fragment {
                 //fetching from firebase to display
                 mUploads.clear();
                 for(DataSnapshot postSnapshot : snapshot.getChildren()){
+
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setKey(postSnapshot.getKey());
                     mUploads.add(upload);
 
 
+                    rating.setText(upload.getRating());
                     countPost.setText(""+snapshot.getChildrenCount());
                 }
 
@@ -131,6 +136,7 @@ public class ProfileFragment extends Fragment {
                                 .load(Profilepic)
                                 .placeholder(R.drawable.ic_default_picture)
                                 .into(imageprofile);
+
                         profilename.setText(dataSnapshot.child("username").getValue().toString());
                         break;
                     }

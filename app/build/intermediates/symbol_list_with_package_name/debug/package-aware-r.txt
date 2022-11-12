@@ -3671,6 +3671,7 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id Prating
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -4283,7 +4284,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id searchImage
 id search_badge
 id search_bar
 id search_button
@@ -4785,7 +4785,6 @@ layout ucrop_layout_scale_wheel
 layout ucrop_view
 layout upload_layout
 layout user_layout
-layout viewsearched_item
 menu example_menu
 menu example_menu2
 menu popup_menu
