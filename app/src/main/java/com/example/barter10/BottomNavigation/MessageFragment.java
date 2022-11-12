@@ -9,11 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.barter10.Adapter.MessageListAdapter;
 import com.example.barter10.Model.Chat;
-import com.example.barter10.Model.Chatlist;
 import com.example.barter10.Model.User;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,12 +30,12 @@ public class MessageFragment extends Fragment {
     private RecyclerView recyclerView;
     private MessageListAdapter messageListAdapter;
     private List<User> mUser;
-    private DatabaseReference reference;
+    private DatabaseReference reference,chatreceive;
     private FirebaseAuth firebaseAuth;
 
 
     String userid;
-    private List<Chatlist> usersList;
+    private List<Chat> usersList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,18 +58,15 @@ public class MessageFragment extends Fragment {
         userid = getActivity().getIntent().getStringExtra("userid");
 
         //sender chatlist
-        reference = FirebaseDatabase.getInstance().getReference("Chatlist").child(FirebaseAuth.getInstance().getUid());
+        reference = FirebaseDatabase.getInstance().getReference("Chats");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 usersList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Chatlist chatlist = dataSnapshot.getValue(Chatlist.class);
 
-                    usersList.add(chatlist);
-
-                    Toast.makeText(getContext(), dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
-
+                    Chat chat = dataSnapshot.getValue(Chat.class);
+                    usersList.add(chat);
                 }
                 chatList();
             }
@@ -82,41 +77,14 @@ public class MessageFragment extends Fragment {
             }
         });
 
-        //receiver
-//        DatabaseReference chatreceive = FirebaseDatabase.getInstance().getReference("Schatlist");
-//        chatreceive.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                usersList.clear();
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-//
-//                    if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
-//                        Chatlist chatlist = dataSnapshot.getValue(Chatlist.class);
-//
-//                        usersList.add(chatlist);
-//                    }
-//
-//                    Toast.makeText(getContext(), dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
-//
-//                }
-//                chatList();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
-
-
-
 
 
         return view;
     }
 
     private void chatList() {
+
+
         reference = FirebaseDatabase.getInstance().getReference("users");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -124,11 +92,32 @@ public class MessageFragment extends Fragment {
                 mUser.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     User user = dataSnapshot.getValue(User.class);
-                    for (Chatlist chatlist : usersList){
-                        if (user.getUserID().equals(chatlist.getId())){
-                            mUser.add(user);
+
+
+                    for (Chat chat : usersList){
+                        if (user.getUserID().equals(chat.getSender())
+                                && chat.getReceiver().equals(FirebaseAuth.getInstance().getUid())){
+
+
+                            if(!user.getUserID().equals(FirebaseAuth.getInstance().getUid())){
+                                mUser.add(user);
+                            }
+
+
+                        }else if(user.getUserID().equals(chat.getReceiver())
+                                && chat.getSender().equals(FirebaseAuth.getInstance().getUid())){
+
+
+                            if(!user.getUserID().equals(FirebaseAuth.getInstance().getUid())){
+                                mUser.add(user);
+                            }
+
+
                         }
+
                     }
+
+
                 }
                 messageListAdapter = new MessageListAdapter(getContext(), mUser);
                 recyclerView.setAdapter(messageListAdapter);
@@ -139,6 +128,33 @@ public class MessageFragment extends Fragment {
 
             }
         });
+
+
+
+//        DatabaseReference Receiver = FirebaseDatabase.getInstance().getReference("users");
+//        Receiver.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                mUser.clear();
+//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                    User user = dataSnapshot.getValue(User.class);
+//
+//                    for (Rchatlist rchatlist : rchatlists){
+//                        if (user.getUserID().equals(rchatlist.getId())){
+//                            mUser.add(user);
+//                        }
+//                    }
+//
+//                }
+//                messageListAdapter = new MessageListAdapter(getContext(), mUser);
+//                recyclerView.setAdapter(messageListAdapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
 
     }
 

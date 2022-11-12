@@ -14,6 +14,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.BottomNavigation.FollowFragment;
 import com.example.barter10.BottomNavigation.HomeFragment;
 import com.example.barter10.BottomNavigation.ListFragment;
 import com.example.barter10.BottomNavigation.MessageFragment;
@@ -94,10 +95,11 @@ public class Home extends AppCompatActivity {
 
 
         //declaring bottom navigation
-        bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_home_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_list_alt_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_chat_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_baseline_person_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(0, R.drawable.ic_baseline_home_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_baseline_list_alt_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_chat_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_person_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_baseline_person_add_alt_1_24));
 
 
         //choosing in bottom navigation
@@ -107,31 +109,39 @@ public class Home extends AppCompatActivity {
                 Fragment fragment = null;
 
                 switch(item.getId()){
+                    case 0:
+                        goBack = 0;
+                        appbarVisibility(goBack);
+                        fragment = new HomeFragment();
+
+                        break;
+
                     case 1:
                         goBack = 1;
                         appbarVisibility(goBack);
-                        fragment = new HomeFragment();
+                        fragment = new ListFragment();
 
                         break;
 
                     case 2:
                         goBack = 2;
                         appbarVisibility(goBack);
-                        fragment = new ListFragment();
+                        fragment = new MessageFragment();
 
                         break;
 
                     case 3:
                         goBack = 3;
                         appbarVisibility(goBack);
-                        fragment = new MessageFragment();
-
+                        fragment = new ProfileFragment();
                         break;
+
 
                     case 4:
                         goBack = 4;
                         appbarVisibility(goBack);
-                        fragment = new ProfileFragment();
+                        fragment = new FollowFragment();
+
                         break;
                 }
                 loadFragment(fragment);
@@ -142,7 +152,7 @@ public class Home extends AppCompatActivity {
         //count notif
 //        bottomNavigation.setCount(1, "1");
 
-        bottomNavigation.show(1, true);
+        bottomNavigation.show(0, true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
@@ -185,7 +195,7 @@ public class Home extends AppCompatActivity {
     }**/
 
     public void appbarVisibility(int goBack){
-        if (goBack != 1){
+        if (goBack != 0){
             appBarLayout.setVisibility(View.GONE);
         }else{
             appBarLayout.setVisibility(View.VISIBLE);
@@ -202,7 +212,7 @@ public class Home extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(goBack == 1){
+        if(goBack == 0){
             Log.d("CDA", "onBackPressed Called");
             Intent setIntent = new Intent(Intent.ACTION_MAIN);
             setIntent.addCategory(Intent.CATEGORY_HOME);

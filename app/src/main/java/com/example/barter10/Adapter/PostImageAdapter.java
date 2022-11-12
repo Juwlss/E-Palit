@@ -22,7 +22,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.example.barter10.FullPostFragment;
+import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.R;
 import com.example.barter10.Profile.visitprofile;
@@ -53,6 +53,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
+
         Upload upload = mUploads.get(position);
         List <SlideModel> slideModels = new ArrayList<>();
 

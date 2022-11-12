@@ -3504,6 +3504,7 @@ drawable ic_baseline_circle_24
 drawable ic_baseline_close_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_favorite_border_24
+drawable ic_baseline_group_add_24
 drawable ic_baseline_history_24
 drawable ic_baseline_home_24
 drawable ic_baseline_image_24
@@ -3514,6 +3515,7 @@ drawable ic_baseline_notifications_24
 drawable ic_baseline_panorama_fish_eye_24
 drawable ic_baseline_people_24
 drawable ic_baseline_person_24
+drawable ic_baseline_person_add_alt_1_24
 drawable ic_baseline_search_24
 drawable ic_baseline_security_24
 drawable ic_baseline_send_24
@@ -4231,7 +4233,6 @@ id pin
 id pinPost
 id position
 id post
-id postImage
 id postLayout
 id prgbar
 id prgbarotp
@@ -4471,7 +4472,6 @@ id unknown
 id unlabeled
 id up
 id update
-id update_list
 id upload
 id upload_item
 id upload_list
@@ -4654,6 +4654,7 @@ layout dialog_choose_app
 layout dp_example
 layout fragment_fashion
 layout fragment_finished
+layout fragment_follow
 layout fragment_full_post
 layout fragment_gadget
 layout fragment_home

@@ -133,47 +133,6 @@ public class MessageActivity extends AppCompatActivity {
 
         reference.child("Chats").push().setValue(hashMap);
 
-        //sender Chatlist
-        DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
-                .child(FirebaseAuth.getInstance().getUid())
-                .child(userid);
-
-        //add user to fragment
-        chatRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (!snapshot.exists()){
-                    chatRef.child("id").setValue(userid);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-
-        //receiver chatlist
-//        DatabaseReference chatRefReceiver = FirebaseDatabase.getInstance().getReference("Chatlist")
-//                .child(userid)
-//                .child(FirebaseAuth.getInstance().getUid());
-//
-//        chatRefReceiver.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                Chat chat = dataSnapshot.getValue(Chat.class);
-//                if(!dataSnapshot.exists()){
-//                    chatRefReceiver.child("id").setValue(chat.getSender());
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-
 
     }
 

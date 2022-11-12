@@ -93,6 +93,7 @@ public class SearchFragment extends Fragment {
                             RecentSearch recents = new RecentSearch(recent,recentkey);
                             reference.child(key).setValue(recents);
                             search_bar.onEditorAction(EditorInfo.IME_ACTION_DONE);
+
                             // going to searched post
                             Fragment mFragment = new viewSearchFragment();
                             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout, mFragment).commit();

@@ -137,13 +137,6 @@
                     android:layout_toRightOf="@id/react"
                     android:src="@drawable/ic_baseline_people_24" />
 
-                <ImageView
-                    android:id="@+id/message"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:src="@drawable/ic_baseline_message_24" />
 
 
             </RelativeLayout>
