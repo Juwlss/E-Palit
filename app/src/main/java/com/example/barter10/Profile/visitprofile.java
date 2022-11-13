@@ -118,7 +118,6 @@ public class visitprofile extends Fragment {
                     //if current user visits other user
                     if (dataSnapshot.getKey().equals(profieid) ){
 
-//                        Toast.makeText(getContext(), profieid+"!@#", Toast.LENGTH_SHORT).show();
                         String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
 
                         Picasso.get()
