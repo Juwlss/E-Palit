@@ -39,6 +39,7 @@ public class HomeFragment extends Fragment{
         FragmentManager fm = getActivity().getSupportFragmentManager();
         pagerAdapter = new PagerAdapter(fm, getLifecycle(), tabLayout.getTabCount());
         viewPager2.setAdapter(pagerAdapter);
+
         new TabLayoutMediator(tabLayout, viewPager2,
                 (tab, position) -> tab.setText(tabCategory[position])
         ).attach();

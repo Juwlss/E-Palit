@@ -7,8 +7,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,18 +14,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.barter10.Adapter.PostImageAdapter;
-import com.example.barter10.Adapter.SelfPostAdapter;
-import com.example.barter10.BottomNavigation.HomeFragment;
+import com.example.barter10.Adapter.VisitPostAdapter;
 import com.example.barter10.Home;
 import com.example.barter10.MessageActivity;
 import com.example.barter10.Model.Upload;
-import com.example.barter10.Model.User;
-import com.example.barter10.Profile.profileSettings;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -51,18 +47,17 @@ public class visitprofile extends Fragment {
     private ImageView backbtn;
     private ImageView imageprofile;
     private TextView username;
-    private TextView countPost;
 
-    private Button btn_message;
+    private ImageButton btn_message,btn_report;
+    private Button btn_follow;
 
     private DatabaseReference databaseReference;
 
     private List<Upload> mUploads;
     private RecyclerView recyclerView;
-    private PostImageAdapter selfPostAdapter;
-    String profieid,search_username;
+    private VisitPostAdapter selfPostAdapter;
+    String profieid;
 
-    private List<User> mUser;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,8 +68,9 @@ public class visitprofile extends Fragment {
 
         imageprofile = view.findViewById(R.id.v_image_profile);
         username = view.findViewById(R.id.v_profilename);
-        countPost = view.findViewById(R.id.v_numpost);
         btn_message = view.findViewById(R.id.btn_message);
+        btn_follow = view.findViewById(R.id.btn_follow);
+        btn_report = view.findViewById(R.id.btn_report);
 
 
         //displaying post of user
@@ -82,11 +78,10 @@ public class visitprofile extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mUploads = new ArrayList<>();
-        selfPostAdapter = new PostImageAdapter(getContext(), mUploads);
+        selfPostAdapter = new VisitPostAdapter(getContext(), mUploads);
         recyclerView.setAdapter(selfPostAdapter);
 
 
-        mUser = new ArrayList<>();
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,6 +108,8 @@ public class visitprofile extends Fragment {
                     //if current user visits his own profile
                     if (profieid.equals(FirebaseAuth.getInstance().getUid())){
                         btn_message.setVisibility(View.GONE);
+                        btn_follow.setVisibility(View.GONE);
+                        btn_report.setVisibility(View.GONE);
                     }
 
                     //if current user visits other user
@@ -154,7 +151,6 @@ public class visitprofile extends Fragment {
                     mUploads.add(upload);
 
 
-                    countPost.setText(""+snapshot.getChildrenCount());
                 }
 
 

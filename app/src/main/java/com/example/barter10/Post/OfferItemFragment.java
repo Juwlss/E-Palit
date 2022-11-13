@@ -55,7 +55,6 @@ public class OfferItemFragment extends Fragment {
     ProgressDialog progressDialog;
     ArrayList<Uri> itemList = new ArrayList<>();
     private DatabaseReference databaseReference;
-    private Button btnUpload;
     private EditText uploadName, uploadLocation, uploadDetails, uploadCondition, uploadValue;
     private int upload_count = 0;
     private ImageView btnGoBack;
@@ -237,7 +236,7 @@ public class OfferItemFragment extends Fragment {
                                                     name = dataSnapshot.child("username").getValue().toString();
                                                     //uploading to firebase
                                                     //uploading to firebase
-                                                    Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),uri.toString(),Profilepic,name,itemLocation, itemName, itemCondition, itemDetails,itemValue);
+                                                    Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),urlStrings.toString(),Profilepic,name,itemLocation, itemName, itemCondition, itemDetails,itemValue);
                                                     databaseReference.child(getKey).child(postId).setValue(offer);//setting primary key
 
                                                     break;

@@ -3537,12 +3537,14 @@ drawable ic_logoe
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_message
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
+drawable ic_report
 drawable ic_search_black_24dp
 drawable ic_undraw_contact_us_re_4qqt_1
 drawable ic_undraw_forgot_password_re_hxwm_1
@@ -3806,6 +3808,7 @@ id btn_img
 id btn_logout
 id btn_message
 id btn_pending
+id btn_report
 id btn_send
 id btn_settings
 id btn_username
@@ -3958,6 +3961,11 @@ id fixed
 id fl
 id flip
 id floating
+id follow_vpager
+id followers_count
+id followertab
+id following_count
+id followingtab
 id forever
 id forgot_pass
 id fragment_container_view_tag
@@ -4174,13 +4182,12 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id numpost
+id o_image_slider
 id o_itemCondition
 id o_itemDetails
 id o_itemName
 id o_itemValue
 id o_location
-id o_postImage
 id o_subMenu
 id o_userProfile
 id o_username
@@ -4232,7 +4239,6 @@ id percent
 id pin
 id pinPost
 id position
-id post
 id postLayout
 id prgbar
 id prgbarotp
@@ -4300,7 +4306,6 @@ id secondTab
 id select_dialog_listview
 id selected
 id selection_type
-id selfpost
 id send_message
 id seperator1
 id seperator2
@@ -4353,6 +4358,7 @@ id submit_area
 id supportScrollUp
 id tabMode
 id tab_categories
+id tab_follow
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -4428,6 +4434,8 @@ id triangle
 id tv_Terms
 id tv_and
 id tv_count
+id tv_followers
+id tv_following
 id tv_message
 id tv_policy
 id tv_termNcondition
@@ -4483,7 +4491,6 @@ id username_message
 id v_backarr
 id v_circle
 id v_image_profile
-id v_numpost
 id v_profilename
 id veriotp
 id verisgn
@@ -4655,6 +4662,8 @@ layout dp_example
 layout fragment_fashion
 layout fragment_finished
 layout fragment_follow
+layout fragment_follower
+layout fragment_following
 layout fragment_full_post
 layout fragment_gadget
 layout fragment_home

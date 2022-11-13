@@ -17,11 +17,13 @@ import com.example.barter10.Adapter.trade_recyclerviewAdapter;
 import com.example.barter10.Model.Pending;
 import com.example.barter10.R;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class ListFragment extends Fragment {
 
+    private String[] tabList = new String[]{"Pending", "Finished"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,33 +37,19 @@ public class ListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list,container, false);
 
 
-
-
         //declaring viewpager and tabs
         lviewPager2 = view.findViewById(R.id.list_vpager);
         lTabLayout = view.findViewById(R.id.listTab);
 
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
-        lpagerAdapter = new ListpageAdapter(fm, getLifecycle());
+        lpagerAdapter = new ListpageAdapter(fm, getLifecycle(), lTabLayout.getTabCount());
         lviewPager2.setAdapter(lpagerAdapter);
 
-        lTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                lviewPager2.setCurrentItem(tab.getPosition());
-            }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+        new TabLayoutMediator(lTabLayout, lviewPager2,
+                (tab, position) -> tab.setText(tabList[position])
+        ).attach();
 
 
 

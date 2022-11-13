@@ -1,37 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
-
-
+    android:layout_height="wrap_content"
+    android:background="#E5E5E5">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_10sdp"
-        android:layout_margin="@dimen/_10sdp">
+        app:cardUseCompatPadding="true"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true">
+
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
 
-            <ImageView
-                android:id="@+id/selfpost"
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="25"
+                app:iss_delay="0"
+                app:iss_error_image="@drawable/ic_baseline_broken_image_24"
+                app:iss_period="5000"
+                app:iss_placeholder="@drawable/ic_baseline_image_24"
+                app:iss_selected_dot="@drawable/ic_baseline_circle_24"
+                app:iss_title_background="@android:color/transparent"
+                app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24" />
+
+
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_slider"
+                android:layout_gravity="bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter"
+                android:text="Item Name"
+                android:textColor="#094067"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/viewPost"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/paulouser" />
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/itemName"
+                android:backgroundTint="#3DA9FC"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter"
+                android:text="View Post"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
 
+            <RelativeLayout
+                android:id="@+id/rLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPost"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/react"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_favorite_border_24" />
+
+                <ImageView
+                    android:id="@+id/people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:layout_toRightOf="@id/react"
+                    android:src="@drawable/ic_baseline_people_24" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayout">
+
+                <TextView
+                    android:id="@+id/itemDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/inter"
+                    android:text="Details"
+                    android:textColor="#094067"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
         </RelativeLayout>
 
 
+
     </androidx.cardview.widget.CardView>
 
-
-
-
-</RelativeLayout>
+</LinearLayout>

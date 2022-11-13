@@ -13,11 +13,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.barter10.Model.viewOffers;
 import com.example.barter10.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyViewHolder> {
 
@@ -41,6 +45,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         viewOffers viewOffers = list.get(position);
+
         holder.userName.setText(viewOffers.getUserName());
         holder.location.setText(viewOffers.getLocation());
         holder.itemName.setText("Item Name : "+viewOffers.getItemName());
@@ -48,12 +53,26 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         holder.itemCondition.setText("Item Condition : "+viewOffers.getItemCondition());
         holder.itemValue.setText("Item Value : "+viewOffers.getItemValue());
 
+        List<SlideModel> slideModels = new ArrayList<>();
+        //multiple images
+        String rep = viewOffers.getImageUrl().replace("]","");
+        String rep1 = rep.replace("[","");
+        String rep2 = rep1.replace(" ","");
+        String[] pictures = rep2.split(",");
 
-        Picasso.get()
-                .load(viewOffers.getImageUrl())
-                .placeholder(R.drawable.ic_baseline_image_24)
-                .fit()
-                .into(holder.offerImg);
+
+
+
+        for (int i =0 ; i < pictures.length ; i++){
+
+            slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
+
+        }
+
+
+        holder.offerImg.setImageList(slideModels, ScaleTypes.FIT);
+
+
         Picasso.get()
                 .load(viewOffers.getProfileUrl())
                 .placeholder(R.drawable.ic_baseline_image_24)
@@ -69,7 +88,8 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
     public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
 
         TextView userName, location, itemName, itemDetails, itemCondition, itemValue;
-        ImageView offerImg, btnOfferMsg, subMenu, userProfile;
+        ImageView  btnOfferMsg, subMenu, userProfile;
+        ImageSlider offerImg;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -80,7 +100,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             itemDetails = itemView.findViewById(R.id.o_itemDetails);
             itemCondition = itemView.findViewById(R.id.o_itemCondition);
             itemValue = itemView.findViewById(R.id.o_itemValue);
-            offerImg = itemView.findViewById(R.id.o_postImage);
+            offerImg = itemView.findViewById(R.id.o_image_slider);
             btnOfferMsg = itemView.findViewById(R.id.btnOfferMsg);
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);

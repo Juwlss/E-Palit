@@ -3,13 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BottomNavigation.FollowFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Follow" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_follow"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            app:tabBackground="@drawable/tab_catselecting"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/black">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/followertab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/followingtab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/follow_vpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_follow" />
+
+    </RelativeLayout>
+
+
 
 </FrameLayout>

@@ -42,39 +42,64 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profilename"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Followers: "
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/followers_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profilename"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/tv_followers"
+                    android:text="0"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profilename"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/followers_count"
+                    android:text="Followers: "
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/following_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profilename"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/tv_following"
+                    android:text="0"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/_18sdp"
-                    android:layout_below="@id/profilename"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:src="@drawable/rating"
-                    android:text="Rating: 12/10"
+                    android:text="Rating: 0/10"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textFontWeight="900"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/post"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_20sdp"
-                    android:layout_alignParentBottom="true"
-                    android:text="Post:"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15ssp" />
-
-                <TextView
-                    android:id="@+id/numpost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_20sdp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:layout_toRightOf="@id/post"
-                    android:text="0"
-                    android:textColor="#000000"
-                    android:textFontWeight="900"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
 
             </RelativeLayout>
 
