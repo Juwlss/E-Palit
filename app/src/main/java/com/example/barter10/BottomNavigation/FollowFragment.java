@@ -19,7 +19,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class FollowFragment extends Fragment {
 
 
-    private String[] tabfollow = new String[]{"Followers", "Following"};
+    private String[] tabfollow = new String[]{"Following", "Followers"};
 
 
     @Override

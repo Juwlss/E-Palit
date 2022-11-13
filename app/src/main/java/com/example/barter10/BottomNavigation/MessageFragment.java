@@ -93,25 +93,17 @@ public class MessageFragment extends Fragment {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     User user = dataSnapshot.getValue(User.class);
 
-
                     for (Chat chat : usersList){
-                        if (user.getUserID().equals(chat.getSender())
-                                && chat.getReceiver().equals(FirebaseAuth.getInstance().getUid())){
-
-
-                            if(!user.getUserID().equals(FirebaseAuth.getInstance().getUid())){
-                                mUser.add(user);
+                        if (user.getUserID().equals(chat.getSender()) || user.getUserID().equals(chat.getReceiver()))     //para magsama kapag chinat o nagchat
+                        {
+                            if (chat.getReceiver().equals(FirebaseAuth.getInstance().getUid())
+                                || chat.getSender().equals(FirebaseAuth.getInstance().getUid())){
+                                if(!user.getUserID().equals(FirebaseAuth.getInstance().getUid()))
+                                {
+                                    mUser.add(user);
+                                    break;
+                                }
                             }
-
-
-                        }else if(user.getUserID().equals(chat.getReceiver())
-                                && chat.getSender().equals(FirebaseAuth.getInstance().getUid())){
-
-
-                            if(!user.getUserID().equals(FirebaseAuth.getInstance().getUid())){
-                                mUser.add(user);
-                            }
-
 
                         }
 

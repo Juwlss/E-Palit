@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,10 +21,12 @@ import com.example.barter10.BottomNavigation.ListFragment;
 import com.example.barter10.BottomNavigation.MessageFragment;
 import com.example.barter10.BottomNavigation.ProfileFragment;
 import com.example.barter10.Search.SearchFragment;
+import com.example.barter10.SignInSignUp.MainActivity;
 import com.example.barter10.Upload.activityUpload;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,7 +56,6 @@ public class Home extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-
         //text welcome
         welcome = findViewById(R.id.welcome);
 
@@ -77,6 +79,7 @@ public class Home extends AppCompatActivity {
                        break;
 
                    }
+
                 }
 
 
@@ -87,6 +90,8 @@ public class Home extends AppCompatActivity {
 
             }
         });
+
+
 
 
 

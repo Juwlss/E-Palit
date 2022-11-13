@@ -24,6 +24,7 @@ import com.example.barter10.Adapter.VisitPostAdapter;
 import com.example.barter10.Home;
 import com.example.barter10.MessageActivity;
 import com.example.barter10.Model.Upload;
+import com.example.barter10.Model.User;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -52,6 +53,7 @@ public class visitprofile extends Fragment {
     private Button btn_follow;
 
     private DatabaseReference databaseReference;
+    private List<User> mUsers;
 
     private List<Upload> mUploads;
     private RecyclerView recyclerView;
@@ -69,7 +71,7 @@ public class visitprofile extends Fragment {
         imageprofile = view.findViewById(R.id.v_image_profile);
         username = view.findViewById(R.id.v_profilename);
         btn_message = view.findViewById(R.id.btn_message);
-        btn_follow = view.findViewById(R.id.btn_follow);
+        btn_follow = view.findViewById(R.id.v_btn_follow);
         btn_report = view.findViewById(R.id.btn_report);
 
 
@@ -78,6 +80,7 @@ public class visitprofile extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mUploads = new ArrayList<>();
+        mUsers = new ArrayList<>();
         selfPostAdapter = new VisitPostAdapter(getContext(), mUploads);
         recyclerView.setAdapter(selfPostAdapter);
 
@@ -178,6 +181,54 @@ public class visitprofile extends Fragment {
 
 
 
+        //follow
+        isFollowing(profieid, btn_follow);
+        btn_follow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btn_follow.getText().toString().equals("follow")){
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(FirebaseAuth.getInstance().getUid())
+                            .child("following").child(profieid).setValue(true);
+
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(profieid)
+                            .child("followers").child(FirebaseAuth.getInstance().getUid()).setValue(true);
+                } else {
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(FirebaseAuth.getInstance().getUid())
+                            .child("following").child(profieid).removeValue();
+
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(profieid)
+                            .child("followers").child(FirebaseAuth.getInstance().getUid()).removeValue();
+                }
+            }
+        });
+
+
+
+
+
+
         return view;
+    }
+
+    private void isFollowing(String userid, Button button){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
+                .child("Follow").child(FirebaseAuth.getInstance().getUid()).child("following");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.child(userid).exists()){
+                    button.setText("following");
+                }else{
+                    button.setText("follow");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 }

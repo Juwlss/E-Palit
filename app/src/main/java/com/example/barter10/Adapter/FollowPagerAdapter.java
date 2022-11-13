@@ -6,8 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.barter10.followerFragment;
-import com.example.barter10.followingFragment;
+import com.example.barter10.Follow.followerFragment;
+import com.example.barter10.Follow.followingFragment;
 
 public class FollowPagerAdapter extends FragmentStateAdapter {
 

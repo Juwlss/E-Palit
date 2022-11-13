@@ -22,10 +22,17 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.Model.User;
 import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.R;
 import com.example.barter10.Profile.visitprofile;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -53,7 +60,6 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
-
         Upload upload = mUploads.get(position);
         List <SlideModel> slideModels = new ArrayList<>();
 
@@ -69,21 +75,16 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
         String[] pictures = rep2.split(",");
 
 
-
-
         for (int i =0 ; i < pictures.length ; i++){
 
 
             slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
 
         }
-
-
+        //display multiple image
         holder.imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
-
-
-
+        //view post
         holder.viewPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,6 +105,7 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
         });
 
 
+
     }
 
     @Override
@@ -116,7 +118,6 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
 
         public TextView itemName;
         public TextView details;
-
         public Button viewPost;
         public ImageSlider imageSlider;
 
@@ -127,7 +128,6 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
 
             itemName = itemView.findViewById(R.id.itemName);
             details = itemView.findViewById(R.id.itemDetails);
-
             viewPost = itemView.findViewById(R.id.viewPost);
 
 
@@ -189,6 +189,28 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
         void onDeleteClick(int position);
 
     }
+
+//    private void isFollowing(String userid, Button button){
+//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
+//                .child("Follow").child(FirebaseAuth.getInstance().getUid()).child("following");
+//
+//        reference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if (snapshot.child(userid).exists()){
+//                    button.setText("following");
+//                }else{
+//                    button.setText("follow");
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//
+//    }
 
     public void setOnItemClickListener(OnItemClickListener listener){
         mListener = listener;

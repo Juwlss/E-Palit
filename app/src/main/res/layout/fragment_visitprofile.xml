@@ -68,8 +68,8 @@
                     android:layout_below="@id/v_profilename"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="Followers: "
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/followers_count"
@@ -92,9 +92,9 @@
                     android:layout_marginLeft="@dimen/_25sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_toRightOf="@id/followers_count"
-                    android:text="Followers: "
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#000000" />
+                    android:text="Following: "
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/following_count"
@@ -133,11 +133,11 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btn_follow"
+                    android:id="@+id/v_btn_follow"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginRight="@dimen/_15sdp"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_15sdp"
                     android:layout_toLeftOf="@id/btn_message"
                     android:background="@drawable/button_ui"
                     android:text="Follow"

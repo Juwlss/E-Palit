@@ -74,20 +74,11 @@
                 android:layout_marginTop="@dimen/_5sdp">
 
                 <ImageView
-                    android:id="@+id/react"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                <ImageView
                     android:id="@+id/people"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_50sdp"
-                    android:layout_toRightOf="@id/react"
+                    android:layout_marginLeft="@dimen/_10sdp"
                     android:src="@drawable/ic_baseline_people_24" />
-
 
 
             </RelativeLayout>

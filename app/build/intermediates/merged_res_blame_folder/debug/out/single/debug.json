@@ -32,6 +32,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\watch.png"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_follow_layout.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\follow_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_slasheye.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\slasheye.png"
     },
@@ -56,12 +60,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\alist.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_toy.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_toy.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle38.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\rectangle38.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_toy.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_toy.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_hover_effect.xml.flat",
@@ -92,12 +96,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_right_24.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_follow.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_follow.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_send_24.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\ic_baseline_send_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_follow.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_follow.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_following.xml.flat",
@@ -140,12 +144,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\juls.jpg"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_border_24.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_24.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_message.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\ic_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_border_24.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_24.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_background_receiver.xml.flat",
@@ -172,12 +176,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\drawable\\ic_baseline_visibility_24.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_user_layout.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\user_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_loading.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\activity_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_user_layout.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\user_layout.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_offer_item.xml.flat",
@@ -280,12 +284,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\layout_terms.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_list.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\src\\main\\res\\layout\\fragment_list.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\36\\app\\build\\intermediates\\merged_res\\debug\\drawable_login_button.xml.flat",

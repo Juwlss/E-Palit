@@ -3961,10 +3961,13 @@ id fixed
 id fl
 id flip
 id floating
+id follow_username
 id follow_vpager
+id follower_rv
 id followers_count
 id followertab
 id following_count
+id following_rv
 id followingtab
 id forever
 id forgot_pass
@@ -4010,6 +4013,7 @@ id ignoreRequest
 id image
 id imageView7
 id imageView8
+id image_follow
 id image_message
 id image_offeree
 id image_offerer
@@ -4489,6 +4493,7 @@ id userProfile
 id username
 id username_message
 id v_backarr
+id v_btn_follow
 id v_circle
 id v_image_profile
 id v_profilename
@@ -4659,6 +4664,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
 layout dp_example
+layout follow_layout
 layout fragment_fashion
 layout fragment_finished
 layout fragment_follow
