@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.barter10.Adapter.FollowAdapter;
 import com.example.barter10.Adapter.PostImageAdapter;
 import com.example.barter10.Adapter.VisitPostAdapter;
 import com.example.barter10.Home;
@@ -47,7 +48,7 @@ public class visitprofile extends Fragment {
 
     private ImageView backbtn;
     private ImageView imageprofile;
-    private TextView username;
+    private TextView username,followers,following;
 
     private ImageButton btn_message,btn_report;
     private Button btn_follow;
@@ -70,6 +71,9 @@ public class visitprofile extends Fragment {
 
         imageprofile = view.findViewById(R.id.v_image_profile);
         username = view.findViewById(R.id.v_profilename);
+        followers = view.findViewById(R.id.followers_count);
+        following = view.findViewById(R.id.following_count);
+
         btn_message = view.findViewById(R.id.btn_message);
         btn_follow = view.findViewById(R.id.v_btn_follow);
         btn_report = view.findViewById(R.id.btn_report);
@@ -98,8 +102,6 @@ public class visitprofile extends Fragment {
 
         //Displaying the username into profile fragment
         DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
-
-
         postReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -136,6 +138,7 @@ public class visitprofile extends Fragment {
 
             }
         });
+
 
 
         //Displaying userpost
@@ -201,7 +204,7 @@ public class visitprofile extends Fragment {
             }
         });
 
-
+        getFollowers();
 
 
 
@@ -229,5 +232,40 @@ public class visitprofile extends Fragment {
             }
         });
 
+    }
+
+
+    private void getFollowers(){
+        //Displaying followers
+        DatabaseReference followerRef = FirebaseDatabase.getInstance().getReference("Follow")
+                .child(profieid).child("followers");
+        followerRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                followers.setText(""+snapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+        //Displaying following
+        DatabaseReference followingRef = FirebaseDatabase.getInstance().getReference("Follow")
+                .child(profieid).child("following");
+        followingRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                following.setText(""+snapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

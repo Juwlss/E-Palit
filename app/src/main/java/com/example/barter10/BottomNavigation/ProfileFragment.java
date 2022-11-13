@@ -41,7 +41,7 @@ public class ProfileFragment extends Fragment {
     private VisitPostAdapter selfPostAdapter;
     private RecyclerView recyclerView;
     private FirebaseAuth firebaseAuth;
-    private TextView rating;
+    private TextView rating,followers,following;
 
 
 
@@ -56,7 +56,8 @@ public class ProfileFragment extends Fragment {
         ImageView imageprofile = view.findViewById(R.id.image_profile);
         TextView profilename = view.findViewById(R.id.profilename);
         rating = view.findViewById(R.id.rating);
-
+        followers = view.findViewById(R.id.followers_count);
+        following = view.findViewById(R.id.following_count);
 
 
         //displaying post of user
@@ -145,10 +146,49 @@ public class ProfileFragment extends Fragment {
         });
 
 
-
+        getFollowers();
 
 
 
         return view;
     }
+
+    private void getFollowers(){
+        //Displaying followers
+        DatabaseReference followerRef = FirebaseDatabase.getInstance().getReference("Follow")
+                .child(FirebaseAuth.getInstance().getUid()).child("followers");
+        followerRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                followers.setText(""+snapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+        //Displaying following
+        DatabaseReference followingRef = FirebaseDatabase.getInstance().getReference("Follow")
+                .child(FirebaseAuth.getInstance().getUid()).child("following");
+        followingRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                following.setText(""+snapshot.getChildrenCount());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+
+
+
+
 }
