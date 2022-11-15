@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.barter10.Adapter.PostImageAdapter;
@@ -60,7 +61,11 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
 
         recyclerView = view.findViewById(R.id.gadget_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
 
         //Displaying Post
@@ -68,7 +73,6 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         postImageAdapter = new PostImageAdapter(getContext(), mUploads);
         recyclerView.setAdapter(postImageAdapter);
         postImageAdapter.setOnItemClickListener(GadgetFragment.this);
-
 
 
         //storage
@@ -125,6 +129,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
 
         String otherUid = selectedItem.getUid();
 
+
         if(currentId.equals(otherUid)){
             StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
 
@@ -132,7 +137,6 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
                 @Override
                 public void onSuccess(Void unused) {
 
-                    databaseReference.child(selectedKey).removeValue();
                     Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -146,6 +150,14 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         else {
             Toast.makeText(getContext(), "This is not your post", Toast.LENGTH_SHORT).show();
         }
+
+
+
+
+
+
+
+        Toast.makeText(getContext(), selectedKey+"XXX"+otherUid, Toast.LENGTH_SHORT).show();
 
 
 

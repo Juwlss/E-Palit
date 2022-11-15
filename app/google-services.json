@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "139010349738",
+    "firebase_url": "https://e-palit-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "e-palit",
     "storage_bucket": "e-palit.appspot.com"
   },
@@ -13,6 +14,30 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "139010349738-lcofiibtc6m3pf16ma2hfr41qfeo1klo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.barter10",
+            "certificate_hash": "3b39998ae89eb4f2c8e783a6de4589006cc6319f"
+          }
+        },
+        {
+          "client_id": "139010349738-p8rmphrj8lehpee1sckjm383f7nophop.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.barter10",
+            "certificate_hash": "85075c49e58511d8de176ae0c7f4b377b84f2742"
+          }
+        },
+        {
+          "client_id": "139010349738-u7pj2su979qfp9bnf7auv352h5vfkr7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.barter10",
+            "certificate_hash": "39d958f93780f17aba715638d517cdbf876091c7"
+          }
+        },
         {
           "client_id": "139010349738-ralg4g11o9ls6k1o405erk8c6ump2rsa.apps.googleusercontent.com",
           "client_type": 3

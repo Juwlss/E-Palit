@@ -55,7 +55,10 @@ public class SportsFragment extends Fragment implements PostImageAdapter.OnItemC
 
         recyclerView = view.findViewById(R.id.sports_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
         mUploads = new ArrayList<>();
         postImageAdapter = new PostImageAdapter(getContext(),mUploads);

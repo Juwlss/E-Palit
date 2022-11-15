@@ -3501,6 +3501,7 @@ int drawable ic_baseline_check_box_outline_blank_24 0x7f0800bc
 int drawable ic_baseline_chevron_right_24 0x7f0800bd
 int drawable ic_baseline_circle_24 0x7f0800be
 int drawable ic_baseline_close_24 0x7f0800bf
+int drawable ic_baseline_delete_24 0x7f080167
 int drawable ic_baseline_edit_24 0x7f0800c0
 int drawable ic_baseline_favorite_border_24 0x7f0800c1
 int drawable ic_baseline_group_add_24 0x7f0800c2
@@ -3525,6 +3526,7 @@ int drawable ic_baseline_visibility_off_24 0x7f0800d4
 int drawable ic_clock_black_24dp 0x7f0800d5
 int drawable ic_default_picture 0x7f0800d6
 int drawable ic_epalit 0x7f0800d7
+int drawable ic_failed 0x7f080163
 int drawable ic_fb 0x7f0800d8
 int drawable ic_frame_37 0x7f0800d9
 int drawable ic_gg 0x7f0800da
@@ -3545,6 +3547,9 @@ int drawable ic_photo_black_48dp 0x7f0800e8
 int drawable ic_photo_camera_black_48dp 0x7f0800e9
 int drawable ic_report 0x7f0800ea
 int drawable ic_search_black_24dp 0x7f0800eb
+int drawable ic_success 0x7f080164
+int drawable ic_swap_failed 0x7f080165
+int drawable ic_swap_success 0x7f080166
 int drawable ic_undraw_contact_us_re_4qqt_1 0x7f0800ec
 int drawable ic_undraw_forgot_password_re_hxwm_1 0x7f0800ed
 int drawable ic_undraw_personal_email_re_4lx7_1 0x7f0800ee
@@ -3675,6 +3680,7 @@ int id FUNCTION 0x7f0a0004
 int id META 0x7f0a0005
 int id NO_DEBUG 0x7f0a0006
 int id Prating 0x7f0a0007
+int id RLM 0x7f0a0361
 int id SHIFT 0x7f0a0008
 int id SHOW_ALL 0x7f0a0009
 int id SHOW_PATH 0x7f0a000a
@@ -3885,6 +3891,7 @@ int id decelerate 0x7f0a00d6
 int id decelerateAndComplete 0x7f0a00d7
 int id decor_content_parent 0x7f0a00d8
 int id default_activity_button 0x7f0a00d9
+int id delete_icon 0x7f0a0362
 int id deltaRelative 0x7f0a00da
 int id dependency_ordering 0x7f0a00db
 int id des 0x7f0a00dc
@@ -3950,6 +3957,7 @@ int id fill 0x7f0a0117
 int id fill_horizontal 0x7f0a0118
 int id fill_vertical 0x7f0a0119
 int id filled 0x7f0a011a
+int id finished_rv 0x7f0a0360
 int id firstTab 0x7f0a011b
 int id fitCenter 0x7f0a011c
 int id fitEnd 0x7f0a011d
@@ -4127,6 +4135,7 @@ int id menu_crop 0x7f0a01c8
 int id menu_loader 0x7f0a01c9
 int id mes_rv 0x7f0a01ca
 int id message 0x7f0a01cb
+int id message_rl 0x7f0a0363
 int id message_username 0x7f0a01cc
 int id messenger_send_button 0x7f0a01cd
 int id messsage_toolbar 0x7f0a01ce
@@ -4502,6 +4511,7 @@ int id vertical_only 0x7f0a033f
 int id viewPost 0x7f0a0340
 int id viewSearch_bar 0x7f0a0341
 int id viewSearch_rv 0x7f0a0342
+int id view_background 0x7f0a0364
 int id view_offset_helper 0x7f0a0343
 int id view_overlay 0x7f0a0344
 int id view_pager 0x7f0a0345
@@ -4663,6 +4673,7 @@ int layout design_text_input_end_icon 0x7f0d003e
 int layout design_text_input_start_icon 0x7f0d003f
 int layout dialog_choose_app 0x7f0d0040
 int layout dp_example 0x7f0d0041
+int layout finished_layout 0x7f0d00cb
 int layout follow_layout 0x7f0d0042
 int layout fragment_fashion 0x7f0d0043
 int layout fragment_finished 0x7f0d0044

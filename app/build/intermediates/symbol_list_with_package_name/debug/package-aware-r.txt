@@ -3502,6 +3502,7 @@ drawable ic_baseline_check_box_outline_blank_24
 drawable ic_baseline_chevron_right_24
 drawable ic_baseline_circle_24
 drawable ic_baseline_close_24
+drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_favorite_border_24
 drawable ic_baseline_group_add_24
@@ -3526,6 +3527,7 @@ drawable ic_baseline_visibility_off_24
 drawable ic_clock_black_24dp
 drawable ic_default_picture
 drawable ic_epalit
+drawable ic_failed
 drawable ic_fb
 drawable ic_frame_37
 drawable ic_gg
@@ -3546,6 +3548,9 @@ drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_report
 drawable ic_search_black_24dp
+drawable ic_success
+drawable ic_swap_failed
+drawable ic_swap_success
 drawable ic_undraw_contact_us_re_4qqt_1
 drawable ic_undraw_forgot_password_re_hxwm_1
 drawable ic_undraw_personal_email_re_4lx7_1
@@ -3676,6 +3681,7 @@ id FUNCTION
 id META
 id NO_DEBUG
 id Prating
+id RLM
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -3886,6 +3892,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_icon
 id deltaRelative
 id dependency_ordering
 id des
@@ -3951,6 +3958,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id finished_rv
 id firstTab
 id fitCenter
 id fitEnd
@@ -4128,6 +4136,7 @@ id menu_crop
 id menu_loader
 id mes_rv
 id message
+id message_rl
 id message_username
 id messenger_send_button
 id messsage_toolbar
@@ -4503,6 +4512,7 @@ id vertical_only
 id viewPost
 id viewSearch_bar
 id viewSearch_rv
+id view_background
 id view_offset_helper
 id view_overlay
 id view_pager
@@ -4664,6 +4674,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
 layout dp_example
+layout finished_layout
 layout follow_layout
 layout fragment_fashion
 layout fragment_finished

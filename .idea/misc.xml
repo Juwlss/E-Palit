@@ -169,18 +169,25 @@
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/background_receiver.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/background_sender.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_baseline_group_add_24.xml" value="0.25925925925925924" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.25925925925925924" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.25925925925925924" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_failed.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_success.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_swap_failed.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/drawable/ic_swap_success.xml" value="0.25092592592592594" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/activity_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/activity_upload.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/category_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/chat_item_left.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/chat_item_right.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/finished_layout.xml" value="0.4" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/follow_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_finished.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_follow.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_follower.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_following.xml" value="0.24010416666666667" />
@@ -189,15 +196,18 @@
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_offer_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_pending.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_search.xml" value="0.21851851851851853" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_update_post.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_view_search.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/fragment_visitprofile.xml" value="0.264" />
-        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/messages.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/listing_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/messages.xml" value="0.176" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/offer_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/post_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/profile_post.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/trade_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/36/app/src/main/res/layout/viewsearched_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/Auth/app/src/main/res/drawable/btn_border.xml" value="0.22777777777777777" />
         <entry key="..\:/Users/andrei/Documents/4th yr/Auth/app/src/main/res/drawable/post_shape.xml" value="0.2703125" />

@@ -58,7 +58,10 @@ public class TechnologyFragment extends Fragment implements PostImageAdapter.OnI
 
         recyclerView = view.findViewById(R.id.technology_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
         mUploads = new ArrayList<>();
         postImageAdapter = new PostImageAdapter(getContext(),mUploads);

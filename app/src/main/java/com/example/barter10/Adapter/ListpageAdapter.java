@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import com.example.barter10.BottomNavigation.FinishedFragment;
-import com.example.barter10.BottomNavigation.PendingFragment;
+import com.example.barter10.List.FinishedFragment;
+import com.example.barter10.List.PendingFragment;
 
 public class ListpageAdapter extends FragmentStateAdapter {
 

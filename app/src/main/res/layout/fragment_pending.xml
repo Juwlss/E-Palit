@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BottomNavigation.PendingFragment">
+    tools:context=".List.PendingFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/trade_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/trade_layout" />
+        tools:listitem="@layout/trade_layout"/>
 
 </FrameLayout>

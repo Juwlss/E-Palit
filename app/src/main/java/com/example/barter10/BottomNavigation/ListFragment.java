@@ -4,8 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
@@ -13,13 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.barter10.Adapter.ListpageAdapter;
-import com.example.barter10.Adapter.trade_recyclerviewAdapter;
-import com.example.barter10.Model.Pending;
 import com.example.barter10.R;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-
-import java.util.ArrayList;
 
 public class ListFragment extends Fragment {
 

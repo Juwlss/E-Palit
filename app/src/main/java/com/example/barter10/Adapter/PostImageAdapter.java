@@ -174,14 +174,13 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         @Override
         public void onClick(View v) {
 
-
-
             if(mListener != null){
                 int position = getAdapterPosition();
                 if(position != RecyclerView.NO_POSITION){
                     mListener.onItemClick(position);
                 }
             }
+
         }
 
 

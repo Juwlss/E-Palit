@@ -63,7 +63,10 @@ public class ProfileFragment extends Fragment {
         //displaying post of user
         recyclerView = view.findViewById(R.id.prof_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         mUploads = new ArrayList<>();
         selfPostAdapter = new VisitPostAdapter(getContext(), mUploads);
         recyclerView.setAdapter(selfPostAdapter);

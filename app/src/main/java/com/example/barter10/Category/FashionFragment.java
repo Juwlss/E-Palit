@@ -56,7 +56,10 @@ public class FashionFragment extends Fragment implements PostImageAdapter.OnItem
 
         recyclerView = view.findViewById(R.id.fashion_rv);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
         mUploads = new ArrayList<>();
         postImageAdapter = new PostImageAdapter(getContext(),mUploads);
