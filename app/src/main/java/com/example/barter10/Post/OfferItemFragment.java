@@ -236,7 +236,9 @@ public class OfferItemFragment extends Fragment {
                                                     name = dataSnapshot.child("username").getValue().toString();
                                                     //uploading to firebase
                                                     //uploading to firebase
-                                                    Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),urlStrings.toString(),Profilepic,name,itemLocation, itemName, itemCondition, itemDetails,itemValue);
+                                                    Boolean pinValue = false;
+
+                                                    Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),urlStrings.toString(),Profilepic,name,itemLocation, itemName, itemCondition, itemDetails,itemValue,getKey,getUid,postId, pinValue);
                                                     databaseReference.child(getKey).child(postId).setValue(offer);//setting primary key
 
                                                     break;

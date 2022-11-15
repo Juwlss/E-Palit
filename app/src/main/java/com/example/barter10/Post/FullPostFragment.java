@@ -21,6 +21,7 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Adapter.OfferListAdapter;
 import com.example.barter10.Home;
+import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.viewOffers;
 import com.example.barter10.R;
@@ -58,9 +59,11 @@ public class FullPostFragment extends Fragment {
 
     DatabaseReference databaseReference;
     DatabaseReference offerReference;
+    DatabaseReference pinReference;
     RecyclerView rv_FullPost;
     OfferListAdapter offerListAdapter;
-    ArrayList<viewOffers> list;
+    RecyclerView rv_Pin;
+    ArrayList<Offer> list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -161,6 +164,12 @@ public class FullPostFragment extends Fragment {
             }
         });
 
+        rv_Pin = view.findViewById(R.id.rv_pin);
+        pinReference = FirebaseDatabase.getInstance().getReference("Offer").child("PinnedPost").child(itemKey);
+        rv_Pin.setHasFixedSize(true);
+        rv_Pin.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
         rv_FullPost = view.findViewById(R.id.rv_Offer);
         offerReference = FirebaseDatabase.getInstance().getReference("Offer").child(itemKey);
         rv_FullPost.setHasFixedSize(true);
@@ -169,12 +178,34 @@ public class FullPostFragment extends Fragment {
         list =  new ArrayList<>();
         offerListAdapter =  new OfferListAdapter(getContext(), list);
         rv_FullPost.setAdapter(offerListAdapter);
+        rv_Pin.setAdapter(offerListAdapter);
+
+
+        pinReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list.clear();
+                if(snapshot.exists()){
+                    Offer viewOffers = snapshot.getValue(Offer.class);
+                    list.add(viewOffers);
+                }
+                offerListAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
 
         offerReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    viewOffers viewOffers = dataSnapshot.getValue(viewOffers.class);
+                    Offer viewOffers = dataSnapshot.getValue(Offer.class);
                     list.add(viewOffers);
                 }
                 offerListAdapter.notifyDataSetChanged();

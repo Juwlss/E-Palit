@@ -60,7 +60,7 @@
                 android:layout_alignTop="@+id/o_username"
                 android:layout_alignBottom="@+id/o_location"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_baseline_more_vert_24">
+                android:src="@drawable/ic_unpin">
 
             </ImageView>
 

@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/2/app/src/main/res/layout/fragment_full_post.xml" value="0.1265625" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/2/app/src/main/res/layout/fragment_search.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/2/app/src/main/res/layout/fragment_view_search.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/2/app/src/main/res/layout/offer_layout.xml" value="0.176" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/2/app/src/main/res/layout/post_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Lorgie/AndroidStudioProjects/2/app/src/main/res/layout/search_item.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/drawable/edittext_ui_search.xml" value="0.178" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Lorgie/AndroidStudioProjects/Clone/app/src/main/res/layout/fragment_search.xml" value="0.25" />

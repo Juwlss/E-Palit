@@ -33,6 +33,10 @@ anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
 anim resize
+anim slide_in_right
+anim slide_in_up
+anim slide_out_left
+anim slide_out_up
 anim ucrop_loader_circle_path
 anim ucrop_loader_circle_scale
 animator design_appbar_state_list_animator
@@ -3546,6 +3550,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
+drawable ic_pin
 drawable ic_report
 drawable ic_search_black_24dp
 drawable ic_success
@@ -3554,6 +3559,7 @@ drawable ic_swap_success
 drawable ic_undraw_contact_us_re_4qqt_1
 drawable ic_undraw_forgot_password_re_hxwm_1
 drawable ic_undraw_personal_email_re_4lx7_1
+drawable ic_unpin
 drawable icon_forgotpassword
 drawable img_checkbox
 drawable juls
@@ -3793,7 +3799,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id btnBack
 id btnCalendar
 id btnFacebook
 id btnGoogle
@@ -3980,7 +3985,6 @@ id followingtab
 id forever
 id forgot_pass
 id fragment_container_view_tag
-id fragmentsearch
 id frame_layout
 id frost
 id fullname
@@ -4276,7 +4280,7 @@ id ratio
 id react
 id recentDelete
 id recentImg
-id recentsearch
+id recentSearch
 id rectangle
 id rectangles
 id relative_user
@@ -4293,6 +4297,8 @@ id rotate_scroll_wheel
 id rounded
 id row_index_key
 id rv_Offer
+id rv_pin
+id s_btnBack
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -4304,6 +4310,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchBar
 id search_badge
 id search_bar
 id search_button

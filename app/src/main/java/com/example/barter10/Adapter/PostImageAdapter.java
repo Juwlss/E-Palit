@@ -125,7 +125,9 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 bundle.putString("ItemKey", postKey);
                 bundle.putString("uId", uid);
                 fragment.setArguments(bundle);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left)
+                        .replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
 
             }
         });
