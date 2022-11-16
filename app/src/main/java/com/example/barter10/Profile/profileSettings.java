@@ -1,9 +1,12 @@
 package com.example.barter10.Profile;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -22,6 +25,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -29,6 +34,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class profileSettings extends Fragment {
@@ -40,6 +48,11 @@ public class profileSettings extends Fragment {
     private TextView userName;
 
     private ImageView picProfile;
+    public Uri imageuri;
+    private ImageView changeProfilePic;
+    private FirebaseStorage firebaseStorage;
+    private StorageReference storageReference;
+    private static final int REQUEST_CODE_IMAGE = 101;
 
     private GoogleSignInClient gsc;
     private GoogleSignInOptions gso;
@@ -51,13 +64,15 @@ public class profileSettings extends Fragment {
 
         logout = view.findViewById(R.id.btn_logout);
         firebaseAuth = FirebaseAuth.getInstance();
-        btnInfo = view.findViewById(R.id.btnMyInfo);
+//        btnInfo = view.findViewById(R.id.btnMyInfo);
         btnSec = view.findViewById(R.id.btnSec);
         userName = view.findViewById(R.id.profileUsername);
         picProfile = view.findViewById(R.id.imgProfile);
 
 
-
+        changeProfilePic = view.findViewById(R.id.changePicture);
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference();
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -87,15 +102,15 @@ public class profileSettings extends Fragment {
             }
         });
 
-        btnInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                Fragment infoFrag = new infoSettingFragment();
-                fragmentTransaction.replace(R.id.frame_layout, infoFrag);
-                fragmentTransaction.commit();
-            }
-        });
+//        btnInfo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                Fragment infoFrag = new infoSettingFragment();
+//                fragmentTransaction.replace(R.id.frame_layout, infoFrag);
+//                fragmentTransaction.commit();
+//            }
+//        });
 
         btnSec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +122,15 @@ public class profileSettings extends Fragment {
             }
         });
 
+        changeProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+
+                uploadImage();
+
+            }
+        });
 
         //retrieving data from firebase and display it to profile
         DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
@@ -157,4 +180,79 @@ public class profileSettings extends Fragment {
             }
         });
     }
+
+
+    private void uploadImage() {
+
+        Intent intent = new Intent();
+        intent.setType("image/*");
+
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, REQUEST_CODE_IMAGE);
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CODE_IMAGE && resultCode == Activity.RESULT_OK && data != null && data.getData() != null){
+
+            if(data.getData() != null){
+                imageuri = data.getData();
+                picProfile.setImageURI(imageuri);
+                UpdateProfileImage();
+            }
+
+        }else{
+            Toast.makeText(getContext(), "Please pick image", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+    }
+
+    private void UpdateProfileImage(){
+
+        Uri IndividualImage = imageuri;
+        StorageReference ImageName = storageReference.child("ProfilePicture").child(IndividualImage.getLastPathSegment());
+
+        ImageName.putFile(IndividualImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                ImageName.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        String profilepic = String.valueOf(uri);
+
+
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users")
+                                .child(FirebaseAuth.getInstance().getUid())
+                                .child("profilepic");
+
+                        reference.setValue(profilepic);
+                    }
+                });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

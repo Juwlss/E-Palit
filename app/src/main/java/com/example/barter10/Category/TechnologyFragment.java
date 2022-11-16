@@ -117,12 +117,15 @@ public class TechnologyFragment extends Fragment implements PostImageAdapter.OnI
         String otherUid = selectedItem.getUid();
 
         if(currentId.equals(otherUid)){
-            StorageReference imageRef = firebaseStorage.getReferenceFromUrl(selectedItem.getImageUrl());
+            String rep = selectedItem.getImageUrl().replace("]","");
+            String rep1 = rep.replace("[","");
+            String rep2 = rep1.replace(" ","");
+
+            StorageReference imageRef = firebaseStorage.getReferenceFromUrl(rep2);
 
             imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-
                     databaseReference.child(selectedKey).removeValue();
                     Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
                 }
@@ -132,7 +135,6 @@ public class TechnologyFragment extends Fragment implements PostImageAdapter.OnI
                     Toast.makeText(getContext(), "Failed to Delete", Toast.LENGTH_SHORT).show();
                 }
             });
-
         }
         else {
             Toast.makeText(getContext(), "This is not your post", Toast.LENGTH_SHORT).show();

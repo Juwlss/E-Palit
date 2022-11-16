@@ -137,9 +137,7 @@
                 android:layout_marginLeft="@dimen/_60sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:background="@drawable/edit_photo_ui"
-                android:src="@drawable/ic_baseline_add_photo_alternate_24">
-
-            </ImageView>
+                android:src="@drawable/ic_baseline_add_photo_alternate_24"/>
 
         </RelativeLayout>
 

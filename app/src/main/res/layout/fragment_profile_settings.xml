@@ -34,6 +34,18 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:src="@drawable/ic_default_picture" />
 
+
+        <ImageView
+            android:id="@+id/changePicture"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_95sdp"
+            android:background="@drawable/edit_photo_ui"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24" />
+
         <TextView
             android:id="@+id/lblHello"
             android:layout_width="wrap_content"
@@ -56,59 +68,59 @@
             android:textSize="@dimen/_24ssp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lblPersonal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profileUsername"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_25ssp"
-            android:fontFamily="@font/inter"
-            android:text="Personal"
-            android:textColor="#333333"
-            android:textFontWeight="800"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/lblPersonal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/profileUsername"-->
+<!--            android:layout_marginLeft="@dimen/_20sdp"-->
+<!--            android:layout_marginTop="@dimen/_25ssp"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:text="Personal"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textFontWeight="800"-->
+<!--            android:textSize="@dimen/_13ssp"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btnMyInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/lblPersonal"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/rippleeffect"
-            android:fontFamily="@font/inter"
-            android:gravity="left|center_vertical"
-            android:paddingLeft="@dimen/_50sdp"
-            android:text="Account Information"
-            android:textAllCaps="false"
-            android:textColor="#333333"
-            android:textFontWeight="600"
-            android:textSize="@dimen/_11ssp"
-            app:backgroundTint="@null" />
+<!--        <Button-->
+<!--            android:id="@+id/btnMyInfo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/lblPersonal"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:background="@drawable/rippleeffect"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="left|center_vertical"-->
+<!--            android:paddingLeft="@dimen/_50sdp"-->
+<!--            android:text="Account Information"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textFontWeight="600"-->
+<!--            android:textSize="@dimen/_11ssp"-->
+<!--            app:backgroundTint="@null" />-->
 
-        <ImageView
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
-            android:layout_alignTop="@+id/btnMyInfo"
-            android:layout_alignBottom="@+id/btnMyInfo"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:src="@drawable/ic_baseline_edit_24" />
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/_16sdp"-->
+<!--            android:layout_height="@dimen/_16sdp"-->
+<!--            android:layout_alignTop="@+id/btnMyInfo"-->
+<!--            android:layout_alignBottom="@+id/btnMyInfo"-->
+<!--            android:layout_marginLeft="@dimen/_20sdp"-->
+<!--            android:src="@drawable/ic_baseline_edit_24" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/btnMyInfo"
-            android:layout_alignEnd="@+id/btnMyInfo"
-            android:layout_alignBottom="@+id/btnMyInfo"
-            android:layout_marginRight="@dimen/_15sdp"
-            android:src="@drawable/ic_baseline_chevron_right_24" />
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignTop="@+id/btnMyInfo"-->
+<!--            android:layout_alignEnd="@+id/btnMyInfo"-->
+<!--            android:layout_alignBottom="@+id/btnMyInfo"-->
+<!--            android:layout_marginRight="@dimen/_15sdp"-->
+<!--            android:src="@drawable/ic_baseline_chevron_right_24" />-->
 
         <TextView
             android:id="@+id/lblMisc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnMyInfo"
+            android:layout_below="@+id/profileUsername"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="@font/inter"

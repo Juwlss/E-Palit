@@ -3802,7 +3802,6 @@ id browser_actions_menu_view
 id btnCalendar
 id btnFacebook
 id btnGoogle
-id btnMyInfo
 id btnOffer
 id btnOfferBack
 id btnOfferItem
@@ -4078,7 +4077,6 @@ id lblName
 id lblNotif
 id lblPassword
 id lblPending
-id lblPersonal
 id lblPhone
 id lblPreference
 id lblSecurity
