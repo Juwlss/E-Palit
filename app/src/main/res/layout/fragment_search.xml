@@ -2,17 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/fragmentsearch"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Search.SearchFragment">
+    tools:context=".SearchFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/btnBack"
+            android:id="@+id/s_btnBack"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -21,7 +20,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card"
-            android:layout_below="@id/btnBack"
+            android:layout_below="@id/s_btnBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="@dimen/_50sdp"
@@ -30,10 +29,10 @@
             app:cardCornerRadius="@dimen/_10sdp">
 
             <EditText
-                android:id="@+id/search_bar"
+                android:id="@+id/searchBar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_below="@id/btnBack"
+                android:layout_below="@id/s_btnBack"
                 android:background="@drawable/edittext_ui_search"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -53,6 +52,5 @@
             android:layout_marginTop="-2dp"
             tools:listitem="@layout/search_item" />
     </RelativeLayout>
-
 
 </FrameLayout>

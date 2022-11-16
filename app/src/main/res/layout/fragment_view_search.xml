@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Search.viewSearchFragment">
+    tools:context=".ViewSearchFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:id="@+id/viewSearch_bar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_below="@id/btnBack"
+                android:layout_below="@id/s_btnBack"
                 android:background="@drawable/edittext_ui_search"
                 android:focusable="false"
                 android:focusableInTouchMode="true"
@@ -52,6 +52,5 @@
             android:layout_marginTop="@dimen/_1sdp"
             tools:listitem="@layout/post_layout" />
     </RelativeLayout>
-
 
 </FrameLayout>

@@ -1,6 +1,5 @@
 package com.example.barter10.Model;
 
-import com.google.firebase.database.Exclude;
 
 public class Offer {
     private String uid;
@@ -10,14 +9,16 @@ public class Offer {
     private String location;
     private String itemName;
     private String itemCondition;
-    private String mKey;
+    private String postKey;
     private String itemDetails;
     private String itemValue;
-
+    private String posterId;
+    private String offerKey;
+    private Boolean pinValue;
     public Offer() {
     }
 
-    public Offer(String uid, String imageUrl, String profileUrl, String userName, String location, String itemName, String itemCondition, String itemDetails, String itemValue) {
+    public Offer(String uid, String imageUrl, String profileUrl, String userName, String location, String itemName, String itemCondition, String itemDetails, String itemValue, String postKey, String posterId, String offerKey, Boolean pinValue) {
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.profileUrl = profileUrl;
@@ -27,6 +28,42 @@ public class Offer {
         this.itemCondition = itemCondition;
         this.itemDetails = itemDetails;
         this.itemValue = itemValue;
+        this.postKey = postKey;
+        this.posterId = posterId;
+        this.offerKey = offerKey;
+        this.pinValue = pinValue;
+    }
+
+    public Boolean getPinValue() {
+        return pinValue;
+    }
+
+    public void setPinValue(Boolean pinValue) {
+        this.pinValue = pinValue;
+    }
+
+    public String getPostKey() {
+        return postKey;
+    }
+
+    public void setPostKey(String postKey) {
+        this.postKey = postKey;
+    }
+
+    public String getOfferKey() {
+        return offerKey;
+    }
+
+    public void setOfferKey(String offerKey) {
+        this.offerKey = offerKey;
+    }
+
+    public String getPosterId() {
+        return posterId;
+    }
+
+    public void setPosterId(String posterId) {
+        this.posterId = posterId;
     }
 
     public String getProfileUrl() {
@@ -99,16 +136,6 @@ public class Offer {
 
     public void setItemValue(String itemValue) {
         this.itemValue = itemValue;
-    }
-
-    @Exclude
-    public String getKey(){
-        return mKey;
-    }
-
-    @Exclude
-    public void setKey(String key){
-        this.mKey = key;
     }
 
 
