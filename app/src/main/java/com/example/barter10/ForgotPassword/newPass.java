@@ -1,5 +1,6 @@
 package com.example.barter10.ForgotPassword;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,20 +9,33 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.barter10.Home;
 import com.example.barter10.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class newPass extends AppCompatActivity {
 
     int passvis;
-
+    private String phones;
+    private EditText newpass;
+    private Button frgbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newpass);
+
+        frgbutton = (Button) findViewById(R.id.imageView7);
+        newpass = findViewById(R.id.pass1);
+
 
 
         ImageButton passtoggle = findViewById(R.id.visoff);
@@ -31,7 +45,41 @@ public class newPass extends AppCompatActivity {
         passtoggle.setVisibility(View.GONE);
         passtoggle2.setVisibility(View.GONE);
 
+        phones = getIntent().getStringExtra("mobile");
 
+        frgbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Query checkphone = FirebaseDatabase.getInstance().getReference("users").orderByChild("userPhone").equalTo(phones);
+                checkphone.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()){
+                            for(DataSnapshot snap: snapshot.getChildren()){
+                                if(pass1.getText().toString().trim().isEmpty()|| pass2.getText().toString().trim().isEmpty()){
+                                    Toast.makeText(newPass.this,"Enter New Password", Toast.LENGTH_SHORT).show();
+                                }else{
+
+                                    Toast.makeText(newPass.this, checkphone.getRef().toString(),Toast.LENGTH_SHORT).show();
+                                    checkphone.getRef().child(snap.getKey()).child("userpassword").setValue(newpass.getText().toString().trim());
+                                }
+
+                            }
+
+                        }
+                        else{
+                            Toast.makeText(newPass.this,phones,Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+            }
+        });
 //showing togglepassword when typing
         pass1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -115,9 +163,8 @@ public class newPass extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
-    public void submitNPass(View view) {
-        startActivity(new Intent(newPass.this, Home.class));
-    }
 }
