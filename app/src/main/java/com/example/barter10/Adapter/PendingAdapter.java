@@ -2,6 +2,7 @@ package com.example.barter10.Adapter;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
@@ -55,7 +56,6 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         holder.offereeTrade.setImageResource(pendingArrayList.get(position).getOfferee_trade());
 
 
-
         holder.confirmTrade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +73,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                 confirm_rate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        dialog.dismiss();
+
                         Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
                     }
                 });

@@ -180,7 +180,6 @@ com/example/barter10/activity_loading.java
  com.example.barter10.activity_loading$1
 com/example/barter10/List/PendingFragment.java
  com.example.barter10.List.PendingFragment
- com.example.barter10.List.PendingFragment$1
 com/example/barter10/CallBack.java
  com.example.barter10.CallBack
 com/example/barter10/Model/Upload.java

@@ -98,7 +98,6 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 editor.putString("uid", upload.getUid());
                 editor.apply();
 
-
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
 
                 MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
@@ -107,13 +106,14 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 Fragment fragment = new visitprofile();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
 
-//                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,new ProfileFragment());
+
             }
         });
 
         holder.viewPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 int pos = holder.getAdapterPosition();// GET SPECIFIC KEY
                 Upload selectedItem = mUploads.get(pos);// FIND SPECIFIC KEY
                 String postKey = selectedItem.getKey();// STORE SPECIFIC KEY
@@ -128,6 +128,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
                 activity.getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left)
                         .replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
 
             }
         });

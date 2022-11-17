@@ -23,10 +23,7 @@ import com.example.barter10.R;
 import java.util.ArrayList;
 
 public class PendingFragment extends Fragment {
-    private Dialog dialog;
-    private RatingBar ratingBar;
-    private TextView confirmRate;
-    private Button confirmTrade;
+
 
 
     ArrayList<Pending> pendingArrayList = new ArrayList<>();
@@ -43,11 +40,6 @@ public class PendingFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.trade_rv);
-        //confirm
-        confirmTrade = view.findViewById(R.id.trade_confirm);
-//        ratingBar = view.findViewById(R.id.rating_bar);
-//        confirmRate = view.findViewById(R.id.confirm_rate);
-
 
 
         setupPendingModel();
@@ -72,20 +64,4 @@ public class PendingFragment extends Fragment {
     }
 
 
-    private void setConfirmTrade(){
-        confirmTrade.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.popup_rating);
-
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-
-
-            }
-        });
-
-    }
 }
