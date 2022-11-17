@@ -34,8 +34,7 @@ public class otp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
         TextView textmobile = findViewById(R.id.textmobileshownumberotp);
-        textmobile.setText(String.format(
-                "+63-%s", getIntent().getStringExtra("mobile")
+        textmobile.setText(String.format(getIntent().getStringExtra("mobile")
         ));
         input1 = findViewById(R.id.pen1);
         input2 = findViewById(R.id.pen2);
@@ -83,7 +82,8 @@ public class otp extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
                             buttonotp.setVisibility(View.VISIBLE);
                             if(task.isSuccessful()){
-                                Intent intent = new Intent(getApplicationContext(),newPass.class);
+                                Intent intent = new Intent(getApplicationContext(), newPass.class);
+                                intent.putExtra("mobile",textmobile.getText().toString());
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                             }else{
