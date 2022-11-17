@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/transparent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_ui"
+        android:backgroundTint="@color/white">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/interbold"
+            android:text="RATE ME!"
+            android:textColor="#333333"
+            android:textSize="@dimen/_18sdp" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:numStars="5"
+            android:progressBackgroundTint="#333333"
+            android:progressTint="#FCDD3D"
+            android:rating="2.5" />
+
+       <TextView
+           android:id="@+id/confirm_rate"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentBottom="true"
+           android:layout_marginStart="@dimen/_12sdp"
+           android:layout_marginTop="@dimen/_12sdp"
+           android:layout_marginEnd="@dimen/_12sdp"
+           android:layout_marginBottom="@dimen/_12sdp"
+           android:fontFamily="@font/interbold"
+           android:text="Confirm"
+           android:textColor="#3DA9FC"
+           android:textSize="@dimen/_15sdp" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

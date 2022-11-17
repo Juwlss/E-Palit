@@ -3874,6 +3874,7 @@ id com_facebook_tooltip_bubble_view_text_body
 id com_facebook_tooltip_bubble_view_top_pointer
 id compress
 id confirm_button
+id confirm_rate
 id confirmation_code
 id constraint
 id container
@@ -4274,6 +4275,7 @@ id progress_horizontal
 id rLayout
 id radio
 id rating
+id rating_bar
 id ratio
 id react
 id recentDelete
@@ -4781,6 +4783,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout offer_layout
 layout pager_row
+layout popup_rating
 layout post_layout
 layout profile_post
 layout sdp_example
@@ -4825,6 +4828,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw firebase_common_keep
+string Confirm
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

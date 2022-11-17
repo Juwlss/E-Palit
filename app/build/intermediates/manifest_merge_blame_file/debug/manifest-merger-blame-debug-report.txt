@@ -47,7 +47,7 @@
 24-->[com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
 25
 26    <application
-26-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:9:5-65:19
+26-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:9:5-66:19
 27        android:allowBackup="true"
 27-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:10:9-35
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -117,49 +117,49 @@
 61            android:exported="true" />
 61-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:41:13-36
 62        <activity
-62-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:42:9-44:39
+62-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:43:9-45:39
 63            android:name="com.example.barter10.SignInSignUp.MainActivity"
-63-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:43:13-54
+63-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:44:13-54
 64            android:exported="true" />
-64-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:44:13-36
+64-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:45:13-36
 65        <activity
-65-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:45:9-54:20
+65-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:46:9-55:20
 66            android:name="com.example.barter10.activity_loading"
-66-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:46:13-45
+66-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:47:13-45
 67            android:exported="true"
-67-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:47:13-36
+67-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:48:13-36
 68            android:screenOrientation="portrait" >
-68-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:48:13-49
+68-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:49:13-49
 69            <intent-filter>
-69-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:49:13-53:29
+69-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:50:13-54:29
 70                <action android:name="android.intent.action.MAIN" />
-70-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:50:17-69
-70-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:50:25-66
+70-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:51:17-69
+70-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:51:25-66
 71
 72                <category android:name="android.intent.category.LAUNCHER" />
-72-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:52:17-77
-72-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:52:27-74
+72-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:53:17-77
+72-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:53:27-74
 73            </intent-filter>
 74        </activity>
 75
 76        <meta-data
-76-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:56:9-58:55
+76-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:57:9-59:55
 77            android:name="com.facebook.sdk.ApplicationId"
-77-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:57:13-58
+77-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:58:13-58
 78            android:value="@string/facebook_app_id" />
-78-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:58:13-52
+78-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:59:13-52
 79        <meta-data
-79-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:59:9-61:61
+79-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:60:9-62:61
 80            android:name="com.facebook.sdk.ClientToken"
-80-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:60:13-56
+80-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:61:13-56
 81            android:value="@string/facebook_client_token" />
-81-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:61:13-58
+81-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:62:13-58
 82        <meta-data
-82-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:62:9-64:57
+82-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:63:9-65:57
 83            android:name="preloaded_fonts"
-83-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:63:13-43
+83-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:64:13-43
 84            android:resource="@array/preloaded_fonts" />
-84-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:64:13-54
+84-->C:\Users\andrei\Documents\4th yr\38\app\src\main\AndroidManifest.xml:65:13-54
 85
 86        <activity
 86-->[com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:15:9-18:68

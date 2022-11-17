@@ -1,11 +1,17 @@
 package com.example.barter10.Adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,13 +20,13 @@ import com.example.barter10.Model.Pending;
 import com.example.barter10.R;
 
 import java.util.ArrayList;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHolder> {
 
     Context context;
     ArrayList<Pending> pendingArrayList;
+    Dialog dialog;
 
     public PendingAdapter(Context context, ArrayList<Pending> pendingArrayList){
         this.context = context;
@@ -48,6 +54,34 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         holder.offererTrade.setImageResource(pendingArrayList.get(position).getOfferer_trade());
         holder.offereeTrade.setImageResource(pendingArrayList.get(position).getOfferee_trade());
 
+
+
+        holder.confirmTrade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                dialog = new Dialog(context);
+                dialog.setContentView(R.layout.popup_rating);
+
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
+                RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
+
+                confirm_rate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+        });
+
+
+
     }
 
     @Override
@@ -60,6 +94,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         CircleImageView offereeImage, offererImage;
         ImageView offereeTrade, offererTrade;
         TextView offereeName, offererName;
+        Button confirmTrade;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -73,6 +108,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             offereeName = itemView.findViewById(R.id.offeree_name);
             offererName = itemView.findViewById(R.id.offerer_name);
 
+            confirmTrade = itemView.findViewById(R.id.trade_confirm);
 
 
         }

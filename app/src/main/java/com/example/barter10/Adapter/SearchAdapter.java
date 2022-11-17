@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.barter10.Model.Search;
 import com.example.barter10.R;
-import com.example.barter10.RecentSearchInterface;
+import com.example.barter10.Search.RecentSearchInterface;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

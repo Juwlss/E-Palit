@@ -43,7 +43,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -287,7 +286,7 @@ public class activityUpload extends AppCompatActivity{
 
                                                     int rate = 0;
 
-                                                    String rating = "Rating: "+rate+"/10";
+                                                    String rating = "Rating: "+rate+"/5";
 
                                                     //getting the username of uploader
                                                     name = dataSnapshot.child("username").getValue().toString();

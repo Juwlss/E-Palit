@@ -79,6 +79,8 @@ com/example/barter10/BuildConfig.java
  com.example.barter10.BuildConfig
 com/example/barter10/Adapter/PendingAdapter.java
  com.example.barter10.Adapter.PendingAdapter
+ com.example.barter10.Adapter.PendingAdapter$1
+ com.example.barter10.Adapter.PendingAdapter$1$1
  com.example.barter10.Adapter.PendingAdapter$MyViewHolder
 com/example/barter10/Post/FullPostFragment.java
  com.example.barter10.Post.FullPostFragment
@@ -152,6 +154,11 @@ com/example/barter10/SignInSignUp/signUp.java
  com.example.barter10.SignInSignUp.signUp$4
  com.example.barter10.SignInSignUp.signUp$5
  com.example.barter10.SignInSignUp.signUp$6
+com/example/barter10/Search/ViewSearchFragment.java
+ com.example.barter10.Search.ViewSearchFragment
+ com.example.barter10.Search.ViewSearchFragment$1
+com/example/barter10/Search/RecentSearchInterface.java
+ com.example.barter10.Search.RecentSearchInterface
 com/example/barter10/signupotp.java
  com.example.barter10.signupotp
  com.example.barter10.signupotp$1
@@ -173,8 +180,7 @@ com/example/barter10/activity_loading.java
  com.example.barter10.activity_loading$1
 com/example/barter10/List/PendingFragment.java
  com.example.barter10.List.PendingFragment
-com/example/barter10/RecentSearchInterface.java
- com.example.barter10.RecentSearchInterface
+ com.example.barter10.List.PendingFragment$1
 com/example/barter10/CallBack.java
  com.example.barter10.CallBack
 com/example/barter10/Model/Upload.java
@@ -215,9 +221,6 @@ com/example/barter10/Category/SportsFragment.java
  com.example.barter10.Category.SportsFragment$1
  com.example.barter10.Category.SportsFragment$2
  com.example.barter10.Category.SportsFragment$3
-com/example/barter10/ViewSearchFragment.java
- com.example.barter10.ViewSearchFragment
- com.example.barter10.ViewSearchFragment$1
 com/example/barter10/Adapter/FollowAdapter.java
  com.example.barter10.Adapter.FollowAdapter
  com.example.barter10.Adapter.FollowAdapter$1

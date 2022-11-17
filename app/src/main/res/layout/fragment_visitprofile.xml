@@ -119,7 +119,7 @@
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textFontWeight="900"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_12ssp" />
 
 
                 <ImageButton

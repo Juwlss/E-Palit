@@ -3873,6 +3873,7 @@ int id com_facebook_tooltip_bubble_view_text_body 0x7f0a00bf
 int id com_facebook_tooltip_bubble_view_top_pointer 0x7f0a00c0
 int id compress 0x7f0a00c1
 int id confirm_button 0x7f0a00c2
+int id confirm_rate 0x7f0a0366
 int id confirmation_code 0x7f0a00c3
 int id constraint 0x7f0a00c4
 int id container 0x7f0a00c5
@@ -4273,6 +4274,7 @@ int id progress_horizontal 0x7f0a024f
 int id rLayout 0x7f0a0250
 int id radio 0x7f0a0251
 int id rating 0x7f0a0252
+int id rating_bar 0x7f0a0364
 int id ratio 0x7f0a0253
 int id react 0x7f0a0254
 int id recentDelete 0x7f0a0255
@@ -4780,6 +4782,7 @@ int layout notification_template_part_chronometer 0x7f0d00a4
 int layout notification_template_part_time 0x7f0d00a5
 int layout offer_layout 0x7f0d00a6
 int layout pager_row 0x7f0d00a7
+int layout popup_rating 0x7f0d00cc
 int layout post_layout 0x7f0d00a8
 int layout profile_post 0x7f0d00a9
 int layout sdp_example 0x7f0d00aa
@@ -4824,6 +4827,7 @@ int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int plurals mtrl_badge_content_description 0x7f100000
 int raw firebase_common_keep 0x7f110000
+int string Confirm 0x7f1200cd
 int string abc_action_bar_home_description 0x7f120000
 int string abc_action_bar_up_description 0x7f120001
 int string abc_action_menu_overflow_description 0x7f120002

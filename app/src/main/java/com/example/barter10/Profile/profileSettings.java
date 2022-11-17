@@ -99,6 +99,9 @@ public class profileSettings extends Fragment {
                 Toast.makeText(getActivity(), "Log out Successfully", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), MainActivity.class));
                 getActivity().finish();
+
+
+
             }
         });
 

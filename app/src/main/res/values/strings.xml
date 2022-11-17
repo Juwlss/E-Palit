@@ -6,7 +6,7 @@
     <string name="facebook_app_id">1558930854569274</string>
     <string name="fb_login_protocol_scheme">fb1558930854569274</string>
     <string name="facebook_client_token">162fc72c6af07b63771b9ff73c0827f6</string>
-
+    <string name="Confirm"><b>Confirm</b></string>
 
     <string-array name="messagelist">
 

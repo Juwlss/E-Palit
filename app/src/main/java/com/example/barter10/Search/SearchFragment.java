@@ -24,8 +24,6 @@ import com.example.barter10.Adapter.SearchAdapter;
 import com.example.barter10.Home;
 import com.example.barter10.Model.Search;
 import com.example.barter10.R;
-import com.example.barter10.RecentSearchInterface;
-import com.example.barter10.ViewSearchFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
