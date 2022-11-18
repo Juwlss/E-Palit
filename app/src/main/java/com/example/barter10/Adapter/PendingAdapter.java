@@ -15,102 +15,333 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.barter10.Model.Pending;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.List.FinishedFragment;
+import com.example.barter10.Model.Trade;
+import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHolder> {
+    private Context context;
+    private List<Trade> tradeList;
 
-    Context context;
-    ArrayList<Pending> pendingArrayList;
-    Dialog dialog;
-
-    public PendingAdapter(Context context, ArrayList<Pending> pendingArrayList){
+    public PendingAdapter(Context context, List<Trade> tradeList) {
         this.context = context;
-        this.pendingArrayList = pendingArrayList;
+        this.tradeList = tradeList;
     }
 
     @NonNull
     @Override
     public PendingAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflating the layout
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.trade_layout, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.trade_layout, parent, false);
         return new PendingAdapter.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PendingAdapter.MyViewHolder holder, int position) {
-        //username
-        holder.offererName.setText(pendingArrayList.get(position).getOfferer());
-        holder.offereeName.setText(pendingArrayList.get(position).getOfferee());
-        //userimage
-        holder.offererImage.setImageResource(pendingArrayList.get(position).getOfferer_image());
-        holder.offereeImage.setImageResource(pendingArrayList.get(position).getOfferee_image());
-        //tradeimage
-        holder.offererTrade.setImageResource(pendingArrayList.get(position).getOfferer_trade());
-        holder.offereeTrade.setImageResource(pendingArrayList.get(position).getOfferee_trade());
+        Trade trade = tradeList.get(position);
+
+        //Get Offeree id//
+        String offereeId = trade.getOffereeId();
+        //Get Offerer id//
+        String offererId = trade.getOffererId();
+        //Get Post id/key//
+        String postKey = trade.getPostKey();
+
+        //Offeree Details//
+        Picasso.get()
+                .load(trade.getOffereeProfile())
+                .placeholder(R.drawable.ic_baseline_image_24)
+                .fit()
+                .into(holder.offereeProfile);
+
+        holder.offereeName.setText(trade.getOffereeName());
+
+        List<SlideModel> slideModels = new ArrayList<>();
+        //multiple images
+        String rep = trade.getOffereeImg().replace("]","");
+        String rep1 = rep.replace("[","");
+        String rep2 = rep1.replace(" ","");
+        String[] pictures = rep2.split(",");
 
 
-        holder.confirmTrade.setOnClickListener(new View.OnClickListener() {
+
+
+        for (int i =0 ; i < pictures.length ; i++){
+
+            slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
+
+        }
+
+
+        holder.offereeImg.setImageList(slideModels, ScaleTypes.FIT);
+
+
+
+
+
+        //Offerer Details//
+        Picasso.get()
+                .load(trade.getOffererProfile())
+                .placeholder(R.drawable.ic_baseline_image_24)
+                .fit()
+                .into(holder.offererProfile);
+
+        holder.offererName.setText(trade.getOffererName());
+
+        List<SlideModel> slideModels2 = new ArrayList<>();
+        //multiple images
+        String rep3 = trade.getOffererImg().replace("]","");
+        String rep4 = rep3.replace("[","");
+        String rep5 = rep4.replace(" ","");
+        String[] pictures2 = rep5.split(",");
+
+
+
+
+        for (int i =0 ; i < pictures2.length ; i++){
+
+            slideModels2.add(new SlideModel(pictures2[i], "", ScaleTypes.FIT));
+
+        }
+
+
+        holder.offererImg.setImageList(slideModels2, ScaleTypes.FIT);
+
+
+
+
+        //Button Confirm
+        holder.confirm.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+
+                //Check if current user is == to the offeree//
+                if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+
+                    String offereeID = FirebaseAuth.getInstance().getUid();
+                    DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeID).child(postKey);
+
+                    //If Offeree click the confirm, the value will change to true instead of null//
+                    tradeStatus.child("offeree").setValue("true");
+
+                    DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
+                    uptradeStatus.child("offeree").setValue("true");
+
+                }
+                else{
+
+                    String offererID = FirebaseAuth.getInstance().getUid();
+                    DatabaseReference tradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererID).child(postKey);
+
+                    //If Offerer click the confirm, the value will change to true instead of null//
+                    tradeStatus2.child("offerer").setValue("true");
+
+                    DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
+                    uptradeStatus2.child("offerer").setValue("true");
+                }
 
 
-                dialog = new Dialog(context);
-                dialog.setContentView(R.layout.popup_rating);
 
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
 
-                TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
-                RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
+            }
+        });
 
-                confirm_rate.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
+        //Button Cancel//
+        holder.cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-                        Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    String offereeID = FirebaseAuth.getInstance().getUid();
 
+                    DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeID).child(postKey);
+                    //If Offeree click the cancel, the value will change to false instead of null//
+                    tradeStatus.child("offeree").setValue("false");
+                    DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
+                    uptradeStatus.child("offeree").setValue("false");
+
+                }
+                else{
+
+                    String offererID = FirebaseAuth.getInstance().getUid();
+                    DatabaseReference tradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererID).child(postKey);
+                    //If Offerer click the cancel, the value will change to false instead of null//
+                    tradeStatus2.child("offerer").setValue("false");
+
+                    DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
+                    uptradeStatus2.child("offerer").setValue("false");
+
+                }
+            }
+        });
+
+        //Get status in Trade Reference//
+        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+            updateStatusOfferee(offererId,postKey,trade);
+        }
+        else {
+            updateStatusOfferer(offereeId,postKey,trade);
+        }
+
+
+
+    }
+
+    private void updateStatusOfferee(String offererId, String postKey, Trade trade) {
+
+
+        DatabaseReference upStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+        upStatus.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String valOfferee = snapshot.child("offeree").getValue().toString();
+                String valOfferer = snapshot.child("offerer").getValue().toString();
+
+
+                if (valOfferee.equals("null") || valOfferer.equals("null")){
+                    Toast.makeText(context, "Status is still false", Toast.LENGTH_SHORT).show();
+                }
+                else if(valOfferee.equals("true") && valOfferer.equals("true")){
+
+                    DatabaseReference offeree = FirebaseDatabase.getInstance().getReference("Trade").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+                    DatabaseReference offerer = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
+
+                    HashMap status  = new HashMap();
+                    status.put("status", "true");
+                    offeree.updateChildren(status);
+                    offerer.updateChildren(status);
+
+                    //Creating Finished reference for storing success/failed transactions//
+                    DatabaseReference finished1 = FirebaseDatabase.getInstance().getReference("Finished").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+                    finished1.setValue(trade);
+
+                    DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
+                    finished2.setValue(trade);
+
+
+                }
+                else if (valOfferee.equals("true") && valOfferer.equals("false") ||
+                        valOfferee.equals("false") && valOfferer.equals("true")){
+
+                    DatabaseReference offeree = FirebaseDatabase.getInstance().getReference("Trade").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+                    DatabaseReference offerer = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
+
+                    HashMap status  = new HashMap();
+                    status.put("status", "false");
+                    offeree.updateChildren(status);
+                    offerer.updateChildren(status);
+
+
+                    //Creating Finished reference for storing success/failed transactions//
+                    DatabaseReference finished1 = FirebaseDatabase.getInstance().getReference("Finished").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+                    finished1.setValue(trade);
+
+                    DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
+                    finished2.setValue(trade);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
 
 
-    }
 
+    }
+    private void updateStatusOfferer(String offereeId, String postKey, Trade trade) {
+
+        DatabaseReference upStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+        upStatus.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String valOfferee = snapshot.child("offeree").getValue().toString();
+                String valOfferer = snapshot.child("offerer").getValue().toString();
+
+
+                if (valOfferee.equals("null") || valOfferer.equals("null")){
+                    Toast.makeText(context, "Status is still false", Toast.LENGTH_SHORT).show();
+                }
+                else if(valOfferee.equals("true") && valOfferer.equals("true")){
+                    DatabaseReference trade = FirebaseDatabase.getInstance().getReference("Trade").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+                    DatabaseReference trade2 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
+
+                    HashMap status  = new HashMap();
+                    status.put("status", "true");
+                    trade.updateChildren(status);
+                    trade2.updateChildren(status);
+
+                }
+                else if (valOfferee.equals("true") && valOfferer.equals("false") ||
+                        valOfferee.equals("false") && valOfferer.equals("true")){
+
+                    DatabaseReference offerer = FirebaseDatabase.getInstance().getReference("Trade").child(FirebaseAuth.getInstance().getUid()).child(postKey);
+                    DatabaseReference offeree = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
+
+
+                    HashMap status  = new HashMap();
+                    status.put("status", "false");
+                    offerer.updateChildren(status);
+                    offeree.updateChildren(status);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
     @Override
     public int getItemCount() {
-        return pendingArrayList.size();
+        return tradeList.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        CircleImageView offereeImage, offererImage;
-        ImageView offereeTrade, offererTrade;
-        TextView offereeName, offererName;
-        Button confirmTrade;
+        CircleImageView offereeProfile,offererProfile;
+        TextView offereeName,offererName;
+        ImageSlider offereeImg,offererImg;
+        Button confirm,cancel;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            //userimage
-            offereeImage = itemView.findViewById(R.id.offeree_user);
-            offererImage = itemView.findViewById(R.id.offerer_user);
-            //trade item
-            offereeTrade = itemView.findViewById(R.id.image_offeree);
-            offererTrade = itemView.findViewById(R.id.image_offerer);
-            //username
-            offereeName = itemView.findViewById(R.id.offeree_name);
-            offererName = itemView.findViewById(R.id.offerer_name);
 
-            confirmTrade = itemView.findViewById(R.id.trade_confirm);
+            offereeProfile = itemView.findViewById(R.id.offeree_user);
+            offereeName = itemView.findViewById(R.id.offeree_name);
+            offereeImg = itemView.findViewById(R.id.offeree_image_slider);
+
+            offererProfile = itemView.findViewById(R.id.offerer_user);
+            offererName = itemView.findViewById(R.id.offerer_name);
+            offererImg = itemView.findViewById(R.id.offerer_image_slider);
+            confirm = itemView.findViewById(R.id.trade_confirm);
+            cancel = itemView.findViewById(R.id.trade_cancel);
 
 
         }

@@ -268,11 +268,28 @@
                     android:textSize="@dimen/_10ssp"
                     android:textStyle="bold" />
 
+                <Button
+                    android:id="@+id/btnConfirmPin"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@id/timer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/btn_upload_ui"
+                    android:fontFamily="@font/inter"
+                    android:text="Take Offer"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_pin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/timer"
+                    android:layout_below="@id/btnConfirmPin"
                     android:layout_marginTop="2dp"
                     android:nestedScrollingEnabled="false"/>
 
@@ -280,7 +297,7 @@
                     android:id="@+id/rv_Offer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/timer"
+                    android:layout_below="@id/btnConfirmPin"
                     android:layout_marginTop="2dp"
                     android:nestedScrollingEnabled="false"
                     tools:listitem="@layout/offer_layout" />

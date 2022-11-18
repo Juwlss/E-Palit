@@ -291,7 +291,8 @@ public class activityUpload extends AppCompatActivity{
                                                     //getting the username of uploader
                                                     name = dataSnapshot.child("username").getValue().toString();
                                                     //uploading to firebase
-                                                    Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), urlStrings.toString(), name, rating, Profilepic,itemLocation, itemName, itemCondition, cat1,itemDetails,itemValue,itemPreference,timeLimit);                                                    reference.child(postId).setValue(upload);//setting primary key
+                                                    Upload upload = new Upload(FirebaseAuth.getInstance().getUid(), urlStrings.toString(), name, rating, Profilepic,itemLocation, itemName, itemCondition, cat1,itemDetails,itemValue,itemPreference,timeLimit,false);
+                                                    reference.child(postId).setValue(upload);//setting primary key
 
                                                     break;
                                                 }

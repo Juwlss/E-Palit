@@ -6,28 +6,32 @@ public class Offer {
     private String imageUrl;
     private String profileUrl;
     private String userName;
-    private String location;
+    private String rating;
     private String itemName;
     private String itemCondition;
     private String postKey;
     private String itemDetails;
     private String itemValue;
+    private String location;
     private String posterId;
     private String offerKey;
     private Boolean pinValue;
+
+
     public Offer() {
     }
 
-    public Offer(String uid, String imageUrl, String profileUrl, String userName, String location, String itemName, String itemCondition, String itemDetails, String itemValue, String postKey, String posterId, String offerKey, Boolean pinValue) {
+    public Offer(String uid, String imageUrl, String profileUrl, String userName, String rating, String itemName, String itemCondition, String itemDetails, String itemValue,String location, String postKey, String posterId, String offerKey, Boolean pinValue) {
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.profileUrl = profileUrl;
         this.userName = userName;
-        this.location = location;
+        this.rating = rating;
         this.itemName = itemName;
         this.itemCondition = itemCondition;
         this.itemDetails = itemDetails;
         this.itemValue = itemValue;
+        this.location = location;
         this.postKey = postKey;
         this.posterId = posterId;
         this.offerKey = offerKey;
@@ -98,12 +102,12 @@ public class Offer {
         this.userName = userName;
     }
 
-    public String getLocation() {
-        return location;
+    public String getRating() {
+        return rating;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public String getItemName() {
@@ -138,5 +142,11 @@ public class Offer {
         this.itemValue = itemValue;
     }
 
+    public String getLocation() {
+        return location;
+    }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }

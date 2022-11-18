@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,52 +16,70 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.barter10.Adapter.PendingAdapter;
-import com.example.barter10.Model.Pending;
+import com.example.barter10.Model.Trade;
 import com.example.barter10.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class PendingFragment extends Fragment {
+    private ArrayList<Trade> tradeList;
+    private DatabaseReference tradeReference;
+    private RecyclerView rv_Pending;
+    private PendingAdapter pendingAdapter;
 
-
-
-    ArrayList<Pending> pendingArrayList = new ArrayList<>();
-
-    int[] offereeImages = {R.drawable.vincentuser,R.drawable.kyouser,R.drawable.daleuser};
-    int[] offererImages = {R.drawable.paulouser,R.drawable.juls,R.drawable.kyouser};
-
-    int[] offereeTrade = {R.drawable.shoe, R.drawable.watch, R.drawable.shoe};
-    int[] offererTrade = {R.drawable.watch, R.drawable.shoe, R.drawable.shoe};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.trade_rv);
+
+        //Getting ID in XML layout//
+        rv_Pending = view.findViewById(R.id.trade_rv);
 
 
-        setupPendingModel();
-        PendingAdapter adapter = new PendingAdapter(getContext(), pendingArrayList);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        //List Setup & Adapter//
+        tradeList = new ArrayList<>();
+        pendingAdapter = new PendingAdapter(getContext(), tradeList );
+
+        //Recycler View Setup//
+        rv_Pending.setHasFixedSize(true);
+        rv_Pending.setLayoutManager(new LinearLayoutManager(getContext()));
+        rv_Pending.setAdapter(pendingAdapter);
+
+        //Displaying Data in Firebase//
+        tradeReference = FirebaseDatabase.getInstance().getReference("Trade").child(FirebaseAuth.getInstance().getUid());
+
+        tradeReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                tradeList.clear();
+                for (DataSnapshot snap : snapshot.getChildren()){
+                    Trade trade = snap.getValue(Trade.class);
+                    tradeList.add(trade);
+                }
+                pendingAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
 
         return view;
-    }
-
-    private void setupPendingModel(){
-        String[] offereeNames = getResources().getStringArray(R.array.offeree);
-        String[] offererNames = getResources().getStringArray(R.array.offerer);
-
-
-        for(int i =0;  i<offereeNames.length; i++){
-            pendingArrayList.add(new Pending(offereeNames[i], offererNames[i],
-                    offereeImages[i], offererImages[i], offereeTrade[i], offererTrade[i]));
-        }
     }
 
 
