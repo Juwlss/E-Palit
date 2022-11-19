@@ -119,29 +119,26 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
                 //Pin Methods Start//
 
-                DatabaseReference pinRef = FirebaseDatabase.getInstance().getReference("Offer");
+                DatabaseReference pinRef = FirebaseDatabase.getInstance().getReference("PinnedPost");
 
                 String postKey = offer.getPostKey();
                 String offerKey = offer.getOfferKey();
                 Boolean getPinValue = offer.getPinValue();
 
+
                 //Pinning the Post//
                 if (getPinValue.equals(false)) {
                     Toast.makeText(context, "Pin", Toast.LENGTH_SHORT).show();
-                    holder.subMenu.setImageResource(R.drawable.ic_unpin);
-
-                    pinRef.child("PinnedPost").child(postKey).setValue(offer);
+                    pinRef.child(postKey).setValue(offer);
 
                     HashMap changePinValue = new HashMap();
                     changePinValue.put("pinValue", true);
-                    pinRef.child("PinnedPost").child(postKey).updateChildren(changePinValue);
+                    pinRef.child(postKey).updateChildren(changePinValue);
 
                     //Deletion of pin//
                     DatabaseReference pinDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     pinDelete.child(offerKey).removeValue();
 
-                    //Show Status//
-                    Toast.makeText(view.getContext(), "Pinned ", Toast.LENGTH_SHORT).show();
 
                     //Refresh Full Post Page//
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
@@ -152,36 +149,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                     fragment.setArguments(bundle);
                     activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_up,R.anim.slide_out_up).replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
                     //Pin Methods End//
-
-                //Unpinning the post//
-                } else {
-                    Toast.makeText(context, "Unpin", Toast.LENGTH_SHORT).show();
-                    holder.subMenu.setImageResource(R.drawable.ic_pin);
-
-
-                    //Unpin Methods Start//
-                    DatabaseReference OfferReference = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
-                    OfferReference.child(offerKey).setValue(offer);
-
-                    //Updating pin Value//
-                    HashMap changePinValue = new HashMap();
-                    changePinValue.put("pinValue", false);
-                    OfferReference.child(offerKey).updateChildren(changePinValue);
-
-                    //Deletion of pin//
-                    DatabaseReference unpin= FirebaseDatabase.getInstance().getReference("Offer").child("PinnedPost").child(postKey);
-                    unpin.removeValue();
-
-                    //Refresh Full Post Page//
-                    AppCompatActivity activity2 = (AppCompatActivity) view.getContext();
-                    Fragment fragment2 = new FullPostFragment();
-                    Bundle bundle2 = new Bundle();
-                    bundle2.putString("ItemKey", postKey);
-                    bundle2.putString("uId", posterId);
-                    fragment2.setArguments(bundle2);
-                    activity2.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment2).addToBackStack(null).commit();
-
-                    //Unpin Methods End//
 
                 }
 

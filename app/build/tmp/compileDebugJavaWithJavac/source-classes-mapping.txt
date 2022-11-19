@@ -83,11 +83,17 @@ com/example/barter10/Model/FullPost.java
  com.example.barter10.Model.FullPost
 com/example/barter10/BuildConfig.java
  com.example.barter10.BuildConfig
-com/example/barter10/Adapter/VisitPostAdapter.java
- com.example.barter10.Adapter.VisitPostAdapter
- com.example.barter10.Adapter.VisitPostAdapter$1
- com.example.barter10.Adapter.VisitPostAdapter$ImageViewHolder
- com.example.barter10.Adapter.VisitPostAdapter$OnItemClickListener
+com/example/barter10/Adapter/PendingAdapter.java
+ com.example.barter10.Adapter.PendingAdapter
+ com.example.barter10.Adapter.PendingAdapter$1
+ com.example.barter10.Adapter.PendingAdapter$2
+ com.example.barter10.Adapter.PendingAdapter$3
+ com.example.barter10.Adapter.PendingAdapter$4
+ com.example.barter10.Adapter.PendingAdapter$5
+ com.example.barter10.Adapter.PendingAdapter$6
+ com.example.barter10.Adapter.PendingAdapter$7
+ com.example.barter10.Adapter.PendingAdapter$8
+ com.example.barter10.Adapter.PendingAdapter$MyViewHolder
 com/example/barter10/DataBindingTriggerClass.java
  com.example.barter10.DataBindingTriggerClass
 com/example/barter10/BottomNavigation/ListFragment.java
@@ -172,15 +178,9 @@ com/example/barter10/Home.java
 com/example/barter10/activity_loading.java
  com.example.barter10.activity_loading
  com.example.barter10.activity_loading$1
-com/example/barter10/Post/UpdatePostFragment.java
- com.example.barter10.Post.UpdatePostFragment
- com.example.barter10.Post.UpdatePostFragment$1
- com.example.barter10.Post.UpdatePostFragment$2
- com.example.barter10.Post.UpdatePostFragment$2$1
- com.example.barter10.Post.UpdatePostFragment$3
- com.example.barter10.Post.UpdatePostFragment$4
- com.example.barter10.Post.UpdatePostFragment$5
- com.example.barter10.Post.UpdatePostFragment$6
+com/example/barter10/List/PendingFragment.java
+ com.example.barter10.List.PendingFragment
+ com.example.barter10.List.PendingFragment$1
 com/example/barter10/CallBack.java
  com.example.barter10.CallBack
 com/example/barter10/Model/Upload.java
@@ -256,6 +256,7 @@ com/example/barter10/Adapter/PostImageAdapter.java
 com/example/barter10/Post/FullPostFragment.java
  com.example.barter10.Post.FullPostFragment
  com.example.barter10.Post.FullPostFragment$1
+ com.example.barter10.Post.FullPostFragment$10
  com.example.barter10.Post.FullPostFragment$2
  com.example.barter10.Post.FullPostFragment$3
  com.example.barter10.Post.FullPostFragment$4
@@ -279,17 +280,17 @@ com/example/barter10/Adapter/OfferListAdapter.java
  com.example.barter10.Adapter.OfferListAdapter
  com.example.barter10.Adapter.OfferListAdapter$1
  com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
-com/example/barter10/Adapter/PendingAdapter.java
- com.example.barter10.Adapter.PendingAdapter
- com.example.barter10.Adapter.PendingAdapter$1
- com.example.barter10.Adapter.PendingAdapter$2
- com.example.barter10.Adapter.PendingAdapter$3
- com.example.barter10.Adapter.PendingAdapter$4
- com.example.barter10.Adapter.PendingAdapter$5
- com.example.barter10.Adapter.PendingAdapter$6
- com.example.barter10.Adapter.PendingAdapter$7
- com.example.barter10.Adapter.PendingAdapter$8
- com.example.barter10.Adapter.PendingAdapter$MyViewHolder
-com/example/barter10/List/PendingFragment.java
- com.example.barter10.List.PendingFragment
- com.example.barter10.List.PendingFragment$1
+com/example/barter10/Post/UpdatePostFragment.java
+ com.example.barter10.Post.UpdatePostFragment
+ com.example.barter10.Post.UpdatePostFragment$1
+ com.example.barter10.Post.UpdatePostFragment$2
+ com.example.barter10.Post.UpdatePostFragment$2$1
+ com.example.barter10.Post.UpdatePostFragment$3
+ com.example.barter10.Post.UpdatePostFragment$4
+ com.example.barter10.Post.UpdatePostFragment$5
+ com.example.barter10.Post.UpdatePostFragment$6
+com/example/barter10/Adapter/VisitPostAdapter.java
+ com.example.barter10.Adapter.VisitPostAdapter
+ com.example.barter10.Adapter.VisitPostAdapter$1
+ com.example.barter10.Adapter.VisitPostAdapter$ImageViewHolder
+ com.example.barter10.Adapter.VisitPostAdapter$OnItemClickListener
