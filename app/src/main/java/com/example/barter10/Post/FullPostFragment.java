@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +44,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class FullPostFragment extends Fragment {
 
     private ImageView btnBack;
@@ -69,6 +72,15 @@ public class FullPostFragment extends Fragment {
     RecyclerView rv_FullPost;
     OfferListAdapter offerListAdapter;
     ArrayList<Offer> list;
+
+    private ImageView unpin;
+
+
+    //For retrieving information of Pinned Post//
+    private CardView pinPost;
+    private TextView p_username,p_rating,p_itemName,p_itemDetails,p_condition,p_value,p_loc;
+    private CircleImageView p_profile;
+    private ImageSlider p_img;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -109,6 +121,20 @@ public class FullPostFragment extends Fragment {
         btnOffer = view.findViewById(R.id.btnOffer);
         takeOffer = view.findViewById(R.id.btnConfirmPin);
 
+        //For retrieving information of Pinned Post//
+        pinPost = view.findViewById(R.id.pinPost);
+
+        unpin = view.findViewById(R.id.o_subMenuUnpin);
+        p_username = view.findViewById(R.id.p_username);
+        p_profile = view.findViewById(R.id.p_userProfile);
+        p_rating = view.findViewById(R.id.p_rating);
+        p_img = view.findViewById(R.id.p_image_slider);
+        p_itemName = view.findViewById(R.id.p_itemName);
+        p_itemDetails = view.findViewById(R.id.p_itemDetails);
+        p_condition = view.findViewById(R.id.p_itemCondition);
+        p_value = view.findViewById(R.id.p_itemValue);
+        p_loc = view.findViewById(R.id.p_location);
+
         databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(itemKey);
 //        storage
         firebaseStorage = FirebaseStorage.getInstance();
@@ -126,7 +152,7 @@ public class FullPostFragment extends Fragment {
             }
         });
         //Reclyer View for Pin Post//
-        pinReference = FirebaseDatabase.getInstance().getReference("Offer").child("PinnedPost").child(itemKey);
+        pinReference = FirebaseDatabase.getInstance().getReference("PinnedPost").child(itemKey);
 
 
         //Reclyer View for Offers//
@@ -150,7 +176,7 @@ public class FullPostFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                showPinnedPost(list,uid,takeOffer,snapshot);
+                showPinnedPost(list,uid,takeOffer,snapshot,pinPost,unpin,itemKey);
 
             }
 
@@ -346,13 +372,16 @@ public class FullPostFragment extends Fragment {
 
     }
 
-    private void showPinnedPost(ArrayList<Offer> list, String uid, Button takeOffer, DataSnapshot snapshot) {
+    private void showPinnedPost(ArrayList<Offer> list, String uid, Button takeOffer, DataSnapshot snapshot, CardView pinPost, ImageView unpin, String itemKey) {
         list.clear();
         if(snapshot.exists()){
-            Offer viewOffers = snapshot.getValue(Offer.class);
-            list.add(viewOffers);
+            Offer offer = snapshot.getValue(Offer.class);
+            String offerKey = offer.getOfferKey();
+            String postKey = offer.getPostKey();
+            String posterId = offer.getPosterId();
+            Boolean pinValue = offer.getPinValue();
 
-            Boolean pinValue = viewOffers.getPinValue();
+
 
 
             //Check if you are the offeree//
@@ -362,17 +391,116 @@ public class FullPostFragment extends Fragment {
                 //If you are the offeree the take offer button will visible//
                 if(pinValue.equals(true)){
                     takeOffer.setVisibility(View.VISIBLE);
+                    pinPost.setVisibility(View.VISIBLE);
+
+                    p_username.setText(offer.getUserName());
+
+                    Picasso.get()
+                            .load(offer.getProfileUrl())
+                            .placeholder(R.drawable.ic_baseline_image_24)
+                            .fit()
+                            .into(p_profile);
+
+                    List<SlideModel> slideModels = new ArrayList<>();
+                    //multiple images
+                    String rep = offer.getImageUrl().replace("]","");
+                    String rep1 = rep.replace("[","");
+                    String rep2 = rep1.replace(" ","");
+                    String[] pictures = rep2.split(",");
+
+
+                    for (int i =0 ; i < pictures.length ; i++){
+
+                        slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
+
+                    }
+
+                    p_img.setImageList(slideModels, ScaleTypes.FIT);
+                    p_rating.setText(offer.getRating());
+                    p_itemName.setText("Item Name : "+offer.getItemName());
+                    p_itemDetails.setText("Item Details : "+offer.getItemDetails());
+                    p_condition.setText("Item Condition : "+offer.getItemCondition());
+                    p_value.setText("Item Value : "+offer.getItemValue());
+                    p_loc.setText("Location : "+offer.getLocation());
+
+                    unpin.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                            DatabaseReference OfferReference = FirebaseDatabase.getInstance().getReference("Offer").child(itemKey);
+                            OfferReference.child(offerKey).setValue(offer);
+
+                            //Updating pin Value//
+                            HashMap changePinValue = new HashMap();
+                            changePinValue.put("pinValue", false);
+                            OfferReference.child(offerKey).updateChildren(changePinValue);
+
+                            pinReference.removeValue();
+
+                            pinPost.setVisibility(View.GONE);
+
+
+                            //Refresh Full Post Page//
+                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                            Fragment fragment = new FullPostFragment();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("ItemKey", postKey);
+                            bundle.putString("uId", posterId);
+                            fragment.setArguments(bundle);
+                            activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_up,R.anim.slide_out_up).replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+
+                        }
+                    });
                 }
                 else {
                     takeOffer.setVisibility(View.GONE);
+                    pinPost.setVisibility(View.GONE);
                 }
             }
             //If you are the offerer the take offer button will gone//
             else {
                 takeOffer.setVisibility(View.GONE);
+                pinPost.setVisibility(View.VISIBLE);
+                unpin.setClickable(false);
+                showPin(offer);
             }
         }
         offerListAdapter.notifyDataSetChanged();
+    }
+
+    private void showPin(Offer offer) {
+        p_username.setText(offer.getUserName());
+
+        Picasso.get()
+                .load(offer.getProfileUrl())
+                .placeholder(R.drawable.ic_baseline_image_24)
+                .fit()
+                .into(p_profile);
+
+        List<SlideModel> slideModels = new ArrayList<>();
+        //multiple images
+        String rep = offer.getImageUrl().replace("]","");
+        String rep1 = rep.replace("[","");
+        String rep2 = rep1.replace(" ","");
+        String[] pictures = rep2.split(",");
+
+
+        for (int i =0 ; i < pictures.length ; i++){
+
+            slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
+
+        }
+
+        p_img.setImageList(slideModels, ScaleTypes.FIT);
+        p_rating.setText(offer.getRating());
+        p_itemName.setText("Item Name : "+offer.getItemName());
+        p_itemDetails.setText("Item Details : "+offer.getItemDetails());
+        p_condition.setText("Item Condition : "+offer.getItemCondition());
+        p_value.setText("Item Value : "+offer.getItemValue());
+        p_loc.setText("Location : "+offer.getLocation());
+
+
     }
 
     private void showFullPost(DataSnapshot snapshot) {
