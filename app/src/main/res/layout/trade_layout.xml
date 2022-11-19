@@ -94,12 +94,12 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_marginBottom="@dimen/_5sdp"
-                        android:background="@drawable/btn_upload_ui"
+                        android:background="@drawable/button_ui"
                         android:fontFamily="@font/inter"
                         android:text="confirm"
                         android:textFontWeight="600"
                         android:textSize="@dimen/_6ssp"
-                        app:backgroundTint="#3DA9FC" />
+                        app:backgroundTint="#3DA9FC"/>
 
                     <Button
                         android:id="@+id/trade_cancel"

@@ -29,13 +29,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PendingFragment extends Fragment {
-    private ArrayList<Trade> tradeList;
+    private List<Trade> tradeList;
     private DatabaseReference tradeReference;
     private RecyclerView rv_Pending;
     private PendingAdapter pendingAdapter;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -75,6 +75,15 @@ public class PendingFragment extends Fragment {
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
+
+
+
+
+
+
 
 
 

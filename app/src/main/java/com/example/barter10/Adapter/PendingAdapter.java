@@ -44,7 +44,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHolder> {
     private Context context;
     private List<Trade> tradeList;
-
+    private Dialog dialog;
     public PendingAdapter(Context context, List<Trade> tradeList) {
         this.context = context;
         this.tradeList = tradeList;
@@ -111,6 +111,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         holder.offererName.setText(trade.getOffererName());
 
         List<SlideModel> slideModels2 = new ArrayList<>();
+
         //multiple images
         String rep3 = trade.getOffererImg().replace("]","");
         String rep4 = rep3.replace("[","");
@@ -129,6 +130,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
         holder.offererImg.setImageList(slideModels2, ScaleTypes.FIT);
 
+        DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
+        DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
 
 
 
@@ -137,17 +140,17 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             @Override
             public void onClick(View view) {
 
+
                 //Check if current user is == to the offeree//
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+
+                    uptradeStatus.child("offeree").setValue("true");
 
                     String offereeID = FirebaseAuth.getInstance().getUid();
                     DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeID).child(postKey);
 
                     //If Offeree click the confirm, the value will change to true instead of null//
                     tradeStatus.child("offeree").setValue("true");
-
-                    DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
-                    uptradeStatus.child("offeree").setValue("true");
 
                 }
                 else{
@@ -158,20 +161,30 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     //If Offerer click the confirm, the value will change to true instead of null//
                     tradeStatus2.child("offerer").setValue("true");
 
-                    DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
                     uptradeStatus2.child("offerer").setValue("true");
-                }
 
+
+
+
+
+
+                }
 
 
 
             }
         });
 
+
+
+
+
         //Button Cancel//
         holder.cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
                     String offereeID = FirebaseAuth.getInstance().getUid();
@@ -179,8 +192,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeID).child(postKey);
                     //If Offeree click the cancel, the value will change to false instead of null//
                     tradeStatus.child("offeree").setValue("false");
-                    DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
+
                     uptradeStatus.child("offeree").setValue("false");
+
 
                 }
                 else{
@@ -189,17 +203,89 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference tradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererID).child(postKey);
                     //If Offerer click the cancel, the value will change to false instead of null//
                     tradeStatus2.child("offerer").setValue("false");
-
-                    DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
                     uptradeStatus2.child("offerer").setValue("false");
+
+
+
 
                 }
             }
         });
 
+
+
+
+
+        //Disable the confirm button after cliking it by offeree
+        uptradeStatus.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String btn_offeree = snapshot.child("offeree").getValue().toString();
+
+                if (btn_offeree.equals("true")){
+
+                    holder.confirm.setBackgroundColor(Color.LTGRAY);
+                    holder.confirm.setClickable(false);
+
+                    holder.cancel.setBackgroundColor(Color.LTGRAY);
+                    holder.cancel.setClickable(false);
+
+
+
+                }else if (btn_offeree.equals("false")){
+                    holder.confirm.setBackgroundColor(Color.LTGRAY);
+                    holder.confirm.setClickable(false);
+
+                    holder.cancel.setBackgroundColor(Color.LTGRAY);
+                    holder.cancel.setClickable(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        //Disable the button of offerer after clicking the confirm button
+        uptradeStatus2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String btn_offerer = snapshot.child("offerer").getValue().toString();
+
+                if (btn_offerer.equals("true")){
+
+                    holder.confirm.setBackgroundColor(Color.LTGRAY);
+                    holder.confirm.setClickable(false);
+
+                    holder.cancel.setBackgroundColor(Color.LTGRAY);
+                    holder.cancel.setClickable(false);
+
+                }else if (btn_offerer.equals("false")){
+
+                    holder.confirm.setBackgroundColor(Color.LTGRAY);
+                    holder.confirm.setClickable(false);
+
+                    holder.cancel.setBackgroundColor(Color.LTGRAY);
+                    holder.cancel.setClickable(false);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         //Get status in Trade Reference//
         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
             updateStatusOfferee(offererId,postKey,trade);
+
+
+
         }
         else {
             updateStatusOfferer(offereeId,postKey,trade);
@@ -208,6 +294,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
     }
+
+
 
     private void updateStatusOfferee(String offererId, String postKey, Trade trade) {
 
@@ -240,6 +328,31 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
 
+                    dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.popup_rating);
+
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialog.show();
+
+                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
+                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
+
+                    confirm_rate.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+
+                            Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
+
+
+                        }
+                    });
+
+
+                    offeree.removeValue();
+                    offerer.removeValue();
+
+
 
                 }
                 else if (valOfferee.equals("true") && valOfferer.equals("false") ||
@@ -260,6 +373,16 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
+
+
+
+                    offeree.removeValue();
+                    offerer.removeValue();
+
+
+
+
+
                 }
 
             }
@@ -342,6 +465,15 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             offererImg = itemView.findViewById(R.id.offerer_image_slider);
             confirm = itemView.findViewById(R.id.trade_confirm);
             cancel = itemView.findViewById(R.id.trade_cancel);
+
+
+
+
+
+
+
+
+
 
 
         }

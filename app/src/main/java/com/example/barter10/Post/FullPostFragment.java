@@ -146,6 +146,8 @@ public class FullPostFragment extends Fragment {
 
 
 
+
+
         //Show pinned post//
         pinReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -161,10 +163,14 @@ public class FullPostFragment extends Fragment {
             }
         });
 
+
+
+
         //Show Offers//
         offerReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Offer viewOffers = dataSnapshot.getValue(Offer.class);
                     list.add(viewOffers);
@@ -177,6 +183,13 @@ public class FullPostFragment extends Fragment {
 
             }
         });
+
+
+
+
+
+
+
 
 
         //Check if the post is already taken//

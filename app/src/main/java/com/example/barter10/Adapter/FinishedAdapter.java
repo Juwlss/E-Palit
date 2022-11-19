@@ -112,14 +112,16 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
 
         String tradeStats = trade.getStatus();
         if (tradeStats.equals("true")){
+
+
             holder.swapStatus.setImageResource(R.drawable.ic_swap_success);
 
             //Remove in pending//
-            DatabaseReference tradeReference1 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
-            DatabaseReference tradeReference2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
-
-            tradeReference1.removeValue();
-            tradeReference2.removeValue();
+//            DatabaseReference tradeReference1 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
+//            DatabaseReference tradeReference2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
+//
+//            tradeReference1.removeValue();
+//            tradeReference2.removeValue();
 
 
         }
@@ -127,11 +129,11 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
             holder.swapStatus.setImageResource(R.drawable.ic_swap_failed);
 
             //Remove in pending//
-            DatabaseReference tradeReference1 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
-            DatabaseReference tradeReference2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
-
-            tradeReference1.removeValue();
-            tradeReference2.removeValue();
+//            DatabaseReference tradeReference1 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
+//            DatabaseReference tradeReference2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
+//
+//            tradeReference1.removeValue();
+//            tradeReference2.removeValue();
         }
 
 
