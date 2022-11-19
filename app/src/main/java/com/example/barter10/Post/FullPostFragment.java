@@ -68,7 +68,6 @@ public class FullPostFragment extends Fragment {
     DatabaseReference pinReference;
     RecyclerView rv_FullPost;
     OfferListAdapter offerListAdapter;
-    RecyclerView rv_Pin;
     ArrayList<Offer> list;
 
     @Override
@@ -127,10 +126,8 @@ public class FullPostFragment extends Fragment {
             }
         });
         //Reclyer View for Pin Post//
-        rv_Pin = view.findViewById(R.id.rv_pin);
         pinReference = FirebaseDatabase.getInstance().getReference("Offer").child("PinnedPost").child(itemKey);
-        rv_Pin.setHasFixedSize(true);
-        rv_Pin.setLayoutManager(new LinearLayoutManager(getContext()));
+
 
         //Reclyer View for Offers//
         rv_FullPost = view.findViewById(R.id.rv_Offer);
@@ -141,7 +138,7 @@ public class FullPostFragment extends Fragment {
         list =  new ArrayList<>();
         offerListAdapter =  new OfferListAdapter(getContext(), list);
         rv_FullPost.setAdapter(offerListAdapter);
-        rv_Pin.setAdapter(offerListAdapter);
+
 
 
 
@@ -170,7 +167,7 @@ public class FullPostFragment extends Fragment {
         offerReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                list.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Offer viewOffers = dataSnapshot.getValue(Offer.class);
                     list.add(viewOffers);

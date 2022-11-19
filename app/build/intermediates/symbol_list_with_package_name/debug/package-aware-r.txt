@@ -4306,7 +4306,6 @@ id rotate_scroll_wheel
 id rounded
 id row_index_key
 id rv_Offer
-id rv_pin
 id s_btnBack
 id save_non_transition_alpha
 id save_overlay_view

@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.example.barter10.Adapter.UploadListAdapter;
 import com.example.barter10.Home;
 import com.example.barter10.Model.Upload;
+import com.example.barter10.Model.User;
 import com.example.barter10.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -280,11 +281,14 @@ public class activityUpload extends AppCompatActivity{
                                             String name;
                                             for (DataSnapshot dataSnapshot : snapshot.getChildren()){
 
+
+                                                User user = dataSnapshot.getValue(User.class);
+
                                                 if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
 
                                                     String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
 
-                                                    int rate = 0;
+                                                    int rate = user.getRating();
 
                                                     String rating = "Rating: "+rate+"/5";
 

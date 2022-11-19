@@ -113,7 +113,6 @@
                             android:textFontWeight="600" />
 
 
-
                         <com.denzcoskun.imageslider.ImageSlider
                             android:id="@+id/image_slider"
                             android:layout_width="wrap_content"
@@ -285,13 +284,7 @@
                     android:textStyle="bold"
                     app:backgroundTint="@null" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_pin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/btnConfirmPin"
-                    android:layout_marginTop="2dp"
-                    android:nestedScrollingEnabled="false"/>
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_Offer"

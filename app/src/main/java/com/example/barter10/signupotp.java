@@ -170,7 +170,7 @@ public class signupotp extends AppCompatActivity {
                 if (task.isSuccessful()){
 
 
-                    User user = new User(FirebaseAuth.getInstance().getUid(), full,pic,userz,pass,pho);
+                    User user = new User(FirebaseAuth.getInstance().getUid(), full,pic,userz,pass,pho,0);
 
                     database.child(FirebaseAuth.getInstance().getUid()).setValue(user);
 
