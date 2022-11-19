@@ -29,6 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyViewHolder> {
@@ -54,12 +55,14 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Offer offer = list.get(position);
 
+        //Show Offer Details//
         holder.userName.setText(offer.getUserName());
-        holder.location.setText(offer.getLocation());
+        holder.rating.setText(offer.getRating());
         holder.itemName.setText("Item Name : "+offer.getItemName());
         holder.itemDetails.setText("Item Details : "+offer.getItemDetails());
         holder.itemCondition.setText("Item Condition : "+offer.getItemCondition());
         holder.itemValue.setText("Item Value : "+offer.getItemValue());
+        holder.location.setText("Location : "+offer.getLocation());
 
         List<SlideModel> slideModels = new ArrayList<>();
         //multiple images
@@ -67,8 +70,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         String rep1 = rep.replace("[","");
         String rep2 = rep1.replace(" ","");
         String[] pictures = rep2.split(",");
-
-
 
 
         for (int i =0 ; i < pictures.length ; i++){
@@ -87,21 +88,22 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                 .fit()
                 .into(holder.userProfile);
 
-        //Determine if post is pinned or not//
 
+        //Determine if post is pinned or not//
         Boolean getPinValue = offer.getPinValue();
 
         if(getPinValue.equals(true)){
+            //Offer pinned//
             holder.subMenu.setImageResource(R.drawable.ic_pin);
         }
         else {
+            //Offer Unpin//
             holder.subMenu.setImageResource(R.drawable.ic_unpin);
         }
 
 
-        //Check if the clicked post is on the current user//
+        //Hides the pin button to the offerers//
         String posterId = offer.getPosterId();
-
         if(FirebaseAuth.getInstance().getUid().equals(posterId) ){
             holder.subMenu.setVisibility(View.VISIBLE);
         }
@@ -111,46 +113,30 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
 
         //Methods for pinning the item//
-
         holder.subMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //Pin Methods Start//
 
-                //Database Reference//
                 DatabaseReference pinRef = FirebaseDatabase.getInstance().getReference("Offer");
 
-                //Key and Id Holder//
-                Offer postOffer = list.get(holder.getAdapterPosition());
-                String uid = offer.getUid();
-                String url = offer.getImageUrl();
-                String profileUrl = offer.getProfileUrl();
-                String userName = offer.getUserName();
-                String location = offer.getLocation();
-                String itemName = offer.getItemName();
-                String itemCondition = offer.getItemCondition();
-                String itemDetails = offer.getItemDetails();
-                String itemValue = offer.getItemValue();
-                String posterId = offer.getPosterId();
                 String postKey = offer.getPostKey();
                 String offerKey = offer.getOfferKey();
                 Boolean getPinValue = offer.getPinValue();
 
-
-                //Conditions//
+                //Pinning the Post//
                 if (getPinValue.equals(false)) {
                     Toast.makeText(context, "Pin", Toast.LENGTH_SHORT).show();
                     holder.subMenu.setImageResource(R.drawable.ic_unpin);
-                    getPinValue = true;
 
-                    //Add To Firebase//
-                    Offer offer = new Offer(uid,url,profileUrl,userName,location, itemName, itemCondition, itemDetails,itemValue,postKey,posterId,offerKey,getPinValue);
                     pinRef.child("PinnedPost").child(postKey).setValue(offer);
 
+                    HashMap changePinValue = new HashMap();
+                    changePinValue.put("pinValue", true);
+                    pinRef.child("PinnedPost").child(postKey).updateChildren(changePinValue);
 
                     //Deletion of pin//
-
                     DatabaseReference pinDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     pinDelete.child(offerKey).removeValue();
 
@@ -165,26 +151,26 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                     bundle.putString("uId", posterId);
                     fragment.setArguments(bundle);
                     activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_up,R.anim.slide_out_up).replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
-
                     //Pin Methods End//
 
-
+                //Unpinning the post//
                 } else {
                     Toast.makeText(context, "Unpin", Toast.LENGTH_SHORT).show();
                     holder.subMenu.setImageResource(R.drawable.ic_pin);
-                    getPinValue = false;
+
 
                     //Unpin Methods Start//
-
-                    Offer addToOfferReference = new Offer(uid,url,profileUrl,userName,location, itemName, itemCondition, itemDetails,itemValue,postKey,posterId,offerKey,getPinValue);
                     DatabaseReference OfferReference = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
-                    OfferReference.child(offerKey).setValue(addToOfferReference);
+                    OfferReference.child(offerKey).setValue(offer);
+
+                    //Updating pin Value//
+                    HashMap changePinValue = new HashMap();
+                    changePinValue.put("pinValue", false);
+                    OfferReference.child(offerKey).updateChildren(changePinValue);
 
                     //Deletion of pin//
                     DatabaseReference unpin= FirebaseDatabase.getInstance().getReference("Offer").child("PinnedPost").child(postKey);
                     unpin.removeValue();
-
-                    //Show Status//
 
                     //Refresh Full Post Page//
                     AppCompatActivity activity2 = (AppCompatActivity) view.getContext();
@@ -199,7 +185,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
                 }
 
-
             }
         });
     }
@@ -211,7 +196,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView userName, location, itemName, itemDetails, itemCondition, itemValue;
+        TextView userName, rating, itemName, itemDetails, itemCondition, itemValue,location;
         ImageView  btnOfferMsg, subMenu, userProfile;
         ImageSlider offerImg;
 
@@ -219,11 +204,12 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             super(itemView);
 
             userName = itemView.findViewById(R.id.o_username);
-            location = itemView.findViewById(R.id.o_location);
+            rating = itemView.findViewById(R.id.o_rating);
             itemName = itemView.findViewById(R.id.o_itemName);
             itemDetails = itemView.findViewById(R.id.o_itemDetails);
             itemCondition = itemView.findViewById(R.id.o_itemCondition);
             itemValue = itemView.findViewById(R.id.o_itemValue);
+            location = itemView.findViewById(R.id.o_location);
             offerImg = itemView.findViewById(R.id.o_image_slider);
             btnOfferMsg = itemView.findViewById(R.id.btnOfferMsg);
             userProfile = itemView.findViewById(R.id.o_userProfile);

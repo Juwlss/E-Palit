@@ -238,7 +238,12 @@ public class OfferItemFragment extends Fragment {
                                                     //uploading to firebase
                                                     Boolean pinValue = false;
 
-                                                    Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),urlStrings.toString(),Profilepic,name,itemLocation, itemName, itemCondition, itemDetails,itemValue,getKey,getUid,postId, pinValue);
+
+                                                    int rate = 0;
+
+                                                    String rating = "Rating: "+rate+"/10";
+
+                                                    Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),urlStrings.toString(),Profilepic,name,rating, itemName, itemCondition, itemDetails,itemValue,itemLocation,getKey,getUid,postId, pinValue);
                                                     databaseReference.child(getKey).child(postId).setValue(offer);//setting primary key
 
                                                     break;

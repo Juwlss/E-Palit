@@ -20,11 +20,12 @@ public class Upload {
     private String itemValue;
     private String itemPreference;
     private String timer;
+    private Boolean takeOffer;
 
     public Upload() {
     }
 
-    public Upload(String uid, String imageUrl, String userName, String rating, String profileUrl, String location, String itemName, String itemCondition, String category1, String itemDetails, String itemValue, String itemPreference, String timer) {
+    public Upload(String uid, String imageUrl, String userName, String rating, String profileUrl, String location, String itemName, String itemCondition, String category1, String itemDetails, String itemValue, String itemPreference, String timer, Boolean takeOffer) {
         this.uid = uid;
         this.imageUrl = imageUrl;
         this.userName = userName;
@@ -38,6 +39,15 @@ public class Upload {
         this.itemValue = itemValue;
         this.itemPreference = itemPreference;
         this.timer = timer;
+        this.takeOffer = takeOffer;
+    }
+
+    public Boolean getTakeOffer() {
+        return takeOffer;
+    }
+
+    public void setTakeOffer(Boolean takeOffer) {
+        this.takeOffer = takeOffer;
     }
 
     public String getUid() {
