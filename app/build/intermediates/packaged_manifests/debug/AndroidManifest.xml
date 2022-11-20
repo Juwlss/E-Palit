@@ -35,6 +35,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Barter10" >
         <activity
+            android:name="com.example.barter10.TermsAndPolicy.Terms"
+            android:exported="true" />
+        <activity
+            android:name="com.example.barter10.TermsAndPolicy.Policy"
+            android:exported="true" />
+        <activity
             android:name="com.example.barter10.MessageActivity"
             android:exported="true" />
         <activity

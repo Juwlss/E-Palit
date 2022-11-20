@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barter10">
         <activity
+            android:name=".TermsAndPolicy.Terms"
+            android:exported="true" />
+        <activity
+            android:name=".TermsAndPolicy.Policy"
+            android:exported="true" />
+        <activity
             android:name=".MessageActivity"
             android:exported="true" />
         <activity
@@ -38,7 +44,6 @@
         <activity
             android:name=".Home"
             android:exported="true" />
-
         <activity
             android:name=".SignInSignUp.MainActivity"
             android:exported="true" />

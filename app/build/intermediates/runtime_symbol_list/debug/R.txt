@@ -4668,8 +4668,10 @@ int layout activity_main 0x7f0d001f
 int layout activity_message 0x7f0d0020
 int layout activity_newpass 0x7f0d0021
 int layout activity_otp 0x7f0d0022
+int layout activity_policy 0x7f0d00cd
 int layout activity_signup_new 0x7f0d0023
 int layout activity_signupotp 0x7f0d0024
+int layout activity_terms_policy 0x7f0d00ce
 int layout activity_upload 0x7f0d0025
 int layout browser_actions_context_menu_page 0x7f0d0026
 int layout browser_actions_context_menu_row 0x7f0d0027
@@ -4725,8 +4727,6 @@ int layout fragment_update_post 0x7f0d0058
 int layout fragment_view_search 0x7f0d0059
 int layout fragment_visitprofile 0x7f0d005a
 int layout image_slider 0x7f0d005b
-int layout layout_privacypolicy 0x7f0d005c
-int layout layout_terms 0x7f0d005d
 int layout listing_layout 0x7f0d005e
 int layout m3_alert_dialog 0x7f0d005f
 int layout m3_alert_dialog_actions 0x7f0d0060

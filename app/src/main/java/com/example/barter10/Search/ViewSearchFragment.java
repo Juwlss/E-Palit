@@ -96,7 +96,7 @@ public class ViewSearchFragment extends Fragment implements View.OnClickListener
 
         postReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
-        Query query = postReference.orderByChild("ApprovedPost").startAt(getSearchValue).endAt(getSearchValue+"\uf8ff");
+        Query query = postReference.orderByChild("itemName").startAt(getSearchValue).endAt(getSearchValue+"\uf8ff");
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

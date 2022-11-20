@@ -112,6 +112,7 @@ public class MessageActivity extends AppCompatActivity {
                     .placeholder(R.drawable.ic_default_picture)
                     .into(profileImage);
 
+            rating.setText("Rating: "+user.getRating()+"/5");
             readMessage(FirebaseAuth.getInstance().getUid(), userid, user.getProfilepic());
 
             }

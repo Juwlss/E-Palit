@@ -4669,8 +4669,10 @@ layout activity_main
 layout activity_message
 layout activity_newpass
 layout activity_otp
+layout activity_policy
 layout activity_signup_new
 layout activity_signupotp
+layout activity_terms_policy
 layout activity_upload
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -4726,8 +4728,6 @@ layout fragment_update_post
 layout fragment_view_search
 layout fragment_visitprofile
 layout image_slider
-layout layout_privacypolicy
-layout layout_terms
 layout listing_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

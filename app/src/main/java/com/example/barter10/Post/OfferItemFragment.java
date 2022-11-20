@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.barter10.Adapter.UploadListAdapter;
 import com.example.barter10.Model.Offer;
+import com.example.barter10.Model.User;
 import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -228,6 +229,8 @@ public class OfferItemFragment extends Fragment {
 //                                            }
                                             for (DataSnapshot dataSnapshot : snapshot.getChildren()){
 
+                                                User user = dataSnapshot.getValue(User.class);
+
                                                 if (dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getUid())){
 
                                                     String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
@@ -239,9 +242,9 @@ public class OfferItemFragment extends Fragment {
                                                     Boolean pinValue = false;
 
 
-                                                    int rate = 0;
+                                                    float rate = user.getRating();
 
-                                                    String rating = "Rating: "+rate+"/10";
+                                                    String rating = "Rating: "+rate+"/5";
 
                                                     Offer offer = new Offer(FirebaseAuth.getInstance().getUid(),urlStrings.toString(),Profilepic,name,rating, itemName, itemCondition, itemDetails,itemValue,itemLocation,getKey,getUid,postId, pinValue);
                                                     databaseReference.child(getKey).child(postId).setValue(offer);//setting primary key

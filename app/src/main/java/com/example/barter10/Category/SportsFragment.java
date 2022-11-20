@@ -40,6 +40,7 @@ public class SportsFragment extends Fragment implements PostImageAdapter.OnItemC
     private PostImageAdapter postImageAdapter;
     private FirebaseAuth firebaseAuth;
     private String currentId;
+    private String rating;
 
     public SportsFragment() {
         // Required empty public constructor
@@ -91,6 +92,13 @@ public class SportsFragment extends Fragment implements PostImageAdapter.OnItemC
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
+
+
+
+
 
         return view;
     }

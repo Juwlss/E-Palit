@@ -62,7 +62,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:fontFamily="@font/inter"
-                                    android:text="Upload Item"
+                                    android:text="Offer Item"
                                     android:textColor="#094067"
                                     android:textFontWeight="700"
                                     android:textSize="@dimen/_20sdp"

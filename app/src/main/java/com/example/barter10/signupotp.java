@@ -115,6 +115,8 @@ public class signupotp extends AppCompatActivity {
 
             }
         });
+
+
         findViewById(R.id.resendsgn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

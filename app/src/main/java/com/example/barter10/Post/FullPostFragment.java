@@ -56,6 +56,7 @@ public class FullPostFragment extends Fragment {
     private  TextView itemDetails;
     private TextView estimatedValue;
     private  TextView preference;
+    private TextView rating;
     private Button takeOffer;
 
     private ImageSlider postImage;
@@ -114,7 +115,7 @@ public class FullPostFragment extends Fragment {
         itemDetails = view.findViewById(R.id.itemDetails);
         estimatedValue = view.findViewById(R.id.itemValue);
         preference = view.findViewById(R.id.itemPref);
-
+        rating = view.findViewById(R.id.rating);
         postImage = view.findViewById(R.id.image_slider);
 
         profileImg = view.findViewById(R.id.userProfile);
@@ -253,6 +254,8 @@ public class FullPostFragment extends Fragment {
 
                         takeOfferMethod(snapshot,uid,itemKey);
 
+
+
                         Toast.makeText(activity, ""+itemKey, Toast.LENGTH_SHORT).show();
                     }
 
@@ -328,7 +331,6 @@ public class FullPostFragment extends Fragment {
 
 
 
-
                 }
 
                 @Override
@@ -336,6 +338,9 @@ public class FullPostFragment extends Fragment {
                     Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
+
+
+
 
         }
     }
@@ -505,31 +510,25 @@ public class FullPostFragment extends Fragment {
 
     private void showFullPost(DataSnapshot snapshot) {
 
-        String iName  = snapshot.child("itemName").getValue().toString();
-        String uName  = snapshot.child("userName").getValue().toString();
-        String profileUrl = snapshot.child("profileUrl").getValue().toString();
-        String loc  = snapshot.child("location").getValue().toString();
 
-        String img  = snapshot.child("imageUrl").getValue().toString();
+        Upload upload = snapshot.getValue(Upload.class);
 
-        String iCondition  = snapshot.child("itemCondition").getValue().toString();
-        String iDetails  = snapshot.child("itemDetails").getValue().toString();
-        String value  = snapshot.child("itemValue").getValue().toString();
-        String pref  = snapshot.child("itemPreference").getValue().toString();
 
-        itemName.setText(iName);
-        userName.setText(uName);
-        location.setText("Location : "+loc);
-        itemCondition.setText("Condition : "+iCondition);
-        itemDetails.setText("Details : "+iDetails);
-        estimatedValue.setText("Estimated Value  : "+value);
-        preference.setText("Preferences : "+pref);
+
+        itemName.setText(upload.getItemName());
+        rating.setText(upload.getRating());
+        userName.setText(upload.getUserName());
+        location.setText("Location : "+upload.getLocation());
+        itemCondition.setText("Condition : "+upload.getItemCondition());
+        itemDetails.setText("Details : "+upload.getItemDetails());
+        estimatedValue.setText("Estimated Value  : "+upload.getItemValue());
+        preference.setText("Preferences : "+upload.getItemPreference());
 
 
         List<SlideModel> slideModels = new ArrayList<>();
 
         //multiple images
-        String rep = img.replace("]","");
+        String rep = upload.getImageUrl().replace("]","");
         String rep1 = rep.replace("[","");
         String rep2 = rep1.replace(" ","");
         String[] pictures = rep2.split(",");
@@ -548,7 +547,7 @@ public class FullPostFragment extends Fragment {
         postImage.setImageList(slideModels, ScaleTypes.FIT);
 
         Picasso.get()
-                .load(profileUrl)
+                .load(upload.getProfileUrl())
                 .placeholder(R.drawable.ic_baseline_image_24)
                 .fit()
                 .into(profileImg);

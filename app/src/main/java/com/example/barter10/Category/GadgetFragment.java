@@ -42,7 +42,8 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
     private PostImageAdapter postImageAdapter;
     private FirebaseAuth firebaseAuth;
     private String currentId;
-
+    private String profiePic;
+    private String rating;
 
     public GadgetFragment() {
         // Required empty public constructor
@@ -101,9 +102,57 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
             }
         });
 
+        //getting profile picture from user
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child("profilepic");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                profiePic = snapshot.getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child("rating");
+
+        ratingReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rating = snapshot.getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
+        //updating profile picture
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
+        Query update = reference.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getUid());
+        update.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    dataSnapshot.child("profileUrl").getRef().setValue(profiePic);
+                    dataSnapshot.child("rating").getRef().setValue("Rating:"+rating+"/5");
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
         return view;
