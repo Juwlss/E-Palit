@@ -148,7 +148,7 @@ public class visitprofile extends Fragment {
 
 
         //Displaying userpost
-        databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
+        databaseReference = FirebaseDatabase.getInstance().getReference("ClosedBid");
         Query qPost = databaseReference.orderByChild("uid").equalTo(profieid);
 
         qPost.addValueEventListener(new ValueEventListener() {
@@ -175,28 +175,27 @@ public class visitprofile extends Fragment {
         });
 
         //display the close bid of user
-        DatabaseReference closeRef = FirebaseDatabase.getInstance().getReference("CloseBid").child(FirebaseAuth.getInstance().getUid());
-
-        closeRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                //fetching from firebase to display
-                mUploads.clear();
-                for(DataSnapshot postSnapshot : snapshot.getChildren()){
-                    Upload upload = postSnapshot.getValue(Upload.class);
-                    upload.setKey(postSnapshot.getKey());
-                    mUploads.add(upload);
-
-
-                }
-                selfPostAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+//        DatabaseReference closeRef = FirebaseDatabase.getInstance().getReference("ClosedBid");
+//
+//        Query queryClose = closeRef.orderByChild("uid").equalTo(profieid);
+//        queryClose.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                //fetching from firebase to display
+//                mUploads.clear();
+//                for(DataSnapshot postSnapshot : snapshot.getChildren()){
+//                    Upload upload = postSnapshot.getValue(Upload.class);
+//                    upload.setKey(postSnapshot.getKey());
+//                        mUploads.add(upload);
+//                }
+//                selfPostAdapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
 
 
 

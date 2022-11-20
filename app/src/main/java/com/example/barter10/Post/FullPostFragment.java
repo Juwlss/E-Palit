@@ -325,6 +325,31 @@ public class FullPostFragment extends Fragment {
                     offereeReference.updateChildren(hashMap);
 
 
+
+
+
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot){
+                            Upload upload = snapshot.getValue(Upload.class);
+
+                            DatabaseReference createClosedBid = FirebaseDatabase.getInstance().getReference("ClosedBid").child(itemKey);
+                            createClosedBid.setValue(upload);
+
+
+
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+                    databaseReference.removeValue();
+                    offereeReference.child("profileUrl").removeValue();
+                    offereeReference.child("rating").removeValue();
+
                     //Go home//
                     Intent intent = new Intent(getActivity(), Home.class);
                     startActivity(intent);

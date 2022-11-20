@@ -686,8 +686,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
 
-                    offeree.removeValue();
-                    offerer.removeValue();
+//                    offeree.removeValue();
+//                    offerer.removeValue();
 
 
 
@@ -712,9 +712,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     finished2.setValue(trade);
 
 
-
-                    offeree.removeValue();
-                    offerer.removeValue();
+//
+//                    offeree.removeValue();
+//                    offerer.removeValue();
 
 
 
@@ -739,9 +739,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     finished2.setValue(trade);
 
 
-
-                    offeree.removeValue();
-                    offerer.removeValue();
+//
+//                    offeree.removeValue();
+//                    offerer.removeValue();
 
                 }
 
@@ -789,9 +789,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 //                    DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offereeId).child(postKey);
 //                    finished2.setValue(trade);
 
-
-                    offerer.removeValue();
-                    offeree.removeValue();
+//
+//                    offerer.removeValue();
+//                    offeree.removeValue();
 
                 }
                 else if (valOfferee.equals("true") && valOfferer.equals("false") ||
@@ -811,9 +811,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 //                    DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offereeId).child(postKey);
 //                    finished2.setValue(trade);
 
-
-                    offerer.removeValue();
-                    offeree.removeValue();
+//
+//                    offerer.removeValue();
+//                    offeree.removeValue();
 
 
 
@@ -832,10 +832,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 //                    finished2.setValue(trade);
 
 
-
-
-                    offerer.removeValue();
-                    offeree.removeValue();
+//
+//
+//                    offerer.removeValue();
+//                    offeree.removeValue();
 
                 }
 
