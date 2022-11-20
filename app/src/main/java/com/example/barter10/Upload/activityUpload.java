@@ -288,7 +288,7 @@ public class activityUpload extends AppCompatActivity{
 
                                                     String Profilepic = dataSnapshot.child("profilepic").getValue().toString();
 
-                                                    int rate = user.getRating();
+                                                    float rate = user.getRating();
 
                                                     String rating = "Rating: "+rate+"/5";
 

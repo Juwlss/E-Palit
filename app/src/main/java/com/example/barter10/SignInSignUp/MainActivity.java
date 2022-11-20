@@ -48,8 +48,11 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "FacebookAuthentication";
 
     private ImageButton  btnGoogle, btnFacebook;
-
+    private float rate;
     int passvis;
     EditText username, password;
     Button signin;
@@ -344,12 +347,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
         if(user!=null){
+
+            DatabaseReference rateRef = FirebaseDatabase.getInstance().getReference("users");
+            rateRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                        if (dataSnapshot.child("userID").equals(user.getUid())){
+                            rate = (float) dataSnapshot.child("rating").getValue();
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+
             User user1 = new User();
             assert user != null;
 
             user1.setUserID(user.getUid());
             user1.setUsername(user.getDisplayName());
             user1.setProfilepic(user.getPhotoUrl().toString());
+            user1.setRating(rate);
             firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
 
             startActivity(new Intent(MainActivity.this, Home.class));
@@ -371,19 +394,49 @@ public class MainActivity extends AppCompatActivity {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
 
+
+
+
+
+
+
+
+
+
                 firebaseAuth.signInWithCredential(credential).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         if(task.isSuccessful()){
 
                             FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                            DatabaseReference rateRef = FirebaseDatabase.getInstance().getReference("users");
+                            rateRef.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                        if (dataSnapshot.child("userID").equals(user.getUid())){
+                                            rate = (float) dataSnapshot.child("rating").getValue();
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
+
                             User user1 = new User();
                             assert user != null;
+
+
 
                             user1.setUserID(user.getUid());
                             user1.setUsername(user.getDisplayName());
                             user1.setProfilepic(user.getPhotoUrl().toString());
-
+                            user1.setRating(rate);
 
                             Toast.makeText(MainActivity.this, "sign in google", Toast.LENGTH_SHORT).show();
                             firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);

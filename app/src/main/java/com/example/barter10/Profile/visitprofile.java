@@ -48,7 +48,7 @@ public class visitprofile extends Fragment {
 
     private ImageView backbtn;
     private ImageView imageprofile;
-    private TextView username,followers,following;
+    private TextView username,followers,following,rating;
 
     private ImageButton btn_message,btn_report;
     private Button btn_follow;
@@ -73,7 +73,7 @@ public class visitprofile extends Fragment {
         username = view.findViewById(R.id.v_profilename);
         followers = view.findViewById(R.id.followers_count);
         following = view.findViewById(R.id.following_count);
-
+        rating = view.findViewById(R.id.rating);
         btn_message = view.findViewById(R.id.btn_message);
         btn_follow = view.findViewById(R.id.v_btn_follow);
         btn_report = view.findViewById(R.id.btn_report);
@@ -129,6 +129,9 @@ public class visitprofile extends Fragment {
                                 .load(Profilepic)
                                 .placeholder(R.drawable.ic_default_picture)
                                 .into(imageprofile);
+
+
+                        rating.setText("Rating: "+dataSnapshot.child("rating").getValue().toString()+"/5");
                         username.setText(dataSnapshot.child("username").getValue().toString());
                         break;
                     }

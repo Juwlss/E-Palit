@@ -93,7 +93,6 @@ public class ProfileFragment extends Fragment {
                     mUploads.add(upload);
 
 
-                    rating.setText(upload.getRating());
                 }
 
                 selfPostAdapter.notifyDataSetChanged();
@@ -136,6 +135,8 @@ public class ProfileFragment extends Fragment {
                                 .placeholder(R.drawable.ic_default_picture)
                                 .into(imageprofile);
 
+
+                        rating.setText("Rating: "+dataSnapshot.child("rating").getValue().toString()+"/5");
                         profilename.setText(dataSnapshot.child("username").getValue().toString());
                         break;
                     }

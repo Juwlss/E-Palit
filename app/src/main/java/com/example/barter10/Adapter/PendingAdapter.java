@@ -25,6 +25,7 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.List.FinishedFragment;
 import com.example.barter10.Model.Trade;
+import com.example.barter10.Model.User;
 import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -45,6 +46,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
     private Context context;
     private List<Trade> tradeList;
     private Dialog dialog;
+    private int rateCount =0;
+
     public PendingAdapter(Context context, List<Trade> tradeList) {
         this.context = context;
         this.tradeList = tradeList;
@@ -184,6 +187,11 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                         holder.cancel.setBackgroundColor(Color.LTGRAY);
                         holder.cancel.setClickable(false);
 
+
+
+
+
+
                     }else if (btn_offeree.equals("false")){
 
                         holder.confirm.setBackgroundColor(Color.LTGRAY);
@@ -285,16 +293,70 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     uptradeStatus.child("offeree").setValue("true");
 
-
                     //If Offeree click the confirm, the value will change to true instead of null//
                     tradeStatus.child("offeree").setValue("true");
 
 
+                    dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.popup_rating);
+
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialog.show();
+
+                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
+                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
+
+
+                    //getting how many users did rate the user
+                    DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId);
+                    countRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            rateCount = (int) snapshot.getChildrenCount();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
+
+
+                    DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
+                    ratingRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                User user = dataSnapshot.getValue(User.class);
+                                if (dataSnapshot.child("userID").getValue().toString().equals(offererId)){
+                                    confirm_rate.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+
+                                            float rating = user.getRating();
+                                            dataSnapshot.child("rating").getRef().setValue((ratingBar.getRating()+rating)/rateCount);
+                                            Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
+                                            dialog.dismiss();
+
+                                        }
+                                    });
+                                }
+
+
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
 
                 }
                 else{
-
 
                     //If Offerer click the confirm, the value will change to true instead of null//
                     tradeStatus2.child("offerer").setValue("true");
@@ -302,9 +364,69 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     uptradeStatus2.child("offerer").setValue("true");
 
 
+                    dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.popup_rating);
 
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialog.show();
+
+                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
+                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
+
+                    //getting how many users did rate the user
+                    DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId);
+                    countRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            rateCount = (int) snapshot.getChildrenCount();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
+
+
+
+
+                    DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
+                    ratingRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                User user = dataSnapshot.getValue(User.class);
+                                if (dataSnapshot.child("userID").getValue().toString().equals(offereeId)){
+                                    confirm_rate.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+
+                                            float rating = user.getRating();
+                                            dataSnapshot.child("rating").getRef().setValue((ratingBar.getRating()+rating)/rateCount);
+                                            Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
+                                            dialog.dismiss();
+
+                                        }
+                                    });
+                                }
+
+
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
                 }
+
+
+
+
 
 
 
@@ -338,6 +460,11 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
                 }
+
+
+
+
+
             }
         });
 
@@ -353,6 +480,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
         //Get status in Trade Reference//
         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+
             updateStatusOfferee(offererId,postKey,trade);
 
 
@@ -400,29 +528,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
 
-//                    dialog = new Dialog(context);
-//                    dialog.setContentView(R.layout.popup_rating);
-//
-//                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//                    dialog.show();
-//
-//                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
-//                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
-//
-//                    confirm_rate.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            dialog.dismiss();
-//
-//                            Toast.makeText(dialog.getContext(), String.valueOf(ratingBar.getRating()), Toast.LENGTH_SHORT).show();
-//
-//
-//                        }
-//                    });
 
 
-                    offeree.removeValue();
-                    offerer.removeValue();
+//                    offeree.removeValue();
+//                    offerer.removeValue();
 
 
 
@@ -448,8 +557,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
 
-                    offeree.removeValue();
-                    offerer.removeValue();
+//                    offeree.removeValue();
+//                    offerer.removeValue();
 
 
 

@@ -3,12 +3,12 @@ package com.example.barter10.Model;
 public class User {
     String userID, fullname, profilepic, username, userpassword, userPhone;
 
-    int rating;
+    float rating;
 
     public User() {
     }
 
-    public User(String userID, String fullname, String profilepic, String username, String userpassword, String userPhone, int rating) {
+    public User(String userID, String fullname, String profilepic, String username, String userpassword, String userPhone, float rating) {
         this.userID = userID;
         this.fullname = fullname;
         this.profilepic = profilepic;
@@ -66,11 +66,11 @@ public class User {
         this.userPhone = userPhone;
     }
 
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 }
