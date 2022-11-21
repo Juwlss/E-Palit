@@ -22,8 +22,12 @@ import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.concurrent.TimeUnit;
 
 public class signUp extends AppCompatActivity {
@@ -31,7 +35,7 @@ public class signUp extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-
+    private String usernameChecker;
 
     int passvis=1,passvis2=1;
     private EditText email,username, password, conpassword,phoNo;
@@ -125,12 +129,31 @@ public class signUp extends AppCompatActivity {
 
                 String checker = "^[9][0-9]{9}$";
 
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+
+                reference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                            usernameChecker = dataSnapshot.child("username").getValue().toString();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
 
                 if(phoNo.getText().toString().trim().isEmpty()){
                     Toast.makeText(signUp.this,"Enter Phone Number",Toast.LENGTH_SHORT).show();
                     return;
                 } else if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_email)) {
                     Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                } else if (usernameChecker.equals(str_username)) {
+                    username.setError("Username is already taken");
                 } else if (str_password.length() < 6) {
                     Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
                 } else if (!str_password.equals(str_conpass)){

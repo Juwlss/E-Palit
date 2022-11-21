@@ -174,28 +174,6 @@ public class visitprofile extends Fragment {
             }
         });
 
-        //display the close bid of user
-//        DatabaseReference closeRef = FirebaseDatabase.getInstance().getReference("ClosedBid");
-//
-//        Query queryClose = closeRef.orderByChild("uid").equalTo(profieid);
-//        queryClose.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                //fetching from firebase to display
-//                mUploads.clear();
-//                for(DataSnapshot postSnapshot : snapshot.getChildren()){
-//                    Upload upload = postSnapshot.getValue(Upload.class);
-//                    upload.setKey(postSnapshot.getKey());
-//                        mUploads.add(upload);
-//                }
-//                selfPostAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
 
 
 
