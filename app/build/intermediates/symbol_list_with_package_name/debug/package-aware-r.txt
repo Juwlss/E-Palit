@@ -4541,6 +4541,7 @@ id v_itemValue
 id v_location
 id v_profilename
 id v_rating
+id v_rv_Offer
 id v_userProfile
 id v_username
 id veriotp

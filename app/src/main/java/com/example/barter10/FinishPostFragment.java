@@ -1,9 +1,12 @@
 package com.example.barter10;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.barter10.Adapter.FinishedOfferAdapter;
 import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.User;
@@ -42,7 +46,12 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
     private ImageSlider p_postImg;
     private TextView p_itemName,p_userName,p_rating,p_location,p_condition,p_details,p_value,p_preference;
 
-    DatabaseReference closeBidReference,pinPostReference;
+    private RecyclerView rv_offers;
+    private FinishedOfferAdapter finishedOfferAdapter;
+    private List<Offer> offerList;
+
+
+    DatabaseReference closeBidReference,pinPostReference,offerReference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,7 +60,6 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
         View view = inflater.inflate(R.layout.fragment_finish_post, container, false);
 
         String postKey = getArguments().getString("ItemKey");
-        String uid = getArguments().getString("uId");
 
         //Getting ID in XML //
         btnBack = view.findViewById(R.id.v_btnPostBack);
@@ -77,6 +85,16 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
         p_value = view.findViewById(R.id.p_itemValue);
         p_location = view.findViewById(R.id.p_location);
 
+        //Reclyer View for Offers//
+        rv_offers = view.findViewById(R.id.v_rv_Offer);
+        offerReference = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+        rv_offers.setHasFixedSize(true);
+        rv_offers.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        offerList =  new ArrayList<>();
+        finishedOfferAdapter = new FinishedOfferAdapter(getContext(), offerList);
+        rv_offers.setAdapter(finishedOfferAdapter);
+
         //Methods//
         btnBack.setOnClickListener(this);
 
@@ -100,6 +118,24 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 showFinishPinPost(snapshot);
             }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //        Show Offers//
+        offerReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                offerList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    Offer viewOffers = dataSnapshot.getValue(Offer.class);
+                    offerList.add(viewOffers);
+                }
+                finishedOfferAdapter.notifyDataSetChanged();
+            }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
@@ -179,7 +215,8 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-        Fragment mFragment = new visitprofile();
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout, mFragment).commit();
+        //Go home//
+        Intent intent = new Intent(getActivity(), Home.class);
+        startActivity(intent);
     }
 }

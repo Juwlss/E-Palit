@@ -55,8 +55,6 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(mContext).inflate(R.layout.profile_post, parent, false);
-
-
         return new ImageViewHolder(v);
     }
 
@@ -96,6 +94,10 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
                 String uid = selectedItem.getUid();//STORE SPECIFIC USER ID
 
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+
                 Fragment fragment = new FinishPostFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("ItemKey", postKey);
