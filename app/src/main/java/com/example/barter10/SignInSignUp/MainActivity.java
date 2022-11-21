@@ -48,8 +48,11 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 
@@ -70,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     TextView create;
     private ImageView mImage;
     private RelativeLayout layout;
-
+    private float rating;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -332,15 +335,48 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
         if(user!=null){
-            User user1 = new User();
+
             assert user != null;
 
-            user1.setUserID(user.getUid());
-            user1.setUsername(user.getDisplayName());
-            user1.setProfilepic(user.getPhotoUrl().toString());
-            firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
+            User user1 = new User();
 
-            startActivity(new Intent(MainActivity.this, Home.class));
+
+
+            DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users");
+            ratingReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    User userrating = snapshot.getValue(User.class);
+
+                    if (snapshot.child(user.getUid()).exists()){
+
+
+                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, Home.class));
+                    }else if (!snapshot.child(user.getUid()).exists()){
+
+                        user1.setUserID(user.getUid());
+                        user1.setUsername(user.getDisplayName());
+                        user1.setProfilepic(user.getPhotoUrl().toString());
+                        user1.setRating(userrating.getRating());
+
+                        firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
+                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, Home.class));
+                    }
+
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+
+
+
         }
 
     }
@@ -365,21 +401,49 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
 
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            User user1 = new User();
+
                             assert user != null;
-
-                            user1.setUserID(user.getUid());
-                            user1.setUsername(user.getDisplayName());
-                            user1.setProfilepic(user.getPhotoUrl().toString());
+                            User user1 = new User();
 
 
-                            Toast.makeText(MainActivity.this, "sign in google", Toast.LENGTH_SHORT).show();
-                            firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
-                            Intent intent = new Intent(MainActivity.this, Home.class);
-                            intent.putExtra("username", user.getDisplayName());
-                            intent.putExtra("profilepic", user.getPhotoUrl().toString());
 
-                            startActivity(intent);
+                            DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
+                            ratingReference.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    User userrating = snapshot.getValue(User.class);
+
+                                    if (snapshot.exists()){
+                                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(MainActivity.this, Home.class);
+                                        intent.putExtra("username", user.getDisplayName());
+                                        intent.putExtra("profilepic", user.getPhotoUrl().toString());
+
+                                        startActivity(intent);
+
+                                    }else if (!snapshot.exists()){
+                                        user1.setUserID(user.getUid());
+                                        user1.setUsername(user.getDisplayName());
+                                        user1.setProfilepic(user.getPhotoUrl().toString());
+                                        user1.setRating(0);
+                                        firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
+
+                                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(MainActivity.this, Home.class);
+                                        intent.putExtra("username", user.getDisplayName());
+                                        intent.putExtra("profilepic", user.getPhotoUrl().toString());
+
+
+                                        startActivity(intent);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
                         }else{
                             Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }

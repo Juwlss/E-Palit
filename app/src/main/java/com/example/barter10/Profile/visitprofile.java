@@ -76,7 +76,6 @@ public class visitprofile extends Fragment {
         rating = view.findViewById(R.id.rating);
         btn_message = view.findViewById(R.id.btn_message);
         btn_follow = view.findViewById(R.id.v_btn_follow);
-        btn_report = view.findViewById(R.id.btn_report);
 
 
         //displaying post of user

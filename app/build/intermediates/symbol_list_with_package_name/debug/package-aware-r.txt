@@ -3819,7 +3819,6 @@ id btn_img
 id btn_logout
 id btn_message
 id btn_pending
-id btn_report
 id btn_send
 id btn_settings
 id btn_username
