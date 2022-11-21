@@ -265,7 +265,7 @@ public class OfferItemFragment extends Fragment {
 
 
 
-                                    Toast.makeText(getContext(), "Successfully Uploaded", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "Successfully Offered", Toast.LENGTH_SHORT).show();
                                     Fragment mFragment = new FullPostFragment();
                                     Bundle bundle = new Bundle();
                                     bundle.putString("ItemKey", getKey);

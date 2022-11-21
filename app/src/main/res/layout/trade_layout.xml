@@ -29,6 +29,21 @@
 
                 //offering
 
+                <Button
+                    android:id="@+id/visituser1"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent" />
+                <Button
+                    android:id="@+id/visituser2"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent" />
+
+
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/offerer_user"
                     android:layout_width="@dimen/_40sdp"

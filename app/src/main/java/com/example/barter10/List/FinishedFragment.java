@@ -61,7 +61,7 @@ public class FinishedFragment extends Fragment {
                     String statusValue = snap.child("status").getValue().toString();
 
                     if(statusValue.equals("null")){
-                        Toast.makeText(getContext(), "Wait for both approval", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getContext(), "Wait for both approval", Toast.LENGTH_SHORT).show();
                     }
                     else if (statusValue.equals("true")){
                         Trade trade = snap.getValue(Trade.class);

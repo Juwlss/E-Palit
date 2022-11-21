@@ -3,6 +3,7 @@ package com.example.barter10.Adapter;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
@@ -131,7 +132,50 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         }
 
 
+
         holder.offererImg.setImageList(slideModels2, ScaleTypes.FIT);
+
+
+
+        holder.visituser1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offereeId);
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+        holder.visituser2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offererId);
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
+
+
         //offeree
         DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
         DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
@@ -665,7 +709,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
                 if (valOfferee.equals("null") || valOfferer.equals("null")){
-                    Toast.makeText(context, "Status is still false1111", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "Status is still false1111", Toast.LENGTH_SHORT).show();
                 }
                 else if(valOfferee.equals("true") && valOfferer.equals("true")){
 
@@ -773,7 +817,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                 DatabaseReference offeree = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
 
                 if (valOfferee.equals("null") || valOfferer.equals("null")){
-                    Toast.makeText(context, "Status is still false2", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "Status is still false2", Toast.LENGTH_SHORT).show();
                 }
                 else if(valOfferee.equals("true") && valOfferer.equals("true")){
 
@@ -859,7 +903,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         CircleImageView offereeProfile,offererProfile;
         TextView offereeName,offererName;
         ImageSlider offereeImg,offererImg;
-        Button confirm,cancel;
+        Button confirm,cancel,visituser1,visituser2;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -873,6 +917,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             offererImg = itemView.findViewById(R.id.offerer_image_slider);
             confirm = itemView.findViewById(R.id.trade_confirm);
             cancel = itemView.findViewById(R.id.trade_cancel);
+            visituser1 = itemView.findViewById(R.id.visituser1);
+            visituser2 = itemView.findViewById(R.id.visituser2);
+
 
 
 

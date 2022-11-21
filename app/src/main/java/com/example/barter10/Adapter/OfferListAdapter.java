@@ -1,11 +1,13 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -19,9 +21,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.viewOffers;
 import com.example.barter10.Post.FullPostFragment;
+import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -92,6 +96,26 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                 .into(holder.userProfile);
 
 
+        holder.visitOffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offer.getUid());
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
+
         //Determine if post is pinned or not//
         Boolean getPinValue = offer.getPinValue();
 
@@ -145,8 +169,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
                 //Pinning the Post//
                 if (getPinValue.equals(false)) {
-                    Toast.makeText(context, "Pin", Toast.LENGTH_SHORT).show();
-                    pinRef.child(postKey).setValue(offer);
+                                      pinRef.child(postKey).setValue(offer);
 
                     HashMap changePinValue = new HashMap();
                     changePinValue.put("pinValue", true);
@@ -191,6 +214,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         TextView userName, rating, itemName, itemDetails, itemCondition, itemValue,location;
         ImageView  btnOfferMsg, subMenu, userProfile;
         ImageSlider offerImg;
+        Button visitOffer;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -206,6 +230,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             btnOfferMsg = itemView.findViewById(R.id.btnOfferMsg);
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
+            visitOffer = itemView.findViewById(R.id.visitOfferer);
 
         }
 

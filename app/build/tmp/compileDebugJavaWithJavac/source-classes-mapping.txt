@@ -98,25 +98,27 @@ com/example/barter10/BuildConfig.java
 com/example/barter10/Adapter/PendingAdapter.java
  com.example.barter10.Adapter.PendingAdapter
  com.example.barter10.Adapter.PendingAdapter$1
+ com.example.barter10.Adapter.PendingAdapter$10
  com.example.barter10.Adapter.PendingAdapter$2
  com.example.barter10.Adapter.PendingAdapter$3
  com.example.barter10.Adapter.PendingAdapter$4
  com.example.barter10.Adapter.PendingAdapter$5
- com.example.barter10.Adapter.PendingAdapter$5$1
- com.example.barter10.Adapter.PendingAdapter$5$2
- com.example.barter10.Adapter.PendingAdapter$5$2$1
- com.example.barter10.Adapter.PendingAdapter$5$3
- com.example.barter10.Adapter.PendingAdapter$5$4
- com.example.barter10.Adapter.PendingAdapter$5$4$1
  com.example.barter10.Adapter.PendingAdapter$6
- com.example.barter10.Adapter.PendingAdapter$6$1
- com.example.barter10.Adapter.PendingAdapter$6$2
- com.example.barter10.Adapter.PendingAdapter$6$2$1
- com.example.barter10.Adapter.PendingAdapter$6$3
- com.example.barter10.Adapter.PendingAdapter$6$4
- com.example.barter10.Adapter.PendingAdapter$6$4$1
  com.example.barter10.Adapter.PendingAdapter$7
+ com.example.barter10.Adapter.PendingAdapter$7$1
+ com.example.barter10.Adapter.PendingAdapter$7$2
+ com.example.barter10.Adapter.PendingAdapter$7$2$1
+ com.example.barter10.Adapter.PendingAdapter$7$3
+ com.example.barter10.Adapter.PendingAdapter$7$4
+ com.example.barter10.Adapter.PendingAdapter$7$4$1
  com.example.barter10.Adapter.PendingAdapter$8
+ com.example.barter10.Adapter.PendingAdapter$8$1
+ com.example.barter10.Adapter.PendingAdapter$8$2
+ com.example.barter10.Adapter.PendingAdapter$8$2$1
+ com.example.barter10.Adapter.PendingAdapter$8$3
+ com.example.barter10.Adapter.PendingAdapter$8$4
+ com.example.barter10.Adapter.PendingAdapter$8$4$1
+ com.example.barter10.Adapter.PendingAdapter$9
  com.example.barter10.Adapter.PendingAdapter$MyViewHolder
 com/example/barter10/Post/FullPostFragment.java
  com.example.barter10.Post.FullPostFragment
@@ -150,6 +152,7 @@ com/example/barter10/Adapter/OfferListAdapter.java
  com.example.barter10.Adapter.OfferListAdapter
  com.example.barter10.Adapter.OfferListAdapter$1
  com.example.barter10.Adapter.OfferListAdapter$2
+ com.example.barter10.Adapter.OfferListAdapter$3
  com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
 com/example/barter10/Adapter/ListpageAdapter.java
  com.example.barter10.Adapter.ListpageAdapter
@@ -195,6 +198,7 @@ com/example/barter10/SignInSignUp/signUp.java
  com.example.barter10.SignInSignUp.signUp$2
  com.example.barter10.SignInSignUp.signUp$3
  com.example.barter10.SignInSignUp.signUp$3$1
+ com.example.barter10.SignInSignUp.signUp$3$2
  com.example.barter10.SignInSignUp.signUp$4
  com.example.barter10.SignInSignUp.signUp$5
  com.example.barter10.SignInSignUp.signUp$6
