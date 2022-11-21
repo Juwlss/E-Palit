@@ -116,7 +116,7 @@ public class visitprofile extends Fragment {
                     if (profieid.equals(FirebaseAuth.getInstance().getUid())){
                         btn_message.setVisibility(View.GONE);
                         btn_follow.setVisibility(View.GONE);
-                        btn_report.setVisibility(View.GONE);
+//                        btn_report.setVisibility(View.GONE);
                     }
 
                     //if current user visits other user

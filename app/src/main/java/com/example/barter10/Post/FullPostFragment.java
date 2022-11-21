@@ -56,7 +56,7 @@ public class FullPostFragment extends Fragment {
     private  TextView itemDetails;
     private TextView estimatedValue;
     private  TextView preference;
-    private TextView rating;
+    private TextView rating,timer;
     private Button takeOffer;
 
     private ImageSlider postImage;
@@ -121,6 +121,7 @@ public class FullPostFragment extends Fragment {
         profileImg = view.findViewById(R.id.userProfile);
         btnOffer = view.findViewById(R.id.btnOffer);
         takeOffer = view.findViewById(R.id.btnConfirmPin);
+        timer = view.findViewById(R.id.timer);
 
         //For retrieving information of Pinned Post//
         pinPost = view.findViewById(R.id.pinPost);
@@ -545,7 +546,7 @@ public class FullPostFragment extends Fragment {
         Upload upload = snapshot.getValue(Upload.class);
 
 
-
+        timer.setText(upload.getTimer());
         itemName.setText(upload.getItemName());
         rating.setText(upload.getRating());
         userName.setText(upload.getUserName());
