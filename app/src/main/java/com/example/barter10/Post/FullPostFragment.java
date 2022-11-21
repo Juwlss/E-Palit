@@ -469,6 +469,12 @@ public class FullPostFragment extends Fragment {
 
                             pinPost.setVisibility(View.GONE);
 
+                            //Setting value of itemPin to false//
+                            DatabaseReference approvedPost = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(postKey);
+                            HashMap updatePin = new HashMap();
+                            updatePin.put("itemPin", false);
+                            approvedPost.updateChildren(updatePin);
+
 
                             //Refresh Full Post Page//
                             AppCompatActivity activity = (AppCompatActivity) view.getContext();

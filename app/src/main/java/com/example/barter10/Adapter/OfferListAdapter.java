@@ -97,12 +97,35 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
         //Hides the pin button to the offerers//
         String posterId = offer.getPosterId();
-        if(FirebaseAuth.getInstance().getUid().equals(posterId) ){
-            holder.subMenu.setVisibility(View.VISIBLE);
-        }
-        else {
-            holder.subMenu.setVisibility(View.GONE);
-        }
+        String postKey = offer.getPostKey();
+
+        DatabaseReference approvedPost = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(postKey);
+        approvedPost.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                String itemPin = snapshot.child("itemPin").getValue().toString();
+
+
+
+                if(FirebaseAuth.getInstance().getUid().equals(posterId) ){
+                    if (itemPin.equals("false")){
+                        holder.subMenu.setVisibility(View.VISIBLE);
+                    }
+                    else if (itemPin.equals("true")){
+                        holder.subMenu.setVisibility(View.GONE);
+                    }
+                }
+                else {
+                    holder.subMenu.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
 
@@ -133,6 +156,12 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                     //Deletion of pin//
                     DatabaseReference pinDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     pinDelete.child(offerKey).removeValue();
+
+                    //Setting value of itemPin to true//
+                    DatabaseReference approvedPost = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(postKey);
+                    HashMap updatePin = new HashMap();
+                    updatePin.put("itemPin", true);
+                    approvedPost.updateChildren(updatePin);
 
 
                     //Refresh Full Post Page//
