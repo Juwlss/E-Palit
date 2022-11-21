@@ -7,22 +7,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.barter10.Adapter.FinishedOfferAdapter;
+import com.example.barter10.Adapter.FinishOfferAdapter;
 import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.Upload;
-import com.example.barter10.Model.User;
-import com.example.barter10.Profile.visitprofile;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,7 +43,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
     private TextView p_itemName,p_userName,p_rating,p_location,p_condition,p_details,p_value,p_preference;
 
     private RecyclerView rv_offers;
-    private FinishedOfferAdapter finishedOfferAdapter;
+    private FinishOfferAdapter finishedOfferAdapter;
     private List<Offer> offerList;
 
 
@@ -92,7 +88,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
         rv_offers.setLayoutManager(new LinearLayoutManager(getContext()));
 
         offerList =  new ArrayList<>();
-        finishedOfferAdapter = new FinishedOfferAdapter(getContext(), offerList);
+        finishedOfferAdapter = new FinishOfferAdapter(getContext(), offerList);
         rv_offers.setAdapter(finishedOfferAdapter);
 
         //Methods//

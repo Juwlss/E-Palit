@@ -158,21 +158,20 @@ public class signupotp extends AppCompatActivity {
     }
 
     private void addUser(){
-        String full = getIntent().getStringExtra("fulldb");
+        String email = getIntent().getStringExtra("fulldb").trim();
         String userz = getIntent().getStringExtra("userdb").trim();
         String pass = getIntent().getStringExtra("passdb");
         String pho = getIntent().getStringExtra("phodb");
         String pic = "gs://e-palit.appspot.com/PostItem/Default/Vector (1).png";
 
-        String username = userz+"@epalit.com";
 
-        firebaseAuth.createUserWithEmailAndPassword(username, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
 
 
-                    User user = new User(FirebaseAuth.getInstance().getUid(), full,pic,userz,pass,pho,0);
+                    User user = new User(FirebaseAuth.getInstance().getUid(), email,pic,userz,pho,0);
 
                     database.child(FirebaseAuth.getInstance().getUid()).setValue(user);
 

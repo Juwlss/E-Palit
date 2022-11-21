@@ -3900,14 +3900,12 @@ id default_activity_button
 id delete_icon
 id deltaRelative
 id dependency_ordering
-id des
 id design
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
-id dest
 id dialog_button
 id didnt2
 id didntsgn
@@ -3940,8 +3938,6 @@ id editLocation
 id editName
 id editPassword
 id editPhone
-id edit_ctr
-id edit_phone
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
@@ -4090,7 +4086,6 @@ id lblSignnow
 id lblTimer
 id lblValue
 id lbl_description
-id lbl_email
 id lbl_forgotpassword
 id left
 id leftToRight
@@ -4480,8 +4475,8 @@ id tv_termNcondition
 id txtConPassword
 id txtCondition
 id txtDetails
+id txtEmail
 id txtEstimatedValue
-id txtFullName
 id txtItemName
 id txtLocation
 id txtName
@@ -4526,6 +4521,7 @@ id userLayout
 id userProfile
 id username
 id username_message
+id username_reset
 id v_backarr
 id v_btnPostBack
 id v_btn_follow

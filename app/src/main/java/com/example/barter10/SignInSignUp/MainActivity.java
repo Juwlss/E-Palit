@@ -142,23 +142,43 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    String email = str_username+"@epalit.com".trim();
-                    firebaseAuth.signInWithEmailAndPassword(email,str_password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(MainActivity.this, Home.class));
-                            }else{
-                                Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(MainActivity.this, "shocks error", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+
+                   databaseReference.addValueEventListener(new ValueEventListener() {
+                       @Override
+                       public void onDataChange(@NonNull DataSnapshot snapshot) {
+                           for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                               if (dataSnapshot.child("username").getValue().toString().equals(str_username)){
+
+                                   String email = dataSnapshot.child("email").getValue().toString();
+
+                                   firebaseAuth.signInWithEmailAndPassword(email,str_password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                       @Override
+                                       public void onComplete(@NonNull Task<AuthResult> task) {
+                                           if(task.isSuccessful()){
+                                               Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
+                                               startActivity(new Intent(MainActivity.this, Home.class));
+                                           }else{
+                                               Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                           }
+                                       }
+                                   }).addOnFailureListener(new OnFailureListener() {
+                                       @Override
+                                       public void onFailure(@NonNull Exception e) {
+                                           Toast.makeText(MainActivity.this, "shocks error", Toast.LENGTH_SHORT).show();
+                                       }
+                                   });
+
+
+                               }
+                           }
+                       }
+
+                       @Override
+                       public void onCancelled(@NonNull DatabaseError error) {
+
+                       }
+                   });
+
                 }
             }
         });

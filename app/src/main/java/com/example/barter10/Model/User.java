@@ -1,19 +1,19 @@
 package com.example.barter10.Model;
 
 public class User {
-    String userID, fullname, profilepic, username, userpassword, userPhone;
+    String userID, email, profilepic, username, userPhone;
 
     float rating;
 
     public User() {
+
     }
 
-    public User(String userID, String fullname, String profilepic, String username, String userpassword, String userPhone, float rating) {
+    public User(String userID, String email, String profilepic, String username, String userPhone, float rating) {
         this.userID = userID;
-        this.fullname = fullname;
+        this.email = email;
         this.profilepic = profilepic;
         this.username = username;
-        this.userpassword = userpassword;
         this.userPhone = userPhone;
         this.rating = rating;
     }
@@ -26,12 +26,12 @@ public class User {
         this.userID = userID;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getProfilepic() {
@@ -48,14 +48,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getUserpassword() {
-        return userpassword;
-    }
-
-    public void setUserpassword(String userpassword) {
-        this.userpassword = userpassword;
     }
 
     public String getUserPhone() {

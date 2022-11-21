@@ -34,7 +34,7 @@ public class signUp extends AppCompatActivity {
 
 
     int passvis=1,passvis2=1;
-    private EditText fullname,username, password, conpassword,phoNo;
+    private EditText email,username, password, conpassword,phoNo;
     private ImageButton visOff;
     private Button signUp;
     private TextView signNow,terms,policy;
@@ -53,7 +53,7 @@ public class signUp extends AppCompatActivity {
         ImageButton passtoggle = findViewById(R.id.visionOff2);
 
 
-        fullname = findViewById(R.id.txtFullName);
+        email = findViewById(R.id.txtEmail);
         username = findViewById(R.id.txtName);
         password = findViewById(R.id.txtPassword);
         conpassword = findViewById(R.id.txtConPassword);
@@ -117,7 +117,7 @@ public class signUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String str_fullname = fullname.getText().toString().trim();
+                String str_email = email.getText().toString().trim();
                 String str_username = username.getText().toString().trim();
                 String str_password = password.getText().toString().trim();
                 String str_conpass = conpassword.getText().toString().trim();
@@ -129,14 +129,14 @@ public class signUp extends AppCompatActivity {
                 if(phoNo.getText().toString().trim().isEmpty()){
                     Toast.makeText(signUp.this,"Enter Phone Number",Toast.LENGTH_SHORT).show();
                     return;
-                } else if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_fullname)) {
+                } else if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_email)) {
                     Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
                 } else if (str_password.length() < 6) {
                     Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
                 } else if (!str_password.equals(str_conpass)){
                     conpassword.setError("Password does not match");
                 } else if (str_username.length() < 4) {
-                    Toast.makeText(signUp.this, "email is too short", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(signUp.this, "username is too short", Toast.LENGTH_SHORT).show();
                 } else if(!checkBox.isChecked()){
                     Toast.makeText(signUp.this, "You must agree to Sign up", Toast.LENGTH_SHORT).show();
                 } else{
@@ -172,7 +172,7 @@ public class signUp extends AppCompatActivity {
                                     Intent intent = new Intent(getApplicationContext(), signupotp.class);
                                     intent.putExtra("phodb", phoNo.getText().toString());
                                     intent.putExtra("verificationsgn", verification);
-                                    intent.putExtra("fulldb",fullname.getText().toString());
+                                    intent.putExtra("fulldb",email.getText().toString());
                                     intent.putExtra("userdb",username.getText().toString());
                                     intent.putExtra("passdb",password.getText().toString());
                                     intent.putExtra("userid", FirebaseAuth.getInstance().getUid());
