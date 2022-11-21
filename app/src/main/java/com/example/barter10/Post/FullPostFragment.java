@@ -136,6 +136,7 @@ public class FullPostFragment extends Fragment {
         p_value = view.findViewById(R.id.p_itemValue);
         p_loc = view.findViewById(R.id.p_location);
 
+
         databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(itemKey);
 //        storage
         firebaseStorage = FirebaseStorage.getInstance();
@@ -422,7 +423,6 @@ public class FullPostFragment extends Fragment {
                 if(pinValue.equals(true)){
                     takeOffer.setVisibility(View.VISIBLE);
                     pinPost.setVisibility(View.VISIBLE);
-
                     p_username.setText(offer.getUserName());
 
                     Picasso.get()

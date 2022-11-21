@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FinishPostFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/v_btnPostBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/v_itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/v_btnPostBack"
+                android:layout_alignBottom="@+id/v_btnPostBack"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/inter"
+                android:text="Item Name"
+                android:textColor="#094067"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_post"
+                android:layout_below="@+id/v_btnPostBack"
+                android:layout_width="wrap_content"
+                android:background="#E5E5E5"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/v_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/v_userProfile"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/v_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toRightOf="@id/v_userProfile"
+                            android:fontFamily="@font/inter"
+                            android:maxLines="1"
+                            android:text="Username"
+                            android:textColor="#333333"
+                            android:textFontWeight="600"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/v_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/v_username"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toRightOf="@id/v_userProfile"
+                            android:fontFamily="@font/inter"
+                            android:maxLines="1"
+                            android:text="Rating: 999/10"
+                            android:textColor="#5F6C7B"
+                            android:textFontWeight="600" />
+
+
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/v_image_slider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_180sdp"
+                            android:layout_below="@+id/v_userProfile"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            app:iss_auto_cycle="true"
+                            app:iss_corner_radius="25"
+                            app:iss_delay="0"
+                            app:iss_error_image="@drawable/ic_baseline_broken_image_24"
+                            app:iss_period="5000"
+                            app:iss_placeholder="@drawable/ic_baseline_image_24"
+                            app:iss_selected_dot="@drawable/ic_baseline_circle_24"
+                            app:iss_title_background="@android:color/transparent"
+                            app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24" />
+
+                        <RelativeLayout
+                            android:id="@+id/rLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/v_image_slider"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/react"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:src="@drawable/ic_baseline_favorite_border_24" />
+
+                            <ImageView
+                                android:id="@+id/people"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_toRightOf="@id/react"
+                                android:src="@drawable/ic_baseline_people_24" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rLayout">
+
+                            <TextView
+                                android:id="@+id/v_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/inter"
+                                android:text="Location"
+                                android:textColor="#094067"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/v_itemCondition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/v_location"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/inter"
+                                android:text="Condition"
+                                android:textColor="#094067"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/v_itemDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/v_itemCondition"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/inter"
+                                android:text="Details"
+                                android:textColor="#094067"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/v_itemValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/v_itemDetails"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/inter"
+                                android:text="Estimated Value"
+                                android:textColor="#094067"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/v_itemPref"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/v_itemValue"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/inter"
+                                android:text="Preference"
+                                android:textColor="#094067"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_post"
+                android:background="#D8EEFE">
+
+                <TextView
+                    android:id="@+id/lblPending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/interbold"
+                    android:text="PENDING OFFERS"
+                    android:textColor="#094067"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lblPending"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/inter"
+                    android:text="Timer"
+                    android:textColor="#094067"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pinPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timer"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/p_userProfile"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_default_picture" />
+
+                        <TextView
+                            android:id="@+id/p_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toRightOf="@id/p_userProfile"
+                            android:fontFamily="@font/inter"
+                            android:maxLines="1"
+                            android:text="Username"
+                            android:textColor="#333333"
+                            android:textFontWeight="600"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/p_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/p_username"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_toRightOf="@id/p_userProfile"
+                            android:maxLines="1"
+                            android:text="Rating"
+                            android:textColor="#5F6C7B"
+                            android:textFontWeight="500" />
+
+                        <ImageView
+                            android:id="@+id/o_subMenuUnpin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/p_username"
+                            android:layout_alignBottom="@+id/p_rating"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_pin">
+
+                        </ImageView>
+
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/p_image_slider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_180sdp"
+                            android:layout_below="@+id/p_userProfile"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            app:iss_auto_cycle="true"
+                            app:iss_corner_radius="25"
+                            app:iss_delay="0"
+                            app:iss_error_image="@drawable/ic_baseline_broken_image_24"
+                            app:iss_period="5000"
+                            app:iss_placeholder="@drawable/ic_baseline_image_24"
+                            app:iss_selected_dot="@drawable/ic_baseline_circle_24"
+                            app:iss_title_background="@android:color/transparent"
+                            app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24" />
+
+                        <TextView
+                            android:id="@+id/p_itemName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_below="@id/p_image_slider"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Item Name"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/btnOfferMsg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignTop="@+id/p_itemName"
+                            android:layout_alignBottom="@+id/p_itemName"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_baseline_message_24"
+                            tools:ignore="UnknownId" />
+
+                        <TextView
+                            android:id="@+id/p_itemDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/p_itemName"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Details"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/p_itemCondition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/p_itemDetails"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Condition"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/p_itemValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/p_itemCondition"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Value"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/p_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/p_itemValue"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/inter"
+                            android:text="Location"
+                            android:textColor="#094067"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_Offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pinPost"
+                    android:layout_marginTop="2dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/offer_layout" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

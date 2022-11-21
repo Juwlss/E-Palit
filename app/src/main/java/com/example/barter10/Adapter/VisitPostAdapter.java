@@ -22,6 +22,8 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.barter10.FinishPostFragment;
+import com.example.barter10.List.FinishedFragment;
 import com.example.barter10.Model.User;
 import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.Model.Upload;
@@ -94,7 +96,7 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
                 String uid = selectedItem.getUid();//STORE SPECIFIC USER ID
 
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                Fragment fragment = new FullPostFragment();
+                Fragment fragment = new FinishPostFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("ItemKey", postKey);
                 bundle.putString("uId", uid);
