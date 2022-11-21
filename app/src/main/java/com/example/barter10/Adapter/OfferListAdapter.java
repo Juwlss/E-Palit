@@ -24,8 +24,11 @@ import com.example.barter10.Model.viewOffers;
 import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -92,16 +95,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         //Determine if post is pinned or not//
         Boolean getPinValue = offer.getPinValue();
 
-        if(getPinValue.equals(true)){
-            //Offer pinned//
-            holder.subMenu.setImageResource(R.drawable.ic_pin);
-        }
-        else {
-            //Offer Unpin//
-            holder.subMenu.setImageResource(R.drawable.ic_unpin);
-        }
-
-
         //Hides the pin button to the offerers//
         String posterId = offer.getPosterId();
         if(FirebaseAuth.getInstance().getUid().equals(posterId) ){
@@ -110,6 +103,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         else {
             holder.subMenu.setVisibility(View.GONE);
         }
+
 
 
         //Methods for pinning the item//
@@ -135,6 +129,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                     changePinValue.put("pinValue", true);
                     pinRef.child(postKey).updateChildren(changePinValue);
 
+
                     //Deletion of pin//
                     DatabaseReference pinDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     pinDelete.child(offerKey).removeValue();
@@ -154,6 +149,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
             }
         });
+
     }
 
     @Override
