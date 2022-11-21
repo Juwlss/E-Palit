@@ -149,6 +149,7 @@ com/example/barter10/Post/OfferItemFragment.java
 com/example/barter10/Adapter/OfferListAdapter.java
  com.example.barter10.Adapter.OfferListAdapter
  com.example.barter10.Adapter.OfferListAdapter$1
+ com.example.barter10.Adapter.OfferListAdapter$2
  com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
 com/example/barter10/Adapter/ListpageAdapter.java
  com.example.barter10.Adapter.ListpageAdapter
