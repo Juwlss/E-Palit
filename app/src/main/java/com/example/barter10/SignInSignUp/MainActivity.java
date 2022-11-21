@@ -155,16 +155,13 @@ public class MainActivity extends AppCompatActivity {
                                        @Override
                                        public void onComplete(@NonNull Task<AuthResult> task) {
                                            if(task.isSuccessful()){
-                                               Toast.makeText(MainActivity.this, "Sign in Success", Toast.LENGTH_SHORT).show();
                                                startActivity(new Intent(MainActivity.this, Home.class));
-                                           }else{
-                                               Toast.makeText(MainActivity.this, "Sign in Failed", Toast.LENGTH_SHORT).show();
                                            }
                                        }
                                    }).addOnFailureListener(new OnFailureListener() {
                                        @Override
                                        public void onFailure(@NonNull Exception e) {
-                                           Toast.makeText(MainActivity.this, "shocks error", Toast.LENGTH_SHORT).show();
+                                           Toast.makeText(MainActivity.this, "Sign in Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
                                        }
                                    });
 
@@ -371,7 +368,6 @@ public class MainActivity extends AppCompatActivity {
                     if (snapshot.child(user.getUid()).exists()){
 
 
-                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this, Home.class));
                     }else if (!snapshot.child(user.getUid()).exists()){
 
@@ -381,7 +377,6 @@ public class MainActivity extends AppCompatActivity {
                         user1.setRating(userrating.getRating());
 
                         firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
-                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this, Home.class));
                     }
 

@@ -156,6 +156,7 @@ public class visitprofile extends Fragment {
                 //fetching from firebase to display
                 mUploads.clear();
                 for(DataSnapshot postSnapshot : snapshot.getChildren()){
+
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setKey(postSnapshot.getKey());
                     mUploads.add(upload);

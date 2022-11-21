@@ -65,7 +65,6 @@ public class profileSettings extends Fragment {
         logout = view.findViewById(R.id.btn_logout);
         firebaseAuth = FirebaseAuth.getInstance();
 //        btnInfo = view.findViewById(R.id.btnMyInfo);
-        btnSec = view.findViewById(R.id.btnSec);
         userName = view.findViewById(R.id.profileUsername);
         picProfile = view.findViewById(R.id.imgProfile);
 
@@ -105,15 +104,6 @@ public class profileSettings extends Fragment {
             }
         });
 
-//        btnInfo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                Fragment infoFrag = new infoSettingFragment();
-//                fragmentTransaction.replace(R.id.frame_layout, infoFrag);
-//                fragmentTransaction.commit();
-//            }
-//        });
 
         btnSec.setOnClickListener(new View.OnClickListener() {
             @Override

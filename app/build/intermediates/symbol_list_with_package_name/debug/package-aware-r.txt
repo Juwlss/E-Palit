@@ -3809,7 +3809,6 @@ id btnOfferItem
 id btnOfferMsg
 id btnPostBack
 id btnSearch
-id btnSec
 id btnSignup
 id btnUpload
 id btnViewBack
@@ -4073,9 +4072,7 @@ id lblDetails
 id lblEmail
 id lblHello
 id lblLocation
-id lblMisc
 id lblName
-id lblNotif
 id lblPassword
 id lblPending
 id lblPhone

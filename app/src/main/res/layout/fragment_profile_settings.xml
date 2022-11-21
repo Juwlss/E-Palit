@@ -116,85 +116,85 @@
 <!--            android:layout_marginRight="@dimen/_15sdp"-->
 <!--            android:src="@drawable/ic_baseline_chevron_right_24" />-->
 
-        <TextView
-            android:id="@+id/lblMisc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profileUsername"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:fontFamily="@font/inter"
-            android:text="Miscellaneous"
-            android:textColor="#333333"
-            android:textFontWeight="700"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/lblMisc"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/profileUsername"-->
+<!--            android:layout_marginLeft="@dimen/_20sdp"-->
+<!--            android:layout_marginTop="@dimen/_20sdp"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:text="Miscellaneous"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textFontWeight="700"-->
+<!--            android:textSize="@dimen/_13ssp"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btnSec"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/lblMisc"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/rippleeffect"
-            android:fontFamily="@font/inter"
-            android:gravity="left|center_vertical"
-            android:paddingLeft="@dimen/_50sdp"
-            android:text="Security"
-            android:textAllCaps="false"
-            android:textColor="#333333"
-            android:textFontWeight="600"
-            android:textSize="@dimen/_11ssp" />
+<!--        <Button-->
+<!--            android:id="@+id/btnSec"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/lblMisc"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:background="@drawable/rippleeffect"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:gravity="left|center_vertical"-->
+<!--            android:paddingLeft="@dimen/_50sdp"-->
+<!--            android:text="Security"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textFontWeight="600"-->
+<!--            android:textSize="@dimen/_11ssp" />-->
 
-        <ImageView
-            android:layout_width="@dimen/_17sdp"
-            android:layout_height="@dimen/_17sdp"
-            android:layout_alignTop="@+id/btnSec"
-            android:layout_alignBottom="@+id/btnSec"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:src="@drawable/ic_baseline_security_24" />
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/_17sdp"-->
+<!--            android:layout_height="@dimen/_17sdp"-->
+<!--            android:layout_alignTop="@+id/btnSec"-->
+<!--            android:layout_alignBottom="@+id/btnSec"-->
+<!--            android:layout_marginLeft="@dimen/_20sdp"-->
+<!--            android:src="@drawable/ic_baseline_security_24" />-->
 
-        <TextView
-            android:id="@+id/lblNotif"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnSec"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/inter"
-            android:paddingLeft="@dimen/_50sdp"
-            android:paddingTop="@dimen/_10sdp"
-            android:paddingBottom="@dimen/_10sdp"
-            android:text="Notification"
-            android:textColor="#333333"
-            android:textFontWeight="700"
-            android:textSize="@dimen/_11ssp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/lblNotif"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/btnSec"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:paddingLeft="@dimen/_50sdp"-->
+<!--            android:paddingTop="@dimen/_10sdp"-->
+<!--            android:paddingBottom="@dimen/_10sdp"-->
+<!--            android:text="Notification"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textFontWeight="700"-->
+<!--            android:textSize="@dimen/_11ssp"-->
+<!--            android:textStyle="bold" />-->
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/lblNotif"
-            android:layout_alignEnd="@id/lblNotif"
-            android:layout_marginEnd="-1dp"
-            android:paddingRight="@dimen/_20sdp"
-            android:thumb="@drawable/thumb"
-            app:track="@drawable/track" />
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBaseline="@id/lblNotif"-->
+<!--            android:layout_alignEnd="@id/lblNotif"-->
+<!--            android:layout_marginEnd="-1dp"-->
+<!--            android:paddingRight="@dimen/_20sdp"-->
+<!--            android:thumb="@drawable/thumb"-->
+<!--            app:track="@drawable/track" />-->
 
-        <ImageView
-            android:layout_width="@dimen/_17sdp"
-            android:layout_height="@dimen/_17sdp"
-            android:layout_alignTop="@+id/lblNotif"
-            android:layout_alignBottom="@+id/lblNotif"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:src="@drawable/ic_baseline_notifications_24" />
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/_17sdp"-->
+<!--            android:layout_height="@dimen/_17sdp"-->
+<!--            android:layout_alignTop="@+id/lblNotif"-->
+<!--            android:layout_alignBottom="@+id/lblNotif"-->
+<!--            android:layout_marginLeft="@dimen/_20sdp"-->
+<!--            android:src="@drawable/ic_baseline_notifications_24" />-->
 
         <TextView
             android:id="@+id/btn_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lblNotif"
+            android:layout_below="@id/profileUsername"
             android:layout_centerInParent="true"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_60sdp"
             android:fontFamily="@font/inter"
             android:text="Sign Out"
             android:textColor="#FF7272"
