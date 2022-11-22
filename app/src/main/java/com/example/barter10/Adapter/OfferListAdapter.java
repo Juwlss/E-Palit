@@ -169,7 +169,8 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
                 //Pinning the Post//
                 if (getPinValue.equals(false)) {
-                                      pinRef.child(postKey).setValue(offer);
+
+                    pinRef.child(postKey).setValue(offer);
 
                     HashMap changePinValue = new HashMap();
                     changePinValue.put("pinValue", true);

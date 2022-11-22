@@ -4081,6 +4081,7 @@ id lblSecurity
 id lblSettings
 id lblSignnow
 id lblTimer
+id lblTradeStatus
 id lblValue
 id lbl_description
 id lbl_forgotpassword
@@ -4301,6 +4302,7 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id rl_footer
 id rl_layout
 id rl_post
 id rotate_scroll_wheel
@@ -4385,7 +4387,6 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
-id swapStatus
 id tabMode
 id tab_categories
 id tab_follow

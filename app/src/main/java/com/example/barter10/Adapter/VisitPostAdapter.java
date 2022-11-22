@@ -64,7 +64,7 @@ public class VisitPostAdapter extends RecyclerView.Adapter<VisitPostAdapter.Imag
         List <SlideModel> slideModels = new ArrayList<>();
 
         holder.itemName.setText(upload.getItemName());
-        holder.details.setText(upload.getItemCondition());
+        holder.details.setText("Item Details : "+upload.getItemCondition());
 
 
 

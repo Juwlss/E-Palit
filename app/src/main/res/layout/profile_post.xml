@@ -66,27 +66,11 @@
                 android:textAllCaps="false"
                 android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/rLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/viewPost"
-                android:layout_marginTop="@dimen/_5sdp">
-
-                <ImageView
-                    android:id="@+id/people"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:src="@drawable/ic_baseline_people_24" />
-
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rLayout">
+                android:layout_below="@id/viewPost">
 
                 <TextView
                     android:id="@+id/itemDetails"

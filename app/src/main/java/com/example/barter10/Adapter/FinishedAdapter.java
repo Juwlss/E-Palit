@@ -1,11 +1,13 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Trace;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -113,9 +115,6 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
         String tradeStats = trade.getStatus();
         if (tradeStats.equals("true")){
 
-
-            holder.swapStatus.setImageResource(R.drawable.ic_swap_success);
-
             //Remove in pending//
             DatabaseReference tradeReference1 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
             DatabaseReference tradeReference2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId).child(postKey);
@@ -126,7 +125,8 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
 
         }
         else if (tradeStats.equals("false")) {
-            holder.swapStatus.setImageResource(R.drawable.ic_swap_failed);
+            holder.rl_footer.setBackgroundColor(Color.parseColor("#EF4565"));
+            holder.tradeStatus.setText("BARTER FAILED");
 
             //Remove in pending//
             DatabaseReference tradeReference1 = FirebaseDatabase.getInstance().getReference("Trade").child(offereeId).child(postKey);
@@ -148,8 +148,8 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
 
         CircleImageView f_offereeProfile, f_offererProfile;
         ImageSlider f_offereeImg, f_offererImg;
-        TextView f_offereeName, f_offererName;
-        ImageView swapStatus;
+        TextView f_offereeName, f_offererName,tradeStatus;
+        RelativeLayout rl_footer;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -164,7 +164,8 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
             f_offereeName = itemView.findViewById(R.id.f_offeree_name);
             f_offererName = itemView.findViewById(R.id.f_offerer_name);
 
-            swapStatus = itemView.findViewById(R.id.swapStatus);
+            rl_footer = itemView.findViewById(R.id.rl_footer);
+            tradeStatus = itemView.findViewById(R.id.lblTradeStatus);
 
         }
     }

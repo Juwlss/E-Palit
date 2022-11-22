@@ -13,7 +13,7 @@ import com.example.barter10.Category.ToyFragment;
 
 public class PagerAdapter extends FragmentStateAdapter {
 
-    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy","Technology"};
+    private String[] tabCategory = new String[]{"Furniture", "Sport", "Fashion", "Appliances","Technology"};
 
     int noTab;
     public PagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle, int Tabno) {
