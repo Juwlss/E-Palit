@@ -152,8 +152,6 @@ public class signUp extends AppCompatActivity {
                     return;
                 } else if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_email)) {
                     Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
-                } else if (usernameChecker.equals(str_username)) {
-                    username.setError("Username is already taken");
                 } else if (str_password.length() < 6) {
                     Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
                 } else if (!str_password.equals(str_conpass)){
@@ -192,7 +190,7 @@ public class signUp extends AppCompatActivity {
                                     super.onCodeSent(verification, forceResendingToken);
                                     progressBar.setVisibility(View.GONE);
                                     signUp.setVisibility(View.VISIBLE);
-                                    Intent intent = new Intent(getApplicationContext(), signupotp.class);
+                                    Intent intent = new Intent(signUp.this, signupotp.class);
                                     intent.putExtra("phodb", phoNo.getText().toString());
                                     intent.putExtra("verificationsgn", verification);
                                     intent.putExtra("fulldb",email.getText().toString());

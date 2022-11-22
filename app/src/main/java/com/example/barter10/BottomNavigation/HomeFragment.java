@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class HomeFragment extends Fragment{
 
-    private String[] tabCategory = new String[]{"Gadget", "Sport", "Fashion", "Toy","Technology"};
+    private String[] tabCategory = new String[]{"Furniture", "Sport", "Fashion", "Appliances","Technology"};
 
     //Oncreate
     @Override

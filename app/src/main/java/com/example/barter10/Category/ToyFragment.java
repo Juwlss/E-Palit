@@ -71,7 +71,7 @@ public class ToyFragment extends Fragment implements PostImageAdapter.OnItemClic
         databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
 
-        Query query = databaseReference.orderByChild("category1").equalTo("Toy");
+        Query query = databaseReference.orderByChild("category1").equalTo("Appliances");
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

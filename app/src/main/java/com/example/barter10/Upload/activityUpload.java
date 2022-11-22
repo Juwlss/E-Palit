@@ -141,11 +141,11 @@ public class activityUpload extends AppCompatActivity{
         Spinner list1 = findViewById(R.id.listCategories1);
         List<String> categories = new ArrayList<>();
         categories.add(0, "Select");
-        categories.add("Gadget");
+        categories.add("Furniture");
         categories.add("Technology");
         categories.add("Fashion");
         categories.add("Sports");
-        categories.add("Toy");
+        categories.add("Appliances");
 
         //setting categories in spinner
         ArrayAdapter<String> dataAdapter;

@@ -81,7 +81,7 @@ public class GadgetFragment extends Fragment implements PostImageAdapter.OnItemC
         //displaying items
         databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost");
 
-        Query query = databaseReference.orderByChild("category1").equalTo("Gadget");
+        Query query = databaseReference.orderByChild("category1").equalTo("Furniture");
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

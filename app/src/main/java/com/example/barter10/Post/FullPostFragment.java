@@ -255,10 +255,6 @@ public class FullPostFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                         takeOfferMethod(snapshot,uid,itemKey);
-
-
-
-                        Toast.makeText(activity, ""+itemKey, Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -290,6 +286,9 @@ public class FullPostFragment extends Fragment {
             offereeReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    Upload upload = snapshot.getValue(Upload.class);
+
                     String uName  = snapshot.child("userName").getValue().toString();
                     String profileUrl = snapshot.child("profileUrl").getValue().toString();
                     String postImg  = snapshot.child("imageUrl").getValue().toString();
@@ -327,36 +326,8 @@ public class FullPostFragment extends Fragment {
                     offereeReference.updateChildren(hashMap);
 
 
-
-
-
-                    databaseReference.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot){
-                            Upload upload = snapshot.getValue(Upload.class);
-
-                            DatabaseReference createClosedBid = FirebaseDatabase.getInstance().getReference("ClosedBid").child(itemKey);
-                            createClosedBid.setValue(upload);
-
-
-
-                        }
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-                            Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-
-                    databaseReference.removeValue();
-                    offereeReference.child("profileUrl").removeValue();
-                    offereeReference.child("rating").removeValue();
-
-                    //Go home//
-                    Intent intent = new Intent(getActivity(), Home.class);
-                    startActivity(intent);
-
-
+                    DatabaseReference createClosedBid = FirebaseDatabase.getInstance().getReference("ClosedBid").child(itemKey);
+                    createClosedBid.setValue(upload);
 
                 }
 
@@ -366,8 +337,13 @@ public class FullPostFragment extends Fragment {
                 }
             });
 
+//          databaseReference.removeValue();
+//          offereeReference.child("profileUrl").removeValue();
+//          offereeReference.child("rating").removeValue();
 
-
+            //Go home//
+            Intent intent = new Intent(getActivity(), Home.class);
+            startActivity(intent);
 
         }
     }

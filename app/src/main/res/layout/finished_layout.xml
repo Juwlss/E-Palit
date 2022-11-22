@@ -146,13 +146,24 @@
 
             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/swapStatus"
+            <RelativeLayout
+                android:id="@+id/rl_footer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/offerer_layout"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:src="@drawable/ic_swap_success" />
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/offeree_layout"
+                android:background="#3DA9FC">
+
+                <TextView
+                    android:id="@+id/lblTradeStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/interbold"
+                    android:text="BARTER SUCCESS!"
+                    android:textColor="#FFFFFF"
+                    android:textFontWeight="900" />
+
+            </RelativeLayout>
 
 
 

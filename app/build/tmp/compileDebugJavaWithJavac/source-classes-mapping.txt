@@ -31,13 +31,15 @@ com/example/barter10/BottomNavigation/FollowFragment.java
  com.example.barter10.BottomNavigation.FollowFragment
 com/example/barter10/TermsAndPolicy/Terms.java
  com.example.barter10.TermsAndPolicy.Terms
-com/example/barter10/BottomNavigation/ProfileFragment.java
- com.example.barter10.BottomNavigation.ProfileFragment
- com.example.barter10.BottomNavigation.ProfileFragment$1
- com.example.barter10.BottomNavigation.ProfileFragment$2
- com.example.barter10.BottomNavigation.ProfileFragment$3
- com.example.barter10.BottomNavigation.ProfileFragment$4
- com.example.barter10.BottomNavigation.ProfileFragment$5
+com/example/barter10/Post/UpdatePostFragment.java
+ com.example.barter10.Post.UpdatePostFragment
+ com.example.barter10.Post.UpdatePostFragment$1
+ com.example.barter10.Post.UpdatePostFragment$2
+ com.example.barter10.Post.UpdatePostFragment$2$1
+ com.example.barter10.Post.UpdatePostFragment$3
+ com.example.barter10.Post.UpdatePostFragment$4
+ com.example.barter10.Post.UpdatePostFragment$5
+ com.example.barter10.Post.UpdatePostFragment$6
 com/example/barter10/ForgotPassword/newPass.java
  com.example.barter10.ForgotPassword.newPass
  com.example.barter10.ForgotPassword.newPass$1
@@ -46,17 +48,26 @@ com/example/barter10/ForgotPassword/newPass.java
  com.example.barter10.ForgotPassword.newPass$3
  com.example.barter10.ForgotPassword.newPass$4
  com.example.barter10.ForgotPassword.newPass$5
-com/example/barter10/Adapter/PostImageAdapter.java
- com.example.barter10.Adapter.PostImageAdapter
- com.example.barter10.Adapter.PostImageAdapter$1
- com.example.barter10.Adapter.PostImageAdapter$2
- com.example.barter10.Adapter.PostImageAdapter$ImageViewHolder
- com.example.barter10.Adapter.PostImageAdapter$OnItemClickListener
-com/example/barter10/Category/FashionFragment.java
- com.example.barter10.Category.FashionFragment
- com.example.barter10.Category.FashionFragment$1
- com.example.barter10.Category.FashionFragment$2
- com.example.barter10.Category.FashionFragment$3
+com/example/barter10/ForgotPassword/otp.java
+ com.example.barter10.ForgotPassword.otp
+ com.example.barter10.ForgotPassword.otp$1
+ com.example.barter10.ForgotPassword.otp$1$1
+ com.example.barter10.ForgotPassword.otp$2
+ com.example.barter10.ForgotPassword.otp$2$1
+ com.example.barter10.ForgotPassword.otp$3
+com/example/barter10/Post/FullPostFragment.java
+ com.example.barter10.Post.FullPostFragment
+ com.example.barter10.Post.FullPostFragment$1
+ com.example.barter10.Post.FullPostFragment$10
+ com.example.barter10.Post.FullPostFragment$2
+ com.example.barter10.Post.FullPostFragment$3
+ com.example.barter10.Post.FullPostFragment$4
+ com.example.barter10.Post.FullPostFragment$5
+ com.example.barter10.Post.FullPostFragment$6
+ com.example.barter10.Post.FullPostFragment$6$1
+ com.example.barter10.Post.FullPostFragment$7
+ com.example.barter10.Post.FullPostFragment$8
+ com.example.barter10.Post.FullPostFragment$9
 com/example/barter10/Adapter/ChatAdapter.java
  com.example.barter10.Adapter.ChatAdapter
  com.example.barter10.Adapter.ChatAdapter$ViewHolder
@@ -81,14 +92,16 @@ com/example/barter10/Adapter/MessageListAdapter.java
  com.example.barter10.Adapter.MessageListAdapter
  com.example.barter10.Adapter.MessageListAdapter$1
  com.example.barter10.Adapter.MessageListAdapter$ViewHolder
-com/example/barter10/Category/GadgetFragment.java
- com.example.barter10.Category.GadgetFragment
- com.example.barter10.Category.GadgetFragment$1
- com.example.barter10.Category.GadgetFragment$2
- com.example.barter10.Category.GadgetFragment$3
- com.example.barter10.Category.GadgetFragment$4
- com.example.barter10.Category.GadgetFragment$5
- com.example.barter10.Category.GadgetFragment$6
+com/example/barter10/Post/OfferItemFragment.java
+ com.example.barter10.Post.OfferItemFragment
+ com.example.barter10.Post.OfferItemFragment$1
+ com.example.barter10.Post.OfferItemFragment$2
+ com.example.barter10.Post.OfferItemFragment$3
+ com.example.barter10.Post.OfferItemFragment$4
+ com.example.barter10.Post.OfferItemFragment$5
+ com.example.barter10.Post.OfferItemFragment$5$1
+ com.example.barter10.Post.OfferItemFragment$5$2
+ com.example.barter10.Post.OfferItemFragment$5$2$1
 com/example/barter10/Model/viewOffers.java
  com.example.barter10.Model.viewOffers
 com/example/barter10/Model/FullPost.java
@@ -120,40 +133,17 @@ com/example/barter10/Adapter/PendingAdapter.java
  com.example.barter10.Adapter.PendingAdapter$8$4$1
  com.example.barter10.Adapter.PendingAdapter$9
  com.example.barter10.Adapter.PendingAdapter$MyViewHolder
-com/example/barter10/Post/FullPostFragment.java
- com.example.barter10.Post.FullPostFragment
- com.example.barter10.Post.FullPostFragment$1
- com.example.barter10.Post.FullPostFragment$10
- com.example.barter10.Post.FullPostFragment$2
- com.example.barter10.Post.FullPostFragment$3
- com.example.barter10.Post.FullPostFragment$4
- com.example.barter10.Post.FullPostFragment$5
- com.example.barter10.Post.FullPostFragment$6
- com.example.barter10.Post.FullPostFragment$6$1
- com.example.barter10.Post.FullPostFragment$7
- com.example.barter10.Post.FullPostFragment$7$1
- com.example.barter10.Post.FullPostFragment$8
- com.example.barter10.Post.FullPostFragment$9
+com/example/barter10/DataBindingTriggerClass.java
+ com.example.barter10.DataBindingTriggerClass
 com/example/barter10/BottomNavigation/ListFragment.java
  com.example.barter10.BottomNavigation.ListFragment
 com/example/barter10/BottomNavigation/HomeFragment.java
  com.example.barter10.BottomNavigation.HomeFragment
-com/example/barter10/Post/OfferItemFragment.java
- com.example.barter10.Post.OfferItemFragment
- com.example.barter10.Post.OfferItemFragment$1
- com.example.barter10.Post.OfferItemFragment$2
- com.example.barter10.Post.OfferItemFragment$3
- com.example.barter10.Post.OfferItemFragment$4
- com.example.barter10.Post.OfferItemFragment$5
- com.example.barter10.Post.OfferItemFragment$5$1
- com.example.barter10.Post.OfferItemFragment$5$2
- com.example.barter10.Post.OfferItemFragment$5$2$1
-com/example/barter10/Adapter/OfferListAdapter.java
- com.example.barter10.Adapter.OfferListAdapter
- com.example.barter10.Adapter.OfferListAdapter$1
- com.example.barter10.Adapter.OfferListAdapter$2
- com.example.barter10.Adapter.OfferListAdapter$3
- com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
+com/example/barter10/Adapter/FinishOfferAdapter.java
+ com.example.barter10.Adapter.FinishOfferAdapter
+ com.example.barter10.Adapter.FinishOfferAdapter$MyOfferHolder
+com/example/barter10/Model/viewSearch.java
+ com.example.barter10.Model.viewSearch
 com/example/barter10/Adapter/ListpageAdapter.java
  com.example.barter10.Adapter.ListpageAdapter
 com/example/barter10/Follow/followerFragment.java
@@ -165,21 +155,19 @@ com/example/barter10/Model/Chat.java
 com/example/barter10/List/FinishedFragment.java
  com.example.barter10.List.FinishedFragment
  com.example.barter10.List.FinishedFragment$1
-com/example/barter10/Profile/visitprofile.java
- com.example.barter10.Profile.visitprofile
- com.example.barter10.Profile.visitprofile$1
- com.example.barter10.Profile.visitprofile$2
- com.example.barter10.Profile.visitprofile$3
- com.example.barter10.Profile.visitprofile$4
- com.example.barter10.Profile.visitprofile$5
- com.example.barter10.Profile.visitprofile$6
- com.example.barter10.Profile.visitprofile$7
- com.example.barter10.Profile.visitprofile$8
-com/example/barter10/Adapter/VisitPostAdapter.java
- com.example.barter10.Adapter.VisitPostAdapter
- com.example.barter10.Adapter.VisitPostAdapter$1
- com.example.barter10.Adapter.VisitPostAdapter$ImageViewHolder
- com.example.barter10.Adapter.VisitPostAdapter$OnItemClickListener
+com/example/barter10/Adapter/SearchAdapter.java
+ com.example.barter10.Adapter.SearchAdapter
+ com.example.barter10.Adapter.SearchAdapter$1
+ com.example.barter10.Adapter.SearchAdapter$ViewHolder
+ com.example.barter10.Adapter.SearchAdapter$ViewHolder$1
+com/example/barter10/MessageActivity.java
+ com.example.barter10.MessageActivity
+ com.example.barter10.MessageActivity$1
+ com.example.barter10.MessageActivity$2
+ com.example.barter10.MessageActivity$3
+ com.example.barter10.MessageActivity$4
+ com.example.barter10.MessageActivity$5
+ com.example.barter10.MessageActivity$6
 com/example/barter10/Profile/profileSettings.java
  com.example.barter10.Profile.profileSettings
  com.example.barter10.Profile.profileSettings$1
@@ -202,9 +190,12 @@ com/example/barter10/SignInSignUp/signUp.java
  com.example.barter10.SignInSignUp.signUp$4
  com.example.barter10.SignInSignUp.signUp$5
  com.example.barter10.SignInSignUp.signUp$6
-com/example/barter10/Search/ViewSearchFragment.java
- com.example.barter10.Search.ViewSearchFragment
- com.example.barter10.Search.ViewSearchFragment$1
+com/example/barter10/Adapter/OfferListAdapter.java
+ com.example.barter10.Adapter.OfferListAdapter
+ com.example.barter10.Adapter.OfferListAdapter$1
+ com.example.barter10.Adapter.OfferListAdapter$2
+ com.example.barter10.Adapter.OfferListAdapter$3
+ com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
 com/example/barter10/Search/RecentSearchInterface.java
  com.example.barter10.Search.RecentSearchInterface
 com/example/barter10/signupotp.java
@@ -253,42 +244,6 @@ com/example/barter10/BottomNavigation/MessageFragment.java
  com.example.barter10.BottomNavigation.MessageFragment
  com.example.barter10.BottomNavigation.MessageFragment$1
  com.example.barter10.BottomNavigation.MessageFragment$2
-com/example/barter10/Category/TechnologyFragment.java
- com.example.barter10.Category.TechnologyFragment
- com.example.barter10.Category.TechnologyFragment$1
- com.example.barter10.Category.TechnologyFragment$2
- com.example.barter10.Category.TechnologyFragment$3
-com/example/barter10/Search/SearchFragment.java
- com.example.barter10.Search.SearchFragment
- com.example.barter10.Search.SearchFragment$1
- com.example.barter10.Search.SearchFragment$2
- com.example.barter10.Search.SearchFragment$3
-com/example/barter10/Model/SliderData.java
- com.example.barter10.Model.SliderData
-com/example/barter10/Category/SportsFragment.java
- com.example.barter10.Category.SportsFragment
- com.example.barter10.Category.SportsFragment$1
- com.example.barter10.Category.SportsFragment$2
- com.example.barter10.Category.SportsFragment$3
-com/example/barter10/Adapter/FollowAdapter.java
- com.example.barter10.Adapter.FollowAdapter
- com.example.barter10.Adapter.FollowAdapter$1
- com.example.barter10.Adapter.FollowAdapter$2
- com.example.barter10.Adapter.FollowAdapter$3
- com.example.barter10.Adapter.FollowAdapter$ViewHolder
-com/example/barter10/MessageActivity.java
- com.example.barter10.MessageActivity
- com.example.barter10.MessageActivity$1
- com.example.barter10.MessageActivity$2
- com.example.barter10.MessageActivity$3
- com.example.barter10.MessageActivity$4
- com.example.barter10.MessageActivity$5
- com.example.barter10.MessageActivity$6
-com/example/barter10/Adapter/FollowPagerAdapter.java
- com.example.barter10.Adapter.FollowPagerAdapter
-com/example/barter10/Adapter/FinishOfferAdapter.java
- com.example.barter10.Adapter.FinishOfferAdapter
- com.example.barter10.Adapter.FinishOfferAdapter$MyOfferHolder
 com/example/barter10/Upload/activityUpload.java
  com.example.barter10.Upload.activityUpload
  com.example.barter10.Upload.activityUpload$1
@@ -301,33 +256,77 @@ com/example/barter10/Upload/activityUpload.java
  com.example.barter10.Upload.activityUpload$6$1
  com.example.barter10.Upload.activityUpload$6$2
  com.example.barter10.Upload.activityUpload$6$2$1
-com/example/barter10/Adapter/SearchAdapter.java
- com.example.barter10.Adapter.SearchAdapter
- com.example.barter10.Adapter.SearchAdapter$1
- com.example.barter10.Adapter.SearchAdapter$ViewHolder
- com.example.barter10.Adapter.SearchAdapter$ViewHolder$1
+com/example/barter10/Search/SearchFragment.java
+ com.example.barter10.Search.SearchFragment
+ com.example.barter10.Search.SearchFragment$1
+ com.example.barter10.Search.SearchFragment$2
+ com.example.barter10.Search.SearchFragment$3
+com/example/barter10/Model/SliderData.java
+ com.example.barter10.Model.SliderData
+com/example/barter10/Adapter/FollowPagerAdapter.java
+ com.example.barter10.Adapter.FollowPagerAdapter
+com/example/barter10/Adapter/FollowAdapter.java
+ com.example.barter10.Adapter.FollowAdapter
+ com.example.barter10.Adapter.FollowAdapter$1
+ com.example.barter10.Adapter.FollowAdapter$2
+ com.example.barter10.Adapter.FollowAdapter$3
+ com.example.barter10.Adapter.FollowAdapter$ViewHolder
+com/example/barter10/BottomNavigation/ProfileFragment.java
+ com.example.barter10.BottomNavigation.ProfileFragment
+ com.example.barter10.BottomNavigation.ProfileFragment$1
+ com.example.barter10.BottomNavigation.ProfileFragment$2
+ com.example.barter10.BottomNavigation.ProfileFragment$3
+ com.example.barter10.BottomNavigation.ProfileFragment$4
+ com.example.barter10.BottomNavigation.ProfileFragment$5
+com/example/barter10/Adapter/PostImageAdapter.java
+ com.example.barter10.Adapter.PostImageAdapter
+ com.example.barter10.Adapter.PostImageAdapter$1
+ com.example.barter10.Adapter.PostImageAdapter$2
+ com.example.barter10.Adapter.PostImageAdapter$ImageViewHolder
+ com.example.barter10.Adapter.PostImageAdapter$OnItemClickListener
+com/example/barter10/Category/GadgetFragment.java
+ com.example.barter10.Category.GadgetFragment
+ com.example.barter10.Category.GadgetFragment$1
+ com.example.barter10.Category.GadgetFragment$2
+ com.example.barter10.Category.GadgetFragment$3
+ com.example.barter10.Category.GadgetFragment$4
+ com.example.barter10.Category.GadgetFragment$5
+ com.example.barter10.Category.GadgetFragment$6
+com/example/barter10/Category/FashionFragment.java
+ com.example.barter10.Category.FashionFragment
+ com.example.barter10.Category.FashionFragment$1
+ com.example.barter10.Category.FashionFragment$2
+ com.example.barter10.Category.FashionFragment$3
+com/example/barter10/Search/ViewSearchFragment.java
+ com.example.barter10.Search.ViewSearchFragment
+ com.example.barter10.Search.ViewSearchFragment$1
+com/example/barter10/Profile/visitprofile.java
+ com.example.barter10.Profile.visitprofile
+ com.example.barter10.Profile.visitprofile$1
+ com.example.barter10.Profile.visitprofile$2
+ com.example.barter10.Profile.visitprofile$3
+ com.example.barter10.Profile.visitprofile$4
+ com.example.barter10.Profile.visitprofile$5
+ com.example.barter10.Profile.visitprofile$6
+ com.example.barter10.Profile.visitprofile$7
+ com.example.barter10.Profile.visitprofile$8
+com/example/barter10/Category/TechnologyFragment.java
+ com.example.barter10.Category.TechnologyFragment
+ com.example.barter10.Category.TechnologyFragment$1
+ com.example.barter10.Category.TechnologyFragment$2
+ com.example.barter10.Category.TechnologyFragment$3
 com/example/barter10/Category/ToyFragment.java
  com.example.barter10.Category.ToyFragment
  com.example.barter10.Category.ToyFragment$1
  com.example.barter10.Category.ToyFragment$2
  com.example.barter10.Category.ToyFragment$3
-com/example/barter10/Model/viewSearch.java
- com.example.barter10.Model.viewSearch
-com/example/barter10/Post/UpdatePostFragment.java
- com.example.barter10.Post.UpdatePostFragment
- com.example.barter10.Post.UpdatePostFragment$1
- com.example.barter10.Post.UpdatePostFragment$2
- com.example.barter10.Post.UpdatePostFragment$2$1
- com.example.barter10.Post.UpdatePostFragment$3
- com.example.barter10.Post.UpdatePostFragment$4
- com.example.barter10.Post.UpdatePostFragment$5
- com.example.barter10.Post.UpdatePostFragment$6
-com/example/barter10/DataBindingTriggerClass.java
- com.example.barter10.DataBindingTriggerClass
-com/example/barter10/ForgotPassword/otp.java
- com.example.barter10.ForgotPassword.otp
- com.example.barter10.ForgotPassword.otp$1
- com.example.barter10.ForgotPassword.otp$1$1
- com.example.barter10.ForgotPassword.otp$2
- com.example.barter10.ForgotPassword.otp$2$1
- com.example.barter10.ForgotPassword.otp$3
+com/example/barter10/Category/SportsFragment.java
+ com.example.barter10.Category.SportsFragment
+ com.example.barter10.Category.SportsFragment$1
+ com.example.barter10.Category.SportsFragment$2
+ com.example.barter10.Category.SportsFragment$3
+com/example/barter10/Adapter/VisitPostAdapter.java
+ com.example.barter10.Adapter.VisitPostAdapter
+ com.example.barter10.Adapter.VisitPostAdapter$1
+ com.example.barter10.Adapter.VisitPostAdapter$ImageViewHolder
+ com.example.barter10.Adapter.VisitPostAdapter$OnItemClickListener

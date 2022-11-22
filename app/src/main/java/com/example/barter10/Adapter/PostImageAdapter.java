@@ -60,7 +60,7 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         holder.userName.setText(upload.getUserName());
         holder.rating.setText(upload.getRating());
         holder.itemName.setText(upload.getItemName());
-        holder.details.setText(upload.getItemCondition());
+        holder.details.setText("Item Details : "+upload.getItemCondition());
 
 
         Picasso.get()
