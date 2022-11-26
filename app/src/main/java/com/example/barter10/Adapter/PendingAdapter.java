@@ -25,6 +25,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.List.FinishedFragment;
+import com.example.barter10.MessageActivity;
 import com.example.barter10.Model.Trade;
 import com.example.barter10.Model.User;
 import com.example.barter10.Profile.visitprofile;
@@ -135,6 +136,22 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
         holder.offererImg.setImageList(slideModels2, ScaleTypes.FIT);
 
+
+
+        holder.messageTrade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+                    Intent intent = new Intent(context, MessageActivity.class);
+                    intent.putExtra("userid", offererId);
+                    context.startActivity(intent);
+                }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+                    Intent intent = new Intent(context, MessageActivity.class);
+                    intent.putExtra("userid", offereeId);
+                    context.startActivity(intent);
+                }
+            }
+        });
 
 
         holder.visituser1.setOnClickListener(new View.OnClickListener() {
@@ -904,7 +921,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         TextView offereeName,offererName;
         ImageSlider offereeImg,offererImg;
         Button confirm,cancel,visituser1,visituser2;
-
+        ImageView messageTrade;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -919,7 +936,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             cancel = itemView.findViewById(R.id.trade_cancel);
             visituser1 = itemView.findViewById(R.id.visituser1);
             visituser2 = itemView.findViewById(R.id.visituser2);
-
+            messageTrade = itemView.findViewById(R.id.message_pending);
 
 
 

@@ -360,7 +360,7 @@
                     android:layout_marginBottom="@dimen/_50sdp"
                     android:background="@drawable/btn_upload_ui"
                     android:fontFamily="@font/inter"
-                    android:text="Upload"
+                    android:text="Post"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textStyle="bold"

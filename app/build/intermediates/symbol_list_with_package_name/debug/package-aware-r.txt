@@ -3543,6 +3543,7 @@ drawable ic_logoe
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_mdi_message_group
 drawable ic_message
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
@@ -3817,7 +3818,6 @@ id btn_forgotpassword
 id btn_img
 id btn_logout
 id btn_message
-id btn_pending
 id btn_send
 id btn_settings
 id btn_username
@@ -4136,6 +4136,7 @@ id menu_crop
 id menu_loader
 id mes_rv
 id message
+id message_pending
 id message_rl
 id message_username
 id messenger_send_button

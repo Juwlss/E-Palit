@@ -105,16 +105,6 @@ public class profileSettings extends Fragment {
         });
 
 
-        btnSec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                Fragment securityFrag = new securityFragment();
-                fragmentTransaction.replace(R.id.frame_layout, securityFrag);
-                fragmentTransaction.commit();
-            }
-        });
-
         changeProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
