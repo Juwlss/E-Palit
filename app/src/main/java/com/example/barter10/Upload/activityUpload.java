@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.Manifest;
 import android.app.Activity;
@@ -79,8 +80,8 @@ public class activityUpload extends AppCompatActivity{
         imageView = findViewById(R.id.image);
         recyclerView = findViewById(R.id.upload_list);
         uploadListAdapter = new UploadListAdapter(itemList);
-        recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
-        recyclerView.setAdapter(uploadListAdapter);
+
+
 
 
         if(ContextCompat.checkSelfPermission(activityUpload.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
@@ -198,14 +199,23 @@ public class activityUpload extends AppCompatActivity{
             if (data.getClipData() != null){
                 int x = data.getClipData().getItemCount();
                 for (int i=0; i<x; i++){
+
+                    recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
+                    recyclerView.setAdapter(uploadListAdapter);
                     imageuri = data.getClipData().getItemAt(i).getUri();
                     itemList.add(imageuri);
                     uploadListAdapter.notifyDataSetChanged();
                 }
 
             }else{
+                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                recyclerView.setAdapter(uploadListAdapter);
                 imageuri = data.getData();
                 itemList.add(imageuri);
+                if(itemList.size()>1){
+                    recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
+                    recyclerView.setAdapter(uploadListAdapter);
+                }
                 uploadListAdapter.notifyDataSetChanged();
                 Toast.makeText(activityUpload.this, "Single", Toast.LENGTH_SHORT).show();
             }
