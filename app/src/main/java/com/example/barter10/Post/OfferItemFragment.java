@@ -3,6 +3,7 @@ package com.example.barter10.Post;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -14,6 +15,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.TextUtils;
@@ -30,6 +32,7 @@ import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.User;
 import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.R;
+import com.example.barter10.Upload.activityUpload;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -70,8 +73,7 @@ public class OfferItemFragment extends Fragment {
         offer = view.findViewById(R.id.btnOfferItem);
         recyclerView = view.findViewById(R.id.upload_list);
         uploadListAdapter = new UploadListAdapter(itemList);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        recyclerView.setAdapter(uploadListAdapter);
+
 
         if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(getActivity(),
@@ -149,14 +151,22 @@ public class OfferItemFragment extends Fragment {
             if (data.getClipData() != null){
                 int x = data.getClipData().getItemCount();
                 for (int i=0; i<x; i++){
+                    recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                    recyclerView.setAdapter(uploadListAdapter);
                     imageuri = data.getClipData().getItemAt(i).getUri();
                     itemList.add(imageuri);
                     uploadListAdapter.notifyDataSetChanged();
                 }
 
             }else{
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(uploadListAdapter);
                 imageuri = data.getData();
                 itemList.add(imageuri);
+                if(itemList.size()>1){
+                    recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                    recyclerView.setAdapter(uploadListAdapter);
+                }
                 uploadListAdapter.notifyDataSetChanged();
                 Toast.makeText(getContext(), "Single", Toast.LENGTH_SHORT).show();
             }
@@ -165,6 +175,8 @@ public class OfferItemFragment extends Fragment {
             Toast.makeText(getContext(), "Please pick image", Toast.LENGTH_SHORT).show();
         }
     }
+
+
     private void upload() {
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("Uploading Post...");
@@ -205,7 +217,6 @@ public class OfferItemFragment extends Fragment {
                                     storeLink(urlStrings);
 
 
-                                    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
                                     DatabaseReference postReference = FirebaseDatabase.getInstance().getReference("users");
 
                                     postReference.addValueEventListener(new ValueEventListener() {

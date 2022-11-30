@@ -17,11 +17,13 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -68,6 +70,8 @@ public class activityUpload extends AppCompatActivity{
     private FirebaseDatabase rootNode;
     private String category1;
 
+    private GridLayout gridLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +84,7 @@ public class activityUpload extends AppCompatActivity{
         imageView = findViewById(R.id.image);
         recyclerView = findViewById(R.id.upload_list);
         uploadListAdapter = new UploadListAdapter(itemList);
-
+        gridLayout = findViewById(R.id.imageList);
 
 
 
@@ -200,24 +204,48 @@ public class activityUpload extends AppCompatActivity{
                 int x = data.getClipData().getItemCount();
                 for (int i=0; i<x; i++){
 
-                    recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
-                    recyclerView.setAdapter(uploadListAdapter);
-                    imageuri = data.getClipData().getItemAt(i).getUri();
-                    itemList.add(imageuri);
-                    uploadListAdapter.notifyDataSetChanged();
+
+
+
+                    if (itemList.size() != 5){
+                        imageuri = data.getClipData().getItemAt(i).getUri();
+                        itemList.add(imageuri);
+
+                        if(itemList.size() % 2 == 0){
+                            recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
+                            recyclerView.setAdapter(uploadListAdapter);
+                        }else{
+                            recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 1));
+                            recyclerView.setAdapter(uploadListAdapter);
+                        }
+
+                    }else if (itemList.size() == 5){
+
+                        Toast.makeText(activityUpload.this, "You can post only 5 images", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
 
             }else{
-                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                recyclerView.setAdapter(uploadListAdapter);
-                imageuri = data.getData();
-                itemList.add(imageuri);
-                if(itemList.size()>1){
-                    recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
+
+
+
+                if (itemList.size() != 5){
+                    imageuri = data.getData();
+                    itemList.add(imageuri);
+
+
+                    if(itemList.size() % 2 == 0){
+                        recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
+
+                    }
                     recyclerView.setAdapter(uploadListAdapter);
+                    uploadListAdapter.notifyDataSetChanged();
+
+                }else if (itemList.size() == 5){
+
+                    Toast.makeText(activityUpload.this, "You can post only 5 images", Toast.LENGTH_SHORT).show();
                 }
-                uploadListAdapter.notifyDataSetChanged();
-                Toast.makeText(activityUpload.this, "Single", Toast.LENGTH_SHORT).show();
             }
 
         }else{

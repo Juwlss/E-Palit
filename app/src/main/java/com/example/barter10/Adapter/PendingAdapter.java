@@ -921,7 +921,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         TextView offereeName,offererName;
         ImageSlider offereeImg,offererImg;
         Button confirm,cancel,visituser1,visituser2;
-        ImageView messageTrade;
+        Button messageTrade;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 

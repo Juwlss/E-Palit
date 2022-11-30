@@ -127,6 +127,12 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+
+
+
+
+
+
         //sign in
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -375,10 +381,15 @@ public class MainActivity extends AppCompatActivity {
                         user1.setUsername(user.getDisplayName());
                         user1.setProfilepic(user.getPhotoUrl().toString());
                         user1.setRating(userrating.getRating());
+//                        user1.setEmail(user.getEmail().trim());
+
 
                         firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
                         startActivity(new Intent(MainActivity.this, Home.class));
                     }
+
+
+
 
 
                 }
@@ -428,29 +439,30 @@ public class MainActivity extends AppCompatActivity {
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     User userrating = snapshot.getValue(User.class);
 
+                                    Intent intent = new Intent(MainActivity.this, Home.class);
+
                                     if (snapshot.exists()){
-                                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(MainActivity.this, Home.class);
                                         intent.putExtra("username", user.getDisplayName());
                                         intent.putExtra("profilepic", user.getPhotoUrl().toString());
 
-                                        startActivity(intent);
+
 
                                     }else if (!snapshot.exists()){
                                         user1.setUserID(user.getUid());
                                         user1.setUsername(user.getDisplayName());
                                         user1.setProfilepic(user.getPhotoUrl().toString());
                                         user1.setRating(0);
+//                                        user1.setEmail(user.getEmail().trim());
                                         firebaseDatabase.getReference().child("users").child(user.getUid()).setValue(user1);
 
-                                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(MainActivity.this, Home.class);
                                         intent.putExtra("username", user.getDisplayName());
                                         intent.putExtra("profilepic", user.getPhotoUrl().toString());
 
-
+                                        Toast.makeText(MainActivity.this, "sign in successfully", Toast.LENGTH_SHORT).show();
                                         startActivity(intent);
                                     }
+
+
                                 }
 
                                 @Override

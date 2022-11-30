@@ -1,6 +1,8 @@
 package com.example.barter10.Post;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -29,6 +31,7 @@ import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.Trade;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.viewOffers;
+import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -57,7 +60,7 @@ public class FullPostFragment extends Fragment {
     private TextView estimatedValue;
     private  TextView preference;
     private TextView rating,timer;
-    private Button takeOffer;
+    private Button takeOffer,visitAuctioneer;
 
     private ImageSlider postImage;
 
@@ -75,7 +78,7 @@ public class FullPostFragment extends Fragment {
     ArrayList<Offer> list;
 
     private ImageView unpin;
-
+    private String takeOfferValue;
 
     //For retrieving information of Pinned Post//
     private CardView pinPost;
@@ -93,6 +96,8 @@ public class FullPostFragment extends Fragment {
         MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
         meowBottomNavigation.setVisibility(View.GONE);
 
+
+        visitAuctioneer = view.findViewById(R.id.visitAuctioneer);
 
 
         btnBack = view.findViewById(R.id.btnPostBack);
@@ -210,6 +215,23 @@ public class FullPostFragment extends Fragment {
             }
         });
 
+        visitAuctioneer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences.Editor editor = view.getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", uid);
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+            }
+        });
 
 
 
@@ -223,7 +245,7 @@ public class FullPostFragment extends Fragment {
         getTakeOffer.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String takeOfferValue = snapshot.child("takeOffer").getValue().toString();
+                takeOfferValue = snapshot.child("takeOffer").getValue().toString();
 
                 //If False they can offer on post//
                 if(takeOfferValue.equals("false")){

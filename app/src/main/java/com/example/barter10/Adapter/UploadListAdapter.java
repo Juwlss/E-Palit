@@ -1,13 +1,16 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.media.Image;
 import android.net.Uri;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +44,7 @@ public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull UploadListAdapter.ViewHolder holder, int position) {
         holder.imageView.setImageURI(imgList.get(position));
+
     }
 
     @Override

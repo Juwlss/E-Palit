@@ -115,7 +115,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         });
 
 
-
         //Determine if post is pinned or not//
         Boolean getPinValue = offer.getPinValue();
 
@@ -232,6 +231,9 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
             visitOffer = itemView.findViewById(R.id.visitOfferer);
+
+
+
 
         }
 
