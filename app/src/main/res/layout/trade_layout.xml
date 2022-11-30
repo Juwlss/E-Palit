@@ -201,14 +201,23 @@
                     app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24" />
 
 
-                <ImageView
+                <Button
                     android:id="@+id/message_pending"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_26sdp"
                     android:layout_below="@id/offeree_image_slider"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:src="@drawable/ic_mdi_message_group" />
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:background="@drawable/message_button"
+                    android:fontFamily="@font/interbold"
+                    android:text="Message"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textFontWeight="900"
+                    android:textSize="@dimen/_7ssp"
+                    app:backgroundTint="@null" />
+
+
 
 
 

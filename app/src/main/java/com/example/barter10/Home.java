@@ -23,6 +23,8 @@ import com.example.barter10.BottomNavigation.ProfileFragment;
 import com.example.barter10.Search.SearchFragment;
 import com.example.barter10.SignInSignUp.MainActivity;
 import com.example.barter10.Upload.activityUpload;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,6 +37,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Home extends AppCompatActivity {
 
+
+
     MeowBottomNavigation bottomNavigation;
     int goBack;
     ImageView btnSearch;
@@ -42,6 +46,11 @@ public class Home extends AppCompatActivity {
     FloatingActionButton upload;
     FirebaseAuth firebaseAuth;
     private TextView welcome;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +89,9 @@ public class Home extends AppCompatActivity {
 
                    }
 
+
+
+
                 }
 
 
@@ -90,11 +102,6 @@ public class Home extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
 
 
 

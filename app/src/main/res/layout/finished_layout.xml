@@ -26,6 +26,13 @@
 
                 //offering
 
+                <Button
+                    android:id="@+id/visitBidder"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent" />
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/f_offerer_user"
                     android:layout_width="@dimen/_40sdp"
@@ -94,6 +101,14 @@
 
                 //offering
 
+
+                <Button
+                    android:id="@+id/visitAuctioneer"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent" />
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/f_offeree_user"
                     android:layout_width="@dimen/_40sdp"
@@ -141,7 +156,6 @@
                     app:iss_selected_dot="@drawable/ic_baseline_circle_24"
                     app:iss_title_background="@android:color/transparent"
                     app:iss_unselected_dot="@drawable/ic_baseline_panorama_fish_eye_24" />
-
 
 
             </RelativeLayout>

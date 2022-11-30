@@ -3499,6 +3499,7 @@ drawable hover_effect
 drawable ic_baseline_add_24
 drawable ic_baseline_add_photo_alternate_24
 drawable ic_baseline_arrow_back_24
+drawable ic_baseline_arrow_drop_down_24
 drawable ic_baseline_arrow_right_24
 drawable ic_baseline_broken_image_24
 drawable ic_baseline_chat_24
@@ -3589,6 +3590,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable message_background
+drawable message_button
 drawable messenger_bubble_large_blue
 drawable messenger_bubble_large_white
 drawable messenger_bubble_small_blue
@@ -4024,6 +4026,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageList
 id imageView7
 id imageView8
 id image_follow
@@ -4558,6 +4561,8 @@ id visible
 id visible_removing_fragment_view_tag
 id visionOff
 id visionOff2
+id visitAuctioneer
+id visitBidder
 id visitOfferer
 id visituser1
 id visituser2
@@ -4956,7 +4961,6 @@ string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
 string fb_login_protocol_scheme
-string fcm_fallback_notification_channel_label
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key

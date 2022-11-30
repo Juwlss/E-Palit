@@ -73,19 +73,31 @@
 
 
                     <!--                    </GridLayout>-->
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/upload_list"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_130sdp"
-                        android:layout_below="@id/header"
-                        android:layout_centerHorizontal="true"
-                        android:scrollbars="horizontal" />
+                    <GridLayout
+                        android:id="@+id/imageList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:rowCount="1"
+                        android:columnCount="1"
+                        android:layout_below="@id/header">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/upload_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_130sdp"
+                            android:layout_gravity="center_horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="1"
+                            android:scrollbars="horizontal"/>
+
+                    </GridLayout>
 
                     <Button
                         android:id="@+id/btn_img"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/upload_list"
+                        android:layout_below="@id/imageList"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:background="@drawable/btn_border"
@@ -347,6 +359,14 @@
                         android:background="@drawable/listcategories_ui"
                         android:fontFamily="@font/inter"
                         android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_alignRight="@id/listCategories1"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
 
                 </RelativeLayout>
 

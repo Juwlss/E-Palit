@@ -1,22 +1,28 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Trace;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Model.Trade;
+import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -137,6 +143,41 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
         }
 
 
+        holder.visitAuctioneer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = v.getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offereeId);
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+            }
+        });
+
+        holder.visitBidder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = v.getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offererId);
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+            }
+        });
+
+
     }
 
     @Override
@@ -150,6 +191,7 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
         ImageSlider f_offereeImg, f_offererImg;
         TextView f_offereeName, f_offererName,tradeStatus;
         RelativeLayout rl_footer;
+        Button visitAuctioneer, visitBidder;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -166,6 +208,9 @@ public class FinishedAdapter extends RecyclerView.Adapter<FinishedAdapter.MyView
 
             rl_footer = itemView.findViewById(R.id.rl_footer);
             tradeStatus = itemView.findViewById(R.id.lblTradeStatus);
+
+            visitAuctioneer = itemView.findViewById(R.id.visitAuctioneer);
+            visitBidder = (Button) itemView.findViewById(R.id.visitBidder);
 
         }
     }
