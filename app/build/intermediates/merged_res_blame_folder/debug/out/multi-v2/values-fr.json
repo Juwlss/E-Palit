@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\41.4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr\\values-fr.xml",
+            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\fixing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr\\values-fr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\77a54add8f54e63adf145b0774bd6ed7\\transformed\\jetified-play-services-base-18.0.1\\res\\values-fr\\values.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "6067,6173,6353,6483,6592,6763,6896,7017,7295,7473,7585,7770,7906,8066,8245,8318,8385",
                         "endColumns": "105,179,129,108,170,132,120,112,177,111,184,135,159,178,72,66,83",
                         "endOffsets": "6168,6348,6478,6587,6758,6891,7012,7125,7468,7580,7765,7901,8061,8240,8313,8380,8464"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\03efb6cf5ec4ba1f7f5a770eba7972d6\\transformed\\jetified-ucrop-2.2.2\\res\\values-fr\\values-fr.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,124,182",
-                        "endColumns": "68,57,52",
-                        "endOffsets": "119,177,230"
-                    },
-                    "to": {
-                        "startLines": "134,135,136",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "13146,13215,13273",
-                        "endColumns": "68,57,52",
-                        "endOffsets": "13210,13268,13321"
                     }
                 },
                 {
@@ -88,6 +71,23 @@
                         "startOffsets": "3426,3590,3750,3901,4014,4102,4189,4267,4357,4454,4569,4683,4778,4873,4985,5104,5187,5272,5463,5557,5667,5789,5901",
                         "endColumns": "163,159,150,112,87,86,77,89,96,114,113,94,94,111,118,82,84,190,93,109,121,111,165",
                         "endOffsets": "3585,3745,3896,4009,4097,4184,4262,4352,4449,4564,4678,4773,4868,4980,5099,5182,5267,5458,5552,5662,5784,5896,6062"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\6e90a640048a08e4bda91e8ec00b9fbd\\transformed\\jetified-ucrop-2.2.2\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,124,182",
+                        "endColumns": "68,57,52",
+                        "endOffsets": "119,177,230"
+                    },
+                    "to": {
+                        "startLines": "134,135,136",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "13146,13215,13273",
+                        "endColumns": "68,57,52",
+                        "endOffsets": "13210,13268,13321"
                     }
                 },
                 {

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\41.4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\fixing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\03efb6cf5ec4ba1f7f5a770eba7972d6\\transformed\\jetified-ucrop-2.2.2\\res\\values-de\\values-de.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,121,179",
-                        "endColumns": "65,57,55",
-                        "endOffsets": "116,174,230"
-                    },
-                    "to": {
-                        "startLines": "134,135,136",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "12956,13022,13080",
-                        "endColumns": "65,57,55",
-                        "endOffsets": "13017,13075,13131"
-                    }
-                },
                 {
                     "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-de\\values-de.xml",
                     "from": {
@@ -103,6 +86,23 @@
                         "startOffsets": "12855",
                         "endColumns": "100",
                         "endOffsets": "12951"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\6e90a640048a08e4bda91e8ec00b9fbd\\transformed\\jetified-ucrop-2.2.2\\res\\values-de\\values-de.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,121,179",
+                        "endColumns": "65,57,55",
+                        "endOffsets": "116,174,230"
+                    },
+                    "to": {
+                        "startLines": "134,135,136",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "12956,13022,13080",
+                        "endColumns": "65,57,55",
+                        "endOffsets": "13017,13075,13131"
                     }
                 },
                 {

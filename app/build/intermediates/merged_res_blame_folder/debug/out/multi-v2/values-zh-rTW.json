@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\41.4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
+            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\fixing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\b84231de16f8ebce1f2f1ac77190dd7c\\transformed\\jetified-facebook-login-15.1.0\\res\\values-zh-rTW\\values-zh-rTW.xml",
@@ -52,23 +52,6 @@
                         "startOffsets": "5373,5474,5602,5717,5819,5926,6042,6142,6340,6450,6551,6680,6795,6897,7005,7061,7118",
                         "endColumns": "100,127,114,101,106,115,99,94,109,100,128,114,101,107,55,56,73",
                         "endOffsets": "5469,5597,5712,5814,5921,6037,6137,6232,6445,6546,6675,6790,6892,7000,7056,7113,7187"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\03efb6cf5ec4ba1f7f5a770eba7972d6\\transformed\\jetified-ucrop-2.2.2\\res\\values-zh-rTW\\values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,132,186,240,287",
-                        "endColumns": "76,53,53,46,116",
-                        "endOffsets": "127,181,235,282,399"
-                    },
-                    "to": {
-                        "startLines": "134,135,136,137,138",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "11183,11260,11314,11368,11415",
-                        "endColumns": "76,53,53,46,116",
-                        "endOffsets": "11255,11309,11363,11410,11527"
                     }
                 },
                 {
@@ -139,6 +122,23 @@
                         "startOffsets": "6237",
                         "endColumns": "102",
                         "endOffsets": "6335"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\6e90a640048a08e4bda91e8ec00b9fbd\\transformed\\jetified-ucrop-2.2.2\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,132,186,240,287",
+                        "endColumns": "76,53,53,46,116",
+                        "endOffsets": "127,181,235,282,399"
+                    },
+                    "to": {
+                        "startLines": "134,135,136,137,138",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "11183,11260,11314,11368,11415",
+                        "endColumns": "76,53,53,46,116",
+                        "endOffsets": "11255,11309,11363,11410,11527"
                     }
                 }
             ]

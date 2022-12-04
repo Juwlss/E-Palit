@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\41.4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\andrei\\Documents\\4th yr\\fixing\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "6,7,8,9,10,11,12,50",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "241,311,395,479,575,677,779,4245",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "306,390,474,570,672,774,868,4329"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\41.4\\app\\src\\main\\res\\values-night\\style.xml",
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\fixing\\app\\src\\main\\res\\values-night\\style.xml",
                     "from": {
                         "startLines": "2,7",
                         "startColumns": "4,4",
@@ -40,22 +23,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\41.4\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\E-Palit\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "829"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
                     },
                     "to": {
-                        "startLines": "13",
-                        "startColumns": "4",
-                        "startOffsets": "873",
-                        "endLines": "25",
-                        "endColumns": "12",
-                        "endOffsets": "1586"
+                        "startLines": "6,7,8,9,10,11,12,50",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "241,311,395,479,575,677,779,4245",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "306,390,474,570,672,774,868,4329"
                     }
                 },
                 {
@@ -73,6 +54,25 @@
                         "startOffsets": "1591,1666,1777,1866,1967,2074,2181,2280,2383,2471,2595,2697,2799,2915,3017,3131,3259,3375,3497,3633,3753,3887,4007,4119,4334,4451,4575,4705,4827,4965,5099,5215",
                         "endColumns": "74,110,88,100,106,106,98,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "1661,1772,1861,1962,2069,2176,2275,2378,2466,2590,2692,2794,2910,3012,3126,3254,3370,3492,3628,3748,3882,4002,4114,4240,4446,4570,4700,4822,4960,5094,5210,5330"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andrei\\Documents\\4th yr\\fixing\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "829"
+                    },
+                    "to": {
+                        "startLines": "13",
+                        "startColumns": "4",
+                        "startOffsets": "873",
+                        "endLines": "25",
+                        "endColumns": "12",
+                        "endOffsets": "1586"
                     }
                 }
             ]

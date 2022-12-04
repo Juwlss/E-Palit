@@ -359,9 +359,7 @@ public class FullPostFragment extends Fragment {
                 }
             });
 
-//          databaseReference.removeValue();
-//          offereeReference.child("profileUrl").removeValue();
-//          offereeReference.child("rating").removeValue();
+
 
             //Go home//
             Intent intent = new Intent(getActivity(), Home.class);

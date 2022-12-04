@@ -49,6 +49,7 @@ public class UpdatePostFragment extends Fragment {
     private String u_category1;
     private DatabaseReference databaseReference;
     private Spinner itemCategory;
+    private int posCat;
 
 
     private ImageView backarrow;
@@ -96,16 +97,15 @@ public class UpdatePostFragment extends Fragment {
             }
         });
 
-
         //adding
         itemCategory = view.findViewById(R.id.u_listCategories1);
         List<String> categories = new ArrayList<>();
-        categories.add(0, "Select");
-        categories.add("Gadget");
+        categories.add("Furniture");
         categories.add("Technology");
         categories.add("Fashion");
         categories.add("Sports");
-        categories.add("Toy");
+        categories.add("Appliances");
+
 
         //setting categories in spinner
         ArrayAdapter<String> dataAdapter;
@@ -116,7 +116,7 @@ public class UpdatePostFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (parent.getItemAtPosition(position).equals("Select")) {
-                    //do nothing
+                    Toast.makeText(getContext(), "Please select a category", Toast.LENGTH_SHORT).show();
                 } else {
                     u_category1 = parent.getItemAtPosition(position).toString();
                 }
@@ -124,9 +124,10 @@ public class UpdatePostFragment extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method
+                Toast.makeText(getContext(), "Please select a Category 123", Toast.LENGTH_SHORT).show();
             }
         });
+
 
         //getting details in edit text
 
@@ -151,6 +152,7 @@ public class UpdatePostFragment extends Fragment {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 String iName  = snapshot.child("itemName").getValue().toString();
                 String loc  = snapshot.child("location").getValue().toString();
                 String img  = snapshot.child("imageUrl").getValue().toString();
@@ -159,7 +161,10 @@ public class UpdatePostFragment extends Fragment {
                 String value  = snapshot.child("itemValue").getValue().toString();
                 String pref  = snapshot.child("itemPreference").getValue().toString();
                 String timer  = snapshot.child("timer").getValue().toString();
-                u_uploadName.setText(iName);;
+                String category = snapshot.child("category1").getValue().toString();
+
+
+                u_uploadName.setText(iName);
                 u_uploadLocation.setText(loc);
                 u_uploadCondition.setText(iCondition);
                 u_uploadDetails.setText(iDetails);
@@ -167,11 +172,26 @@ public class UpdatePostFragment extends Fragment {
                 u_uploadPreference.setText(pref);
                 u_calendar.setText(timer);
 
-//                Picasso.get()
-//                        .load(img)
-//                        .placeholder(R.drawable.ic_baseline_image_24)
-//                        .fit()
-//                        .into(postImage);
+                for (int i  = 0; i< categories.size(); i++){
+
+                    if (category.equals(categories.get(i))){
+                        posCat = i;
+                    }
+
+                }
+
+
+
+
+                itemCategory.setSelection(posCat);
+
+
+
+
+
+
+
+
             }
 
             @Override
@@ -184,7 +204,11 @@ public class UpdatePostFragment extends Fragment {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updatePost(getKey, getUid);
+                if (u_category1.equals(null)){
+                    Toast.makeText(getContext(), "Please Select a Category", Toast.LENGTH_SHORT).show();
+                }else{
+                    updatePost(getKey, getUid);
+                }
             }
         });
 
@@ -193,13 +217,14 @@ public class UpdatePostFragment extends Fragment {
     }
 
     private void updatePost(String getKey, String getUid) {
+
         String itemName = u_uploadName.getText().toString().trim();
         String itemDetails = u_uploadDetails.getText().toString().trim();
         String location = u_uploadLocation.getText().toString().trim();
         String condition = u_uploadCondition.getText().toString().trim();
         String value = u_uploadValue.getText().toString().trim();
         String preference = u_uploadPreference.getText().toString().trim();
-        String categories = u_category1.toString();
+        String categories = u_category1;
 
 
         HashMap hashMap = new HashMap();
@@ -215,6 +240,7 @@ public class UpdatePostFragment extends Fragment {
         databaseReference.updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {
             @Override
             public void onSuccess(Object o) {
+
                 Toast.makeText(getContext(), "Post has been updated!", Toast.LENGTH_SHORT).show();
                 Fragment mFragment = new FullPostFragment();
                 Bundle bundle = new Bundle();
