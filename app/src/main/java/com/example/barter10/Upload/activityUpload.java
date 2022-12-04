@@ -205,8 +205,6 @@ public class activityUpload extends AppCompatActivity{
                 for (int i=0; i<x; i++){
 
 
-
-
                     if (itemList.size() != 5){
                         imageuri = data.getClipData().getItemAt(i).getUri();
                         itemList.add(imageuri);
