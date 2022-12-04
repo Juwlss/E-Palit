@@ -60,7 +60,7 @@ public class FullPostFragment extends Fragment {
     private TextView estimatedValue;
     private  TextView preference;
     private TextView rating,timer;
-    private Button takeOffer,visitAuctioneer;
+    private Button takeOffer,visitAuctioneer,visitBidder;
 
     private ImageSlider postImage;
 
@@ -141,6 +141,7 @@ public class FullPostFragment extends Fragment {
         p_condition = view.findViewById(R.id.p_itemCondition);
         p_value = view.findViewById(R.id.p_itemValue);
         p_loc = view.findViewById(R.id.p_location);
+        visitBidder = view.findViewById(R.id.p_visitOfferer);
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(itemKey);
@@ -297,6 +298,7 @@ public class FullPostFragment extends Fragment {
 
             //Retrieve Oferrer Information//
             String postKey = offer.getPostKey();
+            String offerKey = offer.getOfferKey();
             String offererId = offer.getUid();
             String offererName = offer.getUserName();
             String offererProfile = offer.getProfileUrl();
@@ -318,12 +320,12 @@ public class FullPostFragment extends Fragment {
                     //For Offeree//
                     String status = "null";
                     DatabaseReference setTrade = FirebaseDatabase.getInstance().getReference("Trade").child(posterId);
-                    Trade trade = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status);
+                    Trade trade = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey);
                     setTrade.child(postKey).setValue(trade);
 
                     //For Offerer//
                     DatabaseReference setTrade2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId);
-                    Trade trade2 = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status);
+                    Trade trade2 = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey);
                     setTrade2.child(postKey).setValue(trade2);
 
 
@@ -407,6 +409,7 @@ public class FullPostFragment extends Fragment {
             String offerKey = offer.getOfferKey();
             String postKey = offer.getPostKey();
             String posterId = offer.getPosterId();
+            String offerId = offer.getUid();
             Boolean pinValue = offer.getPinValue();
 
 
@@ -441,6 +444,24 @@ public class FullPostFragment extends Fragment {
                         slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
 
                     }
+
+                    visitBidder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            SharedPreferences.Editor editor = v.getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                            editor.putString("uid", offerId);
+                            editor.apply();
+
+                            AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                            MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                            meowBottomNavigation.setVisibility(View.GONE);
+
+                            Fragment fragment = new visitprofile();
+                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+                        }
+                    });
 
                     p_img.setImageList(slideModels, ScaleTypes.FIT);
                     p_rating.setText(offer.getRating());

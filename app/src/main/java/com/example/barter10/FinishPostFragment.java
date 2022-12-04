@@ -1,9 +1,12 @@
 package com.example.barter10;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,9 +19,11 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Adapter.FinishOfferAdapter;
 import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.Upload;
+import com.example.barter10.Profile.visitprofile;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +45,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
 
     private CircleImageView p_profile;
     private ImageSlider p_postImg;
-    private TextView p_itemName,p_userName,p_rating,p_location,p_condition,p_details,p_value,p_preference;
+    private TextView p_itemName,p_userName,p_rating,p_location,p_condition,p_details,p_value,p_visitBidder;
 
     private RecyclerView rv_offers;
     private FinishOfferAdapter finishedOfferAdapter;
@@ -80,6 +85,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
         p_condition = view.findViewById(R.id.p_itemCondition);
         p_value = view.findViewById(R.id.p_itemValue);
         p_location = view.findViewById(R.id.p_location);
+        p_visitBidder = view.findViewById(R.id.p_visitOfferer);
 
         //Reclyer View for Offers//
         rv_offers = view.findViewById(R.id.v_rv_Offer);
@@ -200,6 +206,25 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
             slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
 
         }
+
+        p_visitBidder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences.Editor editor = v.getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offer.getUid());
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+            }
+        });
+
         p_postImg.setImageList(slideModels, ScaleTypes.FIT);
         p_itemName.setText("Item Name : "+offer.getItemName());
         p_details.setText("Item Details : "+offer.getItemDetails());
