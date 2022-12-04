@@ -48,12 +48,11 @@ com/example/barter10/ForgotPassword/newPass.java
  com.example.barter10.ForgotPassword.newPass$3
  com.example.barter10.ForgotPassword.newPass$4
  com.example.barter10.ForgotPassword.newPass$5
-com/example/barter10/Adapter/PostImageAdapter.java
- com.example.barter10.Adapter.PostImageAdapter
- com.example.barter10.Adapter.PostImageAdapter$1
- com.example.barter10.Adapter.PostImageAdapter$2
- com.example.barter10.Adapter.PostImageAdapter$ImageViewHolder
- com.example.barter10.Adapter.PostImageAdapter$OnItemClickListener
+com/example/barter10/Category/ToyFragment.java
+ com.example.barter10.Category.ToyFragment
+ com.example.barter10.Category.ToyFragment$1
+ com.example.barter10.Category.ToyFragment$2
+ com.example.barter10.Category.ToyFragment$3
 com/example/barter10/Category/FashionFragment.java
  com.example.barter10.Category.FashionFragment
  com.example.barter10.Category.FashionFragment$1
@@ -134,22 +133,10 @@ com/example/barter10/BottomNavigation/ListFragment.java
  com.example.barter10.BottomNavigation.ListFragment
 com/example/barter10/BottomNavigation/HomeFragment.java
  com.example.barter10.BottomNavigation.HomeFragment
-com/example/barter10/Post/OfferItemFragment.java
- com.example.barter10.Post.OfferItemFragment
- com.example.barter10.Post.OfferItemFragment$1
- com.example.barter10.Post.OfferItemFragment$2
- com.example.barter10.Post.OfferItemFragment$3
- com.example.barter10.Post.OfferItemFragment$4
- com.example.barter10.Post.OfferItemFragment$5
- com.example.barter10.Post.OfferItemFragment$5$1
- com.example.barter10.Post.OfferItemFragment$5$2
- com.example.barter10.Post.OfferItemFragment$5$2$1
-com/example/barter10/Adapter/OfferListAdapter.java
- com.example.barter10.Adapter.OfferListAdapter
- com.example.barter10.Adapter.OfferListAdapter$1
- com.example.barter10.Adapter.OfferListAdapter$2
- com.example.barter10.Adapter.OfferListAdapter$3
- com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
+com/example/barter10/DataBindingTriggerClass.java
+ com.example.barter10.DataBindingTriggerClass
+com/example/barter10/Model/viewSearch.java
+ com.example.barter10.Model.viewSearch
 com/example/barter10/Adapter/ListpageAdapter.java
  com.example.barter10.Adapter.ListpageAdapter
 com/example/barter10/Follow/followerFragment.java
@@ -304,15 +291,12 @@ com/example/barter10/Adapter/SearchAdapter.java
  com.example.barter10.Adapter.SearchAdapter$1
  com.example.barter10.Adapter.SearchAdapter$ViewHolder
  com.example.barter10.Adapter.SearchAdapter$ViewHolder$1
-com/example/barter10/Category/ToyFragment.java
- com.example.barter10.Category.ToyFragment
- com.example.barter10.Category.ToyFragment$1
- com.example.barter10.Category.ToyFragment$2
- com.example.barter10.Category.ToyFragment$3
-com/example/barter10/Model/viewSearch.java
- com.example.barter10.Model.viewSearch
-com/example/barter10/DataBindingTriggerClass.java
- com.example.barter10.DataBindingTriggerClass
+com/example/barter10/Adapter/PostImageAdapter.java
+ com.example.barter10.Adapter.PostImageAdapter
+ com.example.barter10.Adapter.PostImageAdapter$1
+ com.example.barter10.Adapter.PostImageAdapter$2
+ com.example.barter10.Adapter.PostImageAdapter$ImageViewHolder
+ com.example.barter10.Adapter.PostImageAdapter$OnItemClickListener
 com/example/barter10/Post/FullPostFragment.java
  com.example.barter10.Post.FullPostFragment
  com.example.barter10.Post.FullPostFragment$1
@@ -327,6 +311,22 @@ com/example/barter10/Post/FullPostFragment.java
  com.example.barter10.Post.FullPostFragment$7$1
  com.example.barter10.Post.FullPostFragment$8
  com.example.barter10.Post.FullPostFragment$9
+com/example/barter10/Post/OfferItemFragment.java
+ com.example.barter10.Post.OfferItemFragment
+ com.example.barter10.Post.OfferItemFragment$1
+ com.example.barter10.Post.OfferItemFragment$2
+ com.example.barter10.Post.OfferItemFragment$3
+ com.example.barter10.Post.OfferItemFragment$4
+ com.example.barter10.Post.OfferItemFragment$5
+ com.example.barter10.Post.OfferItemFragment$5$1
+ com.example.barter10.Post.OfferItemFragment$5$2
+ com.example.barter10.Post.OfferItemFragment$5$2$1
+com/example/barter10/Adapter/OfferListAdapter.java
+ com.example.barter10.Adapter.OfferListAdapter
+ com.example.barter10.Adapter.OfferListAdapter$1
+ com.example.barter10.Adapter.OfferListAdapter$2
+ com.example.barter10.Adapter.OfferListAdapter$3
+ com.example.barter10.Adapter.OfferListAdapter$MyViewHolder
 com/example/barter10/Post/UpdatePostFragment.java
  com.example.barter10.Post.UpdatePostFragment
  com.example.barter10.Post.UpdatePostFragment$1

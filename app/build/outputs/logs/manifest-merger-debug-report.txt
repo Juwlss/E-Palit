@@ -9,15 +9,15 @@ MERGED from [androidx.databinding:databinding-runtime:7.0.2] C:\Users\andrei\Doc
 MERGED from [com.github.denzcoskun:ImageSlideshow:0.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\0f8b95fd3c4dcbbabde1f0182dcabd6a\transformed\jetified-ImageSlideshow-0.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\209b4e169df9eb39470483ca696e3286\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\139bc81091ef124bf6e2ab3a058f775f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
-MERGED from [com.etebarian:meow-bottom-navigation-java:1.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\76d792bf3edf96f93bfe14ae272eb732\transformed\jetified-meow-bottom-navigation-java-1.2.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.etebarian:meow-bottom-navigation-java:1.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\c53c875153fde7d8fdd4428000efaff4\transformed\jetified-meow-bottom-navigation-java-1.2.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.github.chaosleung:pinview:1.4.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f9934de753be3c2a34970e5ce7effb58\transformed\jetified-pinview-1.4.4\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:2:1-35:12
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:2:1-35:12
 MERGED from [com.facebook.android:facebook-android-sdk:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d31080713b21ef853edbe9a05b183a3a\transformed\jetified-facebook-android-sdk-15.1.0\AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-login:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\b84231de16f8ebce1f2f1ac77190dd7c\transformed\jetified-facebook-login-15.1.0\AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-gamingservices:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\8af9203a1a75b958d682b58c5b81ef1f\transformed\jetified-facebook-gamingservices-15.1.0\AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-share:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f6dd7ae6307573f58eb80ec37e445948\transformed\jetified-facebook-share-15.1.0\AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-common:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\bfca31899f2eca9efeccdfbc3b8c58ef\transformed\jetified-facebook-common-15.1.0\AndroidManifest.xml:9:1-44:12
-MERGED from [com.github.yalantis:ucrop:2.2.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\03efb6cf5ec4ba1f7f5a770eba7972d6\transformed\jetified-ucrop-2.2.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.yalantis:ucrop:2.2.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\6e90a640048a08e4bda91e8ec00b9fbd\transformed\jetified-ucrop-2.2.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\386194cb55b99429b17baabf60f1f6dd\transformed\appcompat-1.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-database:6.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\66b7100c560c93b7cf501be471046d2c\transformed\jetified-firebase-ui-database-6.2.0\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\18ea8aed795bb9720dca7c16597bf7c4\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -30,9 +30,9 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\andrei\D
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\247a2b1096c8357ee9fdb80aa589c177\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:17:1-40:12
 MERGED from [com.intuit.sdp:sdp-android:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f717be5b4ff83781787c283ce055276d\transformed\jetified-sdp-android-1.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.intuit.ssp:ssp-android:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\ebbe032ad27c29366d26f220f9a13914\transformed\jetified-ssp-android-1.1.0\AndroidManifest.xml:2:1-11:12
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\9074a698fe94adc7a9cc51297eddeede\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\5b960a6eda317fc2292ae7b66c75a479\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\8966d74f1baee0b376dc3f17aecc0965\transformed\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f08d0cedbcf8110164c292c0d331a4c9\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\b71ca38c6b62191d586da5525b4e6f77\transformed\jetified-firebase-appcheck-interop-16.1.0\AndroidManifest.xml:15:1-25:12
 MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\40abaae235b10b4e9fb2314cfa953954\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
@@ -95,7 +95,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\andrei\Documents
 MERGED from [androidx.print:print:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\761d2a4a7f58a49b782aaab2d93d3f89\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\cde339d3e644570689531bf543ce9af2\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\951943b61d00c0cd79aee8ab64d43391\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
 INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:2:1-72:12
 INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:2:1-72:12
 INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:2:1-72:12
@@ -137,8 +137,8 @@ MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\andrei\Docume
 		ADDED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:7:5-80
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:11:5-80
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:11:5-80
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:11:5-80
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:11:5-80
 	android:name
 		ADDED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:7:22-77
 application
@@ -147,8 +147,8 @@ MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documen
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\209b4e169df9eb39470483ca696e3286\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\139bc81091ef124bf6e2ab3a058f775f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\139bc81091ef124bf6e2ab3a058f775f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:14:5-33:19
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:14:5-33:19
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:14:5-33:19
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:14:5-33:19
 MERGED from [com.facebook.android:facebook-android-sdk:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d31080713b21ef853edbe9a05b183a3a\transformed\jetified-facebook-android-sdk-15.1.0\AndroidManifest.xml:16:5-17:19
 MERGED from [com.facebook.android:facebook-android-sdk:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d31080713b21ef853edbe9a05b183a3a\transformed\jetified-facebook-android-sdk-15.1.0\AndroidManifest.xml:16:5-17:19
 MERGED from [com.facebook.android:facebook-login:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\b84231de16f8ebce1f2f1ac77190dd7c\transformed\jetified-facebook-login-15.1.0\AndroidManifest.xml:16:5-17:19
@@ -167,12 +167,12 @@ MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\andrei\Docume
 MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\5d426bece3a37cf050ac1ddf5e69e4c3\transformed\jetified-firebase-storage-20.1.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\247a2b1096c8357ee9fdb80aa589c177\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\247a2b1096c8357ee9fdb80aa589c177\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\9074a698fe94adc7a9cc51297eddeede\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\9074a698fe94adc7a9cc51297eddeede\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\5b960a6eda317fc2292ae7b66c75a479\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\5b960a6eda317fc2292ae7b66c75a479\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\8966d74f1baee0b376dc3f17aecc0965\transformed\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\8966d74f1baee0b376dc3f17aecc0965\transformed\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f08d0cedbcf8110164c292c0d331a4c9\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f08d0cedbcf8110164c292c0d331a4c9\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\b71ca38c6b62191d586da5525b4e6f77\transformed\jetified-firebase-appcheck-interop-16.1.0\AndroidManifest.xml:23:5-20
@@ -207,8 +207,8 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\andrei\Docume
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\dc91d50a647796944f57e409973c13d9\transformed\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\87ffeba7c8dc8f9b27d3db05de36a0d7\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\87ffeba7c8dc8f9b27d3db05de36a0d7\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
 	android:requestLegacyExternalStorage
 		ADDED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml:14:9-52
 	android:appComponentFactory
@@ -341,12 +341,12 @@ MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documen
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\209b4e169df9eb39470483ca696e3286\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\139bc81091ef124bf6e2ab3a058f775f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\139bc81091ef124bf6e2ab3a058f775f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.etebarian:meow-bottom-navigation-java:1.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\76d792bf3edf96f93bfe14ae272eb732\transformed\jetified-meow-bottom-navigation-java-1.2.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.etebarian:meow-bottom-navigation-java:1.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\76d792bf3edf96f93bfe14ae272eb732\transformed\jetified-meow-bottom-navigation-java-1.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.etebarian:meow-bottom-navigation-java:1.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\c53c875153fde7d8fdd4428000efaff4\transformed\jetified-meow-bottom-navigation-java-1.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.etebarian:meow-bottom-navigation-java:1.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\c53c875153fde7d8fdd4428000efaff4\transformed\jetified-meow-bottom-navigation-java-1.2.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.github.chaosleung:pinview:1.4.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f9934de753be3c2a34970e5ce7effb58\transformed\jetified-pinview-1.4.4\AndroidManifest.xml:20:5-22:41
 MERGED from [io.github.chaosleung:pinview:1.4.4] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f9934de753be3c2a34970e5ce7effb58\transformed\jetified-pinview-1.4.4\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.android:facebook-android-sdk:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d31080713b21ef853edbe9a05b183a3a\transformed\jetified-facebook-android-sdk-15.1.0\AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.android:facebook-android-sdk:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d31080713b21ef853edbe9a05b183a3a\transformed\jetified-facebook-android-sdk-15.1.0\AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.android:facebook-login:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\b84231de16f8ebce1f2f1ac77190dd7c\transformed\jetified-facebook-login-15.1.0\AndroidManifest.xml:12:5-14:41
@@ -357,8 +357,8 @@ MERGED from [com.facebook.android:facebook-share:15.1.0] C:\Users\andrei\Documen
 MERGED from [com.facebook.android:facebook-share:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f6dd7ae6307573f58eb80ec37e445948\transformed\jetified-facebook-share-15.1.0\AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.android:facebook-common:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\bfca31899f2eca9efeccdfbc3b8c58ef\transformed\jetified-facebook-common-15.1.0\AndroidManifest.xml:13:5-15:41
 MERGED from [com.facebook.android:facebook-common:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\bfca31899f2eca9efeccdfbc3b8c58ef\transformed\jetified-facebook-common-15.1.0\AndroidManifest.xml:13:5-15:41
-MERGED from [com.github.yalantis:ucrop:2.2.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\03efb6cf5ec4ba1f7f5a770eba7972d6\transformed\jetified-ucrop-2.2.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.yalantis:ucrop:2.2.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\03efb6cf5ec4ba1f7f5a770eba7972d6\transformed\jetified-ucrop-2.2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\6e90a640048a08e4bda91e8ec00b9fbd\transformed\jetified-ucrop-2.2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\6e90a640048a08e4bda91e8ec00b9fbd\transformed\jetified-ucrop-2.2.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\386194cb55b99429b17baabf60f1f6dd\transformed\appcompat-1.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\386194cb55b99429b17baabf60f1f6dd\transformed\appcompat-1.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.firebaseui:firebase-ui-database:6.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\66b7100c560c93b7cf501be471046d2c\transformed\jetified-firebase-ui-database-6.2.0\AndroidManifest.xml:7:5-9:41
@@ -383,12 +383,12 @@ MERGED from [com.intuit.sdp:sdp-android:1.1.0] C:\Users\andrei\Documents\4th yr\
 MERGED from [com.intuit.sdp:sdp-android:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f717be5b4ff83781787c283ce055276d\transformed\jetified-sdp-android-1.1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.ssp:ssp-android:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\ebbe032ad27c29366d26f220f9a13914\transformed\jetified-ssp-android-1.1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.ssp:ssp-android:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\ebbe032ad27c29366d26f220f9a13914\transformed\jetified-ssp-android-1.1.0\AndroidManifest.xml:7:5-9:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\9074a698fe94adc7a9cc51297eddeede\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\9074a698fe94adc7a9cc51297eddeede\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\5b960a6eda317fc2292ae7b66c75a479\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\5b960a6eda317fc2292ae7b66c75a479\transformed\jetified-circleimageview-2.2.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\8966d74f1baee0b376dc3f17aecc0965\transformed\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\8966d74f1baee0b376dc3f17aecc0965\transformed\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f08d0cedbcf8110164c292c0d331a4c9\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\f08d0cedbcf8110164c292c0d331a4c9\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\b71ca38c6b62191d586da5525b4e6f77\transformed\jetified-firebase-appcheck-interop-16.1.0\AndroidManifest.xml:18:5-20:41
@@ -513,8 +513,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\andrei\Documents
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\cde339d3e644570689531bf543ce9af2\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\951943b61d00c0cd79aee8ab64d43391\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\951943b61d00c0cd79aee8ab64d43391\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -526,41 +526,41 @@ INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest
 		ADDED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\andrei\Documents\4th yr\41.4\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:12:5-81
+ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:12:22-78
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:12:22-78
 activity#com.github.dhaval2404.imagepicker.ImagePickerActivity
-ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:15:9-18:68
+ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:15:9-18:68
 	android:screenOrientation
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:17:13-52
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:17:13-52
 	android:theme
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:18:13-65
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:18:13-65
 	android:name
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:16:13-81
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:16:13-81
 activity#com.yalantis.ucrop.UCropActivity
-ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:19:9-22:72
+ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:19:9-22:72
 	android:screenOrientation
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:21:13-49
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:21:13-49
 	android:theme
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:22:13-69
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:22:13-69
 	android:name
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:20:13-60
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:20:13-60
 provider#com.github.dhaval2404.imagepicker.ImagePickerFileProvider
-ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:24:9-32:20
+ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:24:9-32:20
 	android:grantUriPermissions
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:28:13-47
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:28:13-47
 	android:authorities
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:26:13-72
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:26:13-72
 	android:exported
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:27:13-37
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:25:13-85
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:25:13-85
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:29:13-31:71
+ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:29:13-31:71
 	android:resource
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:31:17-68
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:31:17-68
 	android:name
-		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\d6434f59de3d582b35f2379bff0a1fbb\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:30:17-67
+		ADDED from [com.github.dhaval2404:imagepicker-support:1.7.1] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\96f6e3031c3cd6deef77b3b1364c00b2\transformed\jetified-imagepicker-support-1.7.1\AndroidManifest.xml:30:17-67
 queries
 ADDED from [com.facebook.android:facebook-common:15.1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\bfca31899f2eca9efeccdfbc3b8c58ef\transformed\jetified-facebook-common-15.1.0\AndroidManifest.xml:17:5-19:15
 package#com.facebook.katana
@@ -692,13 +692,13 @@ ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\andrei\Do
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\247a2b1096c8357ee9fdb80aa589c177\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\766f59823e0a5076e4ebba9467a1c238\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\166b9732bb2120a03d69cbd777cdf792\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\40abaae235b10b4e9fb2314cfa953954\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
 	android:authorities
@@ -788,6 +788,6 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\andrei\Document
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\1aae356e4ba8f67e468423a046761f63\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
 	android:name
-		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\10e03ae87e77ee4763356337b7244498\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\andrei\Documents\4th yr\E-Palit\.gradle\caches\transforms-3\596bc7e4c54375d8613a27c64815b284\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
