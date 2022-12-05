@@ -24,12 +24,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_baseline_history_24.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_ui_search.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\edittext_ui_search.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_ui_search.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\edittext_ui_search.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -38,10 +38,6 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_update_post.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\fragment_update_post.xml"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_24.xml.flat",
@@ -64,20 +60,20 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\kyouser.jpg"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_swap_failed.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_swap_failed.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_slasheye.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\slasheye.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_tradesymbol.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\tradesymbol.png"
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_swap_failed.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_swap_failed.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_policy.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\activity_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_tradesymbol.png.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\tradesymbol.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_resend.png.flat",
@@ -112,16 +108,8 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\message_button.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_undraw_mobile_login_re_9ntv1.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\undraw_mobile_login_re_9ntv1.png"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_fb.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_fb.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_design_signup.png.flat",
@@ -148,16 +136,8 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\amessage.png"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_fb.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_fb.png"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_message.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\activity_message.xml"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_et_corner.xml.flat",
@@ -180,12 +160,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\rippleeffect.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_listcategories_ui.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\listcategories_ui.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_settings_24.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_listcategories_ui.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\listcategories_ui.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_follower.xml.flat",
@@ -220,12 +200,12 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\daleuser.jpg"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_offer_item.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\fragment_offer_item.xml"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_offer_item.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\fragment_offer_item.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -238,10 +218,6 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_following.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\fragment_following.xml"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_fb.xml.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_fb.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_add_alt_1_24.xml.flat",
@@ -388,10 +364,6 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\font\\inter.ttf"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_pending.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\fragment_pending.xml"
     },
@@ -414,14 +386,6 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle32.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\rectangle32.png"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_fb.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_fb.png"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\anim_label_resize.xml.flat",
@@ -608,10 +572,6 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\activity_upload.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_fb.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_fb.png"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile_settings.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\layout\\fragment_profile_settings.xml"
     },
@@ -652,10 +612,6 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
     },
     {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_fb.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_fb.png"
-    },
-    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_left.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\anim\\slide_out_left.xml"
     },
@@ -682,6 +638,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_vectorback.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\vectorback.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_up.xml.flat",
@@ -758,18 +718,6 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_swap_horizontal_circle_24.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_baseline_swap_horizontal_circle_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_fb.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_fb.png"
-    },
-    {
-        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_report.xml.flat",
@@ -858,6 +806,10 @@
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_frame35.png.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\frame35.png"
+    },
+    {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_fb.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\src\\main\\res\\drawable\\ic_fb.xml"
     },
     {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\47\\app\\build\\intermediates\\merged_res\\debug\\layout_trade_layout.xml.flat",

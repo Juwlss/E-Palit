@@ -212,9 +212,6 @@ public class activityUpload extends AppCompatActivity{
                         if(itemList.size() % 2 == 0){
                             recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
                             recyclerView.setAdapter(uploadListAdapter);
-                        }else{
-                            recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 1));
-                            recyclerView.setAdapter(uploadListAdapter);
                         }
 
                     }else if (itemList.size() == 5){

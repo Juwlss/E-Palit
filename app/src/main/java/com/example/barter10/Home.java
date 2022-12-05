@@ -1,5 +1,7 @@
 package com.example.barter10;
 
+import static com.google.firebase.messaging.Constants.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -34,6 +36,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class Home extends AppCompatActivity {
 
@@ -46,10 +49,6 @@ public class Home extends AppCompatActivity {
     FloatingActionButton upload;
     FirebaseAuth firebaseAuth;
     private TextView welcome;
-
-
-
-
 
 
     @Override
@@ -186,6 +185,7 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, activityUpload.class));
             }
         });
+
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -195,6 +195,28 @@ public class Home extends AppCompatActivity {
                 bottomNavigation.setVisibility(View.GONE);
             }
         });
+
+
+
+
+//
+//        FirebaseMessaging.getInstance().getToken()
+//                .addOnCompleteListener(new OnCompleteListener<String>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<String> task) {
+//                        if (!task.isSuccessful()) {
+//                            System.out.println("Fetching FCM registration token failed");
+//                            return;
+//                        }
+//
+//                        // Get new FCM registration token
+//                        String token = task.getResult();
+//
+//                        // Log and toast
+//                        Log.d(TAG, "Hello"+token);
+//                        Toast.makeText(Home.this, token, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
 
 
     }

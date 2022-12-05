@@ -116,10 +116,22 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/upload">
 
+                        <TextView
+                            android:id="@+id/max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Maximum of 5 images"
+                            android:textSize="@dimen/_12ssp"
+                            android:fontFamily="@font/interbold"
+                            android:textColor="@color/black" />
+
                         <View
                             android:id="@+id/seperator1"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
+                            android:layout_below="@+id/max"
                             android:layout_marginLeft="@dimen/_10sdp"
                             android:layout_marginTop="@dimen/_20sdp"
                             android:layout_marginRight="@dimen/_10sdp"
