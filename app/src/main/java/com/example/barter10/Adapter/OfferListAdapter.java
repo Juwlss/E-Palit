@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -115,6 +116,10 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         });
 
 
+
+
+
+
         DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
                 .child(offer.getUid())
                 .child("rating");
@@ -154,10 +159,12 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
                     }
                     else if (itemPin.equals("true")){
                         holder.subMenu.setVisibility(View.GONE);
+                        holder.offerDelete.setVisibility(View.GONE);
                     }
                 }
                 else {
                     holder.subMenu.setVisibility(View.GONE);
+                    holder.offerDelete.setVisibility(View.GONE);
                 }
             }
 
@@ -219,6 +226,17 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             }
         });
 
+        holder.offerDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String offerKey = offer.getOfferKey();
+
+                Toast.makeText(context, "Offer Delete", Toast.LENGTH_SHORT).show();
+                DatabaseReference pinDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                pinDelete.child(offerKey).removeValue();
+            }
+        });
+
     }
 
     @Override
@@ -232,6 +250,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
         ImageView  subMenu, userProfile;
         ImageSlider offerImg;
         Button visitOffer;
+        ImageButton offerDelete;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -247,6 +266,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
             visitOffer = itemView.findViewById(R.id.visitOfferer);
+            offerDelete = itemView.findViewById(R.id.offerDelete);
 
 
 
