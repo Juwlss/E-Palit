@@ -242,9 +242,9 @@
                     android:layout_below="@id/lblPending"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:fontFamily="@font/inter"
                     android:text="Timer"
-                    android:layout_marginBottom="@dimen/_10sdp"
                     android:textColor="#094067"
                     android:textSize="@dimen/_10ssp"
                     android:textStyle="bold" />

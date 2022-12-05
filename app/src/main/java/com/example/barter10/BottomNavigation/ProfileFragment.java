@@ -77,32 +77,7 @@ public class ProfileFragment extends Fragment {
 
         //displaying the post of user
         String userId = firebaseAuth.getCurrentUser().getUid();
-//        databaseReference = FirebaseDatabase.getInstance().getReference("ClosedBid");
-//
-//        Query qPost = databaseReference.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getUid());
-//
-//        qPost.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                //fetching from firebase to display
-//                mUploads.clear();
-//                for(DataSnapshot postSnapshot : snapshot.getChildren()){
-//
-//                    Upload upload = postSnapshot.getValue(Upload.class);
-//                    upload.setKey(postSnapshot.getKey());
-//                    mUploads.add(upload);
-//
-//
-//                }
-//
-//                selfPostAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
 
 
         //display the close bid of user
@@ -163,7 +138,6 @@ public class ProfileFragment extends Fragment {
                                 .load(Profilepic)
                                 .placeholder(R.drawable.ic_default_picture)
                                 .into(imageprofile);
-
 
                         rating.setText("Rating: "+dataSnapshot.child("rating").getValue().toString()+"/5");
                         profilename.setText(dataSnapshot.child("username").getValue().toString());

@@ -216,6 +216,8 @@ public class FullPostFragment extends Fragment {
             }
         });
 
+
+
         visitAuctioneer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

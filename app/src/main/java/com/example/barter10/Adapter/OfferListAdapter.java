@@ -91,7 +91,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
         Picasso.get()
                 .load(offer.getProfileUrl())
-                .placeholder(R.drawable.ic_baseline_image_24)
+                .placeholder(R.drawable.ic_default_picture)
                 .fit()
                 .into(holder.userProfile);
 

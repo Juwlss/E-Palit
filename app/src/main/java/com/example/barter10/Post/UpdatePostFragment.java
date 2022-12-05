@@ -92,6 +92,7 @@ public class UpdatePostFragment extends Fragment {
                     public void onPositiveButtonClick(Object selection) {
                         u_calendar.setText(materialDatePicker.getHeaderText());
 
+                        u_timer = materialDatePicker.getHeaderText();
                     }
                 });
             }
@@ -106,20 +107,11 @@ public class UpdatePostFragment extends Fragment {
         categories.add("Sports");
         categories.add("Appliances");
 
-
-        //setting categories in spinner
-        ArrayAdapter<String> dataAdapter;
-        dataAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, categories);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        itemCategory.setAdapter(dataAdapter);
         itemCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).equals("Select")) {
-                    Toast.makeText(getContext(), "Please select a category", Toast.LENGTH_SHORT).show();
-                } else {
-                    u_category1 = parent.getItemAtPosition(position).toString();
-                }
+                u_category1 = parent.getItemAtPosition(position).toString();
+
             }
 
             @Override
@@ -127,6 +119,14 @@ public class UpdatePostFragment extends Fragment {
                 Toast.makeText(getContext(), "Please select a Category 123", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        //setting categories in spinner
+        ArrayAdapter<String> dataAdapter;
+        dataAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, categories);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        itemCategory.setAdapter(dataAdapter);
+
 
 
         //getting details in edit text
@@ -180,14 +180,7 @@ public class UpdatePostFragment extends Fragment {
 
                 }
 
-
-
-
                 itemCategory.setSelection(posCat);
-
-
-
-
 
 
 
@@ -201,14 +194,14 @@ public class UpdatePostFragment extends Fragment {
         });
 
 
+
+
+
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (u_category1.equals(null)){
-                    Toast.makeText(getContext(), "Please Select a Category", Toast.LENGTH_SHORT).show();
-                }else{
-                    updatePost(getKey, getUid);
-                }
+
+                updatePost(getKey, getUid);
             }
         });
 
@@ -218,6 +211,10 @@ public class UpdatePostFragment extends Fragment {
 
     private void updatePost(String getKey, String getUid) {
 
+
+
+
+
         String itemName = u_uploadName.getText().toString().trim();
         String itemDetails = u_uploadDetails.getText().toString().trim();
         String location = u_uploadLocation.getText().toString().trim();
@@ -225,6 +222,7 @@ public class UpdatePostFragment extends Fragment {
         String value = u_uploadValue.getText().toString().trim();
         String preference = u_uploadPreference.getText().toString().trim();
         String categories = u_category1;
+        String timer = u_timer.trim();
 
 
         HashMap hashMap = new HashMap();
@@ -233,8 +231,13 @@ public class UpdatePostFragment extends Fragment {
         hashMap.put("location", location);
         hashMap.put("itemCondition", condition);
         hashMap.put("itemValue", value);
+        hashMap.put("timer", timer);
         hashMap.put("itemPreference", preference);
+
         hashMap.put("category1", categories);
+
+
+
 
 
         databaseReference.updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {

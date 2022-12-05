@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessageActivity">
+    tools:context=".MessageActivity"
+    android:id="@+id/messageContainer">
 
 
    <com.google.android.material.appbar.AppBarLayout
@@ -20,6 +21,7 @@
            android:layout_height="match_parent">
 
            <RelativeLayout
+               android:id="@+id/m_visitProfile"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content">
 
@@ -88,13 +90,13 @@
             android:id="@+id/text_send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_15sdp"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:layout_toLeftOf="@id/btn_send"
             android:background="@drawable/message_background"
             android:hint="Message"
 
-            android:padding="@dimen/_5sdp"/>
+            android:padding="@dimen/_5sdp" />
 
         <ImageButton
             android:id="@+id/btn_send"

@@ -151,24 +151,40 @@ public class OfferItemFragment extends Fragment {
             if (data.getClipData() != null){
                 int x = data.getClipData().getItemCount();
                 for (int i=0; i<x; i++){
-                    recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-                    recyclerView.setAdapter(uploadListAdapter);
-                    imageuri = data.getClipData().getItemAt(i).getUri();
-                    itemList.add(imageuri);
-                    uploadListAdapter.notifyDataSetChanged();
+                    if (itemList.size() != 5){
+                        imageuri = data.getClipData().getItemAt(i).getUri();
+                        itemList.add(imageuri);
+
+                        if(itemList.size() % 2 == 0){
+                            recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                            recyclerView.setAdapter(uploadListAdapter);
+                        }else{
+                            recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
+                            recyclerView.setAdapter(uploadListAdapter);
+                        }
+
+                    }else if (itemList.size() == 5){
+
+                        Toast.makeText(getContext(), "You can post only 5 images", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
             }else{
-                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                recyclerView.setAdapter(uploadListAdapter);
-                imageuri = data.getData();
-                itemList.add(imageuri);
-                if(itemList.size()>1){
-                    recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-                    recyclerView.setAdapter(uploadListAdapter);
-                }
-                uploadListAdapter.notifyDataSetChanged();
-                Toast.makeText(getContext(), "Single", Toast.LENGTH_SHORT).show();
+               if (itemList.size() != 5){
+                   recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                   recyclerView.setAdapter(uploadListAdapter);
+                   imageuri = data.getData();
+                   itemList.add(imageuri);
+                   if(itemList.size()>1){
+                       recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                       recyclerView.setAdapter(uploadListAdapter);
+                   }
+                   uploadListAdapter.notifyDataSetChanged();
+
+               }else if (itemList.size() == 5){
+
+                   Toast.makeText(getContext(), "You can post only 5 images", Toast.LENGTH_SHORT).show();
+               }
             }
 
         }else{

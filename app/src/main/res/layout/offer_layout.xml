@@ -62,6 +62,7 @@
                 android:textColor="#5F6C7B"
                 android:textFontWeight="500" />
 
+
             <ImageView
                 android:id="@+id/o_subMenu"
                 android:layout_width="wrap_content"
@@ -69,9 +70,7 @@
                 android:layout_alignTop="@+id/o_username"
                 android:layout_alignBottom="@+id/o_rating"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_unpin">
-
-            </ImageView>
+                android:src="@drawable/ic_unpin"/>
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/o_image_slider"
@@ -157,6 +156,7 @@
                 android:textColor="#094067"
                 android:textSize="@dimen/_11ssp"
                 android:textStyle="bold" />
+
 
 
         </RelativeLayout>

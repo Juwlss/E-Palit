@@ -21,6 +21,13 @@ import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Model.Offer;
 import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -73,7 +80,6 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
 
         holder.offerImg.setImageList(slideModels, ScaleTypes.FIT);
 
-
         Picasso.get()
                 .load(offer.getProfileUrl())
                 .placeholder(R.drawable.ic_baseline_image_24)
@@ -83,6 +89,23 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
 
         holder.subMenu.setVisibility(View.GONE);
 
+
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        Query update = reference.orderByChild("uid").equalTo(offer.getUid());
+        update.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    holder.rating.setText(dataSnapshot.child("rating").getValue().toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
 
@@ -114,7 +137,7 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
     public static class MyOfferHolder extends RecyclerView.ViewHolder{
 
         private TextView userName, rating, itemName, itemDetails, itemCondition, itemValue,location;
-        private ImageView btnOfferMsg, subMenu, userProfile;
+        private ImageView subMenu, userProfile;
         private ImageSlider offerImg;
         private Button visitOffer;
         public MyOfferHolder(@NonNull View itemView) {
@@ -128,7 +151,6 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
             itemValue = itemView.findViewById(R.id.o_itemValue);
             location = itemView.findViewById(R.id.o_location);
             offerImg = itemView.findViewById(R.id.o_image_slider);
-            btnOfferMsg = itemView.findViewById(R.id.btnOfferMsg);
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
             visitOffer = itemView.findViewById(R.id.visitOfferer);

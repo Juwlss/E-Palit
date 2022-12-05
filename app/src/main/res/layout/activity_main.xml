@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignInSignUp.MainActivity">
+
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,8 +17,8 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="214dp"
-                android:layout_height="261dp"
+                android:layout_width="@dimen/_204sdp"
+                android:layout_height="@dimen/_251sdp"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:src="@drawable/loading_logo" />
@@ -27,9 +29,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/logo"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
                 android:layout_marginBottom="-300dp">
 
                 <ImageView
@@ -121,10 +123,10 @@
                         android:id="@+id/lg_noacc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/inter"
                         android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginLeft="@dimen/_60sdp"
+                        android:fontFamily="@font/inter"
                         android:text="Don't have an account? "
                         android:textColor="#646464"
                         android:textFontWeight="500"
@@ -170,8 +172,8 @@
                         android:layout_width="@dimen/_200sdp"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/bottomLine"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_centerHorizontal="true">
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp">
 
                         <ImageButton
                             android:id="@+id/btnGoogle"
@@ -193,7 +195,6 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
-
 
 
             </RelativeLayout>

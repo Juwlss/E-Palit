@@ -2,18 +2,29 @@ package com.example.barter10;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Adapter.ChatAdapter;
 import com.example.barter10.Model.Chat;
 import com.example.barter10.Model.User;
+import com.example.barter10.Profile.visitprofile;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,7 +44,7 @@ public class MessageActivity extends AppCompatActivity {
     private TextView username,rating;
     private DatabaseReference reference;
     private Toolbar toolbar;
-
+    private RelativeLayout visitProfile,sendMessage;
 
     private ImageButton btnSend;
     private EditText textSend;
@@ -76,9 +87,10 @@ public class MessageActivity extends AppCompatActivity {
         rating = findViewById(R.id.rating);
 
         //message
+        sendMessage = findViewById(R.id.send_message);
         btnSend = findViewById(R.id.btn_send);
         textSend = findViewById(R.id.text_send);
-
+        visitProfile = findViewById(R.id.m_visitProfile);
 
 //        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -97,6 +109,24 @@ public class MessageActivity extends AppCompatActivity {
             }
         });
 
+        visitProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences.Editor editor = getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", userid);
+                editor.apply();
+
+                recyclerView.setVisibility(View.GONE);
+                sendMessage.setVisibility(View.GONE);
+                getSupportActionBar().hide();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.messageContainer, new visitprofile()).commit();
+
+
+            }
+        });
+
 
         reference = FirebaseDatabase.getInstance().getReference("users").child(userid);
 
@@ -105,15 +135,15 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-            User user = snapshot.getValue(User.class);
-            username.setText(user.getUsername());
-            Picasso.get()
-                    .load(user.getProfilepic())
-                    .placeholder(R.drawable.ic_default_picture)
-                    .into(profileImage);
+                User user = snapshot.getValue(User.class);
+                username.setText(user.getUsername());
+                Picasso.get()
+                        .load(user.getProfilepic())
+                        .placeholder(R.drawable.ic_default_picture)
+                        .into(profileImage);
 
-            rating.setText("Rating: "+user.getRating()+"/5");
-            readMessage(FirebaseAuth.getInstance().getUid(), userid, user.getProfilepic());
+                rating.setText("Rating: "+user.getRating()+"/5");
+                readMessage(FirebaseAuth.getInstance().getUid(), userid, user.getProfilepic());
 
             }
             @Override
@@ -198,7 +228,7 @@ public class MessageActivity extends AppCompatActivity {
                     Chat chat = dataSnapshot.getValue(Chat.class);
 
                     if ((chat.getReceiver().equals(myid) && chat.getSender().equals(userid))
-                        || (chat.getReceiver().equals(userid) && chat.getSender().equals(myid))){
+                            || (chat.getReceiver().equals(userid) && chat.getSender().equals(myid))){
 
 
                         mChat.add(chat);
