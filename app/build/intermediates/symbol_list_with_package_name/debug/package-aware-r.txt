@@ -4239,6 +4239,7 @@ id p_location
 id p_rating
 id p_userProfile
 id p_username
+id p_visitAuctioneer
 id p_visitOfferer
 id packed
 id page

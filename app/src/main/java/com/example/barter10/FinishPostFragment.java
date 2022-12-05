@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
@@ -53,6 +55,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
     private List<Offer> offerList;
 
     private String rating;
+    private Button p_visitAuctioneer;
 
     DatabaseReference closeBidReference,pinPostReference,offerReference;
 
@@ -64,7 +67,10 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
 
         String postKey = getArguments().getString("ItemKey");
 
+        String auctioneerId = getArguments().getString("uId");
         //Getting ID in XML //
+
+        p_visitAuctioneer = view.findViewById(R.id.p_visitAuctioneer);
         btnBack = view.findViewById(R.id.v_btnPostBack);
         v_profile = view.findViewById(R.id.v_userProfile);
         v_postImg = view.findViewById(R.id.v_image_slider);
@@ -88,6 +94,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
         p_value = view.findViewById(R.id.p_itemValue);
         p_location = view.findViewById(R.id.p_location);
         p_visitBidder = view.findViewById(R.id.p_visitOfferer);
+
 
         //Reclyer View for Offers//
         rv_offers = view.findViewById(R.id.v_rv_Offer);
@@ -148,22 +155,6 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
 
 
 
-        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
-                .child(FirebaseAuth.getInstance().getUid())
-                .child("rating");
-
-        ratingReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                rating = snapshot.getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
 
 
 
@@ -181,6 +172,8 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
 
         v_userName.setText(upload.getUserName());
         v_itemName.setText(upload.getItemName());
+
+
 
         Picasso.get()
                 .load(upload.getProfileUrl())
@@ -208,13 +201,56 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
         v_value.setText("Item Value : "+upload.getItemValue());
         v_preference.setText("Item Preferences : "+upload.getItemPreference());
 
+        p_visitAuctioneer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", upload.getUid());
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+
+            }
+        });
 
     }
 
     private void showFinishPinPost(DataSnapshot snapshot) {
         Offer offer = snapshot.getValue(Offer.class);
         p_userName.setText(offer.getUserName());
-        p_rating.setText("Rating: "+rating+"/5");
+
+
+
+
+        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(offer.getUid());
+//                .child("rating");
+
+        ratingReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                rating = snapshot.child("rating").getValue().toString();
+
+                p_rating.setText("Rating: "+rating+"/5");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
 
         Picasso.get()
                 .load(offer.getProfileUrl())
@@ -252,6 +288,11 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
             }
         });
+
+
+
+
+
 
         p_postImg.setImageList(slideModels, ScaleTypes.FIT);
         p_itemName.setText("Item Name : "+offer.getItemName());
