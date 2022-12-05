@@ -73,6 +73,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         String offererId = trade.getOffererId();
         //Get Post id/key//
         String postKey = trade.getPostKey();
+        //Get Offer Key//
+        String offerKey = trade.getOfferKey();
 
         //Offeree Details//
         Picasso.get()
@@ -698,14 +700,14 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
         //Get status in Trade Reference//
         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-            updateStatusOfferee(offererId,postKey,trade);
+            updateStatusOfferee(offererId,postKey,trade,offerKey);
 
 
 
 
         }
         else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
-            updateStatusOfferer(offereeId,postKey,trade);
+            updateStatusOfferer(offereeId,postKey,trade,offerKey);
         }
 
 
@@ -714,7 +716,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
 
-    private void updateStatusOfferee(String offererId, String postKey, Trade trade) {
+    private void updateStatusOfferee(String offererId, String postKey, Trade trade, String offerKey) {
 
 
         DatabaseReference upStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(FirebaseAuth.getInstance().getUid()).child(postKey);
@@ -727,6 +729,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                 if (valOfferee.equals("null") || valOfferer.equals("null")){
 //                    Toast.makeText(context, "Status is still false1111", Toast.LENGTH_SHORT).show();
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
                 }
                 else if(valOfferee.equals("true") && valOfferer.equals("true")){
 
@@ -744,6 +748,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
+
+                    //Deletion of duplicate in offer//
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
 
 
 
@@ -772,6 +780,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
 
+                    //Deletion of duplicate in offer//
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
+
 
 //
 //                    offeree.removeValue();
@@ -798,6 +810,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
+
+                    //Deletion of duplicate in offer//
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
 
 
 //
@@ -820,7 +836,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
     }
 
 
-    private void updateStatusOfferer(String offereeId, String postKey, Trade trade) {
+    private void updateStatusOfferer(String offereeId, String postKey, Trade trade, String offerKey) {
 
         DatabaseReference upStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(FirebaseAuth.getInstance().getUid()).child(postKey);
 
@@ -835,6 +851,8 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                 if (valOfferee.equals("null") || valOfferer.equals("null")){
 //                    Toast.makeText(context, "Status is still false2", Toast.LENGTH_SHORT).show();
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
                 }
                 else if(valOfferee.equals("true") && valOfferer.equals("true")){
 
@@ -842,6 +860,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     status.put("status", "true");
                     offerer.updateChildren(status);
                     offeree.updateChildren(status);
+
+                    //Deletion of duplicate in offer//
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
 
                     //Creating Finished reference for storing success/failed transactions//
 //                    DatabaseReference finished1 = FirebaseDatabase.getInstance().getReference("Finished").child(FirebaseAuth.getInstance().getUid()).child(postKey);
@@ -865,6 +887,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     offerer.updateChildren(status);
                     offeree.updateChildren(status);
 
+                    //Deletion of duplicate in offer//
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
+
                     //Creating Finished reference for storing success/failed transactions//
 //                    DatabaseReference finished1 = FirebaseDatabase.getInstance().getReference("Finished").child(FirebaseAuth.getInstance().getUid()).child(postKey);
 //                    finished1.setValue(trade);
@@ -884,6 +910,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     status.put("status", "false");
                     offerer.updateChildren(status);
                     offeree.updateChildren(status);
+
+                    //Deletion of duplicate in offer//
+                    DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
+                    offerDupDelete.child(offerKey).removeValue();
 
                     //Creating Finished reference for storing success/failed transactions//
 //                    DatabaseReference finished1 = FirebaseDatabase.getInstance().getReference("Finished").child(FirebaseAuth.getInstance().getUid()).child(postKey);

@@ -14,11 +14,12 @@ public class Trade {
 
     String postKey;
     String status;
+    String offerKey;
 
     public Trade() {
     }
 
-    public Trade(String offereeId, String offereeName, String offereeProfile, String offereeImg, String offererId, String offererName, String offererProfile, String offererImg, String postKey, String status) {
+    public Trade(String offereeId, String offereeName, String offereeProfile, String offereeImg, String offererId, String offererName, String offererProfile, String offererImg, String postKey, String status, String offerKey) {
         this.offereeId = offereeId;
         this.offereeName = offereeName;
         this.offereeProfile = offereeProfile;
@@ -29,6 +30,15 @@ public class Trade {
         this.offererImg = offererImg;
         this.postKey = postKey;
         this.status = status;
+        this.offerKey = offerKey;
+    }
+
+    public String getOfferKey() {
+        return offerKey;
+    }
+
+    public void setOfferKey(String offerKey) {
+        this.offerKey = offerKey;
     }
 
     public String getOffereeId() {

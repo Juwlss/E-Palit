@@ -4236,6 +4236,7 @@ int id p_location 0x7f0a0227
 int id p_rating 0x7f0a0228
 int id p_userProfile 0x7f0a0229
 int id p_username 0x7f0a022a
+int id p_visitOfferer 0x7f0a0385
 int id packed 0x7f0a022b
 int id page 0x7f0a022c
 int id pager_dots 0x7f0a022d

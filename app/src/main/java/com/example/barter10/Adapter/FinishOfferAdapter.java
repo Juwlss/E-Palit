@@ -1,19 +1,25 @@
 package com.example.barter10.Adapter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Model.Offer;
+import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
 import com.squareup.picasso.Picasso;
 
@@ -77,6 +83,27 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
 
         holder.subMenu.setVisibility(View.GONE);
 
+
+
+
+        holder.visitOffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("uid", offer.getUid());
+                editor.apply();
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                meowBottomNavigation.setVisibility(View.GONE);
+
+                Fragment fragment = new visitprofile();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+            }
+        });
+
     }
 
     @Override
@@ -89,7 +116,7 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
         private TextView userName, rating, itemName, itemDetails, itemCondition, itemValue,location;
         private ImageView btnOfferMsg, subMenu, userProfile;
         private ImageSlider offerImg;
-
+        private Button visitOffer;
         public MyOfferHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -104,6 +131,7 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
             btnOfferMsg = itemView.findViewById(R.id.btnOfferMsg);
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
+            visitOffer = itemView.findViewById(R.id.visitOfferer);
 
         }
     }
