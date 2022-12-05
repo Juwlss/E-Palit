@@ -39,6 +39,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
@@ -240,21 +241,7 @@ public class FullPostFragment extends Fragment {
 
 
 
-        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
-                .child(FirebaseAuth.getInstance().getUid())
-                .child("rating");
 
-        ratingReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                rate = snapshot.getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
 
 
@@ -307,6 +294,24 @@ public class FullPostFragment extends Fragment {
         });
 
 
+        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child("rating");
+
+        ratingReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rate  = "Rating: "+snapshot.getValue().toString()+"/5";
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
         return view;
     }
 
@@ -322,6 +327,8 @@ public class FullPostFragment extends Fragment {
             String offererProfile = offer.getProfileUrl();
             String offerImg = offer.getImageUrl();
             String posterId = offer.getPosterId();
+
+
 
             //Get the offeree information//
             DatabaseReference offereeReference = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(postKey);
@@ -433,6 +440,23 @@ public class FullPostFragment extends Fragment {
 
 
 
+            DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                    .child(offer.getUid())
+                    .child("rating");
+
+            ratingReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    p_rating.setText("Rating: "+snapshot.getValue().toString()+"/5");
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+
             //Check if you are the offeree//
             //If you are the offeree the take offer button will visible//
             if (FirebaseAuth.getInstance().getUid().equals(uid)){
@@ -442,6 +466,7 @@ public class FullPostFragment extends Fragment {
                     takeOffer.setVisibility(View.VISIBLE);
                     pinPost.setVisibility(View.VISIBLE);
                     p_username.setText(offer.getUserName());
+
 
                     Picasso.get()
                             .load(offer.getProfileUrl())
@@ -464,21 +489,7 @@ public class FullPostFragment extends Fragment {
                     }
 
 
-                    DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
-                            .child(FirebaseAuth.getInstance().getUid())
-                            .child("rating");
 
-                    ratingReference.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            rate = snapshot.getValue().toString();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
 
                     visitBidder.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -499,7 +510,7 @@ public class FullPostFragment extends Fragment {
                     });
 
                     p_img.setImageList(slideModels, ScaleTypes.FIT);
-                    p_rating.setText(offer.getRating());
+                    p_rating.setText(rate);
                     p_itemName.setText("Item Name : "+offer.getItemName());
                     p_itemDetails.setText("Item Details : "+offer.getItemDetails());
                     p_condition.setText("Item Condition : "+offer.getItemCondition());
@@ -581,8 +592,10 @@ public class FullPostFragment extends Fragment {
 
         }
 
+
+
         p_img.setImageList(slideModels, ScaleTypes.FIT);
-        p_rating.setText(offer.getRating());
+//        p_rating.setText("Rating: "+rate+"/5");
         p_itemName.setText("Item Name : "+offer.getItemName());
         p_itemDetails.setText("Item Details : "+offer.getItemDetails());
         p_condition.setText("Item Condition : "+offer.getItemCondition());
