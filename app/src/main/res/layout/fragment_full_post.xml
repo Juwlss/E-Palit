@@ -369,15 +369,7 @@
                             android:textSize="@dimen/_11ssp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:id="@+id/btnOfferMsg"
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_30sdp"
-                            android:layout_alignTop="@+id/p_itemName"
-                            android:layout_alignBottom="@+id/p_itemName"
-                            android:layout_alignParentRight="true"
-                            android:src="@drawable/ic_baseline_message_24"
-                            tools:ignore="UnknownId" />
+
 
                         <TextView
                             android:id="@+id/p_itemDetails"

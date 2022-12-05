@@ -24,6 +24,7 @@ import com.example.barter10.Adapter.FinishOfferAdapter;
 import com.example.barter10.Model.Offer;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Profile.visitprofile;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,6 +52,7 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
     private FinishOfferAdapter finishedOfferAdapter;
     private List<Offer> offerList;
 
+    private String rating;
 
     DatabaseReference closeBidReference,pinPostReference,offerReference;
 
@@ -144,6 +146,31 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
             }
         });
 
+
+
+        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child("rating");
+
+        ratingReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rating = snapshot.getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
+
+
+
+
         return view;
     }
 
@@ -187,7 +214,8 @@ public class FinishPostFragment extends Fragment implements View.OnClickListener
     private void showFinishPinPost(DataSnapshot snapshot) {
         Offer offer = snapshot.getValue(Offer.class);
         p_userName.setText(offer.getUserName());
-        p_rating.setText(offer.getRating());
+        p_rating.setText("Rating: "+rating+"/5");
+
         Picasso.get()
                 .load(offer.getProfileUrl())
                 .placeholder(R.drawable.ic_baseline_image_24)

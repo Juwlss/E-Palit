@@ -120,9 +120,9 @@ public class MessageActivity extends AppCompatActivity {
                 recyclerView.setVisibility(View.GONE);
                 sendMessage.setVisibility(View.GONE);
                 getSupportActionBar().hide();
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.messageContainer, new visitprofile()).commit();
 
+                Fragment fragment = new visitprofile();
+                getSupportFragmentManager().beginTransaction().replace(R.id.messageContainer,fragment).addToBackStack(null).commit();
 
             }
         });

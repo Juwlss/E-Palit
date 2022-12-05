@@ -109,7 +109,7 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
 
 
 
-        holder.visitOffer.setOnClickListener(new View.OnClickListener() {
+        holder.visitBidder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
@@ -139,7 +139,7 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
         private TextView userName, rating, itemName, itemDetails, itemCondition, itemValue,location;
         private ImageView subMenu, userProfile;
         private ImageSlider offerImg;
-        private Button visitOffer;
+        private Button visitBidder;
         public MyOfferHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -153,7 +153,7 @@ public class FinishOfferAdapter extends RecyclerView.Adapter<FinishOfferAdapter.
             offerImg = itemView.findViewById(R.id.o_image_slider);
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
-            visitOffer = itemView.findViewById(R.id.visitOfferer);
+            visitBidder = itemView.findViewById(R.id.visitOfferer);
 
         }
     }

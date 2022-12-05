@@ -3808,7 +3808,6 @@ int id btnGoogle 0x7f0a007b
 int id btnOffer 0x7f0a007c
 int id btnOfferBack 0x7f0a007d
 int id btnOfferItem 0x7f0a007e
-int id btnOfferMsg 0x7f0a007f
 int id btnPostBack 0x7f0a0080
 int id btnSearch 0x7f0a0081
 int id btnSignup 0x7f0a0082

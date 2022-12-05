@@ -32,6 +32,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
@@ -88,7 +89,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
         holder.offerImg.setImageList(slideModels, ScaleTypes.FIT);
 
-
         Picasso.get()
                 .load(offer.getProfileUrl())
                 .placeholder(R.drawable.ic_default_picture)
@@ -110,6 +110,23 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
 
                 Fragment fragment = new visitprofile();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
+        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(offer.getUid())
+                .child("rating");
+
+        ratingReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                holder.rating.setText("Rating: "+snapshot.getValue().toString()+"/5");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
@@ -212,7 +229,7 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView userName, rating, itemName, itemDetails, itemCondition, itemValue,location;
-        ImageView  btnOfferMsg, subMenu, userProfile;
+        ImageView  subMenu, userProfile;
         ImageSlider offerImg;
         Button visitOffer;
 
@@ -227,7 +244,6 @@ public class OfferListAdapter extends RecyclerView.Adapter<OfferListAdapter.MyVi
             itemValue = itemView.findViewById(R.id.o_itemValue);
             location = itemView.findViewById(R.id.o_location);
             offerImg = itemView.findViewById(R.id.o_image_slider);
-            btnOfferMsg = itemView.findViewById(R.id.btnOfferMsg);
             userProfile = itemView.findViewById(R.id.o_userProfile);
             subMenu = itemView.findViewById(R.id.o_subMenu);
             visitOffer = itemView.findViewById(R.id.visitOfferer);

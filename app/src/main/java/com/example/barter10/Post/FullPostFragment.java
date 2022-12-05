@@ -86,6 +86,8 @@ public class FullPostFragment extends Fragment {
     private CircleImageView p_profile;
     private ImageSlider p_img;
 
+    private String rate;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -238,7 +240,21 @@ public class FullPostFragment extends Fragment {
 
 
 
+        DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                .child(FirebaseAuth.getInstance().getUid())
+                .child("rating");
 
+        ratingReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rate = snapshot.getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
 
@@ -446,6 +462,23 @@ public class FullPostFragment extends Fragment {
                         slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
 
                     }
+
+
+                    DatabaseReference ratingReference = FirebaseDatabase.getInstance().getReference("users")
+                            .child(FirebaseAuth.getInstance().getUid())
+                            .child("rating");
+
+                    ratingReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            rate = snapshot.getValue().toString();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
                     visitBidder.setOnClickListener(new View.OnClickListener() {
                         @Override
