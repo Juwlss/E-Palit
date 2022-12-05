@@ -3424,6 +3424,7 @@ drawable btn_upload_ui
 drawable button
 drawable button_ui
 drawable calendar_ui
+drawable circle_button
 drawable code
 drawable com_facebook_auth_dialog_background
 drawable com_facebook_auth_dialog_cancel_background
@@ -4214,6 +4215,7 @@ id o_subMenuUnpin
 id o_userProfile
 id o_username
 id off
+id offerDelete
 id offeree_image_slider
 id offeree_layout
 id offeree_name
