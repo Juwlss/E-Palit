@@ -20,8 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-
-
         <TextView
             android:id="@+id/signup_textView"
             android:layout_width="wrap_content"
@@ -141,10 +139,23 @@
             android:background="@drawable/edittext_ui"
             android:ems="10"
             android:fontFamily="@font/inter"
-            android:hint=" +63 Phone Number"
+            android:hint="Phone Number"
             android:inputType="phone"
+            android:paddingStart="@dimen/_30sdp"
             android:paddingLeft="@dimen/_15sdp"
             android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtConPassword"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignStart="@id/txtPhone"
+            android:fontFamily="@font/inter"
+            android:text="+63"
+            android:textColor="#333333"/>
 
         <RelativeLayout
             android:id="@+id/dataprivacy"

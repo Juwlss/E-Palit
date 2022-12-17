@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -126,8 +127,19 @@ public class signUp extends AppCompatActivity {
                 String str_password = password.getText().toString().trim();
                 String str_conpass = conpassword.getText().toString().trim();
 
+                String checker1 = "^[a-zA-Z0-9]$";
+                String checker = "[^a-zA-Z0-9]*"; //containing alphanumeric characters
+//                a-zA-Z0-9
 
-                String checker = "^[9][0-9]{9}$";
+//                ^                 # start-of-string
+//                        (?=.*[0-9])       # a digit must occur at least once
+//                        (?=.*[a-z])       # a lower case letter must occur at least once
+//                        (?=.*[A-Z])       # an upper case letter must occur at least once
+//                        (?=.*[@#$%^&+=])  # a special character must occur at least once you can replace with your special characters
+//                        (?=\\S+$)          # no whitespace allowed in the entire string
+//                        .{4,}             # anything, at least six places though
+//                $                 # end-of-string
+
 
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
 
@@ -147,16 +159,27 @@ public class signUp extends AppCompatActivity {
 
 
 
-                if(phoNo.getText().toString().trim().isEmpty()){
-                    Toast.makeText(signUp.this,"Enter Phone Number",Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_conpass) || TextUtils.isEmpty(str_email)) {
-                    Toast.makeText(signUp.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                if(TextUtils.isEmpty(str_email)){
+                    email.setError("Please enter your email");
+                } else if(!Patterns.EMAIL_ADDRESS.matcher(str_email).matches()){
+                    email.setError("Please enter a valid email");
+                }else if(TextUtils.isEmpty(str_username)){
+                    username.setError("Please enter your username");
+                } else if(TextUtils.isEmpty(str_password)){
+                    password.setError("Please enter your password");
+                } else if(TextUtils.isEmpty(str_conpass)){
+                    conpassword.setError("Please enter your confirm password");
+                } else if(TextUtils.isEmpty(phoNo.getText().toString().trim())){
+                    phoNo.setError("Please enter your phone number");
                 } else if (str_password.length() < 6) {
-                    Toast.makeText(signUp.this, "Password must have more than 6 characters", Toast.LENGTH_SHORT).show();
+                    password.setError("Password must have more than 6 characters");
+                } else if (str_password.matches("[^0-9]*")) {
+                    password.setError("Password must contain numbers");
+                } else if (str_password.matches("[^a-zA-Z]*")) {
+                    password.setError("Password must contain letters");
                 } else if (!str_password.equals(str_conpass)){
                     conpassword.setError("Password does not match");
-                } else if (str_username.length() < 4) {
+                } else if (str_username.length() < 8) {
                     Toast.makeText(signUp.this, "username is too short", Toast.LENGTH_SHORT).show();
                 } else if(!checkBox.isChecked()){
                     Toast.makeText(signUp.this, "You must agree to Sign up", Toast.LENGTH_SHORT).show();

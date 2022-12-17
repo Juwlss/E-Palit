@@ -143,9 +143,10 @@ public class MainActivity extends AppCompatActivity {
 
                 databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
-
-                if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_password)) {
-                    Toast.makeText(MainActivity.this, "Please filled all the requirements", Toast.LENGTH_SHORT).show();
+                if(TextUtils.isEmpty(str_username)){
+                    username.setError("Please enter your username");
+                } else if(TextUtils.isEmpty(str_password)){
+                    password.setError("Please enter your password");
                 }
                 else{
 
@@ -192,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, signUp.class));
             }
         });
+
+
 
 
 

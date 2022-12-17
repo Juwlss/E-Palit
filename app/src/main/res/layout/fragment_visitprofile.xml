@@ -21,6 +21,20 @@
             android:src="@drawable/ic_baseline_arrow_back_24"/>
 
 
+        <TextView
+            android:id="@+id/v_profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:text="Vincent De Lara"
+            android:textColor="#000000"
+            android:textFontWeight="900"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
         <RelativeLayout
             android:id="@+id/profile_info"
             android:layout_width="match_parent"
@@ -42,37 +56,36 @@
                 android:layout_toRightOf="@id/v_image_profile">
 
                 <TextView
-                    android:id="@+id/v_profilename"
+                    android:id="@+id/rating"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_25sdp"
-                    android:fontFamily="@font/inter"
-                    android:maxLines="1"
-                    android:text="Vincent De Lara"
+                    android:layout_height="@dimen/_18sdp"
+                    android:fontFamily="@font/interbold"
+                    android:src="@drawable/rating"
+                    android:text="Rating: 0/5"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textFontWeight="900"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_9ssp" />
 
                 <TextView
                     android:id="@+id/tv_followers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/v_profilename"
+                    android:layout_below="@id/rating"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="Followers: "
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="#333333"
+                    android:textSize="@dimen/_10sdp" />
 
                 <TextView
                     android:id="@+id/followers_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_below="@id/v_profilename"
                     android:layout_toRightOf="@id/tv_followers"
                     android:text="0"
-
-                    android:textSize="@dimen/_12sdp"
+                    android:layout_below="@id/rating"
+                    android:textSize="@dimen/_10sdp"
                     android:textColor="#000000"
                     android:textStyle="bold"/>
 
@@ -80,47 +93,35 @@
                     android:id="@+id/tv_following"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/v_profilename"
+                    android:layout_below="@id/rating"
                     android:layout_marginLeft="@dimen/_25sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_toRightOf="@id/followers_count"
                     android:text="Following: "
                     android:textColor="#000000"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_10sdp" />
 
                 <TextView
                     android:id="@+id/following_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/rating"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_below="@id/v_profilename"
                     android:layout_toRightOf="@id/tv_following"
                     android:text="0"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:textColor="#000000"
                     android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/rating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_18sdp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:src="@drawable/rating"
-                    android:text="Rating: 0/10"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textFontWeight="900"
-                    android:textSize="@dimen/_9ssp" />
 
 
                 <ImageButton
                     android:id="@+id/btn_message"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_75sdp"
                     android:layout_height="@dimen/_30sdp"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:background="@drawable/ic_message"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_toRightOf="@id/v_btn_follow"
+                    android:background="@drawable/button_message"
                     android:textSize="10sp"
                     app:backgroundTint="@null" />
 
@@ -129,13 +130,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/_30sdp"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginRight="@dimen/_6sdp"
-                    android:layout_marginBottom="-1dp"
-                    android:layout_toEndOf="@+id/rating"
                     android:background="@drawable/button_ui"
+                    android:fontFamily="@font/inter"
                     android:text="Follow"
-                    android:textSize="@dimen/_7ssp"
+                    android:textSize="@dimen/_9ssp"
                     app:backgroundTint="@null" />
 
             </RelativeLayout>
@@ -144,12 +142,45 @@
 
         </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/prof_rv"
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_profile"
+            style="@style/tab_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@id/profile_info"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:tabGravity="fill"
+            app:tabBackground="@drawable/tab_catselecting"
+            app:tabIndicatorHeight="0dp"
+            app:tabIconTint="@color/black">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/postTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/commentTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/profile_vpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/profile_info"
-            tools:listitem="@layout/profile_post" />
+            android:layout_below="@id/tab_profile"
+            android:orientation="horizontal" />
 
 
 

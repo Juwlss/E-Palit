@@ -98,34 +98,34 @@ public class UpdatePostFragment extends Fragment {
             }
         });
 
-        //adding
-        itemCategory = view.findViewById(R.id.u_listCategories1);
-        List<String> categories = new ArrayList<>();
-        categories.add("Furniture");
-        categories.add("Technology");
-        categories.add("Fashion");
-        categories.add("Sports");
-        categories.add("Appliances");
-
-        itemCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                u_category1 = parent.getItemAtPosition(position).toString();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(getContext(), "Please select a Category 123", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-        //setting categories in spinner
-        ArrayAdapter<String> dataAdapter;
-        dataAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, categories);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        itemCategory.setAdapter(dataAdapter);
+//        //adding
+//        itemCategory = view.findViewById(R.id.u_listCategories1);
+//        List<String> categories = new ArrayList<>();
+//        categories.add("Furniture");
+//        categories.add("Technology");
+//        categories.add("Fashion");
+//        categories.add("Sports");
+//        categories.add("Appliances");
+//
+//        itemCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                u_category1 = parent.getItemAtPosition(position).toString();
+//
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//                Toast.makeText(getContext(), "Please select a Category 123", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+//        //setting categories in spinner
+//        ArrayAdapter<String> dataAdapter;
+//        dataAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, categories);
+//        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        itemCategory.setAdapter(dataAdapter);
 
 
 
@@ -172,15 +172,15 @@ public class UpdatePostFragment extends Fragment {
                 u_uploadPreference.setText(pref);
                 u_calendar.setText(timer);
 
-                for (int i  = 0; i< categories.size(); i++){
-
-                    if (category.equals(categories.get(i))){
-                        posCat = i;
-                    }
-
-                }
-
-                itemCategory.setSelection(posCat);
+//                for (int i  = 0; i< categories.size(); i++){
+//
+//                    if (category.equals(categories.get(i))){
+//                        posCat = i;
+//                    }
+//
+//                }
+//
+//                itemCategory.setSelection(posCat);
 
 
 
@@ -202,6 +202,7 @@ public class UpdatePostFragment extends Fragment {
             public void onClick(View view) {
 
                 updatePost(getKey, getUid);
+
             }
         });
 
@@ -211,8 +212,7 @@ public class UpdatePostFragment extends Fragment {
 
     private void updatePost(String getKey, String getUid) {
 
-
-
+        databaseReference.child("category1").setValue(u_category1);
 
 
         String itemName = u_uploadName.getText().toString().trim();
@@ -233,8 +233,6 @@ public class UpdatePostFragment extends Fragment {
         hashMap.put("itemValue", value);
         hashMap.put("timer", timer);
         hashMap.put("itemPreference", preference);
-
-        hashMap.put("category1", categories);
 
 
 

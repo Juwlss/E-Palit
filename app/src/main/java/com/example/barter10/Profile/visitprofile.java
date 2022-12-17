@@ -3,12 +3,15 @@ package com.example.barter10.Profile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,13 +23,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.barter10.Adapter.FollowAdapter;
+import com.example.barter10.Adapter.ListpageAdapter;
 import com.example.barter10.Adapter.PostImageAdapter;
+import com.example.barter10.Adapter.VisitPageAdapter;
 import com.example.barter10.Adapter.VisitPostAdapter;
 import com.example.barter10.Home;
 import com.example.barter10.MessageActivity;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.User;
 import com.example.barter10.R;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -62,10 +69,20 @@ public class visitprofile extends Fragment {
     String profieid;
 
 
+
+
+
+    private int[] tabList = new int[]{R.drawable.ic_vector__4_, R.drawable.ic_vector__5_};
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_visitprofile, container, false);
+
+
+
+
 
         backbtn = view.findViewById(R.id.v_backarr);
 
@@ -78,17 +95,40 @@ public class visitprofile extends Fragment {
         btn_follow = view.findViewById(R.id.v_btn_follow);
 
 
+        //tabs
+        ViewPager2 vviewPager2;
+        TabLayout vTabLayout;
+        VisitPageAdapter vpagerAdapter;
+
+
+
+        //declaring viewpager and tabs
+        vviewPager2 = view.findViewById(R.id.profile_vpager);
+        vTabLayout = view.findViewById(R.id.tab_profile);
+
+
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        vpagerAdapter = new VisitPageAdapter(fm, getLifecycle(), vTabLayout.getTabCount());
+        vviewPager2.setAdapter(vpagerAdapter);
+
+//        vTabLayout.getTabAt(0).setIcon(R.drawable.ic_vector__3_);
+//        vTabLayout.getTabAt(1).setIcon(R.drawable.ic_material_symbols_history_edu);
+
+        new TabLayoutMediator(vTabLayout, vviewPager2,
+                (tab, position) -> tab.setIcon(tabList[position])
+        ).attach();
+
         //displaying post of user
-        recyclerView = view.findViewById(R.id.prof_rv);
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        mUploads = new ArrayList<>();
-        mUsers = new ArrayList<>();
-        selfPostAdapter = new VisitPostAdapter(getContext(), mUploads);
-        recyclerView.setAdapter(selfPostAdapter);
+//        recyclerView = view.findViewById(R.id.prof_rv);
+//        recyclerView.setHasFixedSize(true);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+//        linearLayoutManager.setReverseLayout(true);
+//        linearLayoutManager.setStackFromEnd(true);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        mUploads = new ArrayList<>();
+//        mUsers = new ArrayList<>();
+//        selfPostAdapter = new VisitPostAdapter(getContext(), mUploads);
+//        recyclerView.setAdapter(selfPostAdapter);
 
 
 
@@ -146,33 +186,33 @@ public class visitprofile extends Fragment {
 
 
 
-        //Displaying userpost
-        databaseReference = FirebaseDatabase.getInstance().getReference("ClosedBid");
-        Query qPost = databaseReference.orderByChild("uid").equalTo(profieid);
-
-        qPost.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                //fetching from firebase to display
-                mUploads.clear();
-                for(DataSnapshot postSnapshot : snapshot.getChildren()){
-
-                    Upload upload = postSnapshot.getValue(Upload.class);
-                    upload.setKey(postSnapshot.getKey());
-                    mUploads.add(upload);
-
-
-                }
-
-
-                selfPostAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        //Displaying userpost
+//        databaseReference = FirebaseDatabase.getInstance().getReference("ClosedBid");
+//        Query qPost = databaseReference.orderByChild("uid").equalTo(profieid);
+//
+//        qPost.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                //fetching from firebase to display
+//                mUploads.clear();
+//                for(DataSnapshot postSnapshot : snapshot.getChildren()){
+//
+//                    Upload upload = postSnapshot.getValue(Upload.class);
+//                    upload.setKey(postSnapshot.getKey());
+//                    mUploads.add(upload);
+//
+//
+//                }
+//
+//
+//                selfPostAdapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
 
@@ -214,6 +254,18 @@ public class visitprofile extends Fragment {
         });
 
         getFollowers();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -65,7 +65,8 @@
             android:layout_centerInParent="true"
             android:text="Username"
             android:textColor="#333333"
-            android:textSize="@dimen/_24ssp"
+            android:maxLines="1"
+            android:textSize="@dimen/_18ssp"
             android:textStyle="bold" />
 
 <!--        <TextView-->

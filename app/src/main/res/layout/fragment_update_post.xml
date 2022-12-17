@@ -293,54 +293,54 @@
                             android:textColor="@color/black"
                             app:backgroundTint="@null" />
 
-                        <View
-                            android:id="@+id/u_seperator2"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_below="@id/u_btnCalendar"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:background="@drawable/view_ui" />
+<!--                        <View-->
+<!--                            android:id="@+id/u_seperator2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="1dp"-->
+<!--                            android:layout_below="@id/u_btnCalendar"-->
+<!--                            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:layout_marginRight="@dimen/_10sdp"-->
+<!--                            android:background="@drawable/view_ui" />-->
 
-                        <TextView
-                            android:id="@+id/u_lblCategory"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/u_seperator2"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:fontFamily="@font/inter"
-                            android:text="Category"
-                            android:textColor="#094067"
-                            android:textSize="@dimen/_15sdp"
-                            android:textStyle="bold" />
+<!--                        <TextView-->
+<!--                            android:id="@+id/u_lblCategory"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/u_seperator2"-->
+<!--                            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:fontFamily="@font/inter"-->
+<!--                            android:text="Category"-->
+<!--                            android:textColor="#094067"-->
+<!--                            android:textSize="@dimen/_15sdp"-->
+<!--                            android:textStyle="bold" />-->
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/input">
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/input">-->
 
-                        <Spinner
-                            android:id="@+id/u_listCategories1"
-                            android:layout_width="@dimen/_115sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:background="@drawable/listcategories_ui"
-                            android:fontFamily="@font/inter"
-                            android:spinnerMode="dropdown" />
+<!--                        <Spinner-->
+<!--                            android:id="@+id/u_listCategories1"-->
+<!--                            android:layout_width="@dimen/_115sdp"-->
+<!--                            android:layout_height="@dimen/_40sdp"-->
+<!--                            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:background="@drawable/listcategories_ui"-->
+<!--                            android:fontFamily="@font/inter"-->
+<!--                            android:spinnerMode="dropdown" />-->
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignRight="@id/u_listCategories1"
-                            android:layout_marginTop="@dimen/_20sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignRight="@id/u_listCategories1"-->
+<!--                            android:layout_marginTop="@dimen/_20sdp"-->
+<!--                            android:layout_marginRight="@dimen/_10sdp"-->
+<!--                            android:src="@drawable/ic_baseline_arrow_drop_down_24" />-->
 
-                    </RelativeLayout>
+<!--                    </RelativeLayout>-->
 
                     <Button
                         android:id="@+id/update"

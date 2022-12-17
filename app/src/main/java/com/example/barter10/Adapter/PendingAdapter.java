@@ -30,6 +30,7 @@ import com.example.barter10.Model.Trade;
 import com.example.barter10.Model.User;
 import com.example.barter10.Profile.visitprofile;
 import com.example.barter10.R;
+import com.example.barter10.Rating;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,8 +48,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHolder> {
     private Context context;
     private List<Trade> tradeList;
-    private Dialog dialog;
-    private int rateCount =0;
 
     public PendingAdapter(Context context, List<Trade> tradeList) {
         this.context = context;
@@ -212,12 +211,25 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     if (btn_offerer.equals("true")){
 
-                        holder.confirm.setBackgroundColor(Color.LTGRAY);
-                        holder.confirm.setClickable(false);
+//                        Intent intent = new Intent(context, Rating.class);
+//                        intent.putExtra("tradeId", offererId);
+//                        context.startActivity(intent);
+//                        SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+//                        editor.putString("uid", offererId);
+//                        editor.apply();
+                        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-                        holder.cancel.setBackgroundColor(Color.LTGRAY);
-                        holder.cancel.setClickable(false);
 
+                            Intent intent = new Intent(context, MessageActivity.class);
+
+                            context.startActivity(intent);
+                        }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+
+
+                            Intent intent = new Intent(context, MessageActivity.class);
+
+                            context.startActivity(intent);
+                        }
 
 
                     }else if (btn_offerer.equals("false")){
@@ -226,6 +238,12 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                         holder.cancel.setBackgroundColor(Color.LTGRAY);
                         holder.cancel.setClickable(false);
+                    }else if (btn_offerer.equals("null")){
+                        holder.confirm.setBackgroundResource(R.drawable.button_ui);
+
+
+                        holder.cancel.setBackgroundResource(R.drawable.btn_upload_ui);
+
                     }
                 }
 
@@ -244,14 +262,18 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     if (btn_offeree.equals("true")){
 
-                        holder.confirm.setBackgroundColor(Color.LTGRAY);
-                        holder.confirm.setClickable(false);
+                        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-                        holder.cancel.setBackgroundColor(Color.LTGRAY);
-                        holder.cancel.setClickable(false);
+                            Intent intent = new Intent(context, MessageActivity.class);
+
+                            context.startActivity(intent);
+                        }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
 
 
+                            Intent intent = new Intent(context, MessageActivity.class);
 
+                            context.startActivity(intent);
+                        }
 
 
 
@@ -262,6 +284,12 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                         holder.cancel.setBackgroundColor(Color.LTGRAY);
                         holder.cancel.setClickable(false);
+
+                    }else if (btn_offeree.equals("null")){
+                        holder.confirm.setBackgroundResource(R.drawable.button_ui);
+
+
+                        holder.cancel.setBackgroundResource(R.drawable.btn_upload_ui);
 
                     }
                 }
@@ -283,12 +311,19 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     if (btn_offerer.equals("true")){
 
-                        holder.confirm.setBackgroundColor(Color.LTGRAY);
-                        holder.confirm.setClickable(false);
+                        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-                        holder.cancel.setBackgroundColor(Color.LTGRAY);
-                        holder.cancel.setClickable(false);
 
+                            Intent intent = new Intent(context, Rating.class);
+
+                            context.startActivity(intent);
+                        }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+
+
+                            Intent intent = new Intent(context, Rating.class);
+
+                            context.startActivity(intent);
+                        }
 
 
                     }else if (btn_offerer.equals("false")){
@@ -297,6 +332,14 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                         holder.cancel.setBackgroundColor(Color.LTGRAY);
                         holder.cancel.setClickable(false);
+
+
+                    }else if (btn_offerer.equals("null")){
+                        holder.confirm.setBackgroundResource(R.drawable.button_ui);
+
+
+                        holder.cancel.setBackgroundResource(R.drawable.btn_upload_ui);
+
                     }
                 }
 
@@ -315,11 +358,23 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     if (btn_offeree.equals("true")){
 
-                        holder.confirm.setBackgroundColor(Color.LTGRAY);
-                        holder.confirm.setClickable(false);
+                        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+                            SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                            editor.putString("tradeId", offererId);
+                            editor.apply();
 
-                        holder.cancel.setBackgroundColor(Color.LTGRAY);
-                        holder.cancel.setClickable(false);
+                            Intent intent = new Intent(context, Rating.class);
+
+                            context.startActivity(intent);
+                        }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+                            SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                            editor.putString("tradeId", offereeId);
+                            editor.apply();
+
+                            Intent intent = new Intent(context, Rating.class);
+
+                            context.startActivity(intent);
+                        }
 
                     }else if (btn_offeree.equals("false")){
 
@@ -328,6 +383,15 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                         holder.cancel.setBackgroundColor(Color.LTGRAY);
                         holder.cancel.setClickable(false);
+
+                    }else if (btn_offeree.equals("null")){
+                        holder.confirm.setClickable(true);
+                        holder.cancel.setClickable(true);
+
+                        holder.confirm.setBackgroundResource(R.drawable.button_ui);
+
+
+                        holder.cancel.setBackgroundResource(R.drawable.btn_upload_ui);
 
                     }
                 }
@@ -344,161 +408,45 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
 
-
         //Button Confirm
         holder.confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                //Check if current user is == to the offeree//
+//                Check if current user is == to the offeree
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-                    uptradeStatus.child("offeree").setValue("true");
+//                    uptradeStatus.child("offeree").setValue("true");
+//
+//                    //If Offeree click the confirm, the value will change to true instead of null//
+//                    tradeStatus.child("offeree").setValue("true");
 
-                    //If Offeree click the confirm, the value will change to true instead of null//
-                    tradeStatus.child("offeree").setValue("true");
+                    Intent intent = new Intent(context, Rating.class);
+                    AppCompatActivity activity = (AppCompatActivity) context;
+                    MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                    meowBottomNavigation.setVisibility(View.GONE);
 
-
-                    dialog = new Dialog(context);
-                    dialog.setContentView(R.layout.popup_rating);
-
-                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    dialog.show();
-
-                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
-                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
-
-
-                    //getting how many users did rate the user
-                    DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId);
-                    countRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            rateCount = (int) snapshot.getChildrenCount();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
-
-                    DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
-                    ratingRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                User user = dataSnapshot.getValue(User.class);
-                                if (dataSnapshot.child("userID").getValue().toString().equals(offererId)){
-                                    confirm_rate.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-
-                                            float rating = ratingBar.getRating()+user.getRating();
-                                            for (int i = 1; i <= rateCount; i++){
-                                                if (i >=2){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/2);
-                                                    dialog.dismiss();
-                                                }else if (i==1){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/1);
-                                                    dialog.dismiss();
-                                                }
-                                            }
-
-                                        }
-                                    });
-                                }
-
-
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
+                    activity.startActivity(intent);
 
 
                 }
                 else{
 
-                    //If Offerer click the confirm, the value will change to true instead of null//
-                    tradeStatus2.child("offerer").setValue("true");
+//                    //If Offerer click the confirm, the value will change to true instead of null//
+//                    tradeStatus2.child("offerer").setValue("true");
+//
+//                    uptradeStatus2.child("offerer").setValue("true");
 
-                    uptradeStatus2.child("offerer").setValue("true");
+                    Intent intent = new Intent(context, Rating.class);
+                    AppCompatActivity activity = (AppCompatActivity) context;
+                    MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+                    meowBottomNavigation.setVisibility(View.GONE);
 
-
-                    dialog = new Dialog(context);
-                    dialog.setContentView(R.layout.popup_rating);
-
-                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    dialog.show();
-
-                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
-                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
-
-                    //getting how many users did rate the user
-                    DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId);
-                    countRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            rateCount = (int) snapshot.getChildrenCount();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
-
-
-                    DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
-                    ratingRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                User user = dataSnapshot.getValue(User.class);
-                                if (dataSnapshot.child("userID").getValue().toString().equals(offereeId)){
-                                    confirm_rate.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-
-                                            float rating = ratingBar.getRating()+user.getRating();
-                                            for (int i = 1; i <= rateCount; i++){
-                                                if (i >=2){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/2);
-                                                    dialog.dismiss();
-                                                }else if (i==1){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/1);
-                                                    dialog.dismiss();
-                                                }
-                                            }
-
-                                        }
-                                    });
-                                }
-
-
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
+                    activity.startActivity(intent);
 
                 }
+
 
 
             }
@@ -508,7 +456,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
 
 
-        //Button Cancel//
+//        Button Cancel
         holder.cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -516,172 +464,19 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-
-                    //If Offeree click the cancel, the value will change to false instead of null//
-                    tradeStatus.child("offeree").setValue("false");
-
-                    uptradeStatus.child("offeree").setValue("false");
-
-
-                    dialog = new Dialog(context);
-                    dialog.setContentView(R.layout.popup_rating);
-
-                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    dialog.show();
-
-                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
-                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
-
-                    //getting how many users did rate the user
-                    DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId);
-                    countRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            rateCount = (int) snapshot.getChildrenCount();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
-
-
-                    DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
-                    ratingRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                User user = dataSnapshot.getValue(User.class);
-                                if (dataSnapshot.child("userID").getValue().toString().equals(offererId)){
-                                    confirm_rate.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-
-                                            float rating = ratingBar.getRating()+user.getRating();
-                                            for (int i = 1; i <= rateCount; i++){
-                                                if (i >=2){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/2);
-                                                    dialog.dismiss();
-                                                }else if (i==1){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/1);
-                                                    dialog.dismiss();
-                                                }
-                                            }
-
-                                        }
-                                    });
-                                }
-
-
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
-
-
-
-
-
+//                    //If Offeree click the cancel, the value will change to false instead of null//
+//                    tradeStatus.child("offeree").setValue("false");
+//
+//                    uptradeStatus.child("offeree").setValue("false");
 
 
 
 
                 }
                 else{
-                    //If Offerer click the cancel, the value will change to false instead of null//
-                    tradeStatus2.child("offerer").setValue("false");
-                    uptradeStatus2.child("offerer").setValue("false");
-
-
-
-
-                    dialog = new Dialog(context);
-                    dialog.setContentView(R.layout.popup_rating);
-
-                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    dialog.show();
-
-                    TextView confirm_rate = dialog.findViewById(R.id.confirm_rate);
-                    RatingBar ratingBar = dialog.findViewById(R.id.rating_bar);
-
-                    //getting how many users did rate the user
-                    DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId);
-                    countRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            rateCount = (int) snapshot.getChildrenCount();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
-
-
-                    DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
-                    ratingRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                User user = dataSnapshot.getValue(User.class);
-                                if (dataSnapshot.child("userID").getValue().toString().equals(offereeId)){
-                                    confirm_rate.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-
-                                            float rating = ratingBar.getRating()+user.getRating();
-                                            for (int i = 1; i <= rateCount; i++){
-                                                if (i >=2){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/2);
-                                                    dialog.dismiss();
-                                                    break;
-                                                }else if (i==1){
-                                                    dataSnapshot.child("rating").getRef().setValue(rating/1);
-                                                    dialog.dismiss();
-                                                    break;
-                                                }
-                                            }
-
-                                        }
-                                    });
-                                }
-
-
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
-
-
-
-
-
-
-
-
-
-
-
+//                    //If Offerer click the cancel, the value will change to false instead of null//
+//                    tradeStatus2.child("offerer").setValue("false");
+//                    uptradeStatus2.child("offerer").setValue("false");
 
 
 
@@ -689,6 +484,64 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                 }
             }
         });
+
+//        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+//            //Disable the button of offerer after clicking the confirm button
+//            uptradeStatus.addValueEventListener(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                    String btn_offerer = snapshot.child("offeree").getValue().toString();
+//
+//                    if (btn_offerer.equals("true")){
+//
+//                        Intent intent = new Intent(context, Rating.class);
+//                        AppCompatActivity activity = (AppCompatActivity) context;
+//                        MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+//                        meowBottomNavigation.setVisibility(View.GONE);
+//
+//                        activity.startActivity(intent);
+//
+//
+//
+//                    }
+//                }
+//
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError error) {
+//
+//                }
+//            });
+//
+//        }else{
+//            //Disable the button of offeree after clicking the confirm button
+//            uptradeStatus.addValueEventListener(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                    String btn_offeree = snapshot.child("offerer").getValue().toString();
+//
+//                    if (btn_offeree.equals("true")){
+//
+//                        Intent intent = new Intent(context, Rating.class);
+//                        AppCompatActivity activity = (AppCompatActivity) context;
+//                        MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
+//                        meowBottomNavigation.setVisibility(View.GONE);
+//
+//                        activity.startActivity(intent);
+//
+//
+//
+//
+//
+//
+//                    }
+//                }
+//
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError error) {
+//
+//                }
+//            });
+//        }
 
 
 
@@ -742,6 +595,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     offeree.updateChildren(status);
                     offerer.updateChildren(status);
 
+
                     //Creating Finished reference for storing success/failed transactions//
                     DatabaseReference finished1 = FirebaseDatabase.getInstance().getReference("Finished").child(FirebaseAuth.getInstance().getUid()).child(postKey);
                     finished1.setValue(trade);
@@ -749,11 +603,14 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference finished2 = FirebaseDatabase.getInstance().getReference("Finished").child(offererId).child(postKey);
                     finished2.setValue(trade);
 
+
                     //Deletion of duplicate in offer//
                     DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     offerDupDelete.child(offerKey).removeValue();
 
 
+                    Intent intent = new Intent(context, Rating.class);
+                    context.startActivity(intent);
 
 //                    offeree.removeValue();
 //                    offerer.removeValue();
@@ -940,6 +797,14 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             }
         });
     }
+
+
+
+
+
+
+
+
     @Override
     public int getItemCount() {
         return tradeList.size();
@@ -967,15 +832,6 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             visituser1 = itemView.findViewById(R.id.visituser1);
             visituser2 = itemView.findViewById(R.id.visituser2);
             messageTrade = itemView.findViewById(R.id.message_pending);
-
-
-
-
-
-
-
-
-
 
 
         }

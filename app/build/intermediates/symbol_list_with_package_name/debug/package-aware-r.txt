@@ -3422,8 +3422,11 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable btn_upload_ui
 drawable button
+drawable button_comment
+drawable button_message
 drawable button_ui
 drawable calendar_ui
+drawable cancel_trade
 drawable circle_button
 drawable code
 drawable com_facebook_auth_dialog_background
@@ -3468,6 +3471,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable confirm_trade
 drawable daleuser
 drawable default_selected_dot
 drawable default_unselected_dot
@@ -3487,6 +3491,7 @@ drawable enternewpassword
 drawable epalit_logo
 drawable error
 drawable et_corner
+drawable feedbackshape
 drawable four_digits_logo
 drawable frame34
 drawable frame35
@@ -3563,6 +3568,8 @@ drawable ic_undraw_contact_us_re_4qqt_1
 drawable ic_undraw_forgot_password_re_hxwm_1
 drawable ic_undraw_personal_email_re_4lx7_1
 drawable ic_unpin
+drawable ic_vector__4_
+drawable ic_vector__5_
 drawable icon_forgotpassword
 drawable img_checkbox
 drawable juls
@@ -3772,6 +3779,7 @@ id antiClockwise
 id anticipate
 id appBarLayout
 id appbar
+id appbar_rate
 id appname
 id arc
 id asConfigured
@@ -3873,6 +3881,7 @@ id com_facebook_smart_instructions_or
 id com_facebook_tooltip_bubble_view_bottom_pointer
 id com_facebook_tooltip_bubble_view_text_body
 id com_facebook_tooltip_bubble_view_top_pointer
+id commentTab
 id compress
 id confirm_button
 id confirm_rate
@@ -3962,6 +3971,7 @@ id f_offerer_user
 id fade
 id fashionTab
 id fashion_rv
+id feedback
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4276,6 +4286,7 @@ id pin
 id pinPost
 id position
 id postLayout
+id postTab
 id prgbar
 id prgbarotp
 id prgbarsgn
@@ -4286,6 +4297,7 @@ id profileImage
 id profileMenu
 id profileUsername
 id profile_info
+id profile_vpager
 id profilename
 id profileset
 id progressBar
@@ -4293,6 +4305,7 @@ id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
+id rate_back
 id rating
 id rating_bar
 id ratio
@@ -4393,10 +4406,12 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id submit_comment
 id supportScrollUp
 id tabMode
 id tab_categories
 id tab_follow
+id tab_profile
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -4429,9 +4444,11 @@ id textView3
 id textView5
 id textWatcher
 id text_categories
+id text_feedback
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_rate
 id text_send
 id text_view
 id text_view_rotate
@@ -4494,15 +4511,12 @@ id txtsgn
 id txtsgnotp
 id txtviw
 id u_btnCalendar
-id u_lblCategory
 id u_lblCondition
 id u_lblDetails
 id u_lblLocation
 id u_lblPreference
 id u_lblTimer
 id u_lblValue
-id u_listCategories1
-id u_seperator2
 id u_txtCondition
 id u_txtDetails
 id u_txtEstimatedValue
@@ -4586,6 +4600,7 @@ id wrapper_states
 id x_left
 id x_right
 id zero_corner_chip
+id zone
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -4688,6 +4703,7 @@ layout activity_message
 layout activity_newpass
 layout activity_otp
 layout activity_policy
+layout activity_rating
 layout activity_signup_new
 layout activity_signupotp
 layout activity_terms_policy
@@ -4723,6 +4739,7 @@ layout dp_example
 layout finished_layout
 layout follow_layout
 layout fragment_fashion
+layout fragment_feedback
 layout fragment_finish_post
 layout fragment_finished
 layout fragment_follow
@@ -4745,6 +4762,7 @@ layout fragment_technology
 layout fragment_toy
 layout fragment_update_post
 layout fragment_view_search
+layout fragment_visitpost
 layout fragment_visitprofile
 layout image_slider
 layout listing_layout

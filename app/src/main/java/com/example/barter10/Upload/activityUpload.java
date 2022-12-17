@@ -283,7 +283,7 @@ public class activityUpload extends AppCompatActivity{
         String cat1 = category1;
 
 
-        if (itemList.isEmpty() || timer == null || TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails)
+        if (itemList.isEmpty() || timer == null || TextUtils.isEmpty(itemLocation) ||  TextUtils.isEmpty(itemName) || TextUtils.isEmpty(itemDetails)
                 || TextUtils.isEmpty(itemCondition) || TextUtils.isEmpty(itemValue) || TextUtils.isEmpty(itemPreference)
                 || cat1 == null){
             Toast.makeText(activityUpload.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
