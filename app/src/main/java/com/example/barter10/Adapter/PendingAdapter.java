@@ -211,24 +211,22 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                     if (btn_offerer.equals("true")){
 
-//                        Intent intent = new Intent(context, Rating.class);
-//                        intent.putExtra("tradeId", offererId);
-//                        context.startActivity(intent);
-//                        SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
-//                        editor.putString("uid", offererId);
-//                        editor.apply();
+
                         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-                            Intent intent = new Intent(context, MessageActivity.class);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
 
-                            context.startActivity(intent);
                         }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
 
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-                            Intent intent = new Intent(context, MessageActivity.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }
 
 
@@ -239,9 +237,11 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                         holder.cancel.setBackgroundColor(Color.LTGRAY);
                         holder.cancel.setClickable(false);
                     }else if (btn_offerer.equals("null")){
+
+                        holder.cancel.setClickable(true);
+                        holder.confirm.setClickable(true);
+
                         holder.confirm.setBackgroundResource(R.drawable.button_ui);
-
-
                         holder.cancel.setBackgroundResource(R.drawable.btn_upload_ui);
 
                     }
@@ -263,16 +263,17 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     if (btn_offeree.equals("true")){
 
                         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-                            Intent intent = new Intent(context, MessageActivity.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-
-                            Intent intent = new Intent(context, MessageActivity.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }
 
 
@@ -286,9 +287,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                         holder.cancel.setClickable(false);
 
                     }else if (btn_offeree.equals("null")){
+
+                        holder.cancel.setClickable(true);
+                        holder.confirm.setClickable(true);
                         holder.confirm.setBackgroundResource(R.drawable.button_ui);
-
-
                         holder.cancel.setBackgroundResource(R.drawable.btn_upload_ui);
 
                     }
@@ -312,17 +314,17 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     if (btn_offerer.equals("true")){
 
                         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-
-                            Intent intent = new Intent(context, Rating.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-
-                            Intent intent = new Intent(context, Rating.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }
 
 
@@ -359,21 +361,17 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     if (btn_offeree.equals("true")){
 
                         if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
-                            SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
-                            editor.putString("tradeId", offererId);
-                            editor.apply();
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-                            Intent intent = new Intent(context, Rating.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
-                            SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
-                            editor.putString("tradeId", offereeId);
-                            editor.apply();
+                            holder.confirm.setBackgroundColor(Color.LTGRAY);
+                            holder.confirm.setClickable(false);
 
-                            Intent intent = new Intent(context, Rating.class);
-
-                            context.startActivity(intent);
+                            holder.cancel.setBackgroundColor(Color.LTGRAY);
+                            holder.cancel.setClickable(false);
                         }
 
                     }else if (btn_offeree.equals("false")){
@@ -417,33 +415,34 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 //                Check if current user is == to the offeree
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-//                    uptradeStatus.child("offeree").setValue("true");
-//
-//                    //If Offeree click the confirm, the value will change to true instead of null//
-//                    tradeStatus.child("offeree").setValue("true");
+                    uptradeStatus.child("offeree").setValue("true");
+
+                    //If Offeree click the confirm, the value will change to true instead of null//
+                    tradeStatus.child("offeree").setValue("true");
 
                     Intent intent = new Intent(context, Rating.class);
-                    AppCompatActivity activity = (AppCompatActivity) context;
-                    MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
-                    meowBottomNavigation.setVisibility(View.GONE);
+                    intent.putExtra("offereeId", offereeId);
+                    intent.putExtra("tradeId", offererId);
 
-                    activity.startActivity(intent);
+                    intent.putExtra("postKey", postKey);
+
+                    context.startActivity(intent);
 
 
                 }
                 else{
 
-//                    //If Offerer click the confirm, the value will change to true instead of null//
-//                    tradeStatus2.child("offerer").setValue("true");
-//
-//                    uptradeStatus2.child("offerer").setValue("true");
+                    //If Offerer click the confirm, the value will change to true instead of null//
+                    tradeStatus2.child("offerer").setValue("true");
+
+                    uptradeStatus2.child("offerer").setValue("true");
 
                     Intent intent = new Intent(context, Rating.class);
-                    AppCompatActivity activity = (AppCompatActivity) context;
-                    MeowBottomNavigation meowBottomNavigation = activity.findViewById(R.id.bot_nav);
-                    meowBottomNavigation.setVisibility(View.GONE);
+                    intent.putExtra("offererId", offererId);
+                    intent.putExtra("tradeId", offereeId);
+                    intent.putExtra("postKey", postKey);
 
-                    activity.startActivity(intent);
+                    context.startActivity(intent);
 
                 }
 

@@ -77,10 +77,6 @@
             android:id="@+id/feedback"
             android:layout_width="@dimen/_270sdp"
             android:layout_height="@dimen/_120sdp"
-            android:hint="Tell us about your experience"
-            android:textSize="@dimen/_11ssp"
-            android:paddingStart="@dimen/_10sdp"
-            android:paddingTop="@dimen/_10sdp"
             android:layout_below="@id/text_feedback"
             android:layout_centerInParent="true"
             android:layout_marginStart="@dimen/_10sdp"
@@ -88,7 +84,11 @@
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:background="@drawable/feedbackshape"
-            android:gravity="top" />
+            android:gravity="top"
+            android:hint="Tell us about your experience"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11ssp" />
 
         <Button
             android:id="@+id/submit_comment"

@@ -3972,6 +3972,10 @@ id fade
 id fashionTab
 id fashion_rv
 id feedback
+id feedback_rate
+id feedback_rl
+id feedback_rv
+id feedback_username
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4039,6 +4043,7 @@ id image
 id imageList
 id imageView7
 id imageView8
+id image_feedback
 id image_follow
 id image_message
 id image_profile
@@ -4489,6 +4494,7 @@ id triangle
 id tv_Terms
 id tv_and
 id tv_count
+id tv_feedback
 id tv_followers
 id tv_following
 id tv_message
@@ -4736,6 +4742,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
 layout dp_example
+layout feedback_layout
 layout finished_layout
 layout follow_layout
 layout fragment_fashion

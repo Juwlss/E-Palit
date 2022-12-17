@@ -77,19 +77,19 @@
                         android:id="@+id/imageList"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:rowCount="1"
+                        android:layout_below="@id/header"
                         android:columnCount="1"
-                        android:layout_below="@id/header">
+                        android:orientation="vertical"
+                        android:rowCount="1">
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/upload_list"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_130sdp"
                             android:layout_gravity="center_horizontal"
+                            android:scrollbars="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                            app:spanCount="1"
-                            android:scrollbars="horizontal"/>
+                            app:spanCount="1" />
 
                     </GridLayout>
 

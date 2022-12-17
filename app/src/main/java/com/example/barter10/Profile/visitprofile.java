@@ -218,6 +218,8 @@ public class visitprofile extends Fragment {
 
 
         //send message
+
+
         btn_message.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
