@@ -16,10 +16,15 @@ public class Trade {
     String status;
     String offerKey;
 
+    String aucItemName;
+    String bidItemName;
+    String aucRating;
+    String bidRating;
+
     public Trade() {
     }
 
-    public Trade(String offereeId, String offereeName, String offereeProfile, String offereeImg, String offererId, String offererName, String offererProfile, String offererImg, String postKey, String status, String offerKey) {
+    public Trade(String offereeId, String offereeName, String offereeProfile, String offereeImg, String offererId, String offererName, String offererProfile, String offererImg, String postKey, String status, String offerKey, String aucItemName, String bidItemName, String aucRating, String bidRating) {
         this.offereeId = offereeId;
         this.offereeName = offereeName;
         this.offereeProfile = offereeProfile;
@@ -31,6 +36,42 @@ public class Trade {
         this.postKey = postKey;
         this.status = status;
         this.offerKey = offerKey;
+        this.aucItemName = aucItemName;
+        this.bidItemName = bidItemName;
+        this.aucRating = aucRating;
+        this.bidRating = bidRating;
+    }
+
+    public String getAucItemName() {
+        return aucItemName;
+    }
+
+    public void setAucItemName(String aucItemName) {
+        this.aucItemName = aucItemName;
+    }
+
+    public String getBidItemName() {
+        return bidItemName;
+    }
+
+    public void setBidItemName(String bidItemName) {
+        this.bidItemName = bidItemName;
+    }
+
+    public String getAucRating() {
+        return aucRating;
+    }
+
+    public void setAucRating(String aucRating) {
+        this.aucRating = aucRating;
+    }
+
+    public String getBidRating() {
+        return bidRating;
+    }
+
+    public void setBidRating(String bidRating) {
+        this.bidRating = bidRating;
     }
 
     public String getOfferKey() {

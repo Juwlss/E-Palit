@@ -327,6 +327,8 @@ public class FullPostFragment extends Fragment {
             String offererProfile = offer.getProfileUrl();
             String offerImg = offer.getImageUrl();
             String posterId = offer.getPosterId();
+            String oItemName = offer.getItemName();
+            String oRating = offer.getRating();
 
 
 
@@ -341,16 +343,18 @@ public class FullPostFragment extends Fragment {
                     String uName  = snapshot.child("userName").getValue().toString();
                     String profileUrl = snapshot.child("profileUrl").getValue().toString();
                     String postImg  = snapshot.child("imageUrl").getValue().toString();
+                    String itemName = snapshot.child("itemName").getValue().toString();
+                    String rating = snapshot.child("rating").getValue().toString();
 
                     //For Offeree//
                     String status = "null";
                     DatabaseReference setTrade = FirebaseDatabase.getInstance().getReference("Trade").child(posterId);
-                    Trade trade = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey);
+                    Trade trade = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey,itemName,oItemName,rating,oRating);
                     setTrade.child(postKey).setValue(trade);
 
                     //For Offerer//
                     DatabaseReference setTrade2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId);
-                    Trade trade2 = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey);
+                    Trade trade2 = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey,itemName,oItemName,rating,oRating);
                     setTrade2.child(postKey).setValue(trade2);
 
 
