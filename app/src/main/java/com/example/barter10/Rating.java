@@ -52,9 +52,8 @@ public class Rating extends AppCompatActivity {
         ratingBar = findViewById(R.id.rating_bar);
         feedback = findViewById(R.id.feedback);
 
-        tradeId = getIntent().getStringExtra("tradeId");
+        tradeId = getIntent().getStringExtra("tradeId"); //offerer id
         offereeId =  getIntent().getStringExtra("offereeId");
-        offererId =  getIntent().getStringExtra("offererId");
         postKey = getIntent().getStringExtra("postKey");
 
 
@@ -69,8 +68,8 @@ public class Rating extends AppCompatActivity {
                 DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
 
                 //Bidder
-                DatabaseReference tradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
-                DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offererId).child(postKey);
+                DatabaseReference tradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId).child(postKey);
+                DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId).child(postKey);
 
 
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
@@ -82,7 +81,7 @@ public class Rating extends AppCompatActivity {
 
 
 
-                } else if (FirebaseAuth.getInstance().getUid().equals(offererId)){
+                } else if (FirebaseAuth.getInstance().getUid().equals(tradeId)){
 
                     //If Bidder click the confirm, the value will change to true instead of null//
                     tradeStatus2.child("offerer").setValue("null");
@@ -292,11 +291,34 @@ public class Rating extends AppCompatActivity {
 
 
 
-        Log.d("CDA", "onBackPressed Called");
-        Intent setIntent = new Intent(Intent.ACTION_MAIN);
-        setIntent.addCategory(Intent.CATEGORY_HOME);
-        setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(setIntent);
+        //Auctioneer
+        DatabaseReference uptradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
+        DatabaseReference tradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(offereeId).child(postKey);
+
+        //Bidder
+        DatabaseReference tradeStatus2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId).child(postKey);
+        DatabaseReference uptradeStatus = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId).child(postKey);
+
+
+        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+
+            //If Auctioneer click the confirm, the value will change to true instead of null//
+            tradeStatus.child("offeree").setValue("null");
+
+            uptradeStatus.child("offeree").setValue("null");
+
+
+
+        } else if (FirebaseAuth.getInstance().getUid().equals(tradeId)){
+
+            //If Bidder click the confirm, the value will change to true instead of null//
+            tradeStatus2.child("offerer").setValue("null");
+            uptradeStatus2.child("offerer").setValue("null");
+
+        }
+
+
+        startActivity(new Intent(Rating.this, Home.class));
 
 
 

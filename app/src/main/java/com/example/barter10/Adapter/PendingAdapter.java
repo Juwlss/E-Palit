@@ -438,8 +438,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     uptradeStatus2.child("offerer").setValue("true");
 
                     Intent intent = new Intent(context, Rating.class);
-                    intent.putExtra("offererId", offererId);
-                    intent.putExtra("tradeId", offereeId);
+                    intent.putExtra("offereeId", offereeId);
+                    intent.putExtra("tradeId", offererId);
+
                     intent.putExtra("postKey", postKey);
 
                     context.startActivity(intent);

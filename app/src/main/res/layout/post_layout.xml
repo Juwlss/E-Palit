@@ -64,13 +64,12 @@
                     android:textColor="#5F6C7B"
                     android:textFontWeight="500" />
 
-
             </RelativeLayout>
 
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_slider"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/_280sdp"
                 android:layout_below="@+id/relative_user"
                 android:layout_centerInParent="true"
