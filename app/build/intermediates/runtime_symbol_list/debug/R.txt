@@ -3502,6 +3502,7 @@ int drawable gradient 0x7f0800b8
 int drawable hover_back 0x7f0800b9
 int drawable hover_effect 0x7f0800ba
 int drawable ic_baseline_add_24 0x7f0800bb
+int drawable ic_baseline_add_location_alt_24 0x7f080174
 int drawable ic_baseline_add_photo_alternate_24 0x7f0800bc
 int drawable ic_baseline_arrow_back_24 0x7f0800bd
 int drawable ic_baseline_arrow_drop_down_24 0x7f0800be
@@ -3825,6 +3826,7 @@ int id btnViewBack 0x7f0a0084
 int id btn_follow 0x7f0a0085
 int id btn_forgotpassword 0x7f0a0086
 int id btn_img 0x7f0a0087
+int id btn_locate 0x7f0a0395
 int id btn_logout 0x7f0a0088
 int id btn_message 0x7f0a0089
 int id btn_send 0x7f0a008a

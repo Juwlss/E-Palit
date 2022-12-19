@@ -1,4 +1,3 @@
-
 package com.example.barter10.Upload;
 
 import androidx.annotation.NonNull;
@@ -9,13 +8,18 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
@@ -27,13 +31,18 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
 import com.example.barter10.Adapter.UploadListAdapter;
 import com.example.barter10.Home;
 import com.example.barter10.Model.Upload;
 import com.example.barter10.Model.User;
 import com.example.barter10.R;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.DateValidatorPointForward;
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -47,16 +56,19 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
-public class activityUpload extends AppCompatActivity{
+public class activityUpload extends AppCompatActivity {
 
     private static final int REQUEST_CODE_IMAGE = 101;
     private UploadListAdapter uploadListAdapter;
     RecyclerView recyclerView;
-    ImageView imageView;
+    private ImageView imageView, locate;
     Button btnUpload;
     Button calendar;
     ProgressDialog progressDialog;
@@ -72,6 +84,8 @@ public class activityUpload extends AppCompatActivity{
 
     private GridLayout gridLayout;
 
+    private FusedLocationProviderClient locationProviderClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,18 +93,61 @@ public class activityUpload extends AppCompatActivity{
         setContentView(R.layout.activity_upload);
 
 
-
         //new Image
         imageView = findViewById(R.id.image);
         recyclerView = findViewById(R.id.upload_list);
         uploadListAdapter = new UploadListAdapter(itemList);
         gridLayout = findViewById(R.id.imageList);
+        locate = findViewById(R.id.btn_locate);
+
+        locationProviderClient = LocationServices.getFusedLocationProviderClient(activityUpload.this);
+
+
+        locate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ActivityCompat.checkSelfPermission(activityUpload.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                        == PackageManager.PERMISSION_GRANTED) {
+
+                    locationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Location> task) {
+                            Location location = task.getResult();
+
+                            if (location != null) {
+                                try {
+
+                                    Geocoder geocoder = new Geocoder(activityUpload.this,
+                                            Locale.getDefault());
+
+                                    List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+
+
+                                    uploadLocation.setText(Html.fromHtml(addresses.get(0).getLocality()));
 
 
 
-        if(ContextCompat.checkSelfPermission(activityUpload.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+
+
+                            }
+                        }
+                    });
+
+                } else {
+
+                    ActivityCompat.requestPermissions(activityUpload.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+
+                }
+            }
+        });
+
+
+        if (ContextCompat.checkSelfPermission(activityUpload.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(activityUpload.this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},REQUEST_CODE_IMAGE);
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_IMAGE);
 
         }
 
@@ -137,9 +194,6 @@ public class activityUpload extends AppCompatActivity{
         });
 
 
-
-
-
         //spinner list of categories
 
         //adding
@@ -183,6 +237,31 @@ public class activityUpload extends AppCompatActivity{
 
 
     }
+
+//    private void getLocation() {
+//        if (ActivityCompat.checkSelfPermission(activityUpload.this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+//                PackageManager.PERMISSION_GRANTED &&
+//                ActivityCompat.checkSelfPermission(activityUpload.this, Manifest.permission.ACCESS_COARSE_LOCATION)
+//                        != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//
+//
+//
+//
+//
+//
+//
+//            return;
+//        }
+//
+//
+//    }
 
     private void uploadImage() {
 

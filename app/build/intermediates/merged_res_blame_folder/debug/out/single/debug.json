@@ -416,6 +416,10 @@
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\48\\app\\src\\main\\res\\layout\\activity_message.xml"
     },
     {
+        "merged": "C:\\Users\\andrei\\Documents\\4th yr\\48\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_location_alt_24.xml.flat",
+        "source": "C:\\Users\\andrei\\Documents\\4th yr\\48\\app\\src\\main\\res\\drawable\\ic_baseline_add_location_alt_24.xml"
+    },
+    {
         "merged": "C:\\Users\\andrei\\Documents\\4th yr\\48\\app\\build\\intermediates\\merged_res\\debug\\layout_profile_post.xml.flat",
         "source": "C:\\Users\\andrei\\Documents\\4th yr\\48\\app\\src\\main\\res\\layout\\profile_post.xml"
     },
