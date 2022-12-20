@@ -2,6 +2,8 @@ package com.example.barter10.Adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -18,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -81,9 +84,17 @@ public class PostImageAdapter extends RecyclerView.Adapter<PostImageAdapter.Imag
         for (int i =0 ; i < pictures.length ; i++){
 
 
+
             slideModels.add(new SlideModel(pictures[i], "", ScaleTypes.FIT));
 
+
+
+
+
         }
+
+
+
 
 
         holder.imageSlider.setImageList(slideModels, ScaleTypes.FIT);

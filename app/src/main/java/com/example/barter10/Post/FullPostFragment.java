@@ -44,7 +44,10 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -67,7 +70,7 @@ public class FullPostFragment extends Fragment {
 
     private ImageView profileImg;
     private FirebaseAuth firebaseAuth;
-    private ExtendedFloatingActionButton btnOffer;
+    private ExtendedFloatingActionButton btnOffer, btnRenew;
     private FirebaseStorage firebaseStorage;
 
 
@@ -86,6 +89,8 @@ public class FullPostFragment extends Fragment {
     private TextView p_username,p_rating,p_itemName,p_itemDetails,p_condition,p_value,p_loc;
     private CircleImageView p_profile;
     private ImageSlider p_img;
+
+    private String timerDate;
 
     private String rate;
 
@@ -128,6 +133,7 @@ public class FullPostFragment extends Fragment {
 
         profileImg = view.findViewById(R.id.userProfile);
         btnOffer = view.findViewById(R.id.btnOffer);
+        btnRenew = view.findViewById(R.id.btnReopen);
         takeOffer = view.findViewById(R.id.btnConfirmPin);
         timer = view.findViewById(R.id.timer);
 
@@ -176,6 +182,8 @@ public class FullPostFragment extends Fragment {
         list =  new ArrayList<>();
         offerListAdapter =  new OfferListAdapter(getContext(), list);
         rv_FullPost.setAdapter(offerListAdapter);
+
+
 
 
 
@@ -242,6 +250,58 @@ public class FullPostFragment extends Fragment {
 
 
 
+        //Disabling the post if the post expired
+        DatabaseReference dateRef = FirebaseDatabase.getInstance().getReference("ApprovedPost").child(itemKey).child("timer");
+        dateRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                timerDate = snapshot.getValue().toString();
+
+
+                String[] date2 = timerDate.split("–");
+
+                Calendar calendar = Calendar.getInstance();
+
+                Date date = calendar.getTime();
+                SimpleDateFormat format = new SimpleDateFormat("LLL d");
+                String formattedDate = format.format(date);
+
+
+
+
+
+                Toast.makeText(getContext(), date2[1].trim()+" xxx "+formattedDate, Toast.LENGTH_SHORT).show();
+
+
+                pinReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (date2[1].trim().equals(formattedDate) && snapshot.exists()){
+                            takeOfferMethod(snapshot,uid,itemKey);
+                        }else if (date2[1].trim().equals(formattedDate) && !snapshot.exists()){
+                            btnOffer.setVisibility(View.GONE);
+                            btnRenew.setVisibility(View.VISIBLE);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
 
 
 
@@ -283,6 +343,10 @@ public class FullPostFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                         takeOfferMethod(snapshot,uid,itemKey);
+
+                        //Go home//
+                        Intent intent = new Intent(getActivity(), Home.class);
+                        startActivity(intent);
                     }
 
                     @Override
@@ -327,6 +391,8 @@ public class FullPostFragment extends Fragment {
             String offererProfile = offer.getProfileUrl();
             String offerImg = offer.getImageUrl();
             String posterId = offer.getPosterId();
+            String oItemName = offer.getItemName();
+            String oRating = offer.getRating();
 
 
 
@@ -341,16 +407,20 @@ public class FullPostFragment extends Fragment {
                     String uName  = snapshot.child("userName").getValue().toString();
                     String profileUrl = snapshot.child("profileUrl").getValue().toString();
                     String postImg  = snapshot.child("imageUrl").getValue().toString();
+                    String itemName = snapshot.child("itemName").getValue().toString();
+                    String rating = snapshot.child("rating").getValue().toString();
+
+
 
                     //For Offeree//
                     String status = "null";
                     DatabaseReference setTrade = FirebaseDatabase.getInstance().getReference("Trade").child(posterId);
-                    Trade trade = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey);
+                    Trade trade = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey,itemName,oItemName,rating,oRating);
                     setTrade.child(postKey).setValue(trade);
 
                     //For Offerer//
                     DatabaseReference setTrade2 = FirebaseDatabase.getInstance().getReference("Trade").child(offererId);
-                    Trade trade2 = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey);
+                    Trade trade2 = new Trade(posterId,uName,profileUrl,postImg,offererId,offererName,offererProfile,offerImg,postKey,status,offerKey,itemName,oItemName,rating,oRating);
                     setTrade2.child(postKey).setValue(trade2);
 
 
@@ -364,8 +434,6 @@ public class FullPostFragment extends Fragment {
                     tradeStatus2.child(postKey).child("offerer").setValue("null");
 
 
-
-                    Toast.makeText(getContext(), "Offer Taked", Toast.LENGTH_SHORT).show();
 
 
                     //Updating the take offer value to disable offering//
@@ -388,9 +456,7 @@ public class FullPostFragment extends Fragment {
 
 
 
-            //Go home//
-            Intent intent = new Intent(getActivity(), Home.class);
-            startActivity(intent);
+
 
         }
     }

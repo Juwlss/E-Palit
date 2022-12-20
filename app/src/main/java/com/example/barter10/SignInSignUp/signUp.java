@@ -180,7 +180,7 @@ public class signUp extends AppCompatActivity {
                 } else if (!str_password.equals(str_conpass)){
                     conpassword.setError("Password does not match");
                 } else if (str_username.length() < 8) {
-                    Toast.makeText(signUp.this, "username is too short", Toast.LENGTH_SHORT).show();
+                    username.setError("username is too short");
                 } else if(!checkBox.isChecked()){
                     Toast.makeText(signUp.this, "You must agree to Sign up", Toast.LENGTH_SHORT).show();
                 } else{
@@ -204,7 +204,7 @@ public class signUp extends AppCompatActivity {
                                 public void onVerificationFailed(@NonNull FirebaseException e){
                                     progressBar.setVisibility(View.GONE);
                                     signUp.setVisibility(View.VISIBLE);
-                                    Toast.makeText(signUp.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                                    phoNo.setError(e.getMessage());
 
                                 }
 

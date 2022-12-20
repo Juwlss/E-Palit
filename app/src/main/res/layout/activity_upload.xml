@@ -120,10 +120,10 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:text="Maximum of 5 images"
-                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/interbold"
-                        android:textColor="@color/black" />
+                        android:text="Maximum of 5 images"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
 
                     <View
                         android:id="@+id/seperator1"
@@ -219,13 +219,14 @@
                         android:singleLine="true"
                         android:textSize="15dp" />
 
+
                     <ImageView
                         android:id="@+id/btn_locate"
                         android:layout_width="@dimen/_25sdp"
                         android:layout_height="@dimen/_40sdp"
-                        android:src="@drawable/ic_baseline_add_location_alt_24"
                         android:layout_below="@+id/lblLocation"
-                        android:layout_alignRight="@id/txtLocation"/>
+                        android:layout_alignRight="@id/txtLocation"
+                        android:src="@drawable/ic_baseline_add_location_alt_24" />
 
 
                     <TextView
@@ -255,6 +256,7 @@
                         android:paddingBottom="@dimen/_20sdp"
                         android:singleLine="true"
                         android:textSize="15dp" />
+
 
                     <TextView
                         android:id="@+id/lblValue"
@@ -292,7 +294,7 @@
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/inter"
-                        android:text="Preference"
+                        android:text="Preferred Item"
                         android:textColor="#094067"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
@@ -320,7 +322,7 @@
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/inter"
-                        android:text="Timer"
+                        android:text="Date"
                         android:textColor="#094067"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
@@ -336,7 +338,7 @@
                         android:drawableRight="@drawable/ic_baseline_arrow_right_24"
                         android:fontFamily="@font/inter"
                         android:gravity="left|center_vertical"
-                        android:hint="Set Time"
+                        android:hint="Set Date"
                         android:paddingLeft="@dimen/_10sdp"
                         android:textAllCaps="false"
                         android:textColor="@color/black"

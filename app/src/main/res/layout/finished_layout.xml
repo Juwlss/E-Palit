@@ -47,13 +47,13 @@
 
                 <TextView
                     android:id="@+id/f_offerer_name"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_70sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_toLeftOf="@id/f_offerer_user"
                     android:fontFamily="@font/inter"
-                    android:maxLines="1"
+                    android:maxLines="2"
                     android:text="Vincent De Lara"
                     android:textColor="#333333"
                     android:textFontWeight="600"
@@ -123,13 +123,13 @@
 
                 <TextView
                     android:id="@+id/f_offeree_name"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_70sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_toRightOf="@id/f_offeree_user"
                     android:fontFamily="@font/inter"
-                    android:maxLines="1"
+                    android:maxLines="2"
                     android:text="Randale Porciuncula"
                     android:textColor="#333333"
                     android:textFontWeight="600"

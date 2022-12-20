@@ -344,7 +344,9 @@
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_fashion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_feedback.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_finished.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_full_post.xml" value="0.4" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_offer_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_pending.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_profile_settings.xml" value="0.25416666666666665" />
@@ -352,6 +354,7 @@
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_visitpost.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/fragment_visitprofile.xml" value="0.264" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/messages.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/offer_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/popup_rating.xml" value="0.264" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/post_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/andrei/Documents/4th yr/48/app/src/main/res/layout/profile_post.xml" value="0.24166666666666667" />

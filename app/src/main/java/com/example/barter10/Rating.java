@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.barter10.Adapter.PendingAdapter;
@@ -24,6 +25,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class Rating extends AppCompatActivity {
@@ -32,8 +34,8 @@ public class Rating extends AppCompatActivity {
 
     private ImageView backbtn;
     private Button submitComment;
-    private int rateCount =0;
-    private String tradeId,offereeId, offererId, postKey;
+    private int rateCount =0, rateCount2=0;
+    private String tradeId,offereeId, postKey;
     private RatingBar ratingBar;
     private EditText feedback;
 
@@ -55,6 +57,8 @@ public class Rating extends AppCompatActivity {
         tradeId = getIntent().getStringExtra("tradeId"); //offerer id
         offereeId =  getIntent().getStringExtra("offereeId");
         postKey = getIntent().getStringExtra("postKey");
+
+
 
 
 
@@ -119,12 +123,22 @@ public class Rating extends AppCompatActivity {
 
 
 
+        if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
+
+
+
+
+            //Auctioneer's POV
+            RateTradeBidder(postKey);
+        }else  if (FirebaseAuth.getInstance().getUid().equals(tradeId)){
+            //Bidder's  POV
+            RateTradeAuctioneer(offereeId, postKey);
+        }
 
 
 
 
 
-        RateTrade(tradeId, postKey);
 
 //        disableButton();
 
@@ -206,16 +220,17 @@ public class Rating extends AppCompatActivity {
 //    }
 
 
-    private void RateTrade(String tradeId, String postKey){
+    private void RateTradeAuctioneer(String offereeId, String postKey){
 
 
 
-        //getting how many users did rate the user
-        DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId);
-        countRef.addValueEventListener(new ValueEventListener() {
+        //BIDDER's POV
+
+        DatabaseReference countRef2 = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId);
+        countRef2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                rateCount = (int) snapshot.getChildrenCount();
+                rateCount2 = (int) snapshot.getChildrenCount();
             }
 
             @Override
@@ -224,20 +239,23 @@ public class Rating extends AppCompatActivity {
             }
         });
 
-        DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users");
-        ratingRef.addValueEventListener(new ValueEventListener() {
+
+        DatabaseReference ratingRef2 = FirebaseDatabase.getInstance().getReference("users");
+        ratingRef2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     User user = dataSnapshot.getValue(User.class);
 
-                    if (dataSnapshot.child("userID").getValue().toString().equals(tradeId)){
+                    Toast.makeText(Rating.this, tradeId+"\n"+offereeId, Toast.LENGTH_SHORT).show();
+
+                    if (user.getUserID().equals(offereeId)){
                         submitComment.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 float rating = ratingBar.getRating()+user.getRating();
-                                for (int i = 1; i <= rateCount; i++){
+                                for (int i = 1; i <= rateCount2; i++){
                                     if (i >=2){
                                         dataSnapshot.child("rating").getRef().setValue(rating/2);
                                     }else if (i==1){
@@ -248,13 +266,13 @@ public class Rating extends AppCompatActivity {
 
                                 String comment = feedback.getText().toString();
 
-                                DatabaseReference commentRef = FirebaseDatabase.getInstance().getReference("Feedbacks").child(tradeId).child(postKey);
+                                DatabaseReference commentRef = FirebaseDatabase.getInstance().getReference("Feedbacks").child(offereeId).child(postKey);
                                 commentRef.addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
 
-                                        Feedback feedback = new Feedback(FirebaseAuth.getInstance().getUid(), username, comment, picture, rating);
+                                        Feedback feedback = new Feedback(tradeId, username, comment, picture, ratingBar.getRating());
                                         commentRef.setValue(feedback);
                                     }
 
@@ -269,8 +287,6 @@ public class Rating extends AppCompatActivity {
                         });
 
                     }
-
-
                 }
             }
 
@@ -279,6 +295,104 @@ public class Rating extends AppCompatActivity {
 
             }
         });
+
+    }
+
+
+
+
+
+
+    private void RateTradeBidder(String postKey){
+
+
+
+        //auctioneer POV's
+
+        DatabaseReference countRef = FirebaseDatabase.getInstance().getReference("TradeStatus").child(tradeId);
+        countRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rateCount = (int) snapshot.getChildrenCount();
+
+
+                Toast.makeText(Rating.this, tradeId, Toast.LENGTH_SHORT).show();
+
+
+                DatabaseReference ratingRef = FirebaseDatabase.getInstance().getReference("users").child(tradeId);
+                ratingRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        User user = snapshot.getValue(User.class);
+
+
+
+
+                        Toast.makeText(Rating.this, tradeId+"\n"+user.getRating(), Toast.LENGTH_SHORT).show();
+
+                        submitComment.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                float rating = ratingBar.getRating()+user.getRating();
+
+                                if (rateCount >=2){
+                                    snapshot.child("rating").getRef().setValue(rating/2);
+                                }else if (rateCount ==1){
+                                    snapshot.child("rating").getRef().setValue(rating/1);
+
+                                }
+
+
+
+                                String comment = feedback.getText().toString();
+
+                                DatabaseReference commentRef = FirebaseDatabase.getInstance().getReference("Feedbacks").child(tradeId).child(postKey);
+                                commentRef.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+
+
+                                        Feedback feedback = new Feedback(offereeId, username, comment, picture, ratingBar.getRating());
+                                        commentRef.setValue(feedback);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+
+                                startActivity(new Intent(Rating.this, Home.class));
+
+
+
+                            }
+                        });
+
+                    }
+
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
+
+
 
 
 

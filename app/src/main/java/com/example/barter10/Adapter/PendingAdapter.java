@@ -464,22 +464,19 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
                 if (FirebaseAuth.getInstance().getUid().equals(offereeId)){
 
-//                    //If Offeree click the cancel, the value will change to false instead of null//
-//                    tradeStatus.child("offeree").setValue("false");
-//
-//                    uptradeStatus.child("offeree").setValue("false");
+                    //If Offeree click the cancel, the value will change to false instead of null//
+                    tradeStatus.child("offeree").setValue("false");
+
+                    uptradeStatus.child("offeree").setValue("false");
 
 
 
 
                 }
                 else{
-//                    //If Offerer click the cancel, the value will change to false instead of null//
-//                    tradeStatus2.child("offerer").setValue("false");
-//                    uptradeStatus2.child("offerer").setValue("false");
-
-
-
+                    //If Offerer click the cancel, the value will change to false instead of null//
+                    tradeStatus2.child("offerer").setValue("false");
+                    uptradeStatus2.child("offerer").setValue("false");
 
                 }
             }
@@ -608,9 +605,11 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     offerDupDelete.child(offerKey).removeValue();
 
+                    //Creating SettledList for getting data in web admin
+                    DatabaseReference settled = FirebaseDatabase.getInstance().getReference("SettledList").child(postKey);
+                    settled.setValue(trade);
 
-                    Intent intent = new Intent(context, Rating.class);
-                    context.startActivity(intent);
+
 
 //                    offeree.removeValue();
 //                    offerer.removeValue();
@@ -641,7 +640,9 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     offerDupDelete.child(offerKey).removeValue();
 
-
+                    //Creating SettledList for getting data in web admin
+                    DatabaseReference settled = FirebaseDatabase.getInstance().getReference("SettledList").child(postKey);
+                    settled.setValue(trade);
 //
 //                    offeree.removeValue();
 //                    offerer.removeValue();
@@ -671,6 +672,10 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     //Deletion of duplicate in offer//
                     DatabaseReference offerDupDelete = FirebaseDatabase.getInstance().getReference("Offer").child(postKey);
                     offerDupDelete.child(offerKey).removeValue();
+
+                    //Creating SettledList for getting data in web admin
+                    DatabaseReference settled = FirebaseDatabase.getInstance().getReference("SettledList").child(postKey);
+                    settled.setValue(trade);
 
 
 //

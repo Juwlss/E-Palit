@@ -176,7 +176,7 @@
                     android:text="Randale Porciuncula"
                     android:textColor="#333333"
                     android:textFontWeight="600"
-                    android:textSize="@dimen/_8ssp"/>
+                    android:textSize="@dimen/_8ssp" />
 
 
                 <com.denzcoskun.imageslider.ImageSlider

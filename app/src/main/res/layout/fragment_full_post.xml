@@ -20,6 +20,22 @@
         android:textColor="@color/white"
         android:layout_height="wrap_content"/>
 
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/btnReopen"
+        android:backgroundTint="#3DA9FC"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:tint="@android:color/white"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/interbold"
+        android:textAlignment="center"
+        android:text="Renew"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

@@ -14,6 +14,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -206,6 +208,7 @@ public class activityUpload extends AppCompatActivity {
         categories.add("Sports");
         categories.add("Appliances");
 
+
         //setting categories in spinner
         ArrayAdapter<String> dataAdapter;
         dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, categories);
@@ -238,30 +241,7 @@ public class activityUpload extends AppCompatActivity {
 
     }
 
-//    private void getLocation() {
-//        if (ActivityCompat.checkSelfPermission(activityUpload.this, Manifest.permission.ACCESS_FINE_LOCATION) !=
-//                PackageManager.PERMISSION_GRANTED &&
-//                ActivityCompat.checkSelfPermission(activityUpload.this, Manifest.permission.ACCESS_COARSE_LOCATION)
-//                        != PackageManager.PERMISSION_GRANTED) {
-//            // TODO: Consider calling
-//            //    ActivityCompat#requestPermissions
-//            // here to request the missing permissions, and then overriding
-//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-//            //                                          int[] grantResults)
-//            // to handle the case where the user grants the permission. See the documentation
-//            // for ActivityCompat#requestPermissions for more details.
-//
-//
-//
-//
-//
-//
-//
-//            return;
-//        }
-//
-//
-//    }
+
 
     private void uploadImage() {
 
@@ -279,14 +259,20 @@ public class activityUpload extends AppCompatActivity {
 
         if (requestCode == REQUEST_CODE_IMAGE && resultCode == Activity.RESULT_OK && null != data){
 
+            //get a Image obj from ImageView
+
+
             if (data.getClipData() != null){
                 int x = data.getClipData().getItemCount();
                 for (int i=0; i<x; i++){
 
 
+
                     if (itemList.size() != 5){
                         imageuri = data.getClipData().getItemAt(i).getUri();
                         itemList.add(imageuri);
+
+
 
                         if(itemList.size() % 2 == 0){
                             recyclerView.setLayoutManager(new GridLayoutManager(activityUpload.this, 2));
@@ -301,7 +287,6 @@ public class activityUpload extends AppCompatActivity {
                 }
 
             }else{
-
 
 
                 if (itemList.size() != 5){
@@ -450,9 +435,10 @@ public class activityUpload extends AppCompatActivity {
     private void storeLink(ArrayList<String> urlStrings) {
         HashMap<String, String> hashMap = new HashMap<>();
 
+
+
         for (int i = 0; i <urlStrings.size() ; i++) {
             hashMap.put("ImgLink"+i, urlStrings.get(i));
-
         }
 
         progressDialog.dismiss();

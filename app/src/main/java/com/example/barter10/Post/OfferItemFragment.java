@@ -6,6 +6,9 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -18,6 +21,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +37,12 @@ import com.example.barter10.Model.User;
 import com.example.barter10.Post.FullPostFragment;
 import com.example.barter10.R;
 import com.example.barter10.Upload.activityUpload;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,8 +53,11 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 public class OfferItemFragment extends Fragment {
 
@@ -61,9 +72,11 @@ public class OfferItemFragment extends Fragment {
     private DatabaseReference databaseReference;
     private EditText uploadName, uploadLocation, uploadDetails, uploadCondition, uploadValue;
     private int upload_count = 0;
-    private ImageView btnGoBack;
+    private ImageView btnGoBack, locate;
     private String getKey,getUid;
 
+
+    private FusedLocationProviderClient locationProviderClient;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -73,6 +86,50 @@ public class OfferItemFragment extends Fragment {
         offer = view.findViewById(R.id.btnOfferItem);
         recyclerView = view.findViewById(R.id.upload_list);
         uploadListAdapter = new UploadListAdapter(itemList);
+        locate = view.findViewById(R.id.btn_locate);
+
+        locationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
+
+        locate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+                        == PackageManager.PERMISSION_GRANTED) {
+
+                    locationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Location> task) {
+                            Location location = task.getResult();
+
+                            if (location != null) {
+                                try {
+
+                                    Geocoder geocoder = new Geocoder(getContext(),
+                                            Locale.getDefault());
+
+                                    List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+
+
+                                    uploadLocation.setText(Html.fromHtml(addresses.get(0).getLocality()));
+
+
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+
+
+                            }
+                        }
+                    });
+
+                } else {
+
+                    ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+
+                }
+            }
+        });
 
 
         if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){

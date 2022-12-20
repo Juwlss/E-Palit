@@ -3820,6 +3820,7 @@ id btnOffer
 id btnOfferBack
 id btnOfferItem
 id btnPostBack
+id btnReopen
 id btnSearch
 id btnSignup
 id btnUpload
